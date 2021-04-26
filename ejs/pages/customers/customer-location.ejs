@@ -1,0 +1,703 @@
+<%- include('../../partials/_head', {
+  title: 'Customer Location',
+  slug: 'customers-v2',
+  root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+    <%- include('_sidebar-details', {accountLocation: 'accountLocation'}) %>
+
+    <div class="contents-pages modal-container locations-page">
+        <div class="title-header">
+            <span class="fs-18">Locations</span>
+            <div class="">
+                <div href="#addLocation" class="btn-modal btn-main has-icon svg-plus white">
+                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                    Add Location
+                </div>
+
+                <div id="addLocation" class="modal container-modal modal-newlocation">
+                    <div class="modal__overlay bg-fixed"></div>
+                    <div class="modal__container">	
+                        <div class="header-modal">
+                            <span>New Location</span>
+                            <div class="btn btn-main">Add</div>
+                        </div>
+
+                        <div class="body-modal has-form form-location scrolls scrolls-x">
+                            <div class="content-modal">
+                                <div class="column-content left-column">
+                                    <div class="w-100 d-flex">
+                                        <div class="column-location">
+                                            <span class="title">
+                                                Service Locations
+                                            </span>
+                                            <div class="rows d-flex align-end">
+                                                <div class="col col-2 first-field">
+                                                    <div class="txt">
+                                                        <span class="red-delete">*</span>
+                                                        Address to
+                                                    </div>
+                                                    <div class="dropdown">
+                                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                                            Primary
+                                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                        </div>
+                                                        <div class="dropdown-menu">
+                                                            <ul>
+                                                                <li class="items">
+                                                                    Primary
+                                                                </li>
+                                                                <li class="items">
+                                                                    Primary
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>										
+                                                </div>
+                                                <div class="col col-2 second-field">
+                                                    <div class="txt">
+                                                        Location Name
+                                                    </div>
+                                                    <input class="field-input" type="text" name="" placeholder="" value="">
+                                                </div>
+                                            </div>
+        
+                                            <div class="rows has-field">
+                                                <div class="txt">
+                                                    <span class="red-delete">*</span>
+                                                    Service Address
+                                                </div>
+                                                <input class="field-input first-field" type="text" name="" placeholder="Street 1">
+                                                <div>
+                                                    <input class="field-input second-field" type="text" name="" placeholder="Street 2">
+                                                </div>					                    	
+                                                <div class="col d-flex">
+                                                    <input class="field-input city-field" type="text" name="" placeholder="City">
+                                                    <input class="field-input st-field" type="text" name="" placeholder="St">
+                                                    <input class="field-input zip-field" type="text" name="" placeholder="ZIP">
+                                                </div>
+                                            </div> 
+                                            
+                                            <div class="rows note-location">
+                                                <div class="note-box">
+                                                    <div class="location-note">
+                                                        <%- include ("../../svg/states-location-note.svg") %>
+                                                        <span class="text">Location Note</span>
+                                                    </div>
+                                                    <div class="dropdown dropdown-notemore">
+                                                        <div class="dropbtn">
+                                                            <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ex">ie:gate code, guard gate</div>
+                                            </div>
+                                            <div class="rows mt-2">
+                                                <div class="txt">
+                                                    Tags
+                                                </div>
+                                                <input class="field-input" type="text" name="" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="column-location">
+                                            <span class="title">
+                                                Billing Locations
+        
+                                                <div class="switch large">
+                                                    <input id="toggle-samelocation" class="toggle toggle-round" type="checkbox" checked="">
+                                                    <label for="toggle-samelocation">
+                                                        <span class="same"></span>
+                                                    </label>
+                                                </div>
+                                            </span>
+        
+                                            <div class="rows">
+                                                <div class="txt">
+                                                    Bill to
+                                                </div>
+                                                <div class="dropdown">
+                                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                                        Kita Chihoko Chihoko
+                                                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                    </div>
+                                                    <div class="dropdown-menu">
+                                                        <ul>
+                                                            <li class="items">
+                                                                Kita Chihoko Chihoko
+                                                            </li>
+                                                            <li class="items">
+                                                                Kita Chihoko
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="rows has-field mt-4">
+                                                <div class="txt">
+                                                    <span class="red-delete">*</span>
+                                                    Billing Address
+                                                </div>
+                                                <input class="field-input first-field" type="text" name="" placeholder="Street 1">
+                                                <div>
+                                                    <input class="field-input second-field" type="text" name="" placeholder="Street 2">
+                                                </div>					                    	
+                                                <div class="col d-flex">
+                                                    <input class="field-input city-field" type="text" name="" placeholder="City">
+                                                    <input class="field-input st-field" type="text" name="" placeholder="St">
+                                                    <input class="field-input zip-field" type="text" name="" placeholder="ZIP">
+                                                </div>
+                                            </div> 
+                                            
+                                            <div class="rows mt-4">
+                                                <div class="txt">
+                                                    Billing Email
+                                                </div>
+                                                <div class="dropdown">
+                                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                                        Kita Chihoko Chihoko
+                                                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                    </div>
+                                                    <div class="dropdown-menu">
+                                                        <ul>
+                                                            <li class="items">
+                                                                Kita Chihoko Chihoko
+                                                            </li>
+                                                            <li class="items">
+                                                                Kita Chihoko
+                                                            </li>
+                                                      </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="rows mt-4">
+                                                <div class="txt">
+                                                    Billing CC
+                                                </div>
+                                                <div class="dropdown">
+                                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                                        Kita Chihoko Chihoko
+                                                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                    </div>
+                                                    <div class="dropdown-menu">
+                                                        <ul>
+                                                            <li class="items">
+                                                                Kita Chihoko Chihoko
+                                                            </li>
+                                                            <li class="items">
+                                                                Kita Chihoko
+                                                            </li>
+                                                      </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tax-rate d-flex">
+                                        <div class="column-location text-info">
+                                            When adding invoice items for this location automatically assign these tax rates.
+                                        </div>
+                                        <div class="column-location">
+                                            <div class="rows d-flex justify-space-between">
+                                                <div class="col">
+                                                    <div class="txt">
+                                                        Tax Rate
+                                                    </div>
+                                                    <div class="dropup">
+                                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                                            Tax Rate
+                                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                        </div>
+                                                        <div class="dropdown-menu">
+                                                            <ul>
+                                                                <li class="items">
+                                                                    Tax Rate
+                                                                </li>
+                                                                <li class="items">
+                                                                    Tax Rate
+                                                                </li>
+                                                          </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="txt">
+                                                        Tax Rate
+                                                    </div>
+                                                    <div class="dropup">
+                                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                                            Tax Rate
+                                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                        </div>
+                                                        <div class="dropdown-menu">
+                                                            <ul>
+                                                                <li class="items">
+                                                                    Tax Rate
+                                                                </li>
+                                                                <li class="items">
+                                                                    Tax Rate
+                                                                </li>
+                                                          </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="column-content column-preferences">
+                                    <span class="title mb-4">
+                                        Appointment messaging preferences
+                                    </span>
+                                    <div class="flex-content">
+                                        <div class="rows">
+                                            <div class="left-txt svg-conversation">
+                                                <%- include ("../../svg/states-sms.svg") %>
+                                                SMS To
+                                            </div>
+                                            <div class="right-conts">
+                                                <div class="dropdown">
+                                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                                        (577) 179-3780
+                                                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                    </div>
+                                                    <div class="dropdown-menu">
+                                                        <ul>
+                                                            <li class="items">
+                                                                (577) 179-3780
+                                                            </li>
+                                                            <li class="items">
+                                                                (577) 179-3780 0123
+                                                            </li>
+                                                      </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rows mt-1">
+                                            <div class="left-txt">
+                                                <%- include ("../../svg/states-mail-default.svg") %>
+                                                Email To
+                                            </div>
+                                            <div class="right-conts">
+                                                <div class="email-more d-flex">
+                                                    <div class="dropdown">
+                                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                                            <span class="txt-ellipsis">Sid50@gmail.com</span>
+                                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                        </div>
+                                                        <div class="dropdown-menu">
+                                                            <ul>
+                                                                <li class="items">
+                                                                    <span class="txt-ellipsis">Sid50@gmail.com</span>
+                                                                </li>
+                                                                <li class="items">
+                                                                    <span class="txt-ellipsis">Sid50Sid50Sid50@gmail.com</span>
+                                                                </li>
+                                                          </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btn-default btn-icon ml-1 mr-0">
+                                                        <%- include ("../../svg/outline/outline-delete.svg") %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rows mt-1">
+                                            <div class="left-txt"></div>
+                                            <div class="right-conts">
+                                                <div class="email-more d-flex">
+                                                    <div class="dropdown">
+                                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                                            <span class="txt-ellipsis">Sid50@gmail.com</span>
+                                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                        </div>
+                                                        <div class="dropdown-menu">
+                                                            <ul>
+                                                                <li class="items">
+                                                                    <span class="txt-ellipsis">Sid50@gmail.com</span>
+                                                                </li>
+                                                                <li class="items">
+                                                                    <span class="txt-ellipsis">Sid50Sid50Sid50@gmail.com</span>
+                                                                </li>
+                                                          </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btn-default btn-icon ml-1 mr-0">
+                                                        <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="rows row-tabs-item tabs">
+                                            <div class="left-txt">
+                                                Confirmations
+                                            </div>
+                                            <div class="right-conts">
+                                                <div class="tabs-daily w-100">
+                                                    <div class="btn-item">
+                                                        <button class="tab-items active-tab-selector item-off" type="button">
+                                                            Off
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            Email
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            SMS
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            Both
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rows row-tabs-item tabs">
+                                            <div class="left-txt">
+                                                Reminders
+                                            </div>
+                                            <div class="right-conts">
+                                                <div class="tabs-daily w-100">
+                                                    <div class="btn-item">
+                                                        <button class="tab-items item-off" type="button">
+                                                            Off
+                                                        </button>
+                                                        <button class="tab-items active-tab-selector" type="button">
+                                                            Email
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            SMS
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            Both
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rows row-tabs-item tabs">
+                                            <div class="left-txt">
+                                                Followups
+                                            </div>
+                                            <div class="right-conts">
+                                                <div class="tabs-daily w-100">
+                                                    <div class="btn-item">
+                                                        <button class="tab-items item-off" type="button">
+                                                            Off
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            Email
+                                                        </button>
+                                                        <button class="tab-items active-tab-selector" type="button">
+                                                            SMS
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            Both
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rows row-tabs-item tabs">
+                                            <div class="left-txt">
+                                                Broadcasts
+                                            </div>
+                                            <div class="right-conts">
+                                                <div class="tabs-daily w-100">
+                                                    <div class="btn-item">
+                                                        <button class="tab-items item-off" type="button">
+                                                            Off
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            Email
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            SMS
+                                                        </button>
+                                                        <button class="tab-items active-tab-selector" type="button">
+                                                            Both
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rows row-tabs-item tabs">
+                                            <div class="left-txt">
+                                                Payment
+                                            </div>
+                                            <div class="right-conts">
+                                                <div class="tabs-daily w-100">
+                                                    <div class="btn-item">
+                                                        <button class="tab-items item-off" type="button">
+                                                            Off
+                                                        </button>
+                                                        <button class="tab-items active-tab-selector" type="button">
+                                                            Email
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            SMS
+                                                        </button>
+                                                        <button class="tab-items" type="button">
+                                                            Both
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-modal btn-close">
+                            <span>Cancel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-action">
+            <div class="action">
+                <div class="check-items">
+                    <input id="check-0" type="checkbox" value="">
+                    <div class="item-checkbox">
+                        <label for="check-0"></label>
+                    </div>
+                </div>
+                <div class="action-items disable">
+                    <span class="fs-13">0 items:</span>
+                    <div class="btn-default has-icon ">
+                        <div class="svg-delete-grey">
+                            <%- include ("../../svg/outline/outline-delete.svg") %>
+                        </div>
+                        Delete
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tables">
+            <div class="t-title">
+                <div class="rows">
+                    <div class="col-checkbox"></div>
+                    <div class="col-address">
+                        Address
+                    </div>
+                    <div class="col-contact pl-2">
+                        Address Contact
+                    </div>
+                    <div class="col-taxes pl-2">
+                        Taxes
+                    </div>
+                    <div class="col-units pl-2">
+                        Units
+                    </div>
+                    <div class="col-services pl-2">
+                        Active Services
+                    </div>
+                    <div class="col-tags pl-2">
+                        Tags
+                    </div>
+                </div>
+            </div>
+            <div class="t-content scrolls scrolls-x">
+                <% for (i = 0; i < 5; i++){ %>
+                    <div class="rows">
+                        <div class="d-flex w-100 align-top">
+                            <div class="col-checkbox"s>
+                                <div class="check-items">
+                                    <input id="check-1" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-address">
+                                <div class="details">
+                                    <span class="text-violet">Home</span>
+                                    <div class="txt-ellipsis">910 Edinburgh Ln, Charlotte, NC 28209</div>
+                                </div>
+                                <div class="details">
+                                    <span class="text-billing">Billing</span>
+                                    <div class="txt-ellipsis">910 Edinburgh Ln, Charlotte, NC 28209</div>
+                                </div>
+                            </div>
+                            <% if(i == 0) { %>
+                            <div class="col-contact pl-2">
+                                <div class="details tooltip has-content">
+                                    <span class="ic-question">?</span>
+                                    <div class="txt-ellipsis">Kita Chihoko</div>
+
+                                    <div class="tooltiptext tooltip-content top-arrow">
+                                        <div class="details svg-mail white">
+                                            <%- include ("../../svg/outline/outline-mail.svg") %>
+                                            <span class="txt-ellipsis">Emma.Nolan76@yahoo.com</span>
+                                        </div>
+                                        <div class="details mt-0 svg-phone white">
+                                            <%- include ("../../svg/outline/outline-phone.svg") %>
+                                            <span class="txt-ellipsis">1-307-604-8606</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="details tooltip has-content">
+                                    <span class="ic-question">?</span>
+                                    <div class="txt-ellipsis">Amolika Shaikh</div>
+
+                                    <div class="tooltiptext tooltip-content top-arrow">
+                                        <div class="details svg-mail white">
+                                            <%- include ("../../svg/outline/outline-mail.svg") %>
+                                            <span class="txt-ellipsis">Emma.Nolan76@yahoo.com</span>
+                                        </div>
+                                        <div class="details mt-0 svg-phone white">
+                                            <%- include ("../../svg/outline/outline-phone.svg") %>
+                                            <span class="txt-ellipsis">1-307-604-8606</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } else { %>
+                            <div class="col-contact pl-2">
+                                <div class="details tooltip has-content">
+                                    <span class="ic-question">?</span>
+                                    <div class="txt-ellipsis">Kita Chihoko</div>
+
+                                    <div class="tooltiptext tooltip-content down-arrow">
+                                        <div class="details svg-mail white">
+                                            <%- include ("../../svg/outline/outline-mail.svg") %>
+                                            <span class="txt-ellipsis">Emma.Nolan76@yahoo.com</span>
+                                        </div>
+                                        <div class="details mt-0 svg-phone white">
+                                            <%- include ("../../svg/outline/outline-phone.svg") %>
+                                            <span class="txt-ellipsis">1-307-604-8606</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="details tooltip has-content">
+                                    <span class="ic-question">?</span>
+                                    <div class="txt-ellipsis">Amolika Shaikh</div>
+
+                                    <div class="tooltiptext tooltip-content down-arrow">
+                                        <div class="details svg-mail white">
+                                            <%- include ("../../svg/outline/outline-mail.svg") %>
+                                            <span class="txt-ellipsis">Emma.Nolan76@yahoo.com</span>
+                                        </div>
+                                        <div class="details mt-0 svg-phone white">
+                                            <%- include ("../../svg/outline/outline-phone.svg") %>
+                                            <span class="txt-ellipsis">1-307-604-8606</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                            <div class="col-taxes pl-2">
+                                <div class="details txt-ellipsis">
+                                    Tax Name 1 (5%)
+                                </div>
+                                <div class="details txt-ellipsis">
+                                    Tax 2 (1%)
+                                </div>
+                            </div>
+                            <div class="col-units pl-2">
+                                <% if(i == 0) { %>
+                                    <span class="text-violet">250</span>
+                                <% } else { %>
+                                    <span class="disable">0</span>
+                                <% } %>
+                            </div>
+
+                            <% if(i == 0) { %>
+                            <div class="col-services pl-2">
+                                <div class="details tooltip">
+                                    <span class="ic-question">?</span>
+                                    <div class="txt-ellipsis">Ant Monthly Service</div>
+
+                                    <div class="tooltiptext tooltip-content top-arrow">
+                                        <div class="details">
+                                            <span class="txt-ellipsis">Jul 17, 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="details tooltip">
+                                    <span class="ic-question">?</span>
+                                    <div class="txt-ellipsis">BB Service</div>
+
+                                    <div class="tooltiptext tooltip-content top-arrow">
+                                        <div class="details">
+                                            <span class="txt-ellipsis">Jul 17, 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="details tooltip">
+                                    <span class="ic-question">?</span>
+                                    <div class="txt-ellipsis">Ant Monthly Service</div>
+
+                                    <div class="tooltiptext tooltip-content top-arrow">
+                                        <div class="details">
+                                            <span class="txt-ellipsis">Jul 17, 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } else { %>
+                                <div class="col-services pl-2">
+                                    <div class="details tooltip">
+                                        <span class="ic-question">?</span>
+                                        <div class="txt-ellipsis">Ant Monthly Service</div>
+    
+                                        <div class="tooltiptext tooltip-content down-arrow">
+                                            <div class="details">
+                                                <span class="txt-ellipsis">Jul 17, 2020</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="details tooltip">
+                                        <span class="ic-question">?</span>
+                                        <div class="txt-ellipsis">BB Service</div>
+    
+                                        <div class="tooltiptext tooltip-content down-arrow">
+                                            <div class="details">
+                                                <span class="txt-ellipsis">Jul 17, 2020</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="details tooltip">
+                                        <span class="ic-question">?</span>
+                                        <div class="txt-ellipsis">Ant Monthly Service</div>
+    
+                                        <div class="tooltiptext tooltip-content down-arrow">
+                                            <div class="details">
+                                                <span class="txt-ellipsis">Jul 17, 2020</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% } %>
+                            <div class="col-tags pl-2">
+                                <span class="tags">Pets</span>
+                                <span class="tags">Flat</span>
+                                <span class="tags">Allergic person</span>
+                                <span class="tags">Cockroaches</span>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%- include('../../partials/_footer', {
+  slug: 'customers-v2',
+  root: ''
+}) %>

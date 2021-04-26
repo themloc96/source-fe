@@ -1,0 +1,153 @@
+$purple-default: #8d4afc;
+$purple-light: #dac2f2;
+$purple-extralight: #f9f3ff;
+$purple-hover: #9851fc;
+$purple-active: #8142fb;
+
+$yellow-default: #ffbb00;
+$yellow-light: #fff3d1;
+$yellow-extralight: #fff9e8;
+$yellow-hover: #ffc500;
+$yellow-active: #ffb000;
+$yellow-selective: #FFB800;
+$yellow-dark: #BE9429;
+
+$blue-default: #1e7ef7;
+$blue-light: #cfe9ff;
+$blue-extralight: #f1f8ff;
+$blue-hover: #208af7;
+$blue-active: #1a71f6;
+$vivid-cerulean: #00aadd;
+
+$green-default: #1eaa5c;
+$green-light: #bae5cd;
+$green-extralight: #f6faef;
+$green-hover: #20b265;
+$green-active: #1aa152;
+$green-forest:#51A664;
+$june-bud: #add945;
+
+$olivegreen: #81c479;
+$seagreen: #3ac8b0;
+$violet: #ad63da;
+$deeppink: #e0507b;
+$deepazure: #1ab6d2;
+$carrot: #f3743e;
+$deepyellow: #f3a52e;
+$deepemerald: #2ba062;
+$violet-name: #8d3eff;
+$slate-blue: #7c53d9;
+
+$orange-default: #ff871e;
+$orange-light: #ffdfc3;
+$orange-extralight: #fff5ec;
+$orange-hover: #ff9220;
+$orange-active: #ff7b1b;
+$orange-plan: #ffa236;
+$halloween-orange: #f45d29;
+$orange-yellow: #f8c01a;
+$orange-peel: #ff9e04;
+$orange-royal: #F08C3D;
+$orange-opacity: rgba(255.0, 135.0, 30.0, 0.3);
+$yellow-sherwin-williams: #f9b700;
+
+$red-default: #ee4646;
+$red-light: #ffe0e0;
+$red-extralight: #fff3f3;
+$red-hover: #f15454;
+$red-active: #eb3b3b;
+$red-delete: #f14135;
+
+$grey-extralight: #fafbfc;
+$grey-light: #f4f6fa;
+$grey-softlight: #ebeff3;
+$grey-soft: #c1c9d4;
+$grey-middle: #929ba9;
+$grey-dark: #4d5054;
+$grey-extradark: #232426;
+$grey-extrlight: #676f7d;
+$grey-light-2: #d4dae2;
+$grey-boder-line: #eef2f8;
+$grey-greenish: #60708c;
+$grey-greenish-light: #eaecf2;
+$grey-tinsmith: #C4C4C4;
+
+$date-color: #a0adbe;
+
+$black: #000000;
+$black-2: #313438;
+$black-3: #555b64;
+$black-4: #354156;
+$black-5: #202633;
+$black-6: #8792a3;
+$black-7: #c4ccd5;
+
+$emerald: #51d473;
+$turquoise: #3cddc7;
+$royal-blue: #3075ea;
+
+$bg-shawdown: #979797;
+
+$white: #ffffff;
+$white-grey: #fcfcfc;
+$white-darkgrey: #f6f7f8;
+
+$boder-color-yellow: #feedbf;
+$border-color-grey: #e3e8ee;
+$background-yellow-opacity: rgba(255, 187, 0, 0.15);
+$background-title: #464b55;
+$background-input: #f2f5f7;
+$background-circle: #c4ccd9;
+$background-grey: #edeeef;
+
+$pink-default: #dc46ae;
+$pink-light: #ffdaf4;
+$pink-extralight: #fff5fc;
+$pink-hover: #df4cb5;
+$pink-active: #d83fa6;
+
+$btn-hover-black: #7a83a6;
+$btn-hover-gray: #8c929a;
+$btn-disable: #f1f5f8;
+
+$transparent: transparent;
+$bg-body: #f9f9f9;
+
+$btn-hover: #fff9e6;
+$btn-press: #fff5d9;
+$orchid: #b94ddb;
+$cosmic-latte: #fff8e5;
+$very-light-gray: #d1d1d2;
+$anti-flash-white: #f1f3f5;
+$very-light-blue: #dee4eb;
+$very-dark-white: #f7f8f9;
+$cultured: #f4f5f6;
+$rhinestone: #dfdfdf;
+$bg-tabitem: rgba(0, 0, 0, 0.02);
+$extra-white: #EEEEEE;
+$generic-gray: #6c7079;
+$boder-color-message: #ffebb3;
+
+$golden-gate-bridge: #b0388b;
+$international-orange: #be3838;
+$fandango: #b0388b;
+$chocolate-web: #cc6c18;
+
+$colors: ("yellow-sherwin-williams": $yellow-sherwin-williams,"background-grey": $background-grey, "date-color": $date-color, "red-delete": $red-delete, "violet-name": $violet-name, "btn-hover-black": $btn-hover-black, "background-title": $background-title, "royal-blue": $royal-blue, "background-yellow-opacity": $background-yellow-opacity, "black-2": $black-2, "black-3": $black-3, "black-4": $black-4, "bg-shawdown": $bg-shawdown, "boder-color-yellow": $boder-color-yellow, "purple-default": $purple-default, "purple-light": $purple-light, "purple-extralight": $purple-extralight, "purple-hover": $purple-hover, "purple-active": $purple-active, "yellow-default": $yellow-default, "yellow-light": $yellow-light, "yellow-extralight": $yellow-extralight, "yellow-hover": $yellow-hover, "yellow-active": $yellow-active, "blue-default": $blue-default, "blue-light": $blue-light, "blue-extralight": $blue-extralight, "blue-hover": $blue-hover, "blue-active": $blue-active, "green-default": $green-default, "green-light": $green-light, "green-extralight": $green-extralight, "green-hover": $green-hover, "green-active": $green-active, "olivegreen": $olivegreen, "seagreen": $seagreen, "violet": $violet, "deeppink": $deeppink, "deepazure": $deepazure, "carrot": $carrot, "deepyellow": $deepyellow, "deepemerald": $deepemerald, "orange-default": $orange-default, "orange-light": $orange-light, "orange-extralight": $orange-extralight, "orange-hover": $orange-hover, "orange-plan": $orange-plan, "orange-active": $orange-active, "red-default": $red-default, "red-light": $red-light, "red-extralight": $red-extralight, "red-hover": $red-hover, "red-active": $red-active, "grey-extrlight": $grey-extrlight, "grey-extralight": $grey-extralight, "grey-light": $grey-light, "grey-softlight": $grey-softlight, "grey-soft": $grey-soft, "grey-middle": $grey-middle, "grey-dark": $grey-dark, "grey-extradark": $grey-extradark, "black": $black, "white": $white, "pink-default": $pink-default, "pink-light": $pink-light, "pink-extralight": $pink-extralight, "pink-hover": $pink-hover, "pink-active": $pink-active, "transparent": $transparent, "border-color-grey": $border-color-grey, "body": $bg-body, "black-5": $black-5, "halloween-orange": $halloween-orange, "june-bud": $june-bud, "vivid-cerulean": $vivid-cerulean, "yellow-selective": $yellow-selective, "yellow-dark": $yellow-dark, "green-forest": $green-forest, "orange-royal": $orange-royal,);
+
+$font-family-sans-serif: "Inter", sans-serif !default;
+$border-none: none;
+
+// Process circle small
+$progress-circle-small: 18px;
+
+// Box shadow
+$boxshadow-dropdown: 0 10px 15px 0 rgba(0, 0, 0, 0.01), 0 8px 14px 0 rgba(0, 0, 0, 0.02), 0 4px 12px 0 rgba(0, 0, 0, 0.04), 0 2px 8px 0 rgba(0, 0, 0, 0.06), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+$boxshadow-default: 0 3px 6px 0 rgba(0, 0, 0, 0.05), 0 0 4px 0 rgba(0, 0, 0, 0.03), 0 0 1px 0 rgba(0, 0, 0, 0.06);
+$boxshadow-hover: 0 24px 37px 0 rgba(0, 0, 0, 0.04), 0 8px 20px 0 rgba(0, 0, 0, 0.12), 0 6px 12px 0 rgba(0, 0, 0, 0.08), 0 3px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 1px 0 rgba(0, 0, 0, 0.08), 0 43px 48px -19px rgba(0, 0, 0, 0.19);
+$boxshadow-press: 0 6px 8px 0 rgba(0, 0, 0, 0.02), 0 3px 6px 0 rgba(0, 0, 0, 0.04), 0 1px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+$boxshadow-press-inset: inset 0 0 8px 0 rgba(0, 0, 0, 0.08), inset 0 1px 6px 0 rgba(0, 0, 0, 0.03), inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+$boxshadow-dropdown-main: 0 6px 8px -6px rgba(0, 0, 0, 0.12), 0 5px 12px 0 rgba(0, 0, 0, 0.03), 0 4px 10px 0 rgba(0, 0, 0, 0.03), 0 3px 8px 0 rgba(0, 0, 0, 0.04), 0 2px 6px 0 rgba(0, 0, 0, 0.04), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+$boxshadow-tabitem: inset 0 2px 8px 0 rgba(0, 0, 0, 0.07), inset 0 2px 6px 0 rgba(0, 0, 0, 0.14), inset 0 1px 4px 0 rgba(0, 0, 0, 0.04), inset 0 1px 2px 0 rgba(0, 0, 0, 0.02), inset 0 0 1px 0 rgba(0, 0, 0, 0.1);
+$boxshadow-yellow: 0 0 1px 2px $boder-color-message, 0 8px 8px 0 rgba(0, 0, 0, 0.03), 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 2px 3px 0 rgba(0, 0, 0, 0.03), 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+$boxshadow-grey-softlight: 0px 2px 5px rgba(0, 0, 0, 0.05), 0px 2px 2px rgba(0, 0, 0, 0.02), 0px 0px 1px rgba(0, 0, 0, 0.08), inset 0px -1px 0px $grey-softlight;

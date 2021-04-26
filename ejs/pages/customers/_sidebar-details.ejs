@@ -1,0 +1,174 @@
+<div class="sidebar-pages sidebar-customer scrolls pt-4">
+    <a href="/pages/customers/customers-list.html" class="back-customer">
+        <%- include ("../../svg/outline/outline-arrow-left.svg") %>
+        Customers
+    </a>
+    <div class="details">
+        <div class="avatar">
+            <span class="avt">LF</span>
+            <div class="name">
+                <span>Lawrence Fuller</span>
+                <span>#TG582</span>
+            </div>
+        </div>
+        <div class="phone info">165-498-2313</div>
+        <div class="email info">hosea.runolfsson@beer.us</div>
+
+        <div class="price">
+            <div class="col balance">
+                <span>Balance</span>
+                <div class="cost black-2">$2,150.00</div>
+            </div>
+            <div class="col credit">
+                <span>Credits</span>
+                <div class="cost green-default">$6,350.00</div>
+            </div>
+        </div>
+    </div>
+
+	<ul>
+        <li>
+            <%
+				if(typeof timelinesCustomer != 'undefined') {
+			%>
+				<a href="/pages/customers/customer-timelines.html" class="items svg-timeline svg-noeffect active">
+			<% } else { %>
+				<a href="/pages/customers/customer-timelines.html" class="items svg-timeline svg-noeffect">
+			<% } %>
+                <%- include ("../../svg/states-timeline.svg") %>
+				Timeline
+			</a>
+        </li>
+        <li>
+            <div class="items svg-conversation cursor-pointer">
+				<%- include ("../../svg/states-sms.svg") %>
+				Conversations
+			</div>
+		</li>
+		<li>
+			<%
+				if(typeof accountCustomer != 'undefined') {
+			%>
+				<a href="/pages/customers/customer-profile.html" class="items active">
+			<% } else { %>
+				<a href="/pages/customers/customer-profile.html" class="items">
+			<% } %>
+                <%- include ("../../svg/states-customer-default.svg") %>
+				Account
+			</a>
+        </li>
+        
+        <li>
+            <%
+				if(typeof contactCustomer != 'undefined') {
+			%>
+				<a href="/pages/customers/customer-contact.html" class="items active mt-5">
+			<% } else { %>
+				<a href="/pages/customers/customer-contact.html" class="items mt-5">
+			<% } %>
+                <%- include ("../../svg/states-phone-label-default.svg") %>
+				Contacts
+			</a>
+        </li>
+        <li>
+            <%
+                if(typeof accountLocation !='undefined') {
+            %>
+                <a href="/pages/customers/customer-location.html" class="items active">
+            <% } else { %>
+                <a href="/pages/customers/customer-location.html" class="items">
+            <% } %>
+                <%- include ("../../svg/states-service-address-default.svg") %>
+				Locations
+			</a>
+        </li>
+        
+        <li>
+            <%
+                if(typeof jobsCustomer !='undefined') {
+            %>
+                <a href="/pages/customers/customer-jobs.html" class="items active mt-5">
+            <% } else { %>
+                <a href="/pages/customers/customer-jobs.html" class="items mt-5">
+            <% } %>
+                <%- include ("../../svg/states-note-default.svg") %>
+				Jobs
+			</a>
+        </li>
+        <li>
+            <%
+                if(typeof estimateCustomer !='undefined') {
+            %>
+                <a href="/pages/customers/customer-estimate.html" class="items active">
+            <% } else { %>
+                <a href="/pages/customers/customer-estimate.html" class="items">
+            <% } %>
+                <%- include ("../../svg/states-estimate-default.svg") %>
+				Estimates
+			</a>
+		</li>
+        <li>
+            <%
+                if(typeof documentCustomer !='undefined') {
+            %>
+                <a href="/pages/customers/customer-documents.html" class="items active">
+            <% } else { %>
+                <a href="/pages/customers/customer-documents.html" class="items">
+            <% } %>
+                <%- include ("../../svg/states-document-default.svg") %>
+				Documents
+			</a>
+        </li>
+        
+        <li>
+            <%
+                if(typeof invoiceCustomer !='undefined') {
+            %>
+                <a href="/pages/customers/customer-invoice.html" class="items active mt-5">
+            <% } else { %>
+                <a href="/pages/customers/customer-invoice.html" class="items mt-5">
+            <% } %>
+                <%- include ("../../svg/states-document-default.svg") %>
+				Invoices
+			</a>
+        </li>
+        <li>
+            <% 
+                if(typeof paymentCustomer !='undefined' ) { 
+            %>
+                <a href="/pages/customers/customer-payment.html" class="items active">
+            <% } else { %>
+                <a href="/pages/customers/customer-payment.html" class="items">
+            <% } %>
+                <%- include ("../../svg/states-payment-default.svg") %>
+                Payment
+            </a>
+        </li>
+        <li>
+            <% 
+                if(typeof creditCustomer !='undefined') {
+            %>
+                <a href="/pages/customers/customer-credit.html" class="items svg-credit svg-noeffect active">
+            <%
+                } else {
+            %>
+                <a href="/pages/customers/customer-credit.html" class="items svg-credit svg-noeffect">
+            <% } %>
+                <%- include ("../../svg/states-credit-default.svg") %>
+				Credits
+			</a>
+        </li>
+        <li>
+            <%
+                if(typeof statementCustomer !='undefined') {
+            %>
+                <a href="/pages/customers/customer-statement.html" class="items svg-statement svg-noeffect active">
+            <% } else { %>
+                <a href="/pages/customers/customer-statement.html" class="items svg-statement svg-noeffect">
+            <% } %>
+                <%- include ("../../svg/states-statement.svg") %>
+				Statement
+			</a>
+        </li>
+	</ul>
+</div>

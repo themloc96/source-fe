@@ -1,0 +1,334 @@
+<div class="calendar-header">
+    <div class="left-menu">
+        <div class="btn-default btn-icon btn-hasaction view-mapbox">
+            <%- include ("../../svg/outline/outline-map-pin.svg") %>
+        </div>
+        <div class="btn-default btn-icon btn-hasaction btn-viewtask">
+            <div class="btn-list-row-task icons-viewrows" onclick="clickToViewSmalldefault()">
+                <%- include ("../../svg/outline/outline-list-row.svg") %>
+            </div>
+            <div class="btn-list-row-task icons-viewcolumns" onclick="clickToViewSmalldefault()">
+                <%- include ("../../svg/outline/outline-list-columns.svg") %>
+            </div>
+        </div>
+        <span class="line"></span>
+
+        <div class="dropdown view-selection list-calendarcolor">
+            <div class="dropbtn btn-default selection dropdown-calendarcolor">
+                <%- include ("../../svg/outline/outline-types.svg") %>
+                <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+            </div>
+            <div class="dropdown-menu">
+                <ul>
+                    <li class="items">
+                        <div class="icon-text">
+                            <%- include ("../../svg/outline/outline-check-circle.svg") %>
+                            Job Status
+                        </div>
+                        <span class="tags">Alt+1</span>
+                    </li>
+                    <li class="items">
+                        <div class="icon-text">
+                            <%- include ("../../svg/outline/outline-job.svg") %>
+                            Service Template
+                        </div>
+                        <span class="tags">Alt+2</span>
+                    </li>
+                    <li class="items">
+                        <div class="icon-text">
+                            <%- include ("../../svg/outline/outline-add-new.svg") %>
+                            Zip Code
+                        </div>
+                        <span class="tags">Alt+3</span>
+                    </li>
+                    <li class="items">
+                        <div class="icon-text">
+                            <%- include ("../../svg/outline/outline-add-new.svg") %>
+                            County
+                        </div>
+                        <span class="tags">Alt+4</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown view-zipcolor tooltip">
+            <div>
+                <%- include ("../../svg/outline/outline-question.svg") %>
+            </div>
+            <div class="tooltip-main">
+                <ul class="tooltip-zipcolor">
+                    <div class="arrow">
+                        <i class="up"></i>
+                    </div>
+                    <li class="title-zip mt-2">
+                        Zip Code Colors
+                    </li>
+                    <li class="hover-yellow">
+                        <div class="d-flex align-center">
+                            <span class="color bg-halloween-orange"></span>
+                            <span class="code-zip">33101</span>
+                        </div>
+                    </li>
+                    <li class="hover-yellow">
+                        <div class="d-flex align-center">
+                            <span class="color bg-pink-default"></span>
+                            <span class="code-zip">33125</span>
+                        </div>
+                    </li>
+                    <li class="hover-yellow">
+                        <div class="d-flex align-center">
+                            <span class="color bg-june-bud"></span>
+                            <span class="code-zip">33136</span>
+                        </div>
+                    </li>
+                    <li class="hover-yellow">
+                        <div class="d-flex align-center">
+                            <span class="color bg-vivid-cerulean"></span>
+                            <span class="code-zip">33150</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown view-dropdown list-chedule">
+            <div class="dropbtn btn-schedule">
+                <% for (i = 0; i < 8; i++){ %>
+                <div class="avt-img tooltip">
+                    <img src="https://unsplash.it/24/24" alt="">
+                    <span class="tooltiptext top">Tooltip</span>
+                </div>
+                <% } %>
+                <div class="avt-img more-schedule">+6</div>
+
+                <span class="arrow svg-dropup">
+                    <%- include ("../../svg/outline/dropdown-up.svg") %>
+                </span>
+            </div>
+
+            <div class="dropdown-menu">
+                <div class="tabs accessible-tabs-container">
+                    <div class="group-schedule list-schedule">
+                        <ul role="tablist" aria-lable="Tabs Example" class="tab-selectors">
+                            <li class="schedule-items title">Scheduling</li>
+                            <li class="tab-items schedule-items hover-yellow">
+                                Group 1
+                            </li>
+                            <li class="tab-items active-tab-selector schedule-items hover-yellow">
+                                Group 2
+                            </li>
+                            <li class="tab-items schedule-items hover-yellow">
+                                Group 3
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents group-users">
+                        <div id="schedule1" class="tab-conts list-schedule">
+                            <div class="schedule-items title">Users</div>
+                            <ul class="list-user scrolls">
+                                <li class="schedule-items hover-yellow active">
+                                    <div class="avt-img"> <img src="https://unsplash.it/30/30" alt=""> </div>
+                                    Jacqueline Likoki
+                                </li>
+                                <li class="schedule-items hover-yellow">
+                                    <div class="avt-img"> <img src="https://unsplash.it/24/24" alt=""> </div>
+                                    Regina Pollastro
+                                </li>
+                                <% for (i = 0; i < 2; i++){ %>
+                                <li class="schedule-items hover-yellow active">
+                                    <div class="avt-img"> <img src="https://unsplash.it/32/32" alt=""> </div>
+                                    Otmar Doležal
+                                </li>
+                                <% } %>
+                                <li class="schedule-items hover-yellow">
+                                    <div class="avt-img"> <img src="https://unsplash.it/30/30" alt=""> </div>
+                                    Wan Gengxin
+                                </li>
+                                <li class="schedule-items hover-yellow active">
+                                    <div class="avt-img"> <img src="https://unsplash.it/30/30" alt=""> </div>
+                                    Jacqueline Likoki
+                                </li>
+                                <% for (i = 0; i < 3; i++){ %>
+                                <li class="schedule-items hover-yellow">
+                                    <div class="avt-img"> <img src="https://unsplash.it/50/50" alt=""> </div>
+                                    Langke Zambo
+                                </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                        <div id="schedule2" class="tab-conts tab-content-active list-schedule">
+                            <div class="schedule-items title">Users</div>
+                            <ul class="list-user scrolls">
+                                <li class="schedule-items hover-yellow active">
+                                    <div class="avt-img"> <img src="https://unsplash.it/30/30" alt=""> </div>
+                                    Langke Zambo
+                                </li>
+                                <li class="schedule-items hover-yellow">
+                                    <div class="avt-img"> <img src="https://unsplash.it/24/24" alt=""> </div>
+                                    Langke Zambo
+                                </li>
+                                <% for (i = 0; i < 3; i++){ %>
+                                <li class="schedule-items hover-yellow active">
+                                    <div class="avt-img"> <img src="https://unsplash.it/32/32" alt=""> </div>
+                                    Otmar Doležal
+                                </li>
+                                <% } %>
+                                <li class="schedule-items hover-yellow">
+                                    <div class="avt-img"> <img src="https://unsplash.it/30/30" alt=""> </div>
+                                    Wan Gengxin
+                                </li>
+                                <li class="schedule-items hover-yellow active">
+                                    <div class="avt-img"> <img src="https://unsplash.it/30/30" alt=""> </div>
+                                    Jacqueline Likoki
+                                </li>
+                                <% for (i = 0; i < 8; i++){ %>
+                                <li class="schedule-items hover-yellow">
+                                    <div class="avt-img"> <img src="https://unsplash.it/50/50" alt=""> </div>
+                                    Langke Zambo
+                                </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                        <div id="schedule3" class="tab-conts list-schedule">
+                            <div class="schedule-items title">Users</div>
+                            <ul class="list-user scrolls">
+                                <li class="schedule-items hover-yellow active">
+                                    <div class="avt-img"> <img src="https://unsplash.it/30/30" alt=""> </div>
+                                    Jacqueline Likoki
+                                </li>
+                                <li class="schedule-items hover-yellow active">
+                                    <div class="avt-img"> <img src="https://unsplash.it/24/24" alt=""> </div>
+                                    Regina Pollastro
+                                </li>
+                                <% for (i = 0; i < 6; i++){ %>
+                                <li class="schedule-items hover-yellow">
+                                    <div class="avt-img"> <img src="https://unsplash.it/32/32" alt=""> </div>
+                                    Otmar Doležal
+                                </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div> 
+                    
+                    <!-- Btn update calendar -->
+                    <div class="update-calendar">
+                        <a href="/pages/calendar/team.html" class="btn-main">Update Calendar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-menu">
+        <div class="action">
+            <div class="btn-icon btn-action"><%- include ("../../svg/outline/outline-chavron-left.svg") %></div>
+            <div class="btn-icon btn-action"><%- include ("../../svg/outline/outline-chavron-left-double.svg") %></div>
+            <span class="time">Sep 10 - Sep 16, 2020</span>
+            <div class="btn-icon btn-action"><%- include ("../../svg/outline/outline-chevron-right.svg") %></div>
+            <div class="btn-icon btn-action"><%- include ("../../svg/outline/outline-chavron-right-double.svg") %></div>
+        </div>
+
+        <div class="dropdown dropdown-items view-selection list-agenda">
+            <div class="dropbtn btn-default selection btn-agenda">
+                4 Days Rolling
+                <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+            </div>
+            <div class="dropdown-menu">
+                <ul>
+                    <li>
+                        <a href="/pages/calendar/oneday.html" class="items">
+                            Day
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/calendar/week.html" class="items">
+                            Week
+                        </a>
+                    </li>
+                    <li>
+                        <div class="items">
+                            2 Weeks
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items">
+                            Month
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items">
+                            3 Days Rolling
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items">
+                            4 Days Rolling
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn-default btn-today">Today</div>
+
+        <span class="line"></span>
+
+        <div class="action-modal">
+            <div href="#routeOptimizer" class="btn-default btn-icon btn-hasaction btn-modal">
+                <%- include ("../../svg/outline/outline-rout.svg") %>
+            </div>
+    
+            <div class="dropdown view-dropdown list-bach">
+                <div class="dropbtn dropdown-bach">
+                    <%- include ("../../svg/outline/outline-batch.svg") %>
+                </div>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>
+                            <div class="items btn-modal" href="#batchMoveJobs">
+                                Bach Move Jobs
+                            </div>
+                        </li>
+                        <li>
+                            <div class="items btn-modal" href="#batchReassignJobs">
+                                Bach Reasign Jobs
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="dropdown view-dropdown list-bach list-broadcast"> 
+                <div class="dropbtn dropdown-broadcast">
+                    <%- include ("../../svg/outline/outline-broadcast.svg") %>
+                </div>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>
+                            <div href="#sendReminders" class="items btn-modal">
+                                Send Reminders
+                            </div>
+                        </li>
+                        <li>
+                            <div class="items btn-modal">
+                                Send Confirmations
+                            </div>
+                        </li>
+                        <li>
+                            <div href="#sendBroadcast" class="items btn-modal">
+                                Send A Broadcast
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="btn-default btn-icon btn-hasaction btn-print">
+                <div href="#modalPrintSchedule" class="btn-modal">
+                    <%- include ("../../svg/outline/outline-print.svg") %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

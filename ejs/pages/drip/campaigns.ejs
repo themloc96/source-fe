@@ -1,0 +1,312 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'drip-campaigns',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {drip: 'drip'}) %>
+<%- include('../../partials/_sidebar', {drip: 'drip'}) %>
+
+<div class="drip container-wrap">
+    <div class="drip__header heading-page">
+        <h4 class="heading-page__label">
+            <a href="#" class="d-flex align-center">
+                <%- include ("../../svg/outline/outline-arrow-left.svg") %>
+                <span class="ml-3">Drip Campaigns</span>
+            </a>
+        </h4>
+    </div>
+	<div class="drip__container">
+        <%- include('_sidebar', {dripCampaigns: 'dripCampaigns'}) %>
+
+        <div class="wrapper wrapper--campaigns flex-column accessible-tabs-container nav-tabs">
+            <div class="wrapper__title wrapper__title--more heading-page heading-page--normal flex-column__head">
+                <h5 class="heading-page__label form-edit">
+                    Campaigns
+                </h5>
+                <div class="tabs">
+                    <div role="tablist" aria-lable="Tabs Example" class="tab-selectors btn-item">
+                        <button class="tab-items active-tab-selector" type="button">
+                            Active
+                        </button>
+                        <button class="tab-items" type="button">
+                            Library
+                        </button>
+                        <button class="tab-items" type="button">
+                            Results
+                        </button>
+                    </div>
+                </div>
+                <a href="/pages/drip/campaigns-new.html" class="btn-main has-icon svg-plus white">
+                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                    New Campaigns
+                </a>
+            </div>
+            <div class="wrapper__selection">
+                <div class="dropdown">
+                    <div onclick="dropdownFunc(this)" class="dropbtn items">
+                        <div class="txt-ellipsis">All Statuses</div>    
+                        <div class="arrow outline-chevron-down-small">
+                            <%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu scrolls">
+                        <ul>
+                            <li class="items">
+                                <div class="txt-ellipsis">Statuses</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="search-input">
+                    <span class="svg-search-absolute"><%- include ("../../svg/outline/outline-search.svg") %></span>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+            <div class="wrapper__list l-table flex-column__content scrolls-x tab-contents">
+                <!-- Tab Active -->
+                <div class="tab-conts tab-content-active">                   
+                    <div class="l-table__title">
+                        <div class="rows rows--customerlist">
+                            <div class="col col--status">Status</div>
+                            <div class="col col--name col--select">
+                                Name
+                                <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                            </div>
+                            <div class="col col--recipients">Recipients</div>
+                            <div class="col col--date">Start Date</div>
+                            <div class="col col--unsubscrib">Unique Opens</div>
+                            <div class="col col--unsubscrib">Unique Clicks</div>
+                            <div class="col col--report"></div>
+                            <div class="col col--menu"></div>
+                        </div>
+                    </div>
+                    <div class="l-table__content l-table__content--listint scrolls">
+                        <% for (i = 0; i < 6; i++) { %>
+                        <div class="rows rows--customerlist">
+                            <div class="col col--status">
+                                <span class="btn-status btn-status--green">Running</span>
+                            </div>
+                            <div class="col col--name">
+                                <a href="#" class="name-customer">Pauline Welch</a>  
+                                <a href="#view_template" class="view-template btn-modal">Preview</a>
+                            </div>
+                            <div class="col col--recipients">1,830,803</div>
+                            <div class="col col--date">Sep 23, 2020</div>
+                            <div class="col col--unsubscrib">
+                                <div class="progress progress--green">
+                                    <div class="progress__count">431</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--green per-55">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                            </div>
+                            <div class="col col--unsubscrib">
+                                <div class="progress progress--blue">
+                                    <div class="progress__count">431</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--blue per-80">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                            </div>
+                            <div class="col col--report">
+                                <a href="/pages/drip/campaigns-report.html"><%- include ("../../svg/outline/outline-activity-level.svg") %></a>
+                            </div>                            
+                            <div class="col col--menu">
+                                <div class="dropdown">
+                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default btn-default--noborder just-icon">
+                                        <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                    </div>
+                                    <div class="dropdown-menu dropdown-menu--right">
+                                        <ul>
+                                            <li class="items">Start a New Campaign</li>
+                                            <li class="items">Duplicate</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <!-- Tab Library -->
+                <div class="tab-conts">
+                    <div class="l-table__title">
+                        <div class="rows rows--customerlist">
+                            <div class="col col--name col--select">
+                                Name
+                                <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                            </div>
+                            <div class="col col--category">Category</div>
+                            <div class="col col--recipients col--recipients-library">Recipients</div>
+                            <div class="col col--unsubscrib">Unsubscribed</div>
+                            <div class="col col--menu"></div>
+                        </div>
+                    </div>
+                    <div class="l-table__content l-table__content--listint scrolls">
+                        <% for (i = 0; i < 6; i++) { %>
+                        <div class="rows rows--customerlist">
+                            <div class="col col--name">
+                                <a href="#" class="name-customer">Campaign Name</a>  
+                                <a href="#view_template" class="view-template btn-modal">Preview</a>
+                            </div>
+                            <div class="col col--category">
+                                <div class="btn-status btn-status--grey">Online Booking</div>
+                            </div>
+                            <div class="col col--recipients col--recipients-library">1,830,803</div>
+                            <div class="col col--unsubscrib red-default">6898</div>
+                            <div class="col col--menu">
+                                <div class="dropdown">
+                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default btn-default--noborder just-icon">
+                                        <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                    </div>
+                                    <div class="dropdown-menu dropdown-menu--right">
+                                        <ul>
+                                            <li class="items">Start a New Campaign</li>
+                                            <li class="items">Duplicate</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <!-- Tab Result -->
+                <div class="tab-conts">
+                    <div class="l-table__title">
+                        <div class="rows rows--customerlist">
+                            <div class="col col--name col--name-result col--select">
+                                Campaign
+                                <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                            </div>
+                            <div class="col col--type">Type</div>
+                            <div class="col col--unsubscrib col--unsubscrib-result">Opened</div>
+                            <div class="col col--unsubscrib col--unsubscrib-result">Not Opened</div>
+                            <div class="col col--unsubscrib col--unsubscrib-result">Clicked  a Link</div>
+                            <div class="col col--unsubscrib col--unsubscrib-result">Unsubscribed</div>
+                            <div class="col col--unsubscrib col--unsubscrib-result">Marked as Spam</div>
+                            <div class="col col--report"></div>
+                        </div>
+                    </div>
+                    <div class="l-table__content l-table__content--listint scrolls">
+                        <% for (i = 0; i < 6; i++) { %>
+                        <div class="rows rows--customerlist">
+                            <div class="col col--name col--name-result">
+                                <a href="#" class="name-customer">Campaign Name</a>  
+                                <a href="#view_template" class="view-template btn-modal">Preview</a>
+                            </div>
+                            <div class="col col--type">
+                                <span class="type-btn type-btn--email">Email</span>
+                                <span class="type-btn type-btn--sms">Sms</span>
+                            </div>
+                            <div class="col col--unsubscrib col--unsubscrib-result">
+                                <div class="progress progress--green">
+                                    <div class="progress__count">431</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--green per-55">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                            </div>
+                            <div class="col col--unsubscrib col--unsubscrib-result">
+                                <div class="progress progress--red">
+                                    <div class="progress__count">431</div>
+                                                                
+                                    <div class="progress__bar progress__bar--circle progress__bar--red per-80">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                            </div>
+                            <div class="col col--unsubscrib col--unsubscrib-result">
+                                <% for (h = 0; h < 2; h++) { %>
+                                <div class="progress progress--yellow">
+                                    <div class="progress__count">431</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--yellow per-10">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                                <% } %>
+                            </div>
+                            <div class="col col--unsubscrib col--unsubscrib-result">
+                                <% for (h = 0; h < 2; h++) { %>
+                                <div class="progress progress--black">
+                                    <div class="progress__count">431</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--black per-50">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                                <% } %>
+                            </div>
+                            <div class="col col--unsubscrib col--unsubscrib-result">
+                                <div class="progress progress--red">
+                                    <div class="progress__count">1</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--red per-3">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">0.08%</div>
+                                </div>
+                            </div>
+                            <div class="col col--report">
+                                <a href="/pages/drip/campaigns-report.html"><%- include ("../../svg/outline/outline-activity-level.svg") %></a>
+                            </div> 
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>			
+<%- include('_modal-preview') %>
+<%- include('../../partials/_footer', {
+    slug: 'drip-campaigns',
+    root: ''
+}) %>

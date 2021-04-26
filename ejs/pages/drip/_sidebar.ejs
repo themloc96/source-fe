@@ -1,0 +1,62 @@
+<div class="sidebar-pages scrolls">
+	<ul>
+        <li class="navs">
+            <%
+				if(typeof dripCampaigns != 'undefined') {
+			%>
+				<a href="/pages/drip/campaigns.html" class="navs__link items active">
+			<% } else { %>
+				<a href="/pages/drip/campaigns.html" class="navs__link items">
+			<% } %>
+                <%- include ("../../svg/states-note-default.svg") %>
+				Campaigns
+			</a>
+
+			<div class="navs__btn">
+				<%- include ("../../svg/outline/outline-plus-black.svg") %>
+			</div>
+        </li>
+        <li class="navs">
+            <%
+				if(typeof dripSmartLists != 'undefined') {
+			%>
+				<a href="/pages/drip/smartlists.html" class="navs__link items active">
+			<% } else { %>
+				<a href="/pages/drip/smartlists.html" class="navs__link items">
+			<% } %>
+                <%- include ("../../svg/states-note-default.svg") %>
+				Smart Lists
+			</a>
+			<div class="navs__btn">
+				<%- include ("../../svg/outline/outline-plus-black.svg") %>
+			</div>
+        </li>
+        <li class="navs">
+            <%
+				if(typeof dripUnsubscribed != 'undefined') {
+			%>
+				<a href="/pages/drip/unsubscribed.html" class="navs__link items active">
+			<% } else { %>
+				<a href="/pages/drip/unsubscribed.html" class="navs__link items">
+			<% } %>
+                <%- include ("../../svg/states-note-default.svg") %>
+				Unsubscribed
+			</a>
+        </li>
+        <li class="navs">
+            <%
+				if(typeof dripTemplates != 'undefined') {
+			%>
+				<a href="/pages/drip/templates.html" class="navs__link items active">
+			<% } else { %>
+				<a href="/pages/drip/templates.html" class="navs__link items">
+			<% } %>
+                <%- include ("../../svg/states-note-default.svg") %>
+				Message Templates
+			</a>
+			<a href="#" class="navs__btn">
+				<%- include ("../../svg/outline/outline-plus-black.svg") %>
+			</a>
+        </li>
+	</ul>
+</div>

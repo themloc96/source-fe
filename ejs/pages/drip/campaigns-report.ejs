@@ -1,0 +1,355 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'drip-campaigns',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {drip: 'drip'}) %>
+<%- include('../../partials/_sidebar', {drip: 'drip'}) %>
+
+<div class="drip container-wrap">
+    <div class="drip__header heading-page">
+        <h4 class="heading-page__label">
+            <a href="#" class="d-flex align-center">
+                <%- include ("../../svg/outline/outline-arrow-left.svg") %>
+                <span class="ml-3">Drip Campaigns</span>
+            </a>
+        </h4>
+    </div>
+    <div class="drip__container">
+        <%- include('_sidebar', {dripCampaigns: 'dripCampaigns'}) %>
+        <div class="wrapper flex-column">
+            <div class="wrapper__title heading-page flex-column__head">
+                <h4 class="heading-page__label"> 
+                    <a href="/pages/drip/campaigns.html" class="mr-3">
+                        <%- include ("../../svg/outline/outline-arrow-left.svg") %>
+                    </a>
+                    Drip Campaign Name Report                    
+                </h4>
+            </div>
+            <div class="wrapper__container campaigns-report flex-column__content scrolls">
+                <div class="content-tile">
+                    <%- include ("../../svg/outline/outline-user.svg") %>
+                    Smart List:
+                    <span class="name">SERVICE: Regular Monthly Service</span>
+                    <span class="count">486 Recipients</span>
+                </div>
+                <div class="campaigns-report__chart">
+                    <div class="half-column">
+                        <div class="title title--email">
+                            Email Activity
+                            <span class="count dots">486 Customers</span>
+                        </div>
+                        <div class="chart"></div>
+                    </div>
+                    <div class="half-column">
+                        <div class="title title--sms">
+                            SMS Activity
+                            <span class="count dots">486 Customers</span>
+                        </div>
+                        <div class="chart"></div>
+                    </div>
+                </div>
+                <div class="l-table">
+                    <div class="l-table__title">
+                        <div class="rows rows--report">
+                            <div class="col col--select">
+                                Template
+                                <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                            </div>
+                            <div class="col">Opened</div>
+                            <div class="col">Not Opened</div>
+                            <div class="col">Clicked a Link</div>
+                            <div class="col">Unsubscribed</div>
+                            <div class="col">Mark as Spam</div>
+                        </div>
+                    </div>
+                    <div class="l-table__content">
+                        <div class="rows rows--report">
+                            <div class="col col--type">
+                                <span class="type-btn type-btn--email">Email</span>
+                                <span class="type-btn type-btn--sms">Sms</span>
+                            </div>
+                            <div class="col">
+                                <div class="progress progress--green">
+                                    <div class="progress__count">431</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--green per-55">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="progress progress--red">
+                                    <div class="progress__count">431</div>
+                                                                
+                                    <div class="progress__bar progress__bar--circle progress__bar--red per-80">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <% for (h = 0; h < 2; h++) { %>
+                                <div class="progress progress--yellow">
+                                    <div class="progress__count">431</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--yellow per-10">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                                <% } %>
+                            </div>
+                            <div class="col">
+                                <% for (h = 0; h < 2; h++) { %>
+                                <div class="progress progress--black">
+                                    <div class="progress__count">431</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--black per-50">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                                <% } %>
+                            </div>
+                            <div class="col">
+                                <div class="progress progress--red">
+                                    <div class="progress__count">1</div>
+                                                                
+                                    <div class="progress__bar progress__bar--circle progress__bar--red per-8">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">00.01%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-table">
+                    <h3 class="title-small">Emai Link Activity</h3>
+                    <div class="l-table__title">
+                        <div class="rows rows--report">
+                            <div class="col col--double col--select">
+                                Link
+                                <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                            </div>
+                            <div class="col">Unique</div>
+                            <div class="col col--triple">Total</div>
+                        </div>
+                    </div>
+                    <div class="l-table__content">
+                        <% for (i = 0; i < 2; i++) { %>
+                        <div class="rows rows--report">
+                            <div class="col col--double col--name">
+                                http://sendy.co/a/w/3c
+                            </div>
+                            <div class="col">
+                                <div class="progress progress--blue">
+                                    <div class="progress__count">431</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--blue per-55">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                            </div>
+                            <div class="col col--triple">
+                                <div class="progress progress--blue">
+                                    <div class="progress__count">431</div>
+                                                                
+                                    <div class="progress__bar progress__bar--circle progress__bar--blue per-80">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="l-table">
+                    <h3 class="title-small">SMS Link Activity</h3>
+                    <div class="l-table__title">
+                        <div class="rows rows--report">
+                            <div class="col col--double col--select">
+                                Link
+                                <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                            </div>
+                            <div class="col">Unique</div>
+                            <div class="col col--triple">Total</div>
+                        </div>
+                    </div>
+                    <div class="l-table__content">
+                        <% for (i = 0; i < 2; i++) { %>
+                        <div class="rows rows--report">
+                            <div class="col col--double col--name">
+                                https://sendy.co/demo/report?i=1&c=120
+                            </div>
+                            <div class="col">
+                                <div class="progress progress--yellow">
+                                    <div class="progress__count">431</div>
+                                                            
+                                    <div class="progress__bar progress__bar--circle progress__bar--yellow per-55">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                            </div>
+                            <div class="col col--triple">
+                                <div class="progress progress--yellow">
+                                    <div class="progress__count">431</div>
+                                                                
+                                    <div class="progress__bar progress__bar--circle progress__bar--yellow per-80">
+                                        <div class="circle">
+                                            <div class="half-circle half-circle--left"></div>
+                                            <div class="half-circle half-circle--right"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+        
+                                    <div class="progress__number">84.65%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="l-table l-table--list">
+                    <h3 class="title-small">Link Details</h3>
+                    <div class="l-table__title">
+                        <div class="rows rows--report">
+                            <div class="col col--select">
+                                Name
+                                <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                            </div>
+                            <div class="col">Email</div>
+                            <div class="col">SMS</div>
+                            <div class="col col--double">Link</div>
+                            <div class="col">Status</div>
+                        </div>
+                    </div>
+                    <div class="l-table__content">
+                        <% for (i = 0; i < 3; i++) { %>
+                        <div class="rows rows--report">
+                            <div class="col col--name">Valerie Hamilton</div>
+                            <div class="col">w.steele@yahoo.com</div>
+                            <div class="col">(512) 635-2222</div>
+                            <div class="col col--double">
+                                SERVICE: Regular Monthly Service
+                            </div>                            
+                            <div class="col">
+                                <span class="btn-status btn-status--green">Subscribed</span>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="l-table l-table--list">
+                    <h3 class="title-small">Unsubscribed</h3>
+                    <div class="l-table__title">
+                        <div class="rows rows--report">
+                            <div class="col col--select">
+                                Name
+                                <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                            </div>
+                            <div class="col">Email</div>
+                            <div class="col">SMS</div>
+                            <div class="col col--double">Link</div>
+                            <div class="col">Status</div>
+                        </div>
+                    </div>
+                    <div class="l-table__content">
+                        <% for (i = 0; i < 2; i++) { %>
+                        <div class="rows rows--report">
+                            <div class="col col--name">Valerie Hamilton</div>
+                            <div class="col">w.steele@yahoo.com</div>
+                            <div class="col">(512) 635-2222</div>
+                            <div class="col col--double">
+                                SERVICE: Regular Monthly Service
+                            </div>                            
+                            <div class="col">
+                                <span class="btn-status btn-status--red">Unsubscribed</span>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="l-table l-table--list">
+                    <h3 class="title-small">Marked as Spam</h3>
+                    <div class="l-table__title">
+                        <div class="rows rows--report">
+                            <div class="col col--select">
+                                Name
+                                <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                            </div>
+                            <div class="col">Email</div>
+                            <div class="col">SMS</div>
+                            <div class="col col--double">Link</div>
+                            <div class="col">Status</div>
+                        </div>
+                    </div>
+                    <div class="l-table__content">
+                        <div class="rows rows--report">
+                            <div class="col col--name">Valerie Hamilton</div>
+                            <div class="col">w.steele@yahoo.com</div>
+                            <div class="col">(512) 635-2222</div>
+                            <div class="col col--double">
+                                SERVICE: Regular Monthly Service
+                            </div>                            
+                            <div class="col">
+                                <span class="btn-status btn-status--red">Unsubscribed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'drip-campaigns',
+    root: ''
+}) %>

@@ -1,0 +1,188 @@
+<% 
+const ob_mobile = {
+    items1: {
+        id: 1,
+        name: 'Cash',
+    },
+    items2: {
+        id: 2,
+        name: 'Check',
+    },
+    items3: {
+        id: 3,
+        name: 'Credit',
+    },
+    items4: {
+        id: 4,
+        name: 'Credit card',
+    },
+    items5: {
+        id: 5,
+        name: 'Square',
+    },
+    items6: {
+        id: 6,
+        name: 'Stripe',
+    },
+    items7: {
+        id: 7,
+        name: 'Bank Account ACH',
+    },
+    items8: {
+        id: 8,
+        name: 'AU Pest Recommendations & Agreement',
+    },
+    items9: {
+        id: 9,
+        name: 'AU Pre-engagement Agreement (Ver. Jan. 2018)',
+    },
+    items10: {
+        id: 10,
+        name: 'AU Pre-Engagement Report',
+    },
+    items11: {
+        id: 11,
+        name: 'AU Sites Notes',
+    },
+    items12: {
+        id: 12,
+        name: 'AU Subterranean Certificate of Installation',
+    },
+    items13: {
+        id: 13,
+        name: 'Inactive',
+    },
+}
+%>
+
+<%- include('../../partials/_head', {
+    title: 'Settings Users Payment Methods',
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {paymentMethods: 'paymentMethods'}) %>
+
+    <div class="contents-pages container-setting-user d-flex payment-methods-v2">
+
+        <div class="set-user-right w-100 accessible-tabs-container container-column">
+            <div class="header-title flex-auto">
+                <h2>Methods</h2>
+                <div class="tabs">
+                    <div role="tablist" aria-lable="Tabs Example" class="tab-selectors btn-item">
+                        <button class="tab-items active-tab-selector" type="button">
+                            Active
+                        </button>
+                        <button class="tab-items" type="button">
+                            Archived
+                        </button>
+                        <button class="tab-items" type="button">
+                            Deleted
+                        </button>
+                    </div>
+                </div>
+
+                <div class="modal-setting w-button">
+                    <div href="#addMethod" class="btn-modal btn btn-main has-plus btn-add-method svg-plus white">
+                        <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                        <span>Add Method</span>
+                    </div>
+                    <div id="addMethod" class="modal container-modal">
+                        <div class="modal__overlay bg-fixed"></div>
+                        <div class="modal__container modal-add-method">
+                            <div class="header-modal">
+                                <span>New Method</span>
+
+                                <div class="btn btn-main">Save</div>
+                            </div>                            
+                            <div class="body-modal scrolls">
+                                <div class="row">
+                                    <span class="txt">Method Name</span>
+                                    <input class="field-input" type="text" name="" placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="footer-modal btn-close">
+                                <span>Cancel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-delete-all flex-auto">
+                <div class="w-delete-all d-flex align-center">
+                    <div class="check-items">
+                        <input id="check-user-all" type="checkbox" value="">
+                        <div class="item-checkbox">
+                            <label for="check-user-all">
+                                <span class="txt-ellipsis ml-2">0 Items: </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="w-item item-delete border-custom ml-2">
+                        <div class="svg-delete-grey">
+                            <%- include ("../../svg/outline/outline-delete.svg") %>
+                        </div>
+                        <span>Delete</span>
+                    </div>
+                    <div class="w-item item-archive border-custom">
+                        <%- include ("../../svg/outline/outline-clock.svg") %>
+                        <span>Archive</span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-method box-auto">
+                <div class="w-title-methods">
+                    Methods
+                </div>
+
+                <div class="tab-contents tabs content-table scrolls">
+                    <div id="ActiveMethod" class="tab-conts w-100 tab-content-active">
+                        <div class="set-document-list relative">
+                            <ul>
+                                <li>
+                                    <div class="check-items">
+                                        <input class="check-all purple" id="check-user-document-all" type="checkbox" value="">
+                                        <div class="item-checkbox mt-n2">
+                                            <label for="check-user-document-all"></label>
+                                        </div>
+                                    </div>
+                                    <p class="name"> <span>All</span> </p>
+                                </li>
+                                <% for(let items in ob_mobile) { %>
+                                    <li>
+                                        <div class="check-items">
+                                            <input id="check-user-document-<%= ob_mobile[items].id %>" type="checkbox" value="">
+                                            <div class="item-checkbox mt-n2">
+                                                <label for="check-user-document-<%= ob_mobile[items].id %>"></label>
+                                            </div>
+                                        </div>
+                                        <p class="name"> <span class="text cursor-pointer"> <%= ob_mobile[items].name %> </span> </p>
+                                    </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ArchivedMethod" class="tab-conts w-100">
+                        ArchivedMethod
+                    </div>
+                    <div id="DeletedMethod" class="tab-conts w-100">
+                        DeletedMethod
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>        
+        
+    </div>
+</div>
+<div class="overlay-modal"></div>
+<%- include('../../partials/_footer', {
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>

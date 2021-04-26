@@ -1,0 +1,330 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+	<%- include('_sidebar-details', {statementCustomer: 'statementCustomer'}) %>
+
+	<div class="contents-pages modal-container statement-page">
+		<div class="title-header">
+    		<span class="fs-18">Account Statement for Customer Name</span>
+    		<div class="dropdown dropdown-view dropdown-items">
+    			<div class="btn-view btn-default just-icon">
+                    <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                </div>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="items has-icon hover-yellow">
+                            <%- include ("../../svg/outline/outline-pdf.svg") %>
+                            PDF
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items has-icon hover-yellow">
+                            <%- include ("../../svg/outline/outline-print.svg") %>
+                            Print
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items has-icon hover-yellow">
+                            <%- include ("../../svg/outline/outline-mail.svg") %>
+                            Send by Email
+                        </div>
+                    </li>
+                </ul>
+    		</div>
+        </div>
+		
+		<div class="title-action">
+            <div class="action">
+                <div class="dropdown dropdown-box choose-date">
+                    <div class="dropbtn">
+                        <div class="svg-calendar"><%- include ("../../svg/outline/outline-calendar.svg") %></div>
+                        <span>
+                            03/06/2020
+                            <span class="fs-13 date-to">to</span>
+                            03/07/2020
+                        </span>
+                    </div>
+                </div>
+                <div class="dropdown">
+					<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                        Locations
+                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+	                </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li class="items">
+                                Locations
+                            </li>
+                            <li class="items">
+                                Locations
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+					<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                        All Invoices
+                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+	                </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li class="items">
+                                Invoices
+                            </li>
+                            <li class="items">
+                                Invoices
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown dropdown-filter dropdown-column">
+					<div onclick="dropdownFunc(this)" class="dropbtn btn-column btn-default selection">
+                        Columns
+                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul class="filter-all">
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-1" type="checkbox" value="">
+                                        <div class="item-checkbox">
+                                            <label for="check-1">
+                                                <div class="txt-ellipsis">All</div>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-2" type="checkbox" checked="">
+                                        <div class="item-checkbox">
+                                            <label for="check-1">
+                                                <div class="txt-ellipsis">Date</div>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-3" type="checkbox" value="">
+                                        <div class="item-checkbox">
+                                            <label for="check-1">
+                                                <div class="txt-ellipsis">Invoice</div>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items hover-yellow">
+                                    <div class="check-items">
+                                        <input id="check-4" type="checkbox" value="">
+                                        <div class="item-checkbox">
+                                            <label for="check-4">
+                                                <div class="txt-ellipsis">PO. Number</div>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-5" type="checkbox" checked="">
+                                        <div class="item-checkbox">
+                                            <label for="check-5">
+                                                <div class="txt-ellipsis">Service</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-6" type="checkbox" checked="">
+                                        <div class="item-checkbox">
+                                            <label for="check-6">
+                                                <div class="txt-ellipsis">Payment Date</div>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-7" type="checkbox" checked="">
+                                        <div class="item-checkbox">
+                                            <label for="check-7">
+                                                <div class="txt-ellipsis">Amount</div>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-8" type="checkbox" checked="">
+                                        <div class="item-checkbox">
+                                            <label for="check-8">
+                                                <div class="txt-ellipsis">Paid</div>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-9" type="checkbox" checked="">
+                                        <div class="item-checkbox">
+                                            <label for="check-9">
+                                                <div class="txt-ellipsis">Balance</div>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+            </div>
+        </div>
+        
+        <div class="content-statement scrolls scrolls-x">
+            <div class="account-summary">
+                <div class="title-font15 pb-3">
+                    Account Summary from 01 January 2020 to 11 July 2020
+                </div>
+                <div class="charge-detail">
+                    <div class="details">
+                        <span class="txt">Invoiced</span>
+                        <span class="price">$260.00</span>
+                    </div>
+                    <div class="details">
+                        <span class="txt">Payments</span>
+                        <span class="price">$18.20</span>
+                    </div>
+                    <div class="details">
+                        <span class="txt">Available Credit</span>
+                        <span class="price">$288.60</span>
+                    </div>
+                    <div class="details total">
+                        <span>Account Balance</span>
+                        <span class="price">$100.00</span>
+                    </div>
+                </div>
+                <div class="title-font15 pt-6 pb-2">
+                    Statement for Customer Name
+                </div>
+            </div>
+
+            <div class="tables table-statement">
+                <div class="t-title">
+                    <div class="rows">
+                        <div class="col-checkbox"></div>
+                        <div class="col-date">
+                            Date
+                        </div>
+                        <div class="col-invoice pl-2">
+                            Invoice
+                        </div>
+                        <div class="col-service pl-2">
+                            Service
+                        </div>
+                        <div class="col-address pl-2">
+                            Address
+                        </div>
+                        <div class="col-amount">
+                            Amount
+                        </div>
+                        <div class="col-amount">
+                            Paid
+                        </div>
+                        <div class="col-amount">
+                            Balance
+                        </div>
+                    </div>
+                </div>
+                <div class="t-content">
+                    <% for (i = 0; i < 5; i++){ %>
+                    <div class="rows">
+                        <div class="d-flex w-100 align-top">
+                            <div class="col-checkbox">
+                                <div class="check-items">
+                                    <input id="statement-1" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="statement-1"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-date">
+                                <div class="txt-ellipsis">Jul 17, 2020</div>
+                            </div>
+                            <div class="col-invoice pl-2">
+                                <div class="txt-ellipsis">#15160070</div>
+                            </div>
+                            <div class="col-service pl-2">
+                                <div class="txt-ellipsis">Ant Montly Service</div>
+                            </div>
+                            <div class="col-address pl-2">
+                                <div class="txt-ellipsis">910 Edinburgh Ln, Charlotte, NC 28209</div>
+                            </div>
+                            <div class="col-amount pl-2">
+                                <div class="txt-ellipsis">$4.50</div>
+                            </div>
+                            <div class="col-amount pl-2">
+                                <div class="txt-ellipsis">$130.00</div>
+                            </div>
+                            <div class="col-amount pl-2">
+                                <div class="txt-ellipsis">$50.60</div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class="account-summary account-amount">
+                <div class="details total">
+                    <span>Amount Total</span>
+                    <span class="price">$18.20</span>
+                </div>
+                <div class="details total">
+                    <span>Paid Total</span>
+                    <span class="price">$288.60</span>
+                </div>
+                <div class="details total">
+                    <span>Account Balance</span>
+                    <span class="price">$100.00</span>
+                </div>
+            </div>
+
+            <!-- History -->
+            <%- include('../../partials/_history-timeline') %>
+        </div>
+	</div>
+</div>			
+
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

@@ -1,0 +1,129 @@
+<!-- Modal filter -->
+<div id="drip_filter" class="modal modal--drip container-modal">
+    <div class="modal__overlay bg-fixed"></div>
+    <div class="modal__container modal__container--dripfilter flex-column">
+        <div class="header-modal">
+            <div class="header-modal__title">
+                <%- include ("../../svg/outline/outline-filter-active.svg") %>
+                Filters
+            </div>
+            <div class="header-modal__close">
+                <%- include ("../../svg/outline/outline-close.svg") %>
+            </div>
+
+            <div class="header-modal__search search-input">
+                <span class="svg-search-absolute"><%- include ("../../svg/outline/outline-search.svg") %></span>
+                <input type="text" placeholder="Search Filters">
+            </div>
+        </div>        
+
+        <div class="body-modal flex-column__content">
+            <div class="body-modal__content filter-list scrolls">
+                <% for (let i = 0; i < 8; i++ ) { %>
+                <div class="filter-list__row js-filter-toggle">
+                    <%- include ("../../svg/states-invoice-default.svg") %>
+                    <span class="label">Leads</span>
+                    <%- include ("../../svg/outline/outline-chevron-right.svg") %>
+                </div>
+                <% } %>
+            </div>
+            <div class="body-modal__content filter-result scrolls">               
+                <div class="filter-result__title">
+                    <div class="js-filter-toggle cursor-pointer">
+                        <%- include ("../../svg/outline/outline-chavron-left.svg") %>
+                    </div>
+                    <span class="label ml-3">Leads</span>
+                </div>
+                <div class="filter-result__detail">
+                    <h3 class="label">Finde Leads where...</h3>
+                    <% for (let i = 1; i < 8; i++ ) { %>
+                    <div class="result">
+                        <div class="check-items">
+                            <input id="cb_filter<%=i%>" type="checkbox">
+                            <div class="item-checkbox">
+                              <label for="cb_filter<%=i%>"></label>
+                            </div>
+                        </div>
+                        <span class="svg-email"><%- include ("../../svg/states-mail-default.svg") %></span>
+                        <p class="result__label ml-2">Date created</p>
+                    </div>
+                    <% } %>
+                    <div class="result checked toggle">
+                        <div class="check-items">
+                            <input id="cb_filter" type="checkbox" checked>
+                            <div class="item-checkbox">
+                              <label for="cb_filter"></label>
+                            </div>
+                        </div>
+                        <span class="svg-email"><%- include ("../../svg/states-mail-default.svg") %></span>
+                        <p class="result__label ml-2">Total number of email addresses</p>
+                        <div class="result__toggle">
+                            <%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+                        </div>
+                        <!--  -->
+                        <div class="result__detail">
+                            <div class="result__detail-header">                                
+                                <%- include ("../../svg/states-invoice-default.svg") %>
+                                Created by
+                            </div>
+                            <div class="result__detail-body">
+                                <div class="detail-list scrolls">
+                                    <% for (let n = 0; n < 3; n++ ) { %>
+                                    <div class="wrapper__filter-tags">
+                                        <span class="filter filter--name">Tanya Gari</span>
+                                        <span class="filter filter--remove"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                    </div>
+                                    <% } %>
+                                </div>
+
+                                <div class="dropdown">
+                                    <div class="dropbtn btn-default has-icon" onclick="dropdownFunc(this)">
+                                        <%- include ("../../svg/outline/outline-plus-black.svg") %> Add
+                                    </div>
+                                    <div class="dropdown-menu content-search">
+                                        <div class="container-column">
+                                            <div class="flex-auto header-search">
+                                                <div class="search-input">
+                                                    <span class="svg-search-absolute"><%- include ("../../svg/outline/outline-search.svg") %></span>
+                                                    <input class="field-search no-effect" type="text" name="" placeholder="Search">
+                                                </div>
+                                            </div>
+                                            <ul class="box-auto scrolls">
+                                                <% for (let j = 0; j < 5; j++ ) { %>
+                                                <li class="items">
+                                                    <div class="txt-ellipsis">Tag</div>
+                                                </li>
+                                                <% } %>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result__detail-footer">
+                                <span class="cursor-pointer">Cancel</span>
+                                <div class="btn-main ml-4">Apply</div>
+                            </div>
+                        </div>
+                    </div>
+                    <% for (let i = 1; i < 9; i++ ) { %>
+                    <div class="result">
+                        <div class="check-items">
+                            <input id="cb_filter<%=i%>" type="checkbox">
+                            <div class="item-checkbox">
+                                <label for="cb_filter<%=i%>"></label>
+                            </div>
+                        </div>
+                        <span class="svg-email"><%- include ("../../svg/states-mail-default.svg") %></span>
+                        <p class="result__label ml-2">Local time</p>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="footer-modal btn-close">
+            <span class="fw-normal">Cancel</span>
+            <div class="btn btn-main ml-4">Apply</div>
+        </div>
+    </div>
+</div>

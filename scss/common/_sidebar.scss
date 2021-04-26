@@ -1,0 +1,81 @@
+#sidebar {
+    width: 64px;
+    background: $white;
+    height: calc(100% - 64px);
+    position: fixed;
+    left: -150%;
+    top: 64px;
+    border-right: 1px solid $border-color-grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px 0;
+    overflow-x: initial;
+    overflow-y: initial;
+    -webkit-overflow-y: initial;
+    -webkit-overflow-scrolling: touch;
+    z-index: 10;
+
+    @include transitions(left 0.1s ease-in-out);
+
+    &.active {
+        left: 0;
+    }
+
+    .menu-item {
+        margin-bottom: 18px;
+        position: relative;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            .tooltiptext {
+                visibility: visible;
+            }
+        }
+    }
+
+    .sidebar-bottom {
+        .menu-item:first-of-type {
+            margin-bottom: 36px;
+
+            &:after {
+                position: absolute;
+                content: '';
+                bottom: -18px;
+                background: $border-color-grey;
+                height: 1px;
+                width: 40px;
+                left: -4px;
+            }
+        }
+    }
+
+    // iPad in portrait
+    @media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-y: auto;
+
+        .menu-item {
+            &:hover .tooltiptext {
+                visibility: hidden;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1024px) and (min-width: 769px) {
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-y: auto;
+
+        .menu-item {
+            &:hover .tooltiptext {
+                visibility: hidden;
+            }
+        }
+    }
+}

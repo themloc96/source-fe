@@ -1,0 +1,410 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.auth-v2 {
+  background: $bg-body;
+  height: 100vh;
+  overflow: auto;
+  margin-top: -64px;
+
+  .main-login {
+    max-width: 532px;
+    margin: 0 auto;
+    padding-bottom: 200px;
+    position: relative;
+    height: auto;
+    min-height: calc(100% - 200px);
+  }
+
+  #gd-login-v2 {
+    margin: auto 0;
+    max-width: 100%;
+    padding: 0 55px;
+    transition: opacity 400ms ease-in-out;
+    opacity: 1;
+    box-sizing: unset;
+    font-family: $font-family-sans-serif;
+    background-color: $white;
+    border-radius: 8px;
+    border: solid 2px #f0f0f0;
+    @media screen and (max-width: 490px) {
+      padding: 0 20px 75px !important;
+    }
+  }
+
+  .flex {
+    display: flex;
+    @media screen and (max-width: 480px) {
+      display: block;
+    }
+  }
+
+  .gd-form-v2 {
+    h2 {
+      color: $black-2;
+      font-weight: 600;
+      line-height: 1.33;
+      padding-top: 66px;
+      margin-bottom: 35px;
+      text-align: center;
+      @media screen and (max-width: 350px) {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .gd-login-col2 {
+    width: 50%;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      .gd-login-v2-btn-left {
+        padding-right: 0px !important;
+      }
+      .gd-login-v2-btn-right {
+        padding-left: 0px !important;
+      }
+      .btn-fb-icon {
+        margin-right: 3px;
+      }
+      .btn-fb-text,
+      .btn-gg-text {
+        font-size: 14px;
+      }
+    }
+    .gd-login-v2-btn-left {
+      padding-right: 10px;
+    }
+    .gd-login-v2-btn-right {
+      padding-left: 10px;
+    }
+  }
+
+  .btn-fb {
+    border-radius: 1px;
+    -webkit-box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.218s, border-color 0.218s,
+      box-shadow 0.218s;
+    transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
+    -webkit-user-select: none;
+    -webkit-appearance: none;
+    background-color: $white;
+    background-image: none;
+    color: #262626;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    height: 41px;
+    &:hover {
+      -webkit-box-shadow: 0 0 3px 3px #4267b2;
+      box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+    }
+  }
+
+  .btn-fb-blue {
+    background-color: #4267b2;
+    border: $border-none;
+    color: $white;
+    &:hover {
+      background-color: #4267b2;
+    }
+    .btn-fb-content-wp {
+      border: 1px solid transparent;
+      height: 100%;
+      width: 100%;
+      @include flexcenter;
+
+      @media screen and (max-width: 350px) {
+        text-align: left;
+      }
+    }
+    .btn-fb-icon {
+      background-color: #4267b2;
+      -webkit-border-radius: 1px;
+      border-radius: 1px;
+      width: 40px;
+      @include centeritem;
+      @media screen and (max-width: 350px) {
+        padding: 1px;
+      }
+      .fb-custom {
+        @include size(28px);
+        @include flexcenter;
+      }
+    }
+  }
+
+  .btn-fb-text,
+  .btn-gg-text {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.21px;
+    vertical-align: top;
+    line-height: 38px;
+    @media screen and (max-width: 768px) {
+      font-size: 13px;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 350px) {
+      padding-left: 10px;
+    }
+  }
+
+  .btn-gg {
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.218s, border-color 0.218s,
+      box-shadow 0.218s;
+    transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
+    -webkit-user-select: none;
+    -webkit-appearance: none;
+    background-color: $white;
+    background-image: none;
+    color: #262626;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    height: 41px;
+    &:hover {
+      -webkit-box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+      box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+    }
+  }
+
+  .btn-gg-blue {
+    background-color: #4285f4;
+    border: $border-none;
+    color: $white;
+    &:hover {
+      background-color: #4285f4;
+    }
+    .btn-gg-content-wp {
+      border: 1px solid transparent;
+      height: 100%;
+      width: 100%;
+      @media screen and (max-width: 350px) {
+        text-align: left;
+      }
+    }
+    .btn-gg-icon {
+      background-color: $white;
+      -webkit-border-radius: 1px;
+      border-radius: 1px;
+      height: 39px;
+      float: left;
+      padding: 10px;
+      margin-right: 5px;
+      .gg-custom {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .gd-line {
+    padding: 0 41px;
+    .gd-login-line {
+      position: relative;
+      height: 24px;
+      margin-bottom: 15px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -3px;
+        width: 100%;
+        height: 1px;
+        background: #f0f0f0;
+      }
+      span {
+        display: block;
+        width: 35px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        padding: 0;
+        text-align: center;
+        background: $white;
+        color: #a0adbe;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .gd-login-btn {
+    margin-bottom: 20px;
+  }
+
+  .gd-login-btn-group {
+    padding: 0 41px;
+    .user-box {
+      margin-bottom: 23px;
+    }
+    label {
+      color: $black-3;
+      line-height: 1.6;
+      margin-bottom: 3px;
+    }
+    input {
+      min-height: 40px;
+      width: 100%;
+      color: $grey-extradark;
+      outline: none;
+      border: 1px solid #d4dae2;
+      border-radius: 3px;
+      padding: 0px 12px;
+      transition: 0.3s ease-in-out;
+      height: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  .gd-getstarted {
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  .gd-btn-getstarted {
+    height: 40px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .gd-nottext {
+    text-align: right;
+    color: $violet-name;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 4px;
+  }
+
+  .gd-login-confirm {
+    padding: 16px 0 80px;
+    text-align: center;
+    color: $black-3;
+    border: 1px solid #d1d1d1;
+    font-size: 13px;
+    font-weight: 500;
+    a {
+      color: $violet-name;
+      font-weight: 500;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.75;
+      }
+    }
+  }
+
+  .gd-desktop-ver {
+    margin: 48px 0 20px 0;
+    text-align: center;
+    a {
+      font-size: 1em;
+      color: #6f6f6f;
+      text-decoration: none;
+    }
+  }
+
+  .mascot {
+    max-width: 156px;
+    max-height: 121px;
+    margin: 0px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    @include transform(translateX(-50%));
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .main-login {
+      max-width: 70%;
+      .gd-line,
+      .gd-login-btn-group {
+        padding: 0px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 610px) {
+    .main-login {
+      max-width: 90%;
+      .gd-form-v2 {
+        padding: 0px 35px 75px !important;
+      }
+      .gd-login-v2-btn-left {
+        padding-right: 5px;
+      }
+      .gd-login-v2-btn-right {
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.registration-v2 {
+  #recaptcha-wrapper {
+    text-align: center;
+    margin-top: 32px;
+    max-width: 320px;
+  }
+  .g-recaptcha {
+    display: inline-block;
+  }
+  .free-trial {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    @include transform(translateX(-50%));
+    @include centeritem;
+    background-color: $green-default;
+    border-radius: 6px;
+    height: 44px;
+    width: calc(100% - 6px);
+    p {
+      text-align: center;
+      margin-bottom: 0;
+      color: $white;
+    }
+  }
+}
+
+.logo-text-gorilla-v2 {
+  margin-bottom: 100px;
+  margin-top: 60px;
+  img {
+    max-width: 215px;
+  }
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  @media screen and (max-width: 350px) {
+    margin-bottom: 15px;
+  }
+}

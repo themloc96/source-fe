@@ -1,0 +1,254 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Schedules',
+    slug: 'settings-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {schedules: 'schedules'}) %>
+
+    <div class="contents-pages maintables-page container-column setting-schedules">
+		<%- include('_tips') %>
+
+    	<div class="title-header flex-auto">
+    		<span class="fs-18">Schedules</span>
+    		<div class="d-flex align-center">
+    			<div class="cancel px-2">Cancel</div>
+    			<div class="btn btn-main">
+			        Save
+			    </div>
+    		</div>
+		</div>
+		<div class="schedule-upgrade">
+			<div class="mb-4">
+				17 Schedules Used
+				<span class="svg-powerups-purple violet-name ml-5">
+					<%- include ("../../svg/outline/outline-powerups.svg") %>
+					Upgrade Plan
+				</span>
+			</div>
+			<div class="justify-space-between">
+				<div class="list-items nonselect">
+					<div class="check-items">
+		              	<input id="check-0" type="checkbox" value="">
+		              	<div class="item-checkbox">
+							<label for="check-0"> 
+								<span class="txt-ellipsis ml-2">0 items:</span>
+							</label>
+						</div>
+		            </div>
+		            <div class="btn-input ml-13">
+	                    <div class="svg-delete-grey mr-1">
+							<%- include ("../../svg/outline/outline-delete.svg") %>
+						</div>
+                        Delete
+	                </div>
+				</div>
+
+				<div class="btn-input">
+					<span class="mr-1"><%- include ("../../svg/outline/outline-plus-black.svg") %></span>
+					Add Schedule
+				</div>
+			</div>
+		</div>
+
+		<div class="table-title">
+			<div class="rows">
+	            <div class="col-checkbox"></div>
+	            <div class="col-name">Name</div>
+	            <div class="col-nickname pl-2">Nickname</div>
+	            <div class="col-assign pl-2">Assigned to</div>
+	            <div class="col-group pl-2">Group</div>
+	            <div class="col-address pl-2">Start/End Address</div>
+	            <div class="col-job">Jobs Active</div>
+            </div>
+        </div>
+        <div class="table-list scrolls box-auto">
+        	<% for (i = 0; i < 10; i++){ %>
+        	<div class="rows">
+        		<div class="col-checkbox">
+	        		<div class="check-items">
+		              	<input id="check-1" type="checkbox" value="">
+		              	<div class="item-checkbox">
+							<label for="check-1"> </label>
+						</div>
+		            </div>
+	        	</div>
+	            <div class="col-name">
+	            	<div class="txt-ellipsis">Schedule 1</div>
+	            </div>
+	            <div class="col-nickname pl-2">
+	            	<input class="field-input" type="text" name="" placeholder="" value="Mondi">
+	            </div>
+	            <div class="col-assign pl-1">
+					<div class="dropdown dropdown-assign"> 
+						<div onclick="dropdownFunc(this)" class="dropbtn items">
+							<span class="avt-img">
+								<img src="https://unsplash.it/32/32" alt="">
+							</span>
+							<span class="txt-ellipsis">Harinder Mondi</span>
+							<span class="svg-dropup"><%- include ("../../svg/outline/dropdown-up.svg") %></span>
+						</div>
+						<div class="dropdown-menu content-user">
+							<ul class="scrolls">
+								<li class="items">
+									<div class="user-name">
+										<div class="avt-img">
+											<img src="https://unsplash.it/30/30" alt="">
+										</div>
+										<span class="txt-ellipsis">Jacqueline Likoki</span>
+									</div>
+								</li>
+								<li class="items active">
+									<div class="user-name">
+										<div class="avt-img">
+											<img src="https://unsplash.it/30/30" alt="">
+										</div>
+										<span class="txt-ellipsis">Jacqueline Likoki</span>
+									</div>
+								</li>
+								<li class="items">
+									<div class="user-name">
+										<div class="avt-img">
+											<img src="https://unsplash.it/30/30" alt="">
+										</div>
+										<span class="txt-ellipsis">Jacqueline Likoki</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+	            </div>
+	            <div class="col-group pl-2">
+	            	<div class="tags-group dropdown">
+	            		<span class="btn-tags tag-items cursor-pointer">northside</span>
+						<span class="btn-tags tag-items cursor-pointer">eastside</span>
+						<div class="container-column">
+							<div class="tag-list">
+								<div class="scrolls">
+									<div class="tag-items">
+										Greenville
+										<span class="blue-close"></span>
+									</div>
+									<div class="tag-items">
+										Montevideo
+										<span class="blue-close"></span>
+									</div>
+									<div class="tag-items">
+										Perm
+										<span class="blue-close"></span>
+									</div>
+									<div class="tag-items">
+										Rotterdam
+										<span class="blue-close"></span>
+									</div>
+									<input class="add-tags" type="input" placeholder="Tag">
+								</div>
+							</div>
+							<div class="dropdown-menu">
+								<ul class="scrolls">
+									<li class="items">
+										<div class="txt-ellipsis">Tag 1</div>
+									</li>
+									<li class="items">
+										<div class="txt-ellipsis">Tag 2</div>
+									</li>
+									<li class="items active">
+										<div class="txt-ellipsis">Tag 3</div>
+									</li>
+									<li class="items">
+										<div class="txt-ellipsis">Tag 4</div4>
+									</li>
+									<li class="items">
+										<div class="txt-ellipsis">Tag 5</div4>
+									</li>
+								</ul>
+							</div>
+						</div>
+	            	</div>
+	            </div>
+	            <div class="col-address pl-2">
+	            	<div class="start">
+						<%- include ("../../svg/outline/outline-location.svg") %>
+	            		<input class="field-input" type="text" name="" placeholder="" value="924 Robel Locks">
+	            	</div>
+	            	<div class="end">
+						<%- include ("../../svg/outline/outline-location.svg") %>
+	            		<input class="field-input" type="text" name="" placeholder="" value="924 Robel Locks">
+	            	</div>
+	            </div>
+	            <div class="col-job">15</div>
+        	</div>
+        	<% } %>
+        </div>
+
+        <div class="schedules-footer">
+        	<div class="re-assign">Re-Assign</div>
+        	<span class="mt-2 dp-inline-block">In order to delete a schedule it cannot have any active jobs assigned to it. <br>
+        	This process is not reversible.</span>
+
+        	<div class="move-all mt-2">Move all active jobs from</div>
+        	<div class="move-option">
+        		<div class="dropup mr-2">
+					<div onclick="dropdownFunc(this)" class="dropbtn items">
+						<div class="txt-ellipsis">Placeholder</div>
+	
+						<div class="arrow">
+							<%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+						</div>
+					</div>
+					<div class="dropdown-menu">
+						<ul class="scrolls">
+							<li class="items">
+								<div class="txt-ellipsis">Option 1</div>
+							</li>
+							<li class="items">
+								<div class="txt-ellipsis">Option 2</div>
+							</li>
+							<li class="items">
+								<div class="txt-ellipsis">Option 3</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+	            <%- include ("../../svg/outline/outline-arrow-right.svg") %>
+	            <div class="dropup ml-2">
+					<div onclick="dropdownFunc(this)" class="dropbtn items">
+						<div onclick="" class="txt-ellipsis">Placeholder</div>
+	
+						<div class="arrow">
+							<%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+						</div>
+					</div>
+					<div class="dropdown-menu">
+						<ul class="scrolls">
+							<li class="items">
+								<div class="txt-ellipsis">Option 1</div>
+							</li>
+							<li class="items">
+								<div class="txt-ellipsis">Option 2</div>
+							</li>
+							<li class="items">
+								<div class="txt-ellipsis">Option 3</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+	            <div class="btn-input fs-14">
+					Re-Assign
+				</div>
+        	</div>
+        </div>
+    </div>
+
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'settings-v2',
+    root: ''
+}) %>

@@ -1,0 +1,383 @@
+<!-- Sidebar Job Preview -->
+<div class="job-preview"> 
+    <div class="job-preview-header">
+        <a href="#openJobDetails" class="btn-modal btn-open-job hover-grey">
+            <%- include ("../../svg/outline/outline-open.svg") %>
+            <span>Open Job</span>
+        </a>
+        <div class="icon-group">
+            <div class="states relative has-notify notify-btn">
+                <%- include ("../../svg/states-sms.svg") %>
+                <span class="budget">6</span>
+            </div>
+            <div class="col-icon hover-grey">
+                <%- include ("../../svg/outline/outline-collapse-2.svg") %>
+            </div>
+            <div class="col-icon close-btn hover-grey" onclick="closeJobPreview(this)">
+                <%- include ("../../svg/outline/outline-close.svg") %>
+            </div>
+        </div>
+    </div>
+
+    <div class="information">
+        <div class="dropdown dropdown-jobpreview drop-status drop-modified">
+            <div class="dropbtn btn-default btn-job-preview selection confirmed relative">
+                Confirmed
+                <span class="svg-selectbox-white"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+            </div>
+            <div class="dropdown-menu">
+                <div class="scrolls">
+                    <ul>
+                        <li class="item hover-yellow active">
+                            <div class="item-box">
+                                <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                <span class="status text-confirmed">Confirmed</span>
+                            </div>   
+                        </li>
+                        <li class="item hover-yellow">
+                            <div class="item-box">
+                                <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                <span class="status text-unconfirmed">Unconfirmed</span>
+                            </div>   
+                        </li>
+                        <li class="item hover-yellow">
+                            <div class="item-box">
+                                <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                <span class="status text-pending-booking">Pending Booking</span>
+                            </div>   
+                        </li>
+                        <li class="item hover-yellow">
+                            <div class="item-box">
+                                <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                <span class="status text-canceled">Canceled</span>
+                            </div>   
+                        </li>
+                        <li class="item hover-yellow">
+                            <div class="item-box">
+                                <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                <span class="status text-completed">Completed</span>
+                            </div>   
+                        </li>
+                        <li class="item hover-yellow">
+                            <div class="item-box">
+                                <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                <span class="status text-reschedule">Reschedule</span>
+                            </div>   
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="search-emoji relative">
+            <input type="text" class="field-input">
+            <%- include ("../../svg/outline/outline-emoji.svg") %>
+        </div>
+    </div>
+    <div class="wrap-scroll scrolls">
+        <div class="job-calendar">
+            <div class="service-infor">
+                <div class="name-header">
+                    <div class="text font-14 fw-500 service-name">Ant Monthly Service</div>
+                    <div class="col-icon hover-grey">
+                        <%- include ("../../svg/outline/outline-open.svg") %>
+                    </div>
+                </div>
+                <div class="calendar-detail">
+                    <div class="col-icon">
+                        <%- include ("../../svg/outline/outline-calendar.svg") %>
+                    </div>
+                    <div class="datetime-group w-100">
+                        <div class="text fw-500 date">
+                            Wednesday Sep 27th
+                        </div>
+                        <div class="text fw-500">
+                            11:45am - 12:15pm
+                        </div>
+                        <div class="dropdown dropdown-listname relative">
+                            <div class="btn-default btn-listname" id="button" aria-describedby="tooltip">
+                                <div class="text fw-500 display-name">
+                                    <span class="avt-img"><img src="https://unsplash.it/30/30" alt=""></span>
+                                    <span class="active-name">Sakane Miiko</span>
+                                </div>
+                                <span class="svg-dropup"><%- include ("../../svg/outline/dropdown-up.svg") %></span>
+                            </div>
+                            <div class="dropdown-menu list-listname" id="tooltip" role="tooltip">
+                                <div class="scrolls">
+                                    <ul>
+                                        <li class="hover-yellow listname-item">
+                                            <div class="name">
+                                                <span class="avt-img relative">
+                                                    <img src="https://unsplash.it/24/24" alt="">
+                                                    <span class="visibility-hide">
+                                                        <%- include ("../../svg/outline/outline-primary-user.svg") %>
+                                                    </span>
+                                                </span>
+                                                <span class="text-name">Dusya Sigachyova</span>
+                                            </div>
+                                            <div class="btn-group">
+                                                <span class="primary visibility-hide">Primary</span>
+                                                <span class="btn-close-name">
+                                                    <%- include ("../../svg/outline/outline-clear-field.svg") %>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="hover-yellow listname-item primary-active">
+                                            <div class="name">
+                                                <span class="avt-img relative">
+                                                    <img src="https://unsplash.it/30/30" alt="">
+                                                    <%- include ("../../svg/outline/outline-primary-user.svg") %>
+                                                </span>
+                                                <span class="text-name">Ashish Asharaful</span>
+                                            </div>
+                                            <div class="btn-group">
+                                                <span class="primary">Primary</span>
+                                                <span class="btn-close-name">
+                                                    <%- include ("../../svg/outline/outline-clear-field.svg") %>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="hover-yellow listname-item">
+                                            <div class="name">
+                                                <span class="avt-img relative">
+                                                    <img src="https://unsplash.it/32/32" alt="">
+                                                    <span class="visibility-hide">
+                                                        <%- include ("../../svg/outline/outline-primary-user.svg") %>
+                                                    </span>
+                                                </span>
+                                                <span class="text-name">Mbah Enow</span>
+                                            </div>
+                                            <div class="btn-group">
+                                                <span class="primary visibility-hide">Primary</span>
+                                                <span class="btn-close-name">
+                                                    <%- include ("../../svg/outline/outline-clear-field.svg") %>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="hover-yellow listname-item">
+                                            <div class="name">
+                                                <span class="avt-img relative">
+                                                    <img src="https://unsplash.it/30/30" alt="">
+                                                    <span class="visibility-hide">
+                                                        <%- include ("../../svg/outline/outline-primary-user.svg") %>
+                                                    </span>
+                                                </span>
+                                                <span class="text-name">Higashi Mako</span>
+                                            </div>
+                                            <div class="btn-group">
+                                                <span class="primary visibility-hide">Primary</span>
+                                                <span class="btn-close-name">
+                                                    <%- include ("../../svg/outline/outline-clear-field.svg") %>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="hover-yellow listname-item">
+                                            <div class="name">
+                                                <span class="avt-img relative">
+                                                    <img src="https://unsplash.it/30/30" alt="">
+                                                    <span class="visibility-hide">
+                                                        <%- include ("../../svg/outline/outline-primary-user.svg") %>
+                                                    </span>
+                                                </span>
+                                                <span class="text-name">Amelia Cabal</span>
+                                            </div>
+                                            <div class="btn-group">
+                                                <span class="primary visibility-hide">Primary</span>
+                                                <span class="btn-close-name">
+                                                    <%- include ("../../svg/outline/outline-clear-field.svg") %>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="hover-yellow listname-item">
+                                            <div class="name">
+                                                <span class="avt-img relative">
+                                                    <img src="https://unsplash.it/30/30" alt="">
+                                                    <span class="visibility-hide">
+                                                        <%- include ("../../svg/outline/outline-primary-user.svg") %>
+                                                    </span>
+                                                </span>
+                                                <span class="text-name">Nayara Delafuente</span>
+                                            </div>
+                                            <div class="btn-group">
+                                                <span class="primary visibility-hide">Primary</span>
+                                                <span class="btn-close-name">
+                                                    <%- include ("../../svg/outline/outline-clear-field.svg") %>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="hover-yellow listname-item">
+                                            <div class="name">
+                                                <span class="avt-img relative">
+                                                    <img src="https://unsplash.it/50/50" alt="">
+                                                    <span class="visibility-hide">
+                                                        <%- include ("../../svg/outline/outline-primary-user.svg") %>
+                                                    </span>
+                                                </span>
+                                                <span class="text-name">Maria Trofimova</span>
+                                            </div>
+                                            <div class="btn-group">
+                                                <span class="primary visibility-hide">Primary</span>
+                                                <span class="btn-close-name">
+                                                    <%- include ("../../svg/outline/outline-clear-field.svg") %>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="hover-yellow listname-item">
+                                            <div class="name">
+                                                <span class="avt-img relative">
+                                                    <img src="https://unsplash.it/50/50" alt="">
+                                                    <span class="visibility-hide">
+                                                        <%- include ("../../svg/outline/outline-primary-user.svg") %>
+                                                    </span>
+                                                </span>
+                                                <span class="text-name">Maria Trofimova</span>
+                                            </div>
+                                            <div class="btn-group">
+                                                <span class="primary visibility-hide">Primary</span>
+                                                <span class="btn-close-name">
+                                                    <%- include ("../../svg/outline/outline-clear-field.svg") %>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="hover-yellow listname-item">
+                                            <div class="name">
+                                                <span class="avt-img relative">
+                                                    <img src="https://unsplash.it/50/50" alt="">
+                                                    <span class="visibility-hide">
+                                                        <%- include ("../../svg/outline/outline-primary-user.svg") %>
+                                                    </span>
+                                                </span>
+                                                <span class="text-name">Maria Trofimova</span>
+                                            </div>
+                                            <div class="btn-group">
+                                                <span class="primary visibility-hide">Primary</span>
+                                                <span class="btn-close-name">
+                                                    <%- include ("../../svg/outline/outline-clear-field.svg") %>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="list-infor border-top">
+            <div class="customer-infor">
+                <div class="rows">
+                    <div class="customer-name cursor-pointer">
+                        <span class="avt">AB</span>
+                        <span class="text color-violet fw-500 w-100">Nout Golstein</span>
+                    </div>
+                    <div class="col-icon hover-grey"><%- include ("../../svg/outline/outline-open.svg") %></div>  
+                </div>                                        
+
+                <div class="customer-contact">
+                    <span class="email text color-grey w-100 dp-block">Raven_Frami@hotmail.com</span>
+                    <span class="text color-grey w-100 dp-block"> 
+                        1-495-433-0300
+                        <span class="text color-blur label-home">Home</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="rows">
+                    <span class="col-icon">
+                        <%- include ("../../svg/outline/outline-location.svg") %>
+                    </span>
+                    <span class="text fw-500 w-100">Home</span>
+                    <div class="col-icon hover-grey">
+                        <%- include ("../../svg/outline/outline-gear.svg") %>
+                    </div>
+                </div>
+                <div class="customer-contact">
+                    <div class="text color-violet">900 Lucerne Terrace, Orlando, FL 32806</div>
+                    <div class="detail-note">
+                        <div class="description text">Ut reiciendis accusamus necessitatibu asa asdfas Ut reiciendis accusamus necessitatibu asa asdfas</div>
+                        <div class="col-icon see-more pointer">
+                            <%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="rows">
+                    <span class="col-icon">
+                        <%- include ("../../svg/outline/outline-bell.svg") %>
+                    </span>
+                    <div class="text fw-500 w-100">Messaging Preferences</div>
+                    <div class="col-icon hover-grey">
+                        <a class="btn-modal dp-block" href="#messagingPreferences">
+                            <%- include ("../../svg/outline/outline-gear.svg") %>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="rows">
+                    <span class="col-icon svg-note-orange">
+                        <%- include ("../../svg/outline/outline-note.svg") %>
+                    </span>
+                    <div class="text color-orange fw-500 w-100">Nout’s Top Note</div>
+                </div>
+                <div class="customer-contact detail-note">
+                    <div class="description text color-grey">Ut reiciendis accusamus necessitatibu asa asdfas Ut reiciendis accusamus necessitatibu asa asdfas</div>
+                    <div class="col-icon pointer see-more">
+                        <%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+                    </div>
+                </div>
+            </div>                
+            
+            <div class="item">
+                <div class="rows">
+                    <span class="col-icon">
+                        <%- include ("../../svg/outline/outline-note.svg") %>
+                    </span>
+                    <div class="text fw-500 w-100">Job Note</div>
+                </div>
+                <div class="customer-contact detail-note">
+                    <div class="description text color-grey">Ut reiciendis accusamus necessitatibu asa asdfas Ut reiciendis accusamus necessitatibu asa asdfas</div>
+                    <div class="col-icon pointer see-more">
+                        <%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="invoice border-top">
+            <div class="text font-14 fw-500">Invoice</div>
+            <div class="rows invoice-service">
+                <span class="text text-ellipsis">Ant Monthly Service Ant Monthly Service</span>
+                <span class="text fw-500">$100.50</span>
+            </div>
+            <div class="rows mb-2">
+                <div class="rows w-100">
+                    <span class="text total">Total</span>
+                    <span class="text fw-500 discount">2%</span>
+                </div>
+                <span class="text fw-500">$100.50</span>
+            </div>
+            <div class="rows mb-2">
+                <span class="text">Balance</span>
+                <span class="text font-14 fw-600">$100.50</span>
+            </div>
+            <div class="border-top total-balance">
+                <div class="col-icon">
+                    <%- include ("../../svg/outline/outline-wallet.svg") %>
+                </div>
+                <div class="text color-blur w-100">
+                    Balance
+                </div>
+                <div class="text fw-500">
+                    $15.00
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Sidebar Job Preview -->

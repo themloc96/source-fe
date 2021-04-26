@@ -1,0 +1,330 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+	<%- include('_sidebar-details', {accountCustomer: 'accountCustomer'}) %>
+
+	<div class="contents-pages modal-container customer-pages profile-page container-column">
+		<div class="title-header flex-auto">
+    		<span class="fs-18">Customer Profile</span>
+    		<div class="w-button">
+    			<div class="cancel px-2">Cancel</div>
+    			<div class="btn btn-main">
+			        Save
+			    </div>
+    		</div>
+        </div>
+        
+    	<div class="scrolls">
+            <div class="page-wrapper page-accounts">
+				<div class="boxs has-form">
+                    <div class="rows d-flex justify-space-between fs-13">
+                        <div class="col-name first-field">
+                            <span class="txt relative">
+								<span class="dot"></span>
+								First Name
+							</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                        <div class="col-name second-field">
+                            <span class="txt">Last Name</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+					</div>
+					<div class="rows d-flex justify-space-between fs-13">
+                        <div class="col">
+                            <span class="txt relative txt-account">
+								<span class="dot"></span>
+								Account#
+								<div class="absolute">
+									<div class="tooltip">
+										<%- include ("../../svg/outline/outline-question.svg") %>
+										<span class="tooltiptext top"> Tooltip </span>
+									</div>
+								</div>
+							</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                        <div class="col">
+                            <span class="txt d-flex justify-space-between">
+								QuickBooks ID
+								<div class="modal-search-qb">
+									<div href="#searchQB" class="btn-modal btn-searchqb">
+										Search
+									</div>
+									<div id="searchQB" class="modal container-modal">
+										<div class="modal__overlay bg-fixed"></div>
+										<div class="modal__container">	
+											<div class="header-modal">
+												<span>Search QB ID</span>
+											</div>
+					
+											<div class="body-modal">
+												<div class="form-notfound">
+													GorillaDesk tried to find a matching QuickBooks account but a match was not found.
+												</div>
+											</div>
+					
+											<div class="footer-modal btn-close">
+												<span class="">Close</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+					</div>
+					<div class="rows d-flex justify-space-between fs-13">
+                        <div class="col">
+                            <span class="txt">
+								Company
+							</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                        <div class="col">
+                            <span class="txt">
+								Email
+							</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                    </div>
+					<div class="lines"></div>
+
+					<div class="rows d-flex justify-space-between">
+                        <div class="col-phone first-field">
+                            <span class="txt">
+								Phone
+							</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                        <div class="col-phonetype second-field">
+                            <span class="txt">Phone Type</span>
+							<div class="dropdown">
+								<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+									Select Source
+									<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+								</div>
+								<div class="dropdown-menu">
+									<ul>
+										<li class="items">
+											Select Source
+										</li>
+								  </ul>
+								</div>
+						  	</div>
+						</div>
+						<div class="phone-add">
+							<div class="txt">&nbsp;</div>
+							<div class="remove-phone">
+								Remove
+								<%- include ("../../svg/outline/outline-delete.svg") %>
+							</div>
+						</div>
+					</div>
+					<div class="rows d-flex justify-space-between">
+                        <div class="col-phone first-field">
+                            <span class="txt">
+								Phone
+							</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                        <div class="col-phonetype second-field">
+                            <span class="txt">Phone Type</span>
+                            <div class="dropdown">
+								<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+									Select Source
+									<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+								</div>
+								<div class="dropdown-menu">
+									<ul>
+										<li class="items">
+											Select Source
+										</li>
+								  </ul>
+								</div>
+						  	</div>
+						</div>
+						<div class="phone-add">
+							<div class="txt">&nbsp;</div>
+							<div class="btn-default has-icon">
+								<%- include ("../../svg/outline/outline-plus-black.svg") %>
+								Add Phone
+							</div>
+						</div>
+					</div>
+					<div class="lines"></div>
+
+					<div class="rows fs-13">
+						<span class="txt">
+							Source
+						</span>
+						<div class="dropdown">
+							<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+								How did you hear about us?
+								<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+							</div>
+							<div class="dropdown-menu">
+								<ul>
+									<li class="items">
+										How did you hear about us?
+									</li>
+									<li class="items">
+										How did you hear about us? 2
+									</li>
+							  </ul>
+							</div>
+					  	</div>
+					</div>
+					<div class="rows fs-13">
+						<span class="txt">
+							Tags
+						</span>
+						<div class="group-tags">
+							<input class="field-input" type="text" name="" placeholder="">
+							<div class="tags">
+								<div class="its-tags">
+									Perm
+									<span class="remove"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+								</div>
+								<div class="its-tags">
+									Rotterdam
+									<span class="remove"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lines"></div>
+
+					<div class="rows hide-inv fs-13 black-4">
+						<div class="check-items">
+							<input id="check-customer" type="checkbox" value="" checked="">
+							<div class="item-checkbox">
+								<label for="check-customer"></label>
+							</div>
+						</div>
+						Hide the total account balance on invoices
+					</div>
+				</div>
+
+				<div class="boxs box-profile">
+					<div class="header">
+						<span>Payment Methods</span>
+						<div class="dropdown dropdown-items dropdown-addmethod">
+							<div class="btn-addmethod btn-default has-icon m-0">
+								<%- include ("../../svg/outline/outline-plus-black.svg") %>
+							</div>
+							<div class="dropdown-menu">
+								<ul>
+									<li>
+										<div href="#addStripe" class="items has-icon btn-modal">
+											<%- include ("../../svg/outline/outline-stripe.svg") %>
+											Add Credit Card in Stripe
+										</div>
+									</li>
+									<li>
+										<div class="items has-icon">
+											<%- include ("../../svg/outline/outline-square.svg") %>
+											Add Credit Card in Square
+										</div>
+									</li>
+									<li>
+										<div href="#addBank" class="items has-icon btn-modal">
+											<%- include ("../../svg/outline/outline-bank.svg") %>
+											Add Bank Account
+										</div>
+									</li>
+									<li class="line"></li>
+									<li>
+										<div class="items has-icon">
+											<%- include ("../../svg/outline/outline-mail.svg") %>
+											Email Credit Card Invitation
+										</div>
+									</li>
+									<li>
+										<div class="items has-icon">
+											<%- include ("../../svg/outline/outline-mail.svg") %>
+											Email ACH Invitaion
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="content border-top-border-color-grey">
+						<div class="info-card">
+							<div class="card-number">
+								Stripe
+								<span class="number">•••• 7268</span>
+								<span class="date">05/16</span>
+							</div>
+						</div>
+						<div class="info-card">
+							<div class="card-number">
+								Bank Of America
+								<span class="number">•••• 7268</span>
+								<span class="date">05/16</span>
+							</div>
+						</div>
+						<div class="info-card">
+							<div class="card-number">
+								Square
+								<span class="number">•••• 7268</span>
+								<span class="date">05/16</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="boxs box-profile box-access">
+					<div class="header">
+						<span>Portal Access</span>
+					</div>
+					<div class="content pt-4">
+						<div class="rows">
+							<span class="fs-13">
+								Update the account login credentials.
+							</span>
+							<div class="btn-default">
+								Edit Login
+							</div>
+						</div>
+						<div class="rows">
+							<span class="fs-13">
+								Send a reset password email to the customer.
+							</span>
+							<div href="#previewEmail" class="btn-modal btn-default">
+								Email Preview
+							</div>
+						</div>
+						<div class="rows relative">
+							<span class="fs-13">
+								Require a password reset on the next log in.
+							</span>
+							<div class="switch large">
+								<input id="toggle-samelocation" class="toggle toggle-round" type="checkbox" checked="">
+								<label for="toggle-samelocation">
+									<span class="yesno fs-13"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+        
+	</div>
+</div>			
+
+<%- include('../calendar/_modal') %>
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

@@ -1,0 +1,467 @@
+<% const ob_user = {
+    items1: {
+        id: 1,
+        name: 'Search Customer Profiles',
+        desc: 'Occaecati omnis reiciendis nam omnis.'
+    },
+    items2: {
+        id: 2,
+        name: 'Add Customers',
+        desc: 'Natus laboriosam pariatur nulla aut quas alias aliquid. Animi consequatur tempora quasi dolores hic voluptas iure quo sed. Eaque doloribus placeat. Recusandae ut et sequi iste nihil ut.'
+    },
+    items3: {
+        id: 3,
+        name: 'Edit Customers',
+        desc: 'Edit Customers'
+    },
+    items4: {
+        id: 4,
+        name: 'Add Jobs',
+        desc: 'Dolorum error ut dolores voluptate ullam quia. Excepturi quod repudiandae repellat sit sunt quisquam. Fugit quia dicta ad quidem praesentium dolorum dignissimos aliquam. Quis quis magni saepe iusto.'
+    },
+    items5: {
+        id: 5,
+        name: 'Edit Existing Jobs',
+        desc: 'Illum ipsum autem est eligendi.'
+    },
+    items6: {
+        id: 6,
+        name: 'Delete Jobs',
+        desc: 'Aperiam aut maxime temporibus corporis. Sint ut laboriosam repellat. Odio omnis esse beatae quo quod aut natus.'
+    },
+    items7: {
+        id: 7,
+        name: 'Move All Recurring',
+        desc: 'Dolorum error ut dolores voluptate ullam quia. Excepturi quod repudiandae repellat sit sunt quisquam. Fugit quia dicta ad quidem praesentium dolorum dignissimos aliquam. Quis quis magni saepe iusto.'
+    },
+    items8: {
+        id: 8,
+        name: 'Stripe Card',
+        desc: 'Illum ipsum autem est eligendi.'
+    },
+    items9: {
+        id: 9,
+        name: 'Weather Card',
+        desc: 'Delete Comments'
+    },
+}
+
+const ob_desktopmobile = {
+    items1: {
+        id: 1,
+        name: 'Edit or Delete Notes',
+        desc: 'Occaecati omnis reiciendis nam omnis.'
+    },
+    items2: {
+        id: 2,
+        name: 'Delete Comments',
+        desc: 'Natus laboriosam pariatur nulla aut quas alias aliquid. Animi consequatur tempora quasi dolores hic voluptas iure quo sed. Eaque doloribus placeat. Recusandae ut et sequi iste nihil ut.'
+    },
+    items3: {
+        id: 3,
+        name: 'Edit or Delete Top Notes',
+        desc: 'Delete Comments'
+    },
+    items4: {
+        id: 4,
+        name: 'Edit or Delete Tasks',
+        desc: 'Dolorum error ut dolores voluptate ullam quia. Excepturi quod repudiandae repellat sit sunt quisquam. Fugit quia dicta ad quidem praesentium dolorum dignissimos aliquam. Quis quis magni saepe iusto.'
+    },
+    items5: {
+        id: 5,
+        name: 'Edit Check In/Check Out Time',
+        desc: 'Illum ipsum autem est eligendi.'
+    },
+    items6: {
+        id: 6,
+        name: 'Invoice Card',
+        desc: 'Aperiam aut maxime temporibus corporis. Sint ut laboriosam repellat. Odio omnis esse beatae quo quod aut natus.'
+    },
+}
+
+const ob_notifi = {
+    items1: {
+        id: 1,
+        name: 'E-Signed Documents',
+        desc: 'Occaecati omnis reiciendis nam omnis.'
+    },
+    items2: {
+        id: 2,
+        name: 'E-Signed Estimate',
+        desc: 'Natus laboriosam pariatur nulla aut quas alias aliquid. Animi consequatur tempora quasi dolores hic voluptas iure quo sed. Eaque doloribus placeat. Recusandae ut et sequi iste nihil ut.'
+    },
+    items3: {
+        id: 3,
+        name: 'E-Signed Invoice',
+        desc: 'Delete Comments'
+    },
+    items4: {
+        id: 4,
+        name: 'Job Confirmations',
+        desc: 'Dolorum error ut dolores voluptate ullam quia. Excepturi quod repudiandae repellat sit sunt quisquam. Fugit quia dicta ad quidem praesentium dolorum dignissimos aliquam. Quis quis magni saepe iusto.'
+    },
+    items5: {
+        id: 5,
+        name: 'Job Reschedules',
+        desc: 'Illum ipsum autem est eligendi.'
+    },
+    items6: {
+        id: 6,
+        name: 'Online Payments',
+        desc: 'Aperiam aut maxime temporibus corporis. Sint ut laboriosam repellat. Odio omnis esse beatae quo quod aut natus.'
+    },
+    items7: {
+        id: 7,
+        name: 'Reviews Notification',
+        desc: 'Dolorum error ut dolores voluptate ullam quia. Excepturi quod repudiandae repellat sit sunt quisquam. Fugit quia dicta ad quidem praesentium dolorum dignissimos aliquam. Quis quis magni saepe iusto.'
+    },
+    items8: {
+        id: 8,
+        name: 'Subscription Notification',
+        desc: 'Illum ipsum autem est eligendi.'
+    },
+    items9: {
+        id: 9,
+        name: 'Online Booking Notofocation',
+        desc: 'Delete Comments'
+    },
+}
+%>
+
+<%- include('../../partials/_head', {
+    title: 'Settings Users',
+    slug: 'users-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {users: 'users'}) %>
+
+    <div class="contents-pages container-setting-user d-flex users-v2">
+
+        <div class="set-user-left container-column">
+            <div class="header-title flex-auto">
+                <h2>Users</h2>
+                <div class="w-button">
+                    <div class="btn btn-main has-plus svg-plus white">
+                        <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                        <span>Add User</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-sidebar-select-user box-auto">
+                <div class="scrolls">
+                    <ul>
+                        <li class="container-delete-all">
+                            <div class="w-delete-all d-flex align-center">
+                                <div class="check-items">
+                                    <input id="check-user-all" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-user-all"> 
+                                            <span class="txt-ellipsis">0 items: </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="item-delete border-custom ml-2">
+                                    <div class="svg-delete-grey">
+                                        <%- include ("../../svg/outline/outline-delete.svg") %>
+                                    </div>
+                                    <span class="ml-1">Delete</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="selected">
+                            <div class="items-content">
+                                <div class="check-items">
+                                    <input class="check-all purple" id="check-user-0" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-user-0"></label>
+                                    </div>
+                                </div>
+                                <div class="avatar">
+                                    <a href="/pages/settings/users-documents.html">
+                                        <img src="https://unsplash.it/32/32" alt="">
+                                    </a>
+                                </div>
+                                <div class="w-name">
+                                    <a href="/pages/settings/users-documents.html">
+                                        <span> Alicia Stanger </span>
+                                        <p> Technician </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="wrap-date">
+                                <p>13 May 2003</p>
+                                <p>Schedule 1</p>
+                            </div>
+                            
+                        </li>
+                        <% for (let g = 1; g < 60;  g++ ) { %>
+                        <li>
+                            <div class="items-content">
+                                <div class="check-items">
+                                    <input class="check-all purple" id="check-user-<%=g%>" type="checkbox" value="">
+                                    <label for="check-user-<%=g%>"></label>
+                                </div>
+                                <div class="avatar">
+                                    <a href="/pages/settings/users-documents.html">
+                                        <img src="https://unsplash.it/32/32" alt="">
+                                    </a>
+                                </div>
+                                <div class="w-name">
+                                    <a href="/pages/settings/users-documents.html">
+                                        <span> Alicia Stanger </span>
+                                        <p> Technician </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="wrap-date">
+                                <p>13 May 2003</p>
+                                <p>Schedule 1</p>
+                            </div>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>   
+
+        <div class="set-user-right container-column">
+            <div class="header-title flex-auto">
+                <h2>User </h2>
+                <div class="w-button">
+                    <div class="cancel"> Cancel </div>
+                    <div class="btn btn-main">
+                        <span>Save</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scrolls box-auto">
+                <div class="set-user-wrap relative">
+                    <div class="w-user-infomations">
+                        <div class="header d-flex">
+                            <div class="avatar">
+                                <img src="https://unsplash.it/80/80" alt="">
+                            </div> 
+                            <div class="btn-edit-photo btn-default has-icon">
+                                <%- include ("../../svg/outline/outline-pen.svg") %>
+                                Edit Photo
+                            </div>  
+                            <div class="btn-remove svg-delete-grey">
+                                <%- include ("../../svg/outline/outline-delete.svg") %>
+                            </div>  
+                            <div class="modal-choose-avatar">
+                                <div class="content-modal-choose-avatar">
+                                    <div class="images-list">
+                                        <ul>
+                                            <li>
+                                                <img src="https://unsplash.it/56/56" alt="">
+                                            </li>
+                                            <li class="selected">
+                                                <img src="https://unsplash.it/56/56" alt="">
+                                            </li>
+                                            <% for (let g = 1; g < 9;  g++ ) { %>
+                                                <li>
+                                                    <img src="https://unsplash.it/56/56" alt="">
+                                                </li>
+                                            <% } %>
+                                        </ul>
+                                    </div>
+                                    <div class="btn btn-main btn-choose-a-file">
+                                        <span>Choose a File</span>
+                                    </div>
+                                    <p> 
+                                        Recommended size is 300x300 pixels <br/>
+                                        The maximum size is per file is 2MB 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="w-input">
+                                <span class="txt">First Name</span>
+                                <input class="field-input" type="text" name="" placeholder="Amarachi">
+                            </div>
+                            <div class="w-input">
+                                <span class="txt">Last Name</span>
+                                <input  class="field-input" type="text" name="" id="" placeholder="Amarachi">
+                            </div>
+                            <div class="w-input">
+                                <span class="txt">User Name</span>
+                                <input class="field-input" type="text" name="" id="" placeholder="Amarachi">
+                            </div>
+                            <div class="w-input">
+                                <span class="txt">License</span>
+                                <div class="relative">
+                                    <input class="field-input" type="text" name="" placeholder="AE0000699304">
+                                    <div class="w-tooltip absolute">
+                                        <div class="tooltip">
+                                            <%- include ("../../svg/outline/outline-question.svg") %>
+                                            <span class="tooltiptext top"> Tooltip </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-100">
+                                <div class="w-input">
+                                    <span class="txt">Email</span>
+                                    <input class="field-input" type="text" name="" placeholder="amber.diaz45@example.com">
+                                </div> 
+                            </div>
+                            <div class="w-input">
+                                <span class="txt">New Password</span>
+                                <input class="field-input" type="text" name="" placeholder="Amarachi">
+                            </div>
+                            <div class="w-input">
+                                <span class="txt">Confirm Password</span> 
+                                <input  class="field-input" type="text" name="" id="" placeholder="AE0000699304">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="w-user-infomations-dropdown">
+                        <div class="header-dropdown d-flex justify-space-between">
+                            <h3> Admin Permissions </h3>
+                            <div class="w-right d-flex">
+                                <div class="switch large">
+                                    <input id="toggle-user-0" class="toggle toggle-round" type="checkbox">
+                                    <label for="toggle-user-0">
+                                        <span class="onoff"></span>
+                                    </label>
+                                </div>
+                                <div class="btn-dropdown accordion-item-button">
+                                    <%- include ("../../svg/outline/outline-chavron-up.svg") %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-user-infomations">
+                            Content Admin Permissions
+                        </div>
+                    </div>
+            
+                    <div class="w-user-infomations-dropdown">
+                        <div class="header-dropdown d-flex justify-space-between active">
+                            <h3> Technician Permissions </h3>
+                            <div class="w-right d-flex">
+                                <div class="switch large">
+                                    <input id="toggle-user-technician" class="toggle toggle-round" type="checkbox" checked>
+                                    <label for="toggle-user-technician">
+                                        <span class="onoff"></span>
+                                    </label>
+                                </div>
+                                <div class="btn-dropdown accordion-item-button">
+                                    <%- include ("../../svg/outline/outline-chavron-up.svg") %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-user-infomations active">
+                            <div class="w-check-options">
+                                <div class="title"> Tabs </div>
+                                <div class="check-items sticket has-bg">
+                                    <input class="check-all" id="check-tabs-0" type="checkbox" value="">
+                                    <label for="check-tabs-0"> 
+                                        Customers 
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="check-items sticket has-bg">
+                                    <input class="check-all" id="check-tabs-reports" type="checkbox" value="">
+                                    <label for="check-tabs-reports"> 
+                                        Reports 
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="check-items sticket has-bg">
+                                    <input class="check-all" id="check-tabs-settings" type="checkbox" value="">
+                                    <label for="check-tabs-settings"> 
+                                        Settings 
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="w-check-options">
+                                <div class="title"> Devices </div>
+                                <div class="check-items sticket has-bg">
+                                    <input class="check-all" id="check-tabs-desktop" type="checkbox" value="">
+                                    <label for="check-tabs-desktop"> 
+                                        Desktop 
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="check-items sticket has-bg">
+                                    <input class="check-all" id="check-tabs-mobile" type="checkbox" value="">
+                                    <label for="check-tabs-mobile"> 
+                                        Mobile 
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="w-check-options-custom">
+                                <div class="w-list-custom">
+                                    <div class="title"> Mobile </div>
+                                    <ul>
+                                        <% for(let items in ob_user) { %>
+                                            <li>
+                                                <p class="name">  <%= ob_user[items].name %> </p>
+                                                <p> <%= ob_user[items].desc %> </p>
+                                                <div class="switch large">
+                                                    <input id="toggle-user-custom-<%=ob_user[items].id%>" class="toggle toggle-round" type="checkbox">
+                                                    <label for="toggle-user-custom-<%=ob_user[items].id%>"></label>
+                                                </div>
+                                            </li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            
+                                <div class="w-list-custom">
+                                    <div class="title"> Desktop & Mobile </div>
+                                    <ul>
+                                        <% for(let items in ob_desktopmobile) { %>
+                                            <li>
+                                                <p class="name">  <%= ob_desktopmobile[items].name %> </p>
+                                                <p> <%= ob_desktopmobile[items].desc %> </p>
+                                                <div class="switch large">
+                                                    <input id="toggle-user-customde-<%=ob_desktopmobile[items].id%>" class="toggle toggle-round" type="checkbox">
+                                                    <label for="toggle-user-customde-<%=ob_desktopmobile[items].id%>"></label>
+                                                </div>
+                                            </li>
+                                        <% } %>
+                                        
+                                    </ul>
+                                </div>
+            
+                                <div class="w-list-custom">
+                                    <div class="title"> Notifications </div>
+                                    <ul>
+                                        <% for(let items in ob_notifi) { %>
+                                            <li>
+                                                <p class="name">  <%= ob_notifi[items].name %> </p>
+                                                <p> <%= ob_notifi[items].desc %> </p>
+                                                <div class="switch large">
+                                                    <input id="toggle-user-notifi-<%=ob_notifi[items].id%>" class="toggle toggle-round" type="checkbox">
+                                                    <label for="toggle-user-notifi-<%=ob_notifi[items].id%>"></label>
+                                                </div>
+                                            </li>
+                                        <% } %>
+                                        
+                                    </ul>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'users-v2',
+    root: ''
+}) %>

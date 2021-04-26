@@ -1,0 +1,433 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Profile',
+    slug: 'settings-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {profile: 'profile'}) %>
+
+    <div class="contents-pages profile container-column">
+    	<div class="title-header flex-auto">
+    		<span class="fs-18">Profile</span>
+    		<div class="w-button">
+    			<div class="cancel px-2">Cancel</div>
+    			<div class="btn btn-main">
+			        Save
+			    </div>
+    		</div>
+		</div>
+    	<div class="scrolls box-auto">
+            <div class="setting-wrap page-wrapper has-form">
+                <div class="boxs">
+                    <div class="logo">
+                        <img src="/images/logo_company.png" alt="">
+                    </div>
+                    <div class="d-flex align-center mt-4">
+                        <div class="btn-uplogo black-3 fw-500">Upload Logo</div>
+                        <span class="remove-logo d-flex ml-1">
+                            <%- include ("../../svg/outline/outline-delete.svg") %>
+                        </span>
+                    </div>
+                </div>
+                <div class="boxs fs-13">
+                    <div class="rows">
+                        <span class="txt">Company Name</span>
+                        <input class="field-input" type="text" name="" placeholder="Placeholder">
+                    </div>
+                    <div class="rows d-flex justify-space-between">
+                        <div class="col">
+                            <span class="txt">Business License</span>
+                            <input class="field-input error" type="text" name="" placeholder="" value="Wrong Value">
+                            <span class="dp-inline-block txt-incorrect">
+                                <%- include ("../../svg/outline/error-icon.svg") %>
+                                Incorrect email address
+                            </span>
+                        </div>
+                        <div class="col">
+                            <span class="txt">Industry</span>
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                    Placeholder
+                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li class="items">
+                                            Placeholder
+                                        </li>
+                                        <li class="items">
+                                            Placeholder
+                                        </li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+
+                    <div class="rows d-flex justify-space-between">
+                        <div class="col">
+                            <span class="txt">Country</span>
+                            <input class="field-input disable" type="text" name="" placeholder="Placeholder">
+                        </div>
+                        <div class="col">
+                            <span class="txt">Timezone</span>
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                    Placeholder
+                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li class="items">
+                                            Placeholder
+                                        </li>
+                                        <li class="items">
+                                            Placeholder
+                                        </li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rows d-flex justify-space-between">
+                        <div class="col">
+                            <span class="txt">Currency</span>
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                    Placeholder
+                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li class="items">
+                                            Placeholder
+                                        </li>
+                                        <li class="items">
+                                            Placeholder
+                                        </li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <span class="txt">Date Format</span>
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                    Placeholder
+                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li class="items">
+                                            Placeholder
+                                        </li>
+                                        <li class="items">
+                                            Placeholder
+                                        </li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+
+                    <div class="rows">
+                        <span class="txt">Email</span>
+                        <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        <span class="notes fs-12">This is the email your customers will receive when you send an invoice.</span>
+                    </div>
+                    <div class="rows">
+                        <span class="txt">Address</span>
+                        <input class="field-input" type="text" name="" placeholder="Placeholder">
+                    </div>
+                    <div class="rows d-flex justify-space-between">
+                        <div class="col">
+                            <span class="txt">City</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                        <div class="col-st">
+                            <span class="txt">State</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                        <div class="col-zip">
+                            <span class="txt">Zip</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <span class="txt">Website</span>
+                        <input class="field-input" type="text" name="" placeholder="Placeholder">
+                    </div>
+                    <div class="rows d-flex justify-space-between">
+                        <div class="col">
+                            <span class="txt">Phone</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                        <div class="col">
+                            <span class="txt">Fax</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                    </div>
+                    <div class="line"></div>
+
+                    <div class="rows">
+                        <span class="txt">Operating Hours</span>
+                        <div class="hours-opera">
+                            <span class="grey-extrlight mr-1">from</span>
+                            <div class="field-input wrapper-choosetime">
+                                <div class="from-time">
+                                    <div class="dropup">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            <span>01</span>
+                                            <span class="time-text">h</span>
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <div class="scrolls">
+                                                <ul>
+                                                    <li>
+                                                        <div class="items">01</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">02</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">03</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">04</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">05</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">06</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">07</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">08</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">09</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">10</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">11</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">12</div>
+                                                    </li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="from-time">
+                                    <div class="dropup">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            <span>01</span>
+                                            <span class="time-text">m</span>
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <div class="scrolls">
+                                                <ul>
+                                                    <li>
+                                                        <div class="items">01</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">02</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">03</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">04</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">05</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">06</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">07</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">08</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">09</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">10</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">11</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">12</div>
+                                                    </li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs">
+                                    <div class="btn-item m-0">
+                                        <button class="tab-items" type="button">
+                                            AM
+                                        </button>
+                                        <button class="tab-items active-tab-selector" type="button">
+                                            PM
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hours-opera">
+                            <span class="grey-extrlight mr-1">to</span>
+                            <div class="field-input wrapper-choosetime">
+                                <div class="from-time">
+                                    <div class="dropup">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            <span>01</span>
+                                            <span class="time-text">h</span>
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <div class="scrolls">
+                                                <ul>
+                                                    <li>
+                                                        <div class="items">01</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">02</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">03</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">04</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">05</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">06</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">07</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">08</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">09</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">10</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">11</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">12</div>
+                                                    </li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="from-time">
+                                    <div class="dropup">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            <span>01</span>
+                                            <span class="time-text">m</span>
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <div class="scrolls">
+                                                <ul>
+                                                    <li>
+                                                        <div class="items">01</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">02</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">03</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">04</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">05</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">06</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">07</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">08</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">09</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">10</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">11</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="items">12</div>
+                                                    </li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs">
+                                    <div class="btn-item m-0">
+                                        <button class="tab-items" type="button">
+                                            AM
+                                        </button>
+                                        <button class="tab-items active-tab-selector" type="button">
+                                            PM
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rows">
+                        <div class="col">
+                            <span class="txt">Temperature</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'settings-v2',
+    root: ''
+}) %>

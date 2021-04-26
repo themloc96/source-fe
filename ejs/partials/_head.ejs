@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Cache-control" content="max-age=31536000">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="description" content=""/>
+    <link rel="icon" href="<%= root; %>/images/favicon.png" type="image/png"/>
+    <link rel="shortcut icon" href="<%= root; %>/images/favicon.png" />
+    <title><%= title; %></title>
+    <link type="text/css" rel="stylesheet" href="../../css/common.css"/>
+
+    <% if (slug === 'splash') %>
+    <% if (slug === 'index') %>
+    <% if (slug === 'forgot-v2' || slug === 'login-v2' || slug === 'registration-v2' || slug === 'reset-v2') {  %>
+      <link type="text/css" rel="stylesheet" href="../../css/pages/auth.css" />
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+    <% } %>
+    <% if (slug === 'report-v2' || slug === 'commision-v2') {  %>
+      <link type="text/css" rel="stylesheet" href="../../css/pages/report.css" />
+    <% } %>
+    <% if (slug === 'review-v2') {  %>
+      <link type="text/css" rel="stylesheet" href="../../css/pages/reviews.css" />
+    <% } %>
+    <% if (slug === 'settings-v2' || slug === 'users-v2' || slug === 'users-documents-v2' || slug=== 'payment-methods-v2' || slug=== 'title-v2' || slug=== 'invoice-v2' || slug=== 'estimate-v2' || slug=== 'workorder-v2' || slug=== 'service-edit-v2' || slug=== 'service-materials-v2' || slug=== 'service-invoice-v2' || slug=== 'service-estimate-v2' || slug=== 'system-email-template-v2' || slug=== 'system-custom-edit-v2' || slug=== 'setting-broadcast-v2' ) {  %>
+      <link type="text/css" rel="stylesheet" href="../../css/pages/settings.css" />
+    <% } %>
+
+    <% if (slug === 'customers-v2') {  %>
+      <link type="text/css" rel="stylesheet" href="../../css/pages/customer.css" />
+      <!-- Mapbox -->
+      <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet" />
+      <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+    <% } %>
+    
+    <% if (slug === 'calendar') {  %>
+      <link type="text/css" rel="stylesheet" href="../../css/pages/calendar.css" />
+      <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css" />
+      <!-- Mapbox -->
+      <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet" />
+      <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+    <% } %>
+
+    <% if (slug === 'drip-campaigns') {  %>
+      <link type="text/css" rel="stylesheet" href="../../css/pages/drip.css" />
+    <% } %>
+  </head>
+
+  <body>
+    <div class="<% if (slug === 'calendar' || slug === 'index' || slug === 'forgot-v2' || slug === 'login-v2' || slug === 'registration-v2' || slug === 'reset-v2' || slug ==='report-v2' || slug ==='review-v2' || slug ==='commision-v2' || slug ==='settings-v2' || slug ==='title-v2' || slug ==='payment-methods-v2' || slug ==='users-v2' || slug ==='users-documents-v2' || slug ==='invoice-v2' || slug ==='estimate-v2' || slug ==='workorder-v2' || slug ==='service-edit-v2' || slug ==='service-materials-v2' || slug ==='service-invoice-v2' || slug ==='service-estimate-v2' || slug ==='system-email-template-v2' || slug ==='system-custom-edit-v2' || slug ==='setting-broadcast-v2' || slug ==='customers-v2' || slug === 'job-details' || slug === 'drip-campaigns'){ %>gorilladesk<% } %>
+      <% if (slug === 'calendar') { %>has-trial-bar<% } %>
+      <% if (slug === 'splash') { %>splash<% } %>
+      <% if (slug === 'drip-campaigns') { %>c-drip<% } %>"> 

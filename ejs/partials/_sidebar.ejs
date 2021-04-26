@@ -1,0 +1,104 @@
+<div id="sidebar" class="sidebar-container">
+    <div class="sidebar-top">
+        <div class="tooltip menu-item items-collapse-hover">
+            <div>
+                <div class="default"><%- include ("../svg/menu-calendar.svg") %></div>
+                <div class="active"><%- include ("../svg/menu-calendar-active.svg") %></div>
+            </div>
+            <span class="tooltiptext"> Calendar </span>
+        </div>
+        <div class="tooltip menu-item items-collapse-hover">
+            <div>
+                <div class="default"><%- include ("../svg/menu-inbox.svg") %></div>
+                <div class="active"><%- include ("../svg/menu-inbox-active.svg") %></div>
+            </div>
+            <span class="tooltiptext"> Inbox </span>
+        </div>
+        <div class="tooltip menu-item items-collapse-hover">
+            <a href="/pages/customers/customers-list.html">
+                <%
+                    if(typeof customers != 'undefined') {
+                %>
+                    <%- include ("../svg/menu-customers-active.svg") %>
+                <% } else { %> 
+                    <div class="default"><%- include ("../svg/menu-customers.svg") %></div>
+                    <div class="active"><%- include ("../svg/menu-customers-active.svg") %></div>
+                <% } %> 
+            </a>
+            <span class="tooltiptext"> Customers </span>
+        </div>
+        <div class="tooltip menu-item items-collapse-hover">
+            <div>
+                <div class="default"><%- include ("../svg/menu-leads.svg") %></div>
+                <div class="active"><%- include ("../svg/menu-leads-active.svg") %></div>
+            </div>
+            <span class="tooltiptext"> Leads </span>
+        </div>
+        <div class="tooltip menu-item items-collapse-hover">
+            <a href="/pages/reviews/index.html">
+                <%
+                    if(typeof reviews != 'undefined') {
+                %>
+                <%- include ("../svg/menu-reviews-active.svg") %>
+                <% } else { %> 
+                    <div class="default"><%- include ("../svg/menu-reviews.svg") %></div>
+                    <div class="active"><%- include ("../svg/menu-reviews-active.svg") %></div>
+                <% } %> 
+            </a>
+            <span class="tooltiptext"> Reviews </span>
+        </div>
+        <div class="tooltip menu-item items-collapse-hover">
+            <a href="/pages/report/forecast.html">
+                <%
+					if(typeof report != 'undefined') {
+				%>
+                    <%- include ("../svg/menu-reports-active.svg") %>
+                <% } else { %> 
+                    <div class="default"><%- include ("../svg/menu-reports.svg") %></div>
+                    <div class="active"><%- include ("../svg/menu-reports-active.svg") %></div>
+                <% } %> 
+            </a>
+            <span class="tooltiptext"> Reports </span>
+        </div>
+        <div class="tooltip menu-item items-collapse-hover">
+            <a href="/pages/commissions/index.html">
+                <%
+					if(typeof commision != 'undefined') {
+				%>
+                    <%- include ("../svg/menu-commission-active.svg") %>
+                <% } else { %>
+                    <div class="default"><%- include ("../svg/menu-commission.svg") %></div>
+                    <div class="active"><%- include ("../svg/menu-commission-active.svg") %></div>
+                <% } %> 
+            </a>
+            <span class="tooltiptext"> Commission </span>
+        </div>
+    </div>
+    <div class="sidebar-bottom">
+        <div class="menu-item">
+            <div class="add-btn svg-plus white">
+                <%- include ("../svg/outline/outline-plus-black.svg") %>
+            </div>
+        </div>
+        <div class="tooltip menu-item items-collapse-hover">
+            <a href="/pages/settings/company-profile.html">
+                <%
+                    if(typeof settings != 'undefined') {
+                %>
+                    <%- include ("../svg/menu-settings-active.svg") %>
+                <% } else { %>                     
+                    <div class="default"><%- include ("../svg/menu-settings.svg") %></div>
+                    <div class="active"><%- include ("../svg/menu-settings-active.svg") %></div>
+                <% } %> 
+            </a>
+            <span class="tooltiptext"> Settings </span>
+        </div>
+        <div class="tooltip menu-item items-collapse-hover">
+            <div>
+                <div class="default"><%- include ("../svg/menu-addons.svg") %></div>
+                <div class="active"><%- include ("../svg/menu-addons-active.svg") %></div>
+            </div>
+            <span class="tooltiptext"> Addons </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,166 @@
+<%- include('../../partials/_head', {
+    title: 'Customer Detail - Credits',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+	<%- include('_sidebar-details', {creditCustomer: 'creditCustomer'}) %>
+
+	<div class="contents-pages modal-container credit-page">
+		<div class="title-header">
+    		<span class="fs-18">Credits</span>
+    		<div class="">
+    			<div href="#addCredit" class="btn-modal btn-main has-icon svg-plus white">
+					<%- include ("../../svg/outline/outline-plus-black.svg") %>
+					Credit
+				</div>
+				<div id="addCredit" class="modal container-modal">
+					<div class="modal__overlay bg-fixed"></div>
+					<div class="modal__container show-contact">	
+						<div class="header-modal">
+							<span>New Credit</span>
+							<div class="btn-main">Add</div>
+						</div>
+
+						<div hred class="body-modal">
+							<div class="has-form">
+								<div class="d-flex align-end spacing-bottom">
+									<div class="first-field amount-box width-xs">
+										<div class="txt">Amount</div>
+										<div class="relative">
+											<input class="field-input" type="text" name="" placeholder="Placeholder" value="">
+											<span class="icon-dollar">$</span>
+										</div>
+									</div>
+									<div class="second-field date-box width-xs">
+										<div class="txt">Date</div>
+										<div class="relative">
+											<input class="field-input" type="text" name="" placeholder="Placeholder" value="">
+											<span class="svg-calendar-absolute"><%- include ("../../svg/outline/outline-calendar.svg") %></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex align-end">
+									<div class="first-field width-sm">
+										<div class="txt">Method</div>
+										<div class="dropdown">
+											<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection method-select border-light">
+												<span class="txt-ellipsis">Suhaib Al Minhas</span>
+												<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+											</div>
+											<div class="dropdown-menu">
+												<ul>
+													<li class="items">
+														<span class="txt-ellipsis">Suhaib Al Minhas</span>
+													</li>
+													<li class="items">
+														<span class="txt-ellipsis">Suhaib Al</span>
+													</li>
+											  </ul>
+											</div>
+									  	</div>
+									</div>
+									<div class="second-field width-sm">
+										<div class="txt">Memo</div>
+										<input class="field-input border-light memo-input" type="text" name="" placeholder="" value="">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="footer-modal btn-close">
+							<span>Cancel</span>
+						</div>
+					</div>
+				</div>
+    		</div>
+        </div>
+		
+		<div class="title-action">
+			<div>
+				<div class="action">
+					<div class="check-items">
+		              	<input id="check-0" type="checkbox" value="">
+		              	<div class="item-checkbox">
+							<label for="check-0"></label>
+						</div>
+		            </div>
+		            <div class="action-items disable">
+			            <span class="fs-13">0 items:</span>
+		                <div class="btn-default has-icon">
+		                    <div class="svg-delete-grey">
+                                    <%- include ("../../svg/outline/outline-delete.svg") %>
+                                </div>
+		                    Delete
+		                </div>
+	                </div>
+				</div>
+			</div>	
+		</div>
+
+		<div class="tables table-credit">
+            <div class="t-title">
+                <div class="rows">
+                    <div class="col-checkbox"></div>
+					<div class="col-method">
+						Method
+					</div>
+					<div class="col-date pl-2">
+						Date
+					</div>
+					<div class="col-total pd-24">
+						Total
+					</div>
+					<div class="col-status pl-2">
+						Status
+					</div>
+					<div class="col-memo">
+						Memo
+					</div>
+                </div>
+            </div>
+            <div class="t-content scrolls scrolls-x">
+            	<% for (i = 0; i < 50; i++){ %>
+                <div class="rows">
+                    <div class="d-flex w-100 align-top">
+                    	<div class="col-checkbox">
+                    		<div class="check-items">
+				              	<input id="check-1" type="checkbox" value="">
+				              	<div class="item-checkbox">
+									<label for="check-1"></label>
+								</div>
+				            </div>
+                    	</div>
+                        <div class="col-method">
+                        	<span class="title">Check</span>
+                        </div>
+                        <div class="col-date pl-2">
+                            <span class="txt-ellipsis">Jul 17, 2020</span>
+                        </div>
+                        <div class="col-total pl-2">
+                            <span class="txt-ellipsis">$100.00</span>
+                        </div>
+                        <div class="col-status pl-2">
+                            <span class="txt-ellipsis text-green">$10.00 Available</span>
+						</div>
+						<div class="col-memo">
+							<span class="txt-ellipsis">Nulla rerum asperiores et aut.</span>
+						</div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+	    </div>
+	</div>
+</div>			
+
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

@@ -1,0 +1,199 @@
+<% 
+const ob_document_users = {
+    items1: {
+        id: 1,
+        name: '4 Images Doc',
+    },
+    items2: {
+        id: 2,
+        name: 'Agreement (BeeSafe)',
+    },
+    items3: {
+        id: 3,
+        name: 'AL Waiver Form',
+    },
+    items4: {
+        id: 4,
+        name: 'AL WIIR',
+    },
+    items5: {
+        id: 5,
+        name: 'AL WIIR (03/2005)',
+    },
+    items6: {
+        id: 6,
+        name: 'Apartment Log Sheet',
+    },
+    items7: {
+        id: 7,
+        name: 'Apartment Log Sheet (Think Green)',
+    },
+    items8: {
+        id: 8,
+        name: 'AU Pest Recommendations & Agreement',
+    },
+    items9: {
+        id: 9,
+        name: 'AU Pre-engagement Agreement (Ver. Jan. 2018)',
+    },
+    items10: {
+        id: 10,
+        name: 'AU Pre-Engagement Report',
+    },
+    items11: {
+        id: 11,
+        name: 'AU Sites Notes',
+    },
+    items12: {
+        id: 12,
+        name: 'AU Subterranean Certificate of Installation',
+    },
+    items13: {
+        id: 13,
+        name: 'Inactive',
+    },
+}
+%>
+
+<%- include('../../partials/_head', {
+    title: 'Settings Users Documents',
+    slug: 'users-documents-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {usersDocuments: 'usersDocuments'}) %>
+
+    <div class="contents-pages container-setting-user d-flex">
+
+        <div class="set-user-left container-column">
+            <div class="header-title flex-auto">
+                <h2>Users </h2>
+                <div class="w-button">
+                    <div class="btn btn-main has-plus svg-plus white">
+                        <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                        <span>Add User</span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap-sidebar-select-user box-auto">
+                <div class="scrolls">
+                    <ul>
+                        <li class="container-delete-all">
+                            <div class="w-delete-all d-flex align-center">
+                                <div class="check-items">
+                                    <input class="check-all purple" id="check-user-all" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-user-all"> 
+                                            <span class="txt-ellipsis">0 items:</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="item-delete border-custom ml-2">
+                                    <div class="svg-delete-grey">
+                                        <%- include ("../../svg/outline/outline-delete.svg") %>
+                                    </div>
+                                    <span class="ml-1">Delete</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="selected">
+                            <div class="items-content">
+                                <div class="check-items">
+                                    <input class="check-all purple" id="check-user-0" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-user-0"></label>
+                                    </div>
+                                </div>
+                                <div class="avatar">
+                                    <img src="https://unsplash.it/32/32" alt="">
+                                </div>
+                                <div class="w-name">
+                                    <span> Alicia Stanger </span>
+                                    <p> Technician </p>
+                                </div>
+                            </div>
+                            <div class="wrap-date">
+                                <p>13 May 2003</p>
+                                <p>Schedule 1</p>
+                            </div>
+                        </li>
+                        <% for (let g = 1; g < 60;  g++ ) { %>
+                        <li>
+                            <div class="items-content">
+                                <div class="check-items">
+                                    <input class="check-all purple" id="check-user-<%=g%>" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-user-<%=g%>"></label>
+                                    </div>
+                                </div>
+                                <div class="avatar">
+                                    <img src="https://unsplash.it/32/32" alt="">
+                                </div>
+                                <div class="w-name">
+                                    <span> Alicia Stanger </span>
+                                    <p> Technician </p>
+                                </div>
+                            </div>
+                            <div class="wrap-date">
+                                <p>13 May 2003</p>
+                                <p>Schedule 1</p>
+                            </div>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>   
+
+        <div class="set-user-right container-column">
+            <div class="header-title">
+                <h2>Documents </h2>
+                <div class="w-button">
+                    <div class="cancel"> Cancel </div>
+                    <div class="btn btn-main">
+                        <span>Save</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scrolls">
+                <div class="set-document-list relative">
+                    <ul>
+                        <li>
+                            <div class="check-items">
+                                <input class="check-all purple" id="check-user-document-all" type="checkbox" value="">
+                                <div class="item-checkbox">
+                                    <label for="check-user-document-all">
+                                        <span class="txt-ellipsis name">All</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                        <% for(let items in ob_document_users) { %>
+                            <li>
+                                <div class="check-items">
+                                    <input class="check-all purple" id="check-user-document-<%= ob_document_users[items].id %>" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-user-document-<%= ob_document_users[items].id %>">
+                                            <span class="txt-ellipsis name"> <%= ob_document_users[items].name %> </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'users-documents-v2',
+    root: ''
+}) %>

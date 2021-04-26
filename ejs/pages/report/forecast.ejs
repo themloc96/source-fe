@@ -1,0 +1,549 @@
+<%- include('../../partials/_head', {
+  title: 'Report',
+  slug: 'report-v2',
+  root: ''
+}) %>
+
+<%- include('../../partials/_header', {report: 'report'}) %>
+<%- include('../../partials/_sidebar', {report: 'report'}) %>
+
+<!-- content -->
+<div id="report_wrap" class="report container-wrap">
+
+    <%- include('_sidebar') %>
+
+    <div class="container container-report">
+        <div class="main border-bottom-border-color-grey">
+            <div class="header">
+                <div class="header-main">
+                    <h2 class="header-title fs-18">Sales Forecast</h2>
+                    <div class="header-content action-select">
+                        <div class="header-content-left dropdown">
+                            <div class="item-report">
+                                <%- include ("../../svg/outline/outline-calendar.svg") %>
+                                <span class="calendar-label ml-1">03/06/2020 <span class="fs-13 date-to">to</span>
+                                    03/07/2020</span>
+                            </div>
+                            <!-- Dropdown search client -->
+                            <div class="dropdown dropdown-items dropdown-revenue">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                    Clients
+                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                </div>
+                                <!-- Dropdown content -->
+                                <div class="dropdown-menu">
+                                    <div class="revenue-content">
+                                        <div class="search-input">
+                                            <div class="search relative">
+                                                <span class="svg-search-absolute"><%- include ("../../svg/outline/outline-search.svg") %></span>
+                                                <input class="field-search" type="text" name="" placeholder="Search">
+                                                <span class="close-btn svg-remove white">
+                                                    <%- include ("../../svg/outline/outline-remove.svg") %>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="result-search scrolls">
+                                            <div class="content-selected">
+                                                <span class="title">Selected</span>
+                                                <div class="items selected">
+                                                    <div class="avt">AB</div>
+                                                    <div class="txt-ellipsis">Leo Knight</div>
+                                                </div>
+                                                <div class="items selected">
+                                                    <div class="avt">AB</div>
+                                                    <div class="txt-ellipsis">Takamaru Ayako</div>
+                                                </div>
+                                                <div class="items selected">
+                                                    <div class="avt">AB</div>
+                                                    <div class="txt-ellipsis">Gabriel Pires</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="content-client">
+                                                <span class="title">Clients</span>
+                                                <% for (i = 0; i < 8; i++){ %>
+                                                <div class="items hover-yellow">
+                                                    <div class="avt">AB</div>
+                                                    <div class="txt-ellipsis">Lucy Miller</div>
+                                                </div>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End -->
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                    Columns
+                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li class="items">
+                                            <div class="txt-ellipsis">Columns 1</div>
+                                        </li>
+                                        <li class="items">
+                                            <div class="txt-ellipsis">Columns 2</div>
+                                        </li>
+                                  </ul>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                    Service Type
+                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li class="items">
+                                            <div class="txt-ellipsis">Service Type 1</div>
+                                        </li>
+                                        <li class="items">
+                                            <div class="txt-ellipsis">Service Type 2</div>
+                                        </li>
+                                        <li class="items">
+                                            <div class="txt-ellipsis">Service Type 3</div>
+                                        </li>
+                                        <li class="items">
+                                            <div class="txt-ellipsis">Service Type 4</div>
+                                        </li>
+                                  </ul>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                    Job Status
+                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <ul class="status-dropdown">
+                                        <li class="border-bottom-border-color-grey">
+                                            <div class="check-items">
+                                                <input id="checkbox-forecast" type="checkbox" checked>
+                                                <div class="item-checkbox">
+                                                    <label for="checkbox-forecast">
+                                                        <span class="txt-ellipsis">All Statuses</span>
+                                                    </label>
+                                                </div>
+                                            </div> 
+                                        </li>
+                                        <li>
+                                            <div class="check-items">
+                                                <input id="check-draft" type="checkbox" value="">
+                                                <div class="item-checkbox">
+                                                    <label for="check-void">
+                                                        <span class="txt-ellipsis">Draft</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-items">
+                                                <input id="check-void" type="checkbox" value="">
+                                                <div class="item-checkbox">
+                                                    <label for="check-void">
+                                                        <span class="txt-ellipsis">Void</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-items">
+                                                <input id="check-partial" type="checkbox" value="">
+                                                <div class="item-checkbox">
+                                                    <label for="check-partial">
+                                                        <span class="txt-ellipsis">Partial</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check-items">
+                                                <input id="check-paid" type="checkbox" value="">
+                                                <div class="item-checkbox">
+                                                    <label for="check-paid">
+                                                        <span class="txt-ellipsis">Partial Paid</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item-report pl-1 pr-1">
+                                <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                            </div>
+                            <div class="item-report border-none">
+                                <div class="dropdown dropdown-nobox">
+                                    <div onclick="dropdownFunc(this)" class="dropbtn">
+                                        <span class="sort">Sort By:</span>
+	                                    <span class="text">First Name</span>
+                                        <span class="svg-dropup"><%- include ("../../svg/outline/dropdown-up.svg") %></span>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="scrolls">
+                                            <ul>
+                                                <li class="items">
+                                                    <div class="txt-ellipsis">First name 2</div>
+                                                </li>
+                                                <li class="items">
+                                                    <div class="txt-ellipsis">First name 2</div>
+                                                </li>
+                                            </ul>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-content-right">
+                            <div class="search-form relative">
+                                <span class="svg-search-absolute"><%- include ("../../svg/outline/outline-search.svg") %></span>
+                                <input id="search-ip" type="text" name="" placeholder="Search Customers">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main border-bottom-border-color-grey">
+            <div class="header">
+                <div class="header-main pt-0">
+                    <div class="header-content action-items pt-0 mt-3 ">
+                        <div class="header-content-left">
+                            <div class="item-report border-none not-active pl-0">
+                                <div class="check-items">
+                                    <input id="check-item-report" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-item-report">
+                                            <span class="txt-ellipsis">0 item-reports:</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-report border-custom disable">
+                                <div class="svg-delete-grey">
+                                    <%- include ("../../svg/outline/outline-delete.svg") %>
+                                </div>
+                                <span class="ml-1">Delete</span>
+                            </div>
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                    Batch Actions
+                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li class="items">
+                                            <div class="txt-ellipsis">Create</div>
+                                        </li>
+                                        <li class="items">
+                                            <div class="txt-ellipsis">Update</div>
+                                        </li>
+                                        <li class="items">
+                                            <div class="txt-ellipsis">Edit</div>
+                                        </li> 
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-content-right">
+                            <div class="item-report border-none">
+                                <span class="date-to fs-13">Export 864 customers:</span>
+                                <span class="csv pl-1 fs-13">CSV</span>
+                                <span class="excel pl-1 fs-13">Excel</span>
+                            </div>
+                            <div class="item-report mr-0 border-custom">
+                                <%- include ("../../svg/outline/outline-print.svg") %>
+                                <span class="print-text ml-1">Print</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main pl-0 pr-0 table-scroll scrolls scrolls-x">
+            <table class="fs-13">
+                <tr class="border-bottom-border-color-grey parent-sticky-top">
+                    <th class="col-checkbox text-left">
+                        <div class="check-items">
+                            <input id="check-customer" type="checkbox" value="" checked>
+                            <div class="item-checkbox">
+                                <label for="check-customer"></label>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="text-left customer-name">
+                        Customer
+                    </th>
+                    <th class="col-infocard">
+                        Credit Card
+                    </th>
+                    <th>
+                        90+ Days
+                    </th>
+                    <th>
+                        Jan
+                    </th>
+                    <th>
+                        Feb
+                    </th>
+                    <th>
+                        Mar
+                    </th>
+                    <th>
+                        Apr
+                    </th>
+                    <th>
+                        May
+                    </th>
+                    <th>
+                        Jun
+                    </th>
+                    <th>
+                        Jul
+                    </th>
+                    <th>
+                        Aug
+                    </th>
+                    <th>
+                        Sep
+                    </th>
+                    <th>
+                        Oct
+                    </th>
+                    <th>
+                        Nov
+                    </th>
+                    <th>
+                        Total
+                    </th>
+                    <th>
+                        Available Credit
+                    </th>
+                </tr>
+                <% for (let j = 0; j < 15;  j++ ) { %>
+                <tr class="border-bottom-border-color-grey">
+                    <td class="col-checkbox text-left">
+                        <div class="check-items">
+                            <input class="check-all purple" id="check-<%= [j] %>" type="checkbox" value="">
+                            <div class="item-checkbox">
+                                <label for="check-<%= [j] %>"></label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="d-flex align-center">
+                        <div class="avt fs-11">
+                            AB
+                        </div>
+                        <span class="name fs-13">Alice Krejčová</span>
+                    </td>
+                    <!-- col info card -->
+                    <td class="col-infocard">
+                        <div class="info-card">
+                            <div class="card-number">
+                                Stripe
+                                <span class="number">•••• 7268</span>
+                                <span class="date">05/16</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-moreday">
+                        <div class="showmore-amount">
+                            <div class="currency svg-chevron purple">
+                                $160.00
+                                <%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+                            </div>
+                            <div class="showmore">
+                                <div class="items">$180.00</div>
+                                <div class="items">$190.00</div>
+                                <div class="items">$0.00</div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--  -->
+                    <td>
+                        $160.00
+                    </td>
+                    <td>
+                        $5.00
+                    </td>
+                    <td>
+                        $0.00
+                    </td>
+                    <td>
+                        $8,015.35
+                    </td>
+                    <td>
+                        $10,100.00
+                    </td>
+                    <td>
+                        $160.00
+                    </td>
+                    <td>
+                        $80.00
+                    </td>
+                    <td class="not-active col-5">
+                        $0.00
+                    </td>
+                    <td>
+                        $0.00
+                    </td>
+                    <td>
+                        $160.00
+                    </td>
+                    <td>
+                        $160.00
+                    </td>
+                    <td>
+                        <b>$16,845.15</b>
+                    </td>
+                    <td class="col-available">
+                        $5.00
+                    </td>
+                </tr>
+                <tr class="border-bottom-border-color-grey">
+                    <td class="col-checkbox text-left">
+                        <div class="check-items">
+                            <input class="check-all purple" id="check-2-<%= [j+1] %>" type="checkbox" value="">
+                            <div class="item-checkbox">
+                                <label for="check-2-<%= [j] %>"></label>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="d-flex align-center">
+                        <div class="avt fs-11">
+                            AB
+                        </div>
+                        <span class="name fs-13">Alice Krejčová</span>
+                    </td>
+                    <!--  -->
+                    <td class="col-infocard">
+                        <div class="info-card">
+                            <div class="card-number">
+                                Stripe
+                                <span class="number">•••• 7268</span>
+                                <span class="date">05/16</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-moreday">
+                        <div class="showmore-amount">
+                            <div class="currency svg-chevron purple">
+                                $160.00
+                                <%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+                            </div>
+                            <div class="showmore">
+                                <div class="items">$180.00</div>
+                                <div class="items">$190.00</div>
+                                <div class="items">$0.00</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        $8,015.35
+                    </td>
+                    <td>
+                        $10,100.00
+                    </td>
+                    <td>
+                        $160.00
+                    </td>
+                    <td>
+                        $80.00
+                    </td>
+                    <td class="not-active col-5">
+                        $0.00
+                    </td>
+                    <td>
+                        $15.00
+                    </td>
+                    <td>
+                        $0.00
+                    </td>
+                    <td>
+                        $0.00
+                    </td>
+                    <td>
+                        $160.00
+                    </td>
+                    <td>
+                        $160.00
+                    </td>
+                    <td>
+                        $160.00
+                    </td>
+                    <td>
+                        <div class="btn-jobstt pending">
+                            <span>Pending Booking</span>
+                        </div>
+                    </td>
+                    <td class="col-available">
+                        $5.00
+                    </td>
+                </tr>
+                <% } %>
+                <tr class="parent-sticky">
+                    <th colspan="2" class="text-left pl-5">
+                        Total
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                    <th class="col-5">
+                        $8,845.15
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <%- include('../../partials/_pagination') %>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'report-v2',
+    root: ''
+}) %>

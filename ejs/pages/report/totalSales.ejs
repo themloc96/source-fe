@@ -1,0 +1,270 @@
+<%- include('../../partials/_head', {
+	title: 'Report',
+	slug: 'report-v2',
+	root: ''
+  }) %>
+  
+  <%- include('../../partials/_header') %>
+  <%- include('../../partials/_sidebar') %>
+  
+  <!-- content -->
+  <div class="report container-wrap">
+	<%- include('_sidebar') %>
+  
+	  <div class="container container-column total-sale-report">
+		  <div class="header main">
+			  <div class="header-main">
+				  <div class="title-header">
+					  <h2 class="header-title fs-18">
+						  Total Sales
+						  <%- include ("../../svg/outline/outline-question.svg") %>
+					  </h2>
+				  </div>
+				  <div class="content-chartjs"> 
+					  <div class="chartjs-header"> 
+						  <div class="title">
+							  Year-To-Year Total Sales <b> $15,823.50 </b>
+						  </div>
+						  <div class="btn-display">
+						  Hide <%- include ("../../svg/outline/outline-chevron-up-small.svg") %>
+						  </div>
+					  </div>   
+					  
+					  <div class="list-years-totalsales">
+					  <ul>
+						  <li class="button-three-dot">
+							  <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+						  </li>
+						  <% for (i = 2010; i < 2021; i++){ %>
+						  <li <% if(i == 2020) { %> class="active" <% } %> > <i class="box-color" style="background: #3cddc7;"></i>  <%=i%> </li>
+						  <% } %>
+					  </ul>
+					  </div>
+					  
+					  <div class="chartjs-content">
+						  <img src="../../images/report/TotalSale.png" alt="" style="max-width: 100%;">
+					  </div>
+				  </div>
+  
+				  <div class="header-content">
+					  <div class="header-content-left">
+					  <div class="item-report">
+						  <%- include ("../../svg/outline/outline-calendar.svg") %>
+						  <span class="ml-1">03/06/2020 <span class="fs-13 date-to">to</span> 03/07/2020</span>
+					  </div>
+					  <!-- Dropdown search client -->
+					  <div class="dropdown dropdown-items dropdown-revenue">
+						  <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+							  Clients
+							  <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+						  </div>
+						  <!-- Dropdown content -->
+						  <div class="dropdown-menu">
+							  <div class="revenue-content revenue-modified">
+								  <div class="search-input">
+									  <div class="search relative">
+										  <span class="svg-search-absolute"><%- include ("../../svg/outline/outline-search.svg") %></span>
+										  <input class="field-search" type="text" name="" placeholder="Search">
+										  <span class="close-btn svg-remove white">
+											  <%- include ("../../svg/outline/outline-remove.svg") %>
+										  </span>
+									  </div>
+								  </div>
+  
+								  <div class="result-search scrolls">
+									  <div class="content-selected">
+										  <span class="title">Selected</span>
+										  <div class="items selected">
+											  <div class="avt">AB</div>
+											  <div class="txt-ellipsis">Leo Knight</div>
+										  </div>
+										  <div class="items selected">
+											  <div class="avt">AB</div>
+											  <div class="txt-ellipsis">Takamaru Ayako</div>
+										  </div>
+										  <div class="items selected">
+											  <div class="avt">AB</div>
+											  <div class="txt-ellipsis">Gabriel Pires</div>
+										  </div>
+									  </div>
+  
+									  <div class="content-client">
+										  <span class="title">Clients</span>
+										  <% for (i = 0; i < 8; i++){ %>
+										  <div class="items hover-yellow">
+											  <div class="avt">AB</div>
+											  <div class="txt-ellipsis">Lucy Miller</div>
+										  </div>
+										  <% } %>
+									  </div>
+								  </div>
+							  </div>
+						  </div>
+					  </div>
+					  <!-- End -->
+					  <div class="item-report border-none">
+						  <div class="dropdown dropdown-nobox">
+							  <div onclick="dropdownFunc(this)" class="dropbtn">
+								  <span class="sort">Sort By:</span>
+								  <span class="text">First Name</span>
+								  <span class="svg-dropup"><%- include ("../../svg/outline/dropdown-up.svg") %></span>
+							  </div>
+							  <div class="dropdown-menu">
+								  <div class="scrolls">
+									  <ul>
+										  <li class="items">
+											<span class="txt-ellipsis">First name 2</span>
+										  </li>
+										  <li class="items">
+												<span class="txt-ellipsis">First name 2</span>
+										  </li>
+									  </ul>
+								  </div>
+							  </div>
+							</div>
+					  </div>
+					  
+					  </div>
+					  <div class="header-content-right">
+					  <div class="item-report border-none">
+						  <span class="date-to fs-13">Export 864 customers:</span>
+						  <span class="csv pl-1 fs-13">CSV</span>
+						  <span class="excel pl-1 fs-13">Excel</span>
+					  </div>
+					  <div class="item-report mr-0 border-custom">
+						  <%- include ("../../svg/outline/outline-print.svg") %>
+						  <span class="date-to ml-1">Print</span>
+					  </div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+		  <div class="table-scroll scrolls scrolls-x box-auto has-footer-larger">
+			  <table> 
+				  <tr class="border-bottom-border-color-grey parent-sticky-top">
+					  <th class="col-invoice text-left">
+						  Invoice
+					  </th>
+					  <th class="col-customer text-left">
+						  Customer
+					  </th>
+					  <th class="col-date text-left">
+						  Date
+					  </th>
+					  <th class="col-status text-left">
+						  Status
+					  </th>
+					  <th class="col-amount text-left">
+						  Amount
+					  </th>
+					  <th class="col-tax text-left">
+						  w/o Tax
+					  </th>
+					  <th class="text-left">
+						  Status
+					  </th>
+				  </tr>
+				  <% for (let j = 10; j < 30;  j++ ) { %>
+				  <tr class="border-bottom-border-color-grey">
+					  <td class="col-invoice">
+						  <div class="name pl-0">1180063</div>
+					  </td>
+					  <td class="col-customer">
+						  <div>
+							  <div class="avt mr-1 fs-11">
+								  AB
+							  </div>
+							  Qiu Xun
+						  </div>
+					  </td>
+					  <td class="col-date">
+						  Jul 17, 2020
+					  </td>
+					  <td class="col-status">
+						  <span class="btn-draft">Sent</span>
+					  </td>
+					  <td class="col-amount">
+						  $100.00
+					  </td>
+					  <td class="col-tax">
+						  $100.00
+					  </td>
+					  <td>
+						  <div class="report-status dropdown">
+							  <span class="btn-draft btn-report-status">Pending</span>
+							  <span class="btn-assign-booking dropbtn" onclick="dropdownFunc(this)"> 
+								  <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+							  </span>
+							  <div class="assign-booking-wrap dropdown-menu">
+								  <div class="assign-header">
+									  <div>Assign Booking</div>
+									  <input class="field-input" type="text" name="" placeholder="">
+								  </div>
+								  <div class="list-users-box">
+									  <ul class="list-users scrolls">
+										  <li class="add-user items">
+											  <div class="add-new">
+												  <span class="svg-plus purple">
+													  <%- include ("../../svg/outline/outline-plus-black.svg") %>
+												  </span>
+												  Add as New Customer
+												</div>
+										  </li>
+										  <li class="items">
+											  <div class="avt-img">
+												  <img src="https://unsplash.it/24/24" alt="">
+											  </div>
+											  Afonso Pinto
+										  </li>
+										  <li class="items">
+											  <div class="avt-img">
+												  <img src="https://unsplash.it/24/24" alt="">
+											  </div>
+											  Sebastian Bennett
+										  </li>
+										  <li class="items">
+											  <div class="avt-img">
+												  <img src="https://unsplash.it/24/24" alt="">
+											  </div>
+											  Sung Jin-Shil
+										  </li>
+										  <li class="items">
+											  <div class="avt-img">
+												  <img src="https://unsplash.it/24/24" alt="">
+											  </div>
+											  Afonso Pinto
+										  </li>
+										  <li class="items">
+											  <div class="avt-img">
+												  <img src="https://unsplash.it/24/24" alt="">
+											  </div>
+											  Afonso Pinto
+										  </li>
+									  </ul>
+								  </div>
+							  </div>
+						  </div>
+					  </td>
+				  </tr>
+				  <% } %>
+			  </table>
+		  </div>
+		  <div class="total-report">
+			  <div class="total-text">
+				  Total
+			  </div>
+			  <div class="total-amount">
+				  $106,036.00
+			  </div>
+			  <div class="total-tax">
+				  $106,036.00
+			  </div>
+		  </div>
+		  <%- include('../../partials/_pagination') %>
+	  </div>
+  </div>
+  
+  <%- include('../../partials/_footer', {
+	  slug: 'report-v2',
+	  root: ''
+  }) %>

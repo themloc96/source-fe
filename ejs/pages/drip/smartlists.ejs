@@ -1,0 +1,147 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'drip-campaigns',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {drip: 'drip'}) %>
+<%- include('../../partials/_sidebar', {drip: 'drip'}) %>
+
+<div class="drip container-wrap">
+    <div class="drip__header heading-page">
+        <h4 class="heading-page__label">
+            <a href="#" class="d-flex align-center">
+                <%- include ("../../svg/outline/outline-arrow-left.svg") %>
+                <span class="ml-3">Drip Campaigns</span>
+            </a>
+        </h4>
+    </div>
+    <div class="drip__container">
+        <%- include('_sidebar', {dripSmartLists: 'dripSmartLists'}) %>
+
+        <div class="wrapper flex-column">
+            <div class="wrapper__title heading-page flex-column__head">
+                <h4 class="heading-page__label"> Smart Lists </h4>
+                <a href="#" class="btn-main has-icon svg-plus white">
+                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                    New Smart List
+                </a>
+            </div>
+            <div class="wrapper__list l-table flex-column__content scrolls-x">
+                <div class="l-table__title">
+                    <div class="rows rows--customerlist">
+                        <div class="col col--name col--select">
+                            Name
+                            <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                        </div>
+                        <div class="col col--recipients">Recipients</div>
+                        <div class="col col--camps">Campaigns</div>
+                        <div class="col col--updated">Updated by</div>
+                        <div class="col col--date">Last Change</div>
+                        <div class="col col--unsubscrib">Unsubscribed</div>
+                        <div class="col col--menu"></div>
+                    </div>
+                </div>
+                <div class="l-table__content l-table__content--listint scrolls">
+                    <% for (i = 0; i < 5; i++){ %>
+                    <div class="rows rows--customerlist">
+                        <div class="col col--name">
+                            <a href="/pages/drip/smartlists-detail.html">
+                                REGULAR CUSTOMERS
+                            </a>
+                        </div>
+                        <div class="col col--recipients">1,830,803</div>
+                        <div class="col col--camps">6</div>
+                        <div class="col col--updated">
+                            <div class="avt-img">
+                                <img src="/images/avatar.png">
+                            </div>
+                            <span class="avt-name">Jerry Lucas</span>
+                        </div>
+                        <div class="col col--date">April 14, 2020</div>
+                        <div class="col col--unsubscrib">
+                            <div class="progress progress--red">
+                                <div class="progress__count">18</div>
+                                                        
+                                <div class="progress__bar progress__bar--circle progress__bar--red per-25">
+                                    <div class="circle">
+                                        <div class="half-circle half-circle--left"></div>
+                                        <div class="half-circle half-circle--right"></div>
+                                    </div>
+                                    <div class="shadow"></div>
+                                </div>
+
+                                <div class="progress__number">2.48%</div>
+                            </div>
+                        </div>
+                        <div class="col col--menu">
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)"
+                                    class="dropbtn btn-default btn-default--noborder just-icon">
+                                    <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu--right">
+                                    <ul>
+                                        <li class="items">Option1</li>
+                                        <li class="items">Option1</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                    <div class="rows rows--customerlist">
+                        <div class="col col--name">
+                            <a href="#">
+                                SEASONAL SERVICE: Autumn
+                            </a>
+                        </div>
+                        <div class="col col--recipients">1,830,803</div>
+                        <div class="col col--camps disable">0</div>
+                        <div class="col col--updated">
+                            <div class="avt-img">
+                                <img src="/images/avatar.png">
+                            </div>
+                            <span class="avt-name">Jerry Lucas</span>
+                        </div>
+                        <div class="col col--date">April 14, 2020</div>
+                        <div class="col col--unsubscrib">
+                            <div class="progress progress--red">
+                                <div class="progress__count">18</div>
+                                                        
+                                <div class="progress__bar progress__bar--circle progress__bar--red per-45">
+                                    <div class="circle">
+                                        <div class="half-circle half-circle--left"></div>
+                                        <div class="half-circle half-circle--right"></div>
+                                    </div>
+                                    <div class="shadow"></div>
+                                </div>
+
+                                <div class="progress__number">2.48%</div>
+                            </div>
+                        </div>
+                        <div class="col col--menu">
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)"
+                                    class="dropbtn btn-default btn-default--noborder just-icon">
+                                    <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu--right">
+                                    <ul>
+                                        <li class="items">Option1</li>
+                                        <li class="items">Option1</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'drip-campaigns',
+    root: ''
+}) %>

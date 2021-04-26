@@ -1,0 +1,345 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Service Invoice',
+    slug: 'service-invoice-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {serviceTemplates: 'serviceTemplates'}) %>
+
+    <div class="contents-pages container-setting-user service-edit-v2">
+        <div class="w-100 wrap-content-service container-column">
+            <div class="header-title flex-auto">
+                <h2>Edit service </h2>
+                <div class="w-button">
+                    <div class="cancel"> Cancel </div>
+                    <div class="btn btn-main">
+                        <span>Save</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-services d-flex box-auto">
+                <div class="container-setting-left">
+                    <div class="wrap-title">
+                        <ul>
+                            <li>
+                                <a href="/pages/settings/service-edit.html" class="item svg-service svg-noeffect">
+                                    <%- include ("../../svg/states-servicetemplate.svg") %>
+                                    Service
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/pages/settings/service-estimate.html" class="item">
+                                    <%- include ("../../svg/states-estimate-default.svg") %>
+                                    Estimate
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/pages/settings/service-invoice.html" class="item active">
+                                    <%- include ("../../svg/states-document-default.svg") %>
+                                    Invoice
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/pages/settings/service-materials.html" class="item">
+                                    <%- include ("../../svg/states-materials-default.svg") %>
+                                    Materials
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wrap-title wrap-list-add">
+                        <ul>
+                            <li>
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Estimate
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Invoice
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Documents
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Materials
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-setting-right">
+                    <div class="service-invoice-v2 scrolls invoice-scrolls">
+                        <div class="container-setting-center has-form relative">
+                            <div class="wrap-content">
+                                <div class="flex-title">
+                                    <h3 class="title">Invoice</h3>
+                                    <div class="delete-title">
+                                        <div class="btn-delete"> Delete <%- include ("../../svg/outline/outline-delete.svg") %> </div>
+                                    </div>
+                                </div>
+
+                                <div class="setting-title-job">
+                                    This invoice repeats with the job.
+                                    <span class="btn-setting">
+                                        <%- include ("../../svg/outline/outline-gear.svg") %>
+                                    </span>
+                                </div>
+                                <div class="box-name-note">
+                                    <div class="name-note-title">
+                                        <div class="box-name">
+                                            <%- include ("../../svg/outline/outline-drag.svg") %>
+                                            <div class="dropdown dropdown-nobox">
+                                                <div onclick="dropdownFunc(this)" class="dropbtn">
+                                                    Service Name
+                                                    <span class="svg-dropup">
+                                                        <%- include ("../../svg/outline/dropdown-down.svg") %>
+                                                    </span>
+                                                </div>
+                                                <div class="dropdown-menu">
+                                                    <ul>
+                                                        <li class="items">
+                                                            <div class="txt-ellipsis">Service Name</div>
+                                                        </li>
+                                                        <li class="items">
+                                                            <div class="txt-ellipsis">Service Name</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-input-total">
+                                            <%- include ("../../svg/outline/outline-clock.svg") %>
+                                            <div class="input-price">
+                                                <input class="field-input" type="text" name="" placeholder="$30.00">
+                                            </div>
+                                            <div class="field-input-tax rows">
+                                                <div class="first-field">
+                                                    <div class="dropdown">
+                                                        <div onclick="dropdownFunc(this)"
+                                                            class="dropbtn btn-default selection">
+                                                            Tax
+                                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                        </div>
+                                                        <div class="dropdown-menu">
+                                                            <ul>
+                                                                <li class="items">
+                                                                    Tax
+                                                                </li>
+                                                                <li class="items">
+                                                                    Tax 2
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="second-field">
+                                                    <div class="dropdown">
+                                                        <div onclick="dropdownFunc(this)"
+                                                            class="dropbtn btn-default selection">
+                                                            Tax
+                                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                        </div>
+                                                        <div class="dropdown-menu">
+                                                            <ul>
+                                                                <li class="items">
+                                                                    Tax
+                                                                </li>
+                                                                <li class="items">
+                                                                    Tax 2
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="input-increase-decrease">
+                                                <span class="btn-icon">
+                                                    <%- include ("../../svg/outline/outline-minus.svg") %> </span>
+                                                <input class="field-input" type="text" name="" placeholder="2">
+                                                <span class="btn-icon">
+                                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                                </span>
+                                            </div>
+                                            <div class="sum-total">$60.00</div>
+                                            <span> <%- include ("../../svg/outline/outline-delete.svg") %> </span>
+                                        </div>
+                                    </div>
+                                    <input class="field-input" type="text" name="" placeholder="Item Note">
+                                </div>
+                                <div class="wrap-list-calc-total">
+                                    <div class="calc-total-left">
+                                        <div class="btn-default has-icon">
+                                            <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                            Add Item
+                                        </div>
+                                    </div>
+                                    <div class="calc-total-right">
+                                        <ul>
+                                            <li>
+                                                <div class="name">Subtotal</div>
+                                                <div class="total"> $260.00 </div>
+                                            </li>
+                                            <li>
+                                                <div class="name">Tax Name (7%)</div>
+                                                <div class="total"> $18.20 </div>
+                                            </li>
+                                            <li>
+                                                <div class="name">Tax 2</div>
+                                                <div class="total disable"> $00.00 </div>
+                                            </li>
+                                            <li class="line"></li>
+                                            <li>
+                                                <div class="name">Amount Due</div>
+                                                <div class="total"> $100.00 </div>
+                                            </li>
+                                            <li>
+                                                <div class="name">Available Credit</div>
+                                                <div class="total"> $50.00 </div>
+                                            </li>
+                                            <li>
+                                                <div class="name">Balance Due</div>
+                                                <div class="total large"> $188.60 </div>
+                                            </li>
+                                        </ul>
+                                        <div class="btn-default has-icon add-discount">
+                                            <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                            Add Discount
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wrap-list-insert-items dashboard-wrapper">
+                                    <div class="boxs box-topnote">
+                                        <div class="left-icons">
+                                            <%- include ("../../svg/states-eye-2.svg") %>
+                                        </div>
+
+                                        <div class="content">
+                                            <div class="header-box">
+                                                <div class="name">
+                                                    Terms
+                                                </div>
+
+                                                <div class="d-flex">
+                                                    <div class="dropdown dropdown-insert">
+                                                        <div onclick="dropdownFunc(this)" class="dropbtn items">
+                                                            <span class="txt-ellipsis">Insert</span>
+
+                                                            <span class="svg-dropup"><%- include ("../../svg/outline/dropdown-up.svg") %></span>
+                                                        </div>
+                                                        <div class="dropdown-menu scrolls">
+                                                            <ul>
+                                                                <% for (let h = 1; h < 5;  h++ ) { %>
+                                                                <li class="items">
+                                                                    <div class="txt-ellipsis">Template Name</div>
+                                                                </li>
+                                                                <% } %>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown more-option">
+                                                        <div class="dropbtn">
+                                                            <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="conts-box">
+                                                <div class="description">
+                                                    Net 30 days.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="boxs box-topnote">
+                                        <div class="left-icons">
+                                            <%- include ("../../svg/states-note-default.svg") %>
+                                        </div>
+
+                                        <div class="content">
+                                            <div class="header-box">
+                                                <div class="name">
+                                                    Invoice notes
+                                                    <span class="ml-1 fw-normal">(visible to client)</span>
+                                                </div>
+
+                                                <div class="d-flex">
+                                                    <div class="dropdown dropdown-insert">
+                                                        <div onclick="dropdownFunc(this)" class="dropbtn items">
+                                                            <span class="txt-ellipsis">Insert</span>
+
+                                                            <span class="svg-dropup"><%- include ("../../svg/outline/dropdown-up.svg") %></span>
+                                                        </div>
+                                                        <div class="dropdown-menu scrolls">
+                                                            <ul>
+                                                                <% for (let h = 1; h < 5;  h++ ) { %>
+                                                                <li class="items">
+                                                                    <div class="txt-ellipsis">Template Name</div>
+                                                                </li>
+                                                                <% } %>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown more-option">
+                                                        <div onclick="dropdownFunc(this)" class="dropbtn">
+                                                            <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                                        </div>
+                                                        <div class="dropdown-menu">
+                                                            <ul>
+                                                                <li class="items has-icon">
+                                                                    <%- include ("../../svg/outline/outline-pen.svg") %>
+                                                                    Edit Top Note
+                                                                </li>
+                                                                <li class="items has-icon">
+                                                                    <%- include ("../../svg/outline/outline-delete.svg") %>
+                                                                    Delete Top Note
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="conts-box">
+                                                <div class="description">
+                                                    Thanks so much for your business.
+                                                </div>
+                                                <div class="attachment-image scrolls-x">
+                                                    <div class="attachment">
+                                                        <img src="https://unsplash.it/100/50" alt="">
+                                                    </div>
+                                                    <div class="attachment">
+                                                        <img src="https://unsplash.it/200/100" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'service-invoice-v2',
+    root: ''
+}) %>

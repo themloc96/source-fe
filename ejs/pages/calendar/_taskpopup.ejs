@@ -1,0 +1,36 @@
+<!-- Task popup -->
+<div id="openPopupTask" class="modal container-modal">
+    <div class="modal__overlay bg-fixed"></div>
+    <div class="modal__container task-popup">
+        <div class="task-popup-content">
+            <div class="header">
+                <div>12 Tasks</div>
+                <div class="btn-default just-icon">
+                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                </div>
+            </div>
+            <div class="popup-content scrolls">
+                <% for (i = 0; i < 8; i++){ %>
+                <div class="box-task">
+                    <div class="title">
+                        <div class="btn-default task-done">
+                            <%- include ("../../svg/outline/outline-check-circle.svg") %>
+                            Done
+                        </div>
+                        <div class="info-time">
+                            <div class="time">06/06/2020 13:30AM</div>
+                            <div class="just-icon">
+                                <%- include ("../../svg/outline/outline-chevron-right.svg") %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        Quibusdam architecto nesciunt ipsa dolores in autem. Et ipsam non sed totam ducimus dolor et.
+                        Dolorem eos quia veritatis iure commodi. Mollitia ipsa sit.
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

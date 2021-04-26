@@ -1,0 +1,124 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Service Templates',
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting ">
+
+    <%- include('_sidebar', {stSystem: 'stSystem'}) %>
+
+    <div class="contents-pages container-setting-user maintables-page d-flex setting-items setting-custom">
+        <div class="relative w-100 container-column">
+            <%- include('_tips') %>
+
+            <div class="header-title flex-auto">
+                <h2>System Email & SMS</h2>
+            </div>
+            <div class="from-addr address-none flex-auto">
+                <span>"From" Address</span>
+                <span class="company">Dev Team LLC</span>
+                <div class="email">
+                    agmenty@info.com
+                    <div class="tooltip">
+                        <%- include ("../../svg/outline/outline-question.svg") %>
+                        <span class="tooltiptext top">Tooltip</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-table table-custom table-system box-auto">
+                <div class="table-title">
+                    <div class="rows">
+                        <div class="col-template">Template</div>
+                        <div class="col-status pl-2">Status</div>
+                    </div>
+                </div>
+                <div class="table-list scrolls">                	
+                    <div class="rows">
+                        <div class="col-template">
+                            <a href="/pages/settings/system-email-sms.html" class="text txt-ellipsis">Invoice</a>
+                        </div>
+                        <div class="col-status pl-2">
+                            <span class="stt"></span>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="col-template">
+                            <div class="text txt-ellipsis">Work Order</div>
+                        </div>
+                        <div class="col-status pl-2">
+                            <span class="stt"></span>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="col-template">
+                            <div class="text txt-ellipsis">Receipt</div>
+                        </div>
+                        <div class="col-status pl-2">
+                            <span class="stt"></span>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="col-template">
+                            <div class="text txt-ellipsis">Credit Card Invitation</div>
+                        </div>
+                        <div class="col-status pl-2">
+                            <span class="stt active">Active</span>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="col-template">
+                            <div class="text txt-ellipsis">ACH Invitation</div>
+                        </div>
+                        <div class="col-status pl-2">
+                            <span class="stt disable">Disable</span>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="col-template">
+                            <div class="text txt-ellipsis">ACH Micro-Deposit Reminder</div>
+                        </div>
+                        <div class="col-status pl-2">
+                            <span class="stt active">Active</span>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="col-template">
+                            <div class="text txt-ellipsis">Estimate Reminders</div>
+                        </div>
+                        <div class="col-status pl-2">
+                            <span class="stt active">Active</span>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="col-template">
+                            <div class="text txt-ellipsis">Appointment confirmations</div>
+                        </div>
+                        <div class="col-status pl-2">
+                            <span class="stt"></span>
+                        </div>
+                    </div>
+                    <div class="rows">
+                        <div class="col-template">
+                            <div class="text txt-ellipsis">Appointment reminders</div>
+                        </div>
+                        <div class="col-status pl-2">
+                            <span class="stt"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <%- include('../../partials/_pagination') %>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>

@@ -1,0 +1,305 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Title',
+    slug: 'title-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {title: 'title'}) %>
+
+    <div class="contents-pages container-setting-user d-flex title-v2">
+
+        <div class="set-user-right w-100 container-column">
+            <%- include('_tips') %>      
+             
+            <div class="header-title flex-auto">
+                <h2>Calendar Tiles </h2>
+                <div class="w-button">
+                    <div class="cancel"> Cancel </div>
+                    <div class="btn btn-main">
+                        <span>Save</span>
+                    </div>
+                </div>
+            </div>     
+            <div class="scrolls box-auto">
+
+                <div class="set-user-wrap relative">
+                    <p class="title-live-preview">Live Title Preview</p>
+                    <div class="w-user-infomations w-title-preview">
+                        <div class="col-date">
+                            <div class="title-date">
+                                <p>10</p>
+                                <p>Wed</p>
+                            </div>
+                        </div>
+                        <div class="col-date">
+                            <div class="title-date">
+                                <p>11</p>
+                                <p>Mon</p>
+                            </div>
+                            <div class="w-service-preview">
+                                <div class="name"> 😄 Service Name </div>
+                                <div class="desc">
+                                    <p> WV 26501, Morgantown, WV 26501 </p>
+                                    <p> Sampson Totton </p>
+                                    <p> 14 September, Sun </p>
+                                    <p> 14:00 - 15:30 </p>
+                                </div>
+                                <ul class="list-persons">
+                                    <% for(let i=3; i>0; i--) { %>
+                                        <li style="z-index: <%=i%>"><img src="../../images/header/avatar.jpg" alt=""></li>
+                                    <% } %>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-date">
+                            <div class="title-date">
+                                <p>12</p>
+                                <p>Fri</p>
+                            </div>
+                        </div>
+                        <div class="row-time">
+                            <div class="time"> 09:00AM </div>
+                        </div>
+                        <div class="row-time">
+                            <div class="time"> 10:00AM </div>
+                        </div>
+                    </div>
+            
+                </div>
+
+                <div class="set-user-wrap relative">
+                    <div class="w-user-infomations">
+                        <div class="header header-title-fields d-flex">
+                            <h3> Fields </h3>
+                            <a class="btn-default btn-request" href="javascript:void(0);"> Request a New Field </a>
+                        </div>
+                        <div class="content">
+                            <div class="row-fields">
+                                <div class="btn-drag">
+                                    <%- include ("../../svg/outline/outline-drag.svg") %>
+                                </div>
+                                <div class="w-input">
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            Service Type
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="items">
+                                                    Service Type
+                                                </li>
+                                                <li class="items">
+                                                    Service Type 2
+                                                </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="circle"></span>
+                                <div class="w-input">
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            Service Zip
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="items">
+                                                    Service Zip
+                                                </li>
+                                                <li class="items">
+                                                    Service Zip 2
+                                                </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="row-fields">
+                                <div class="btn-drag">
+                                    <%- include ("../../svg/outline/outline-drag.svg") %>
+                                </div>
+                                <div class="w-input">
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            Calendar Time
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="items">
+                                                    Calendar Time
+                                                </li>
+                                                <li class="items">
+                                                    Calendar Time 2
+                                                </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="circle"></span>
+                                <div class="w-input">
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            None
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="items">
+                                                    None
+                                                </li>
+                                                <li class="items">
+                                                    None 2
+                                                </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fields">
+                                <div class="btn-drag">
+                                    <%- include ("../../svg/outline/outline-drag.svg") %>
+                                </div>
+                                <div class="w-input">
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            Service Address
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="items">
+                                                    Service Address
+                                                </li>
+                                                <li class="items">
+                                                    Service Address 2
+                                                </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="circle"></span>
+                                <div class="w-input">
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            Invoice Total
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="items">
+                                                    Invoice Total
+                                                </li>
+                                                <li class="items">
+                                                    Invoice Total 2
+                                                </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fields">
+                                <div class="btn-drag">
+                                    <%- include ("../../svg/outline/outline-drag.svg") %>
+                                </div>
+                                <div class="w-input">
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            Placeholder
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="items">
+                                                    Placeholder
+                                                </li>
+                                                <li class="items">
+                                                    Placeholder 2
+                                                </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="circle"></span>
+                                <div class="w-input">
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            Placeholder
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="items">
+                                                    Placeholder
+                                                </li>
+                                                <li class="items">
+                                                    Placeholder 2
+                                                </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-fields">
+                                <div class="btn-drag">
+                                    <%- include ("../../svg/outline/outline-drag.svg") %>
+                                </div>
+                                <div class="w-input">
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            Placeholder
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="items">
+                                                    Placeholder
+                                                </li>
+                                                <li class="items">
+                                                    Placeholder 2
+                                                </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="circle"></span>
+                                <div class="w-input">
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            Placeholder
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="items">
+                                                    Placeholder
+                                                </li>
+                                                <li class="items">
+                                                    Placeholder 2
+                                                </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </div>        
+        
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'title-v2',
+    root: ''
+}) %>

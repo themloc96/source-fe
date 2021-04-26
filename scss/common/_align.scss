@@ -1,0 +1,22 @@
+/* text align */
+.text {
+    &-center {
+        text-align: center !important;
+    }
+
+    &-left {
+        text-align: left !important;
+    }
+
+    &-right {
+        text-align: right !important;
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.word-break {
+    word-break: break-word;
+}

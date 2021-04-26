@@ -1,0 +1,203 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Items',
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {stItems: 'stItems'}) %>
+
+    <div class="contents-pages container-setting-user maintables-page d-flex modal-container setting-items payment-methods-v2">
+
+        <div class="set-user-right w-100 accessible-tabs-container container-column">
+            <%- include('_tips') %>
+            <div class="header-title flex-auto">
+                <h2>Line Items</h2>
+                <div class="tabs">
+                    <div role="tablist" aria-lable="Tabs Example" class="tab-selectors btn-item">
+                        <button class="tab-items active-tab-selector" type="button">
+                            Active
+                        </button>
+                        <button class="tab-items" type="button">
+                            Archived
+                        </button>
+                        <button class="tab-items" type="button">
+                            Deleted
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-setting">
+                    <button href="#addItems" class="btn-modal btn btn-main has-plus btn-add-method svg-plus white">
+                        <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                        Add Item
+                    </button>
+                    <div id="addItems" class="modal container-modal">
+                        <div class="modal__overlay bg-fixed"></div>
+                        <div class="modal__container large">
+                            <div class="header-modal">
+                                <span>New Item</span>
+
+                                <div class="btn btn-main">Save</div>
+                            </div>
+                            <div class="body-modal scrolls">
+                                <div class="row">
+                                    <span class="txt">Name</span>
+                                    <input class="field-input" type="text" name="" placeholder="Placeholder">
+                                </div>
+                                <div class="row form-newnote">
+                                    <span class="txt">Description</span>
+                                    <div class="description-box container-column">
+                                        <textarea class="field-input no-effect box-auto scrolls" name="" rows="4" cols="50" placeholder="Placeholder"></textarea>
+                                        
+                                        <div class="toolbar flex-auto">
+                                            <div class="tool-link">
+                                                <%- include ("../../svg/outline/outline-emoji.svg") %>
+                                            </div>
+                                            <div class="tool-link">
+                                                <%- include ("../../svg/outline/outline-attach.svg") %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row row-multi">
+                                    <div class="col">
+                                        <span class="txt">Cost</span>
+                                        <div class="cost-input">
+                                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <span class="txt">Tax 1</span>
+                                        <div class="dropup">
+                                            <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                                Placeholder
+                                                <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                            </div>
+                                            <div class="dropdown-menu">
+                                                <ul>
+                                                    <li class="items">
+                                                        Placeholder
+                                                    </li>
+                                                    <li class="items">
+                                                        Placeholder
+                                                    </li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <span class="txt">Tax 2</span>
+                                        <div class="dropup">
+                                            <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                                Placeholder
+                                                <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                            </div>
+                                            <div class="dropdown-menu">
+                                                <ul>
+                                                    <li class="items">
+                                                        Placeholder
+                                                    </li>
+                                                    <li class="items">
+                                                        Placeholder
+                                                    </li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-modal btn-close">
+                                <span>Cancel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-delete-all flex-auto">
+                <div class="w-delete-all d-flex align-center">
+                    <div class="check-items">
+                        <input id="check-user-all" type="checkbox" value="">
+                        <div class="item-checkbox">
+                            <label for="check-user-all">                                
+                                <span class="txt-ellipsis">0 Items: </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="w-item item-delete border-custom ml-2">
+                        <div class="svg-delete-grey">
+                            <%- include ("../../svg/outline/outline-delete.svg") %>
+                        </div>
+                        <span>Delete</span>
+                    </div>
+                    <div class="w-item item-archive border-custom">
+                        <%- include ("../../svg/outline/outline-clock.svg") %>
+                        <span>Archive</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-contents tabs content-table box-auto">
+                <div id="ActiveMethod" class="tab-conts w-100 tab-content-active">
+                    <div class="table-title">
+                        <div class="rows">
+                            <div class="col-checkbox"></div>
+                            <div class="col-name">Name</div>
+                            <div class="col-description pl-2">Description</div>
+                            <div class="col-tax2 pl-2">Tax 2</div>
+                            <div class="col-tax1 pl-2">Tax 1</div>
+                            <div class="col-cost pl-2">Cost</div>
+                        </div>
+                    </div>
+                    <div class="table-list scrolls">
+                        <% for (i = 0; i < 10; i++){ %>
+                        <div class="rows">
+                            <div class="col-checkbox">
+                                <div class="check-items">
+                                    <input id="check-1" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-name">
+                                <div class="txt-ellipsis">Bi Monthly Kerry</div>
+                            </div>
+                            <div class="col-description pl-2">
+                                <span class="txt-ellipsis">Discount of $25 for family and friends of TruGanix.</span>
+                            </div>
+                            <div class="col-tax2 pl-2">
+                                <span class="txt-ellipsis">0</span>
+                            </div>
+                            <div class="col-tax1 pl-2">
+                                <span class="txt-ellipsis">0</span>
+                            </div>
+                            <div class="col-cost pl-2">
+                                <span class="txt-ellipsis">$100.00</span>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div id="ArchivedMethod" class="tab-conts w-100">
+                    <div class="p-5">ArchivedMethod</div>
+                </div>
+                <div id="DeletedMethod" class="tab-conts w-100">
+                    <div class="p-5">DeletedMethod</div>
+                </div>
+            </div>
+
+            <%- include('../../partials/_pagination') %>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>

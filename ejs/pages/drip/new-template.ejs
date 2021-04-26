@@ -1,0 +1,276 @@
+<%- include('../../partials/_head', {
+    title: 'Message Templates',
+    slug: 'drip-campaigns',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {drip: 'drip'}) %>
+<%- include('../../partials/_sidebar', {drip: 'drip'}) %>
+
+<div class="drip container-wrap">
+    <div class="drip__header heading-page">
+        <h4 class="heading-page__label">
+            <a href="#" class="d-flex align-center">
+                <%- include ("../../svg/outline/outline-arrow-left.svg") %>
+                <span class="ml-3">Drip Campaigns</span>
+            </a>
+        </h4>
+    </div>
+	<div class="drip__container">
+        <%- include('_sidebar', {dripTemplates: 'dripTemplates'}) %>
+        <div class="wrapper flex-column">
+            <div class="wrapper__title heading-page flex-column__head">
+                <h4 class="heading-page__label"> 
+                    <a href="/pages/drip/templates.html">
+                        <%- include ("../../svg/outline/outline-arrow-left.svg") %>
+                        <span class="ml-2">Templates</span>
+                    </a>                     
+                </h4>
+                <div class="btn btn-main disable">
+                    <span>Save</span>
+                </div>
+            </div>
+            <div class="wrapper__list l-template scrolls-x">
+                <div class="l-template__content l-template__content--edit scrolls">
+                    <div class="has-form">
+                        <div class="rows">
+                            <span class="has-form__label">Template Name</span>
+                            <input class="has-form__input field-input" type="text" name="" placeholder="Placeholder">
+                            <div class="line"></div>
+                        </div>
+                        <div class="has-form__line"></div>
+                        <div class="rows">
+                            <span class="has-form__label">Subject Line</span>
+                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+
+                            <div class="dropdown dropdown--variable">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default has-icon">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Insert Variable
+                                </div>
+                                <div class="dropdown-menu scrolls">
+                                    <ul>
+                                        <% for (let i = 0; i < 5; i++ ) { %>
+                                        <li class="items">Variable Item</li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="has-form__line"></div>
+
+                        <div class="l-switchboxs">
+                            <div class="l-switchboxs__title">
+                                <div class="title svg-email-blue">
+                                    <%- include ("../../svg/states-mail-default.svg") %>
+                                    Email
+                                </div>
+                                <div class="btn-default has-icon">
+                                    <%- include ("../../svg/outline/outline-mail.svg") %>
+                                    Send Test Mail
+                                </div>
+
+                                <div class="switch large pl-2">
+                                    <input id="toggle_email" class="toggle toggle-round" type="checkbox" checked onclick="checkboxMessage('reminder-email-body');">
+                                    <label for="toggle_email">
+                                        <span class="onoff enable-disable"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="l-switchboxs__content reminder-email-body form-newnote">
+                                <p class="message-title">Email Body</p>
+
+                                <div class="description-box container-column">
+                                    <textarea class="field-input no-effect box-auto scrolls" rows="4" cols="50 " autofocus></textarea>
+                                    <div class="toolbar flex-auto">
+                                        <div class="tool-link">
+                                            <%- include ("../../svg/outline/outline-text-bold.svg") %>
+                                        </div>
+                                        <div class="tool-link tool-link--line">
+                                            <%- include ("../../svg/outline/outline-text-italic.svg") %>
+                                        </div>
+                                        <div class="tool-link">
+                                            <%- include ("../../svg/outline/outline-text-list-1.svg") %>
+                                        </div>
+                                        <div class="tool-link tool-link--line">
+                                            <%- include ("../../svg/outline/outline-text-list-2.svg") %>
+                                        </div>
+                                        <div class="tool-link">
+                                            <%- include ("../../svg/outline/outline-attach.svg") %>
+                                        </div>
+                                        <div class="tool-link">
+                                            <%- include ("../../svg/outline/outline-code.svg") %>
+                                        </div>
+                                    </div>
+
+                                    <!-- content has variable label -->                                    
+                                    <div class="container-message-builder">
+                                        <p>
+                                            Hi
+                                            <span class="btn btn-tag-message btn-text-color">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Client First Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> .
+                                        </p>
+                                        <p>
+                                            I have attached your most recent invoice 
+                                            <span class="btn btn-tag-message btn-text-color">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Invoice Number <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> as a PDF. Please let me know if you have any questions. 
+                                            Pay online using our secure checkout.
+                                            <p>
+                                                <span class="btn btn-tag-message btn-text-color">
+                                                    <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Stripe Payment Link <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                                </span>
+                                            </p>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="l-switchboxs__content-action">
+                                    <div class="dropdown dropdown--variable">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default has-icon">
+                                            <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                            Insert Variable
+                                        </div>
+                                        <div class="dropdown-menu scrolls">
+                                            <ul>
+                                                <% for (let i = 0; i < 5; i++ ) { %>
+                                                <li class="items">Variable Item</li>
+                                                <% } %>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="btn-default has-icon">
+                                        <%- include ("../../svg/outline/outline-repeat.svg") %>
+                                        Restore Default
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="has-form__line"></div>
+                        <div class="l-switchboxs">
+                            <div class="l-switchboxs__title">
+                                <div class="title svg-sms-yellow">
+                                    <%- include ("../../svg/states-sms.svg") %> SMS
+                                </div>
+
+                                <div class="switch large">
+                                    <input id="toggle_sms" class="toggle toggle-round" type="checkbox" checked onclick="checkboxMessage('template-sms-body');">
+                                    <label for="toggle_sms">
+                                        <span class="onoff enable-disable"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="l-switchboxs__content template-sms-body form-newnote">
+                                <p class="message-title">Email Body</p>
+
+                                <div class="description-box container-column">
+                                    <textarea class="field-input no-effect box-auto scrolls" rows="4" cols="50 " autofocus></textarea>
+                                    <div class="toolbar flex-auto">
+                                        <div class="tool-link">
+                                            <%- include ("../../svg/outline/outline-text-bold.svg") %>
+                                        </div>
+                                        <div class="tool-link tool-link--line">
+                                            <%- include ("../../svg/outline/outline-text-italic.svg") %>
+                                        </div>
+                                        <div class="tool-link">
+                                            <%- include ("../../svg/outline/outline-text-list-1.svg") %>
+                                        </div>
+                                        <div class="tool-link tool-link--line">
+                                            <%- include ("../../svg/outline/outline-text-list-2.svg") %>
+                                        </div>
+                                        <div class="tool-link">
+                                            <%- include ("../../svg/outline/outline-attach.svg") %>
+                                        </div>
+                                        <div class="tool-link">
+                                            <%- include ("../../svg/outline/outline-code.svg") %>
+                                        </div>
+                                    </div>
+
+                                    <!-- content has variable label -->                                    
+                                    <div class="container-message-builder">
+                                        <p>
+                                            Hi
+                                            <span class="btn btn-tag-message btn-text-color">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Client First Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> .
+                                        </p>
+                                        <p>
+                                            I have attached your most recent invoice 
+                                            <span class="btn btn-tag-message btn-text-color">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Invoice Number <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> as a PDF. Please let me know if you have any questions. 
+                                            Pay online using our secure checkout.
+                                            <p>
+                                                <span class="btn btn-tag-message btn-text-color">
+                                                    <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Stripe Payment Link <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                                </span>
+                                            </p>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="l-switchboxs__content-action">
+                                    <div class="dropup dropdown--variable">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default has-icon">
+                                            <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                            Insert Variable
+                                        </div>
+                                        <div class="dropdown-menu scrolls">
+                                            <ul>
+                                                <% for (let i = 0; i < 5; i++ ) { %>
+                                                <li class="items">Variable Item</li>
+                                                <% } %>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="btn-default has-icon">
+                                        <%- include ("../../svg/outline/outline-repeat.svg") %>
+                                        Restore Default
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="l-template__content l-template__content--preview scrolls"> 
+                    <div class="container-content-email">
+                        <h3 class="container-content-email__title">Neutral Resources</h3>
+                        <div class="container-content-email__wrap">
+                            <div class="logo">
+                                <img src="/images/logo_company.png" alt="" width="105px" height="60px">
+                            </div>
+                            <div class="description-head">
+                                <p> Hi Client_First_Name, </p>
+                                <p cla> I have attached your most recent invoice #5167 as a PDF. Please let me know if you have any questions. </p>
+                                <p> Pay online using our secure checkout. </p>
+                                <div class="btn btn-main btn-pay-online">
+                                    <span>Pay Online</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="description-info">
+                                <p> Chris Moreschi </p>
+                                <p> TruGanix </p>
+                                <p> 855-536-7470 </p>
+                                <p> chris.moreschi@gmail.com </p>
+                                <p class="cursor-pointer manage-link">Manage Your Account &gt;&gt;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-footer-email">
+                        <p> Hi Client_First_Name, </p>
+                        <p> I have attached your most recent invoice #5167 as a PDF. Please let me know if you have any questions. </p>
+                        <p> Pay online using our secure checkout. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>			
+
+<%- include('../../partials/_footer', { 
+    slug: 'drip-campaigns',
+    root: ''
+}) %>

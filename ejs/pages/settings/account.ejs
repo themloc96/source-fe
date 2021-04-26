@@ -1,0 +1,93 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Account',
+    slug: 'settings-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {stAccount: 'stAccount'}) %>
+
+    <div class="contents-pages page-account container-column">
+    	<div class="title-header flex-auto">
+    		<span class="fs-18">Your GorillaDesk Account</span>
+		</div>
+
+		<div class="scrolls box-auto">
+            <div class="setting-wrap page-wrapper">
+                <div class="boxs">
+                	<span class="title">Current Plan</span>
+                	<div class="conts black-3">
+                		Your next charge is
+                		<span class="plans ml-1 svg-star-white">
+							<%- include ("../../svg/outline/outline-star.svg") %>
+							Pro 3 $199/mo
+						</span>
+                	</div>
+                	<div class="more">
+                		See plans and activate account
+                		<span class="ml-1 svg-chevron purple">
+							<%- include ("../../svg/outline/outline-chevron-right.svg") %>
+						</span>
+                	</div>
+                </div>
+
+                <div class="boxs">
+                	<span class="title">Credit Card</span>
+                	<div class="conts d-flex">
+                		<div class="card">
+                			Stripe
+                			<span class="ml-4">•••• 7268</span>
+                		</div>
+                		<span class="duedate">05/16</span>
+                	</div>
+                	<div class="more">
+                		Change your credit card and billing information
+						<span class="svg-chevron purple ml-1">
+							<%- include ("../../svg/outline/outline-chevron-right.svg") %>
+						</span>
+                	</div>
+                </div>
+
+                <div class="boxs">
+                	<span class="title">Last Invoice</span>
+                	<div class="conts black-3">
+                		<span class="plans ml-1 svg-star-white">
+							<%- include ("../../svg/outline/outline-star.svg") %>
+							Pro 3 $199/mo
+						</span>
+                		on june 6, 2020
+                	</div>
+                	<a href="/pages/settings/invoice.html" class="more">
+                		See all invoices
+                		<span class="svg-chevron purple ml-1">
+							<%- include ("../../svg/outline/outline-chevron-right.svg") %>
+						</span>
+                	</a>
+                </div>
+
+                <div class="last-boxs boxs">
+                	<span class="title">Need to freeze or stop your subscription?</span>
+                	<div class="conts">
+                		Please complete the form below.
+                	</div>
+                	<div class="more">
+                		Subscription Change Request
+                		<span class="svg-chevron purple ml-1">
+							<%- include ("../../svg/outline/outline-chevron-right.svg") %>
+						</span>
+                	</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'settings-v2',
+    root: ''
+}) %>

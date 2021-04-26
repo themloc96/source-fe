@@ -1,0 +1,194 @@
+@import "../common/variables";
+@import "../common/mixins";
+
+.review {
+    &.container-wrap {
+        overflow: hidden;
+    }
+
+    .header-review {
+        flex: 0 0 auto;
+        padding: 20px 25px;
+        border-bottom: solid 1px $border-color-grey;
+
+        > div:first-child {
+            @include flexcenter;
+        }
+    }
+
+    .group-select {
+        display: flex;
+        justify-content: space-between;
+
+        .dropdown {
+            .dropbtn {
+                min-width: 95px;
+            }
+            & + .dropdown {
+                margin-left: 8px;
+            }
+        }
+
+        .calendar {
+            .dropbtn {
+                color: $grey-extrlight;
+                padding: 0px 10px 0px 5px;
+
+                .date-to {
+                    color: $date-color;
+                    padding: 0px 3px;
+                }
+
+                .outline-calendar {
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+
+    .tables {
+        .content-table {
+            font-size: 13px;
+            height: 100%;
+
+            .tab-conts {
+                @include size(100%);
+            }
+
+            .t-title {
+                .rows {
+                    height: 40px;
+
+                    > div {
+                        font-size: 13px;
+                        font-weight: 600;
+                        line-height: 1.54;
+                    }
+                }
+            }
+
+            .t-content {
+                color: $black-5;
+                height: calc(100% - 42px);
+
+                .rows {
+                    min-height: 64px;
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+
+                    > div {
+                        align-items: flex-start;
+                        width: 100%;
+                    }
+                }
+
+                .col-date,
+                .col-feedback {
+                    margin-top: 4px;
+                }
+            }
+
+            .rows {
+                @include flexcenter;
+
+                border-bottom: solid 1px $border-color-grey;
+                padding: 20px 10px 20px 25px;
+            }
+
+            .member {
+                justify-content: space-between;
+
+                @include flexcenter;
+
+                .avt {
+                    display: inline-block;
+                    border-radius: 9px;
+
+                    @include centeritem;
+
+                    @include size(24px);
+
+                    &.avt-img {
+                        background-color: $background-input;
+                    }
+                }
+
+                .name {
+                    width: calc(100% - 30px);
+
+                    @include text-ellipsis;
+                }
+            }
+
+            .col-customer {
+                width: 13%;
+
+                .avt {
+                    background-color: $royal-blue;
+                    color: $white;
+                }
+
+                .name {
+                    color: $violet-name;
+                }
+            }
+
+            .col-date {
+                width: 13%;
+            }
+
+            .col-temmate {
+                width: 13%;
+
+                .avt {
+                    img {
+                        @include size(100%);
+
+                        border-radius: 9px;
+                    }
+                }
+            }
+
+            .col-rating {
+                width: 20%;
+
+                > div:first-child {
+                    @include flexcenter;
+
+                    > span:first-child {
+                        margin-right: 5px;
+                        margin-top: -3px;
+                    }
+                }
+
+                svg {
+                    cursor: pointer;
+                }
+            }
+
+            .col-feedback {
+                width: calc(41% - 25px);
+            }
+
+            #likelyRatings {
+                .col-customer,
+                .col-temmate {
+                    width: 20%;
+                }
+
+                .col-date {
+                    width: 16%;
+                }
+
+                .col-feedback {
+                    width: calc(44% - 25px);
+                }
+            }
+        }
+    }
+
+    .footer-pages {
+        flex: 0 0 auto;
+    }
+}

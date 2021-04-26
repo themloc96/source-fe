@@ -1,0 +1,127 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Tags',
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {stTags: 'stTags'}) %>
+    
+    <div class="contents-pages container-setting-user maintables-page d-flex payment-methods-v2 modal-container setting-items">
+        <div class="relative w-100 accessible-tabs-container container-column">
+            <div class="header-title flex-auto">
+                <h2>Tags</h2>
+                <div class="tabs">
+                    <div role="tablist" aria-lable="Tabs Example" class="tab-selectors btn-item">
+                        <button class="tab-items active-tab-selector" type="button">
+                            Location
+                        </button>
+                        <button class="tab-items" type="button">
+                            Customers
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-setting">
+                    <button href="#addTags" class="btn-modal btn btn-main has-plus btn-add-method svg-plus white">
+                        <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                        Add Tag
+                    </button>
+                    <div id="addTags" class="modal container-modal">
+                        <div class="modal__overlay bg-fixed"></div>
+                        <div class="modal__container">
+                            <div class="header-modal">
+                                <span>New Item</span>
+
+                                <div class="btn btn-main">Save</div>
+                            </div>
+                            <div class="body-modal scrolls">
+                                <div class="row pb-1">
+                                    <span class="txt">Tag Name</span>
+                                    <input class="field-input" type="text" name="" placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="footer-modal btn-close">
+                                <span>Cancel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-delete-all flex-auto">
+                <div class="w-delete-all d-flex align-center">
+                    <div class="check-items">
+                        <input class="check-all purple" id="check-user-all" type="checkbox" value="">
+                        <div class="item-checkbox">
+							<label for="check-user-all"> 
+								<span class="txt-ellipsis ml-2">0 items:</span>
+							</label>
+						</div>
+                    </div>
+                    <div class="w-item item-delete border-custom ml-2">
+                        <div class="svg-delete-grey">
+                            <%- include ("../../svg/outline/outline-delete.svg") %>
+                        </div>
+                        <span>Delete</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-contents tabs content-table table-tags box-auto">
+                <div id="locationTags" class="tab-conts w-100 tab-content-active">
+                    <div class="table-title">
+                        <div class="rows">
+                            <div class="col-checkbox"></div>
+                            <div class="col-name">Name</div>
+                            <div class="col-type pr-5">Type</div>
+                            <div class="col-edit"></div>
+                            <div class="col-delete"></div>
+                        </div>
+                    </div>
+                    <div class="table-list scrolls">
+                        <% for (i = 0; i < 15; i++){ %>
+                        <div class="rows">
+                            <div class="col-checkbox">
+                                <div class="check-items">
+                                    <input class="check-all purple" id="check-1" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-name">
+                                <div class="txt-ellipsis">#00AADD</div>
+                            </div>
+                            <div class="col-type pr-5">
+                                <span class="txt-ellipsis">
+                                    Location
+                                </span>
+                            </div>
+                            <div class="col-hover">
+                                <div class="manage-link"><%- include ("../../svg/outline/outline-pen.svg") %></div>
+                            </div>
+                            <div class="col-hover">
+                                <div class="manage-link"><%- include ("../../svg/outline/outline-delete.svg") %></div>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div id="customersTags" class="tab-conts w-100">
+                    <div class="p-5">Customers Tags</div>
+                </div>
+            </div>
+
+            <%- include('../../partials/_pagination') %>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>

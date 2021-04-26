@@ -1,0 +1,139 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+	<div class="contents-pages customer-review-column">
+		<div class="title-header">
+			<div class="step-import-customer">
+				<div class="step-number">2</div>
+				<div class="step-details">
+					<div class="step-title">Step</div>
+					<div class="step-description">Review & map your column attributes</div>
+				</div>
+			</div>
+			<div class="right-conts btn-close">
+				<a href="/pages/customers/customers-list.html" class="btn-cancel">Cancel</a>
+				<div class="btn-main">Import</div>
+			</div>
+		</div>
+
+		<div class="list-import scrolls">
+			<div class="list-comlumn active">
+				<div class="column-header">
+					<div class="title">Column 1</div>
+					<span class="checkbox-items">
+						<%- include ("../../svg/outline/outline-check-circle.svg") %>
+					</span>
+					<span class="checked">
+						<%- include ("../../svg/outline/outline-check-circle-fill-green.svg") %>
+					</span>
+				</div>
+				<div class="select-attribute">
+					<div class="dropdown">
+						<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+							Select Atribute
+							<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+						</div>
+						<div class="dropdown-menu">
+							<ul>
+								<li class="items">
+									Select Atribute 2
+								</li>
+								<li class="items">
+									Select Atribute 3
+								</li>
+								<li class="items">
+									Select Atribute 4
+								</li>
+								<li class="items">
+									Select Atribute 5
+								</li>
+						  </ul>
+						</div>
+				  	</div>
+				</div>
+				<div class="import-items">
+					<ul>
+						<li class="item">
+							<span class="number">1.</span>
+							<span>Harinder</span>
+						</li>
+						<li class="item">
+							<span class="number">2.</span>
+							<span>Laquita</span>
+						</li>
+						<li class="item">
+							<span class="number">3.</span>
+							<span>Uruewa</span>
+						</li>
+						<li class="item last">… +20 more</li>
+					</ul>
+				</div>
+			</div>
+			<% for (i=0; i < 9; i++){ %>
+			<div class="list-comlumn">
+				<div class="column-header">
+					<div class="title">Column 1</div>
+					<span class="checkbox-items">
+						<%- include ("../../svg/outline/outline-check-circle.svg") %>
+					</span>
+					<span class="checked">
+						<%- include ("../../svg/outline/outline-check-circle-fill-green.svg") %>
+					</span>
+				</div>
+				<div class="select-attribute">
+					<div class="dropdown">
+						<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+							Select Atribute
+							<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+						</div>
+						<div class="dropdown-menu">
+							<ul>
+								<li class="items">
+									Select Atribute 2
+								</li>
+								<li class="items">
+									Select Atribute 3
+								</li>
+								<li class="items">
+									Select Atribute 4
+								</li>
+								<li class="items">
+									Select Atribute 5
+								</li>
+						  </ul>
+						</div>
+				  	</div>
+				</div>
+				<div class="import-items">
+					<ul>
+						<li class="item">
+							<span class="number">1.</span>
+							<span>Harinder</span>
+						</li>
+						<li class="item">
+							<span class="number">2.</span>
+							<span>Laquita</span>
+						</li>
+						<li class="item">
+							<span class="number">3.</span>
+							<span>Uruewa</span>
+						</li>
+						<li class="item last">… +20 more</li>
+					</ul>
+				</div>
+			</div>
+			<% } %>
+		</div>
+	</div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

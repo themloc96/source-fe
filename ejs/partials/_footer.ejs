@@ -1,0 +1,25 @@
+ 
+</div>
+</body>
+<% if (slug === 'forgot-v2' || slug === 'login-v2' || slug === 'registration-v2' || slug === 'reset-v2') {  %>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<% } %>
+<% if (slug === 'calendar') {  %>
+<script src="../../js/calendar.js"></script>
+<!-- Calendar library -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@5.5.0/main.min.js" defer></script>
+<!-- Tooltip -->
+<script src="../../js/popper.min.js"></script>
+<script src="../../js/add-massage.js"></script>
+<% } %>
+<% if (slug === 'customers-v2') {  %>
+<script src="../../js/customers.js" defer></script>
+<% } %>
+<% if (slug === 'settings-v2' || slug === 'users-v2' || slug === 'users-documents-v2' || slug=== 'payment-methods-v2' || slug=== 'title-v2' || slug=== 'invoice-v2' || slug=== 'estimate-v2' || slug=== 'workorder-v2' || slug=== 'service-edit-v2' || slug=== 'service-materials-v2' || slug=== 'service-invoice-v2' || slug=== 'service-estimate-v2' || slug=== 'system-email-template-v2' || slug=== 'system-custom-edit-v2' || slug=== 'setting-broadcast-v2' ) {  %>
+<script src="../../js/setting.js"></script>
+<% } %>
+<script src="../../js/index.js" defer></script>
+<script src="../../js/modal.js"></script>
+<script src="../../js/search-form.js"></script>
+</html>

@@ -1,0 +1,76 @@
+<!-- Modal Drip Preview template -->
+<div id="view_template" class="modal modal--drip container-modal">
+    <div class="modal__overlay bg-fixed"></div>
+    <div class="modal__container modal__container--preview">
+        <div class="body-modal accessible-tabs-container">
+            <div role="tablist" aria-lable="Tabs Example" class="tab-selectors">
+                <div class="tab-items active-tab-selector">
+                    Step 1
+                </div>
+                <div class="tab-items">
+                    Step 2
+                </div>
+                <div class="tab-items">
+                    Step 3
+                </div>
+                <div class="tab-items">
+                    Step 4
+                </div>
+            </div>
+            <div class="tab-contents scrolls">
+                <div class="tab-conts tab-content-active">
+                    <h3 class="preview-title fw-600">Step 1</h3>
+                    <div class="tab-conts__description">
+                        <h3 class="preview-title preview-title--email svg-email-blue">
+                            <%- include ("../../svg/states-mail-default.svg") %>
+                            Email
+                        </h3>
+                        <div class="container-content-email">
+                            <h3 class="container-content-email__title">Neutral Resources</h3>
+                            <div class="container-content-email__wrap">
+                                <div class="logo">
+                                    <img src="/images/logo_company.png" alt="" width="105px" height="60px">
+                                </div>
+                                <div class="description-head">
+                                    <p> Hi Client_First_Name, </p>
+                                    <p cla> I have attached your most recent invoice #5167 as a PDF. Please let me know if you have any questions. </p>
+                                    <p> Pay online using our secure checkout. </p>
+                                    <div class="btn btn-main btn-pay-online">
+                                        <span>Pay Online</span>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="description-info">
+                                    <p> Chris Moreschi </p>
+                                    <p> TruGanix </p>
+                                    <p> 855-536-7470 </p>
+                                    <p> chris.moreschi@gmail.com </p>
+                                    <p class="cursor-pointer manage-link">Manage Your Account &gt;&gt;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sms -->                        
+                        <h3 class="preview-title preview-title--sms svg-sms-yellow">
+                            <%- include ("../../svg/states-sms.svg") %>
+                            SMS
+                        </h3>
+                        <div class="container-footer-email">
+                            <p> Hi Client_First_Name, </p>
+                            <p> I have attached your most recent invoice #5167 as a PDF. Please let me know if you have any questions. </p>
+                            <p> Pay online using our secure checkout. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-conts">
+                    <h3 class="preview-title fw-600">Step 2</h3>
+                </div>
+                <div class="tab-conts">
+                    <h3 class="preview-title fw-600">Step 3</h3>
+                </div>
+                <div class="tab-conts">
+                    <h3 class="preview-title fw-600">Step 4</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

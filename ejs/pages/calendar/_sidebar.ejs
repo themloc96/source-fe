@@ -1,0 +1,360 @@
+<div class="calendar-sidebar">
+    <div class="sidebar-details">
+        <!-- View monthly caledar -->
+        <div class="monthly-calendar"></div>
+        <!-- End wiew monthly caledar -->
+
+        <div class="switch-maintab tabs accessible-tabs-container"> 
+            <ul role="tablist" aria-lable="Tabs Example" class="tab-selectors header-action">
+                <li class="tab-items ">
+                    <span>Work Pool</span>
+                </li>
+                <li class="tab-items active-tab-selector">
+                    <span>Tasks</span>
+                </li>
+                <li class="tab-items">
+                    <span>Job List</span>
+                </li>
+            </ul>
+
+            <div class="tab-contents content-tab">
+                <!-- Tab Work Pool -->
+                <div class="tab-conts detail-workpool detail-joblist">
+                    <div class="search relative">
+                        <div class="search-input">
+                            <span class="svg-search"><%- include ("../../svg/outline/outline-search.svg") %></span>
+                            <input class="field-input" type="text" name="" placeholder="Search">                            
+                            <span class="visibility-hide">
+                                <%- include ("../../svg/outline/outline-clear-field.svg") %>
+                            </span>
+                        </div>
+                        <div class="list-search-workpool dropdown-menu dp-hide">
+                            <ul>
+                                <li class="item hover-yellow">
+                                    <div class="name">
+                                        <span class="avt">AB</span>
+                                        <span class="txt-ellipsis">Christian Russell</span>
+                                    </div>
+                                    <div class="address">110 S 4th St
+                                        Minneapolis, MN 55401</div>
+                                </li>
+                                <li class="item hover-yellow">
+                                    <div class="name">
+                                        <span class="avt">AB</span>
+                                        <span class="txt-ellipsis">Christian Russell</span>
+                                    </div>
+                                    <div class="address">110 S 4th St
+                                        Minneapolis, MN 55401</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dropdown dropdown-job-workpool drop-status">
+                        <div class="dropbtn btn-job-workpool btn-default selection">
+                            <div class="d-flex align-center">
+                                <%- include ("../../svg/outline/outline-job.svg") %>
+                                Missed
+                            </div>
+                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                        </div>
+                        <div class="dropdown-menu">
+                            <div class="scrolls">
+                                <ul>
+                                    <li class="item hover-yellow active">
+                                        <div class="item-box">
+                                            <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                            <span class="status text-confirmed">Confirmed</span>
+                                        </div>   
+                                    </li>
+                                    <li class="item hover-yellow">
+                                        <div class="item-box">
+                                            <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                            <span class="status text-unconfirmed">Unconfirmed</span>
+                                        </div>   
+                                    </li>
+                                    <li class="item hover-yellow">
+                                        <div class="item-box">
+                                            <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                            <span class="status text-pending-booking">Pending Booking</span>
+                                        </div>   
+                                    </li>
+                                    <li class="item hover-yellow">
+                                        <div class="item-box">
+                                            <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                            <span class="status text-canceled">Canceled</span>
+                                        </div>   
+                                    </li>
+                                    <li class="item hover-yellow">
+                                        <div class="item-box">
+                                            <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                            <span class="status text-completed">Completed</span>
+                                        </div>   
+                                    </li>
+                                    <li class="item hover-yellow">
+                                        <div class="item-box">
+                                            <span class="col-icon"><%- include ("../../svg/outline/outline-arrow-check.svg") %></span>
+                                            <span class="status text-reschedule">Reschedule</span>
+                                        </div>   
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-workpool details-jobslist">
+                        <div class="scrolls">
+                            <div class="jobslist history-joblist">
+                                <div class="name">
+                                    <span class="emoij">😀</span>
+                                    <span class="txt-ellipsis">Service Name</span>
+                                </div>
+                                <div class="info">WV 26501, Morgantown, WV 26501</div>
+                                <div class="info">06/24/2020  08:45AM - 09:30AM</div>
+                                <div class="user">
+                                    <div class="avt-img">
+                                        <img src="https://unsplash.it/20/20" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jobslist history-joblist completed">
+                                <div class="name">
+                                    <span class="emoij">😀</span>
+                                    <span class="txt-ellipsis">Service Name</span>
+                                </div>
+                                <div class="info">WV 26501, Morgantown, WV 26501</div>
+                                <div class="info txt-ellipsis">06/24/2020  08:45AM - 09:30AM</div>
+                                <div class="user">
+                                    <div class="avt-img">
+                                        <img src="https://unsplash.it/20/20" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jobslist history-joblist reschedule">
+                                <div class="name">
+                                    <span class="emoij">😀</span>
+                                    <span class="txt-ellipsis">Service Name</span>
+                                </div>
+                                <div class="info">WV 26501, Morgantown, WV 26501</div>
+                                <div class="info">06/24/2020  08:45AM - 09:30AM</div>
+                                <div class="user">
+                                    <div class="avt-img">
+                                        <img src="https://unsplash.it/20/20" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jobslist history-joblist">
+                                <div class="name">
+                                    <span class="emoij">😀</span>
+                                    <span class="txt-ellipsis">Service Name</span>
+                                </div>
+                                <div class="info">WV 26501, Morgantown, WV 26501</div>
+                                <div class="info">06/24/2020  08:45AM - 09:30AM</div>
+                                <div class="user">
+                                    <div class="avt-img">
+                                        <img src="https://unsplash.it/20/20" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jobslist history-joblist">
+                                <div class="name">
+                                    <span class="emoij">😀</span>
+                                    <span class="txt-ellipsis">Service Name</span>
+                                </div>
+                                <div class="info">WV 26501, Morgantown, WV 26501</div>
+                                <div class="info">06/24/2020  08:45AM - 09:30AM</div>
+                                <div class="user">
+                                    <div class="avt-img">
+                                        <img src="https://unsplash.it/20/20" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jobslist history-joblist">
+                                <div class="name">
+                                    <span class="emoij">😀</span>
+                                    <span class="txt-ellipsis">Service Name</span>
+                                </div>
+                                <div class="info">WV 26501, Morgantown, WV 26501</div>
+                                <div class="info">06/24/2020  08:45AM - 09:30AM</div>
+                                <div class="user">
+                                    <div class="avt-img">
+                                        <img src="https://unsplash.it/20/20" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab Task -->
+                <div class="tab-conts tab-content-active detail-tasks">
+                    <div class="task-header">
+                        <div class="btn-item">
+                            <div class="tab-items active-tab-selector">Active</div>
+                            <div class="tab-items">Done</div>
+                        </div>
+                        <div class="dropdown dropdown-assignto dropdown-items">
+                            <div class="dropbtn btn-assignto btn-default selection">
+                                <div class="d-flex align-center">
+                                    <%- include ("../../svg/outline/outline-user.svg") %>
+                                    Assign To
+                                </div>
+                                <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                            </div>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li>
+                                        <div class="items hover-yellow">User 1</div>   
+                                    </li>
+                                    <li>
+                                        <div class="items hover-yellow">User 2</div>   
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contents scrolls">
+                        <div class="h-100">
+
+                            <div class="box-task done">
+                                <div class="title">
+                                    <div class="btn-default task-done">
+                                        <%- include ("../../svg/outline/outline-check-circle.svg") %>
+                                        Done
+                                    </div>
+                                    <div class="time">06/06/2020 13:30AM</div>
+                                </div>
+                                <div class="detail-note">
+                                    <div class="description">
+                                        Sed id quibusdam perferendis iusto aliquid qui doloribus necdoloribus
+                                        nec perferendis iusto aliquid qui doloribus necdoloribus aliquid. 
+                                        Sed id quibusdam perferendis iusto aliquid qui doloribus necdoloribus necdoloribus aliquid.
+                                    </div> 
+                                    <div class="see-more">
+                                        <%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+                                    </div>
+                                </div>
+
+                                <div class="customer-name">
+                                    <div class="box">
+                                        <div class="avt-img">
+                                            <img src="https://unsplash.it/25/25" alt="">
+                                        </div>
+                                        <div class="name">Saami Al Samad</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% for (i = 0; i < 4; i++){ %>
+                            <div class="box-task">
+                                <div class="title">
+                                    <div class="btn-default task-done">
+                                        <%- include ("../../svg/outline/outline-check-circle.svg") %>
+                                        Done
+                                    </div>
+                                    <div class="time">06/06/2020 13:30AM</div>
+                                </div>
+                                <div class="detail-note">
+                                    <div class="description">
+                                        Sed id quibusdam perferendis iusto aliquid qui doloribus necdoloribus
+                                        nec perferendis iusto aliquid qui doloribus necdoloribus aliquid. 
+                                        Sed id quibusdam perferendis iusto aliquid qui doloribus necdoloribus necdoloribus aliquid.
+                                    </div> 
+                                    <div class="see-more">
+                                        <%- include ("../../svg/outline/outline-chevron-down-small.svg") %>
+                                    </div>
+                                </div>
+
+                                <div class="customer-name">
+                                    <div class="box">
+                                        <div class="avt-img">
+                                            <img src="https://unsplash.it/25/25" alt="">
+                                        </div>
+                                        <div class="name">Saami Al Samad</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab Job List -->
+                <div class="tab-conts detail-joblist">
+                    <div class="scrolls">
+                        <div class="search-jobs dropdown-filter">
+                            <div class="search-input">
+                                <span class="svg-search"><%- include ("../../svg/outline/outline-search.svg") %></span>
+                                <input class="field-search" type="text" name="" placeholder="Search">
+                                <div class="user-result">
+                                    <div class="w-100">
+                                        <div class="avt fs-11">AB</div>
+                                        <span class="txt-ellipsis">Christian Russell</span>
+                                        <span class="close-btn svg-remove white">
+                                            <%- include ("../../svg/outline/outline-remove.svg") %>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-result dropdown-menu">
+                                <ul class="scrolls">
+                                    <% for (i = 0; i < 5; i++){ %>
+                                    <li>
+                                        <div class="items result-items hover-yellow">
+                                            <div class="avt">AB</div>
+                                            <span class="txt-ellipsis">Christian Russell</span>
+                                        </div>
+                                    </li>
+                                    <% } %>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="details-jobslist">
+                            <!-- Active jobs -->
+                            <div class="title">Active</div>
+                            <% for (i = 0; i < 2; i++){ %>
+                            <div class="jobslist active-jobs">
+                                <div class="name">
+                                    <span class="emoij">😀</span>
+                                    <span class="txt-ellipsis">Service Name</span>
+                                </div>
+                                <div class="info">06/24/2020  08:45AM - 09:30AM</div>
+                                <div class="info">Sampson Totton</div>
+                                <div class="info">14 September, Sun</div>
+                                <div class="info">14:00 - 15:30</div>
+                            </div>
+                            <% } %>
+                            <div class="jobslist active-jobs completed">
+                                <div class="name">
+                                    <span class="emoij">😀</span>
+                                    <span class="txt-ellipsis">Service Name</span>
+                                </div>
+                                <div class="info">WV 26501, Morgantown, WV 26501</div>
+                                <div class="info">Sampson Totton</div>
+                                <div class="info">14 September, Sun</div>
+                                <div class="info">14:00 - 15:30</div>
+                            </div>
+                            
+                            <!-- History jobs -->
+                            <div class="title">History</div>
+                            <% for (i = 0; i < 3; i++){ %>
+                            <div class="jobslist history-joblist">
+                                <div class="name">
+                                    <span class="emoij">😀</span>
+                                    <span class="txt-ellipsis">Service Name</span>
+                                </div>
+                                <div class="info">WV 26501, Morgantown, WV 26501</div>
+                                <div class="info">06/24/2020  08:45AM - 09:30AM</div>
+                                <div class="user">
+                                    <div class="avt-img">
+                                        <img src="https://unsplash.it/20/20" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('_sidebar-job-preview') %>
+</div>

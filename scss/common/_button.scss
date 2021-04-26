@@ -1,0 +1,569 @@
+@import "mixins";
+
+.btn {
+    @include btn;
+
+    &-regular-m {
+        border-color: $grey-soft;
+        color: $grey-dark;
+        padding: 6px 15px;
+
+        button {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background: $transparent;
+            border: none;
+            outline: none;
+        }
+
+        &:hover {
+            border-color: $btn-hover;
+            color: $grey-extradark !important;
+        }
+    }
+
+    // btn icon
+    &-regular-l {
+        @include btn;
+
+        border-color: $grey-soft;
+        max-width: 100%;
+        padding: 5px 8px;
+        color: $grey-dark;
+
+        > button {
+            max-width: 100%;
+            height: 20px;
+            font-family: Inter;
+            font-size: 14px;
+            line-height: 1.43;
+            text-align: center;
+            background: $transparent;
+            border: none;
+            outline: none;
+        }
+
+        &:hover {
+            border-color: $btn-hover;
+            color: $grey-extradark !important;
+        }
+    }
+
+    // btn only icon
+    &-regular-i {
+        @include btn;
+
+        border-color: $grey-soft;
+        max-width: 100%;
+        max-height: 100%;
+        color: $grey-dark;
+        display: inline-flex;
+        padding: 8px 9px;
+
+        > button {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background: $transparent;
+            border: none;
+            color: $white;
+            outline: none;
+
+            &:nth-child(2) {
+                padding-left: 5px;
+            }
+        }
+
+        &:hover {
+            border-color: $btn-hover;
+            color: $grey-extradark !important;
+        }
+    }
+
+    &.active {
+        border-color: $btn-hover;
+        color: $grey-extradark !important;
+
+        button {
+            max-width: 100%;
+            max-height: 100%;
+            font-family: Inter;
+            font-size: 14px;
+            color: $grey-extradark;
+        }
+    }
+
+    &.disable {
+        border-color: $btn-disable;
+
+        button {
+            max-width: 100%;
+            max-height: 100%;
+            font-family: Inter;
+            font-size: 14px;
+            color: $grey-soft;
+        }
+    }
+
+    // btn main
+    &-main {
+        @include btn;
+
+        background-color: $purple-default;
+        max-width: 100%;
+        max-height: 100%;
+        color: $white;
+        padding: 6px 14px;
+        display: inline-flex;
+        align-items: center;
+
+        > button {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background: $transparent;
+            border: none;
+            color: $white;
+            outline: none;
+            background: $transparent;
+            border: none;
+            color: $white;
+            outline: none;
+
+            &:nth-child(2) {
+                padding-left: 5px;
+            }
+        }
+
+        &:not(.inactive):not(.disable):hover {
+            background-color: $purple-hover;
+            color: $white !important;
+        }
+
+        &.has-icon {
+            @include flexcenter;
+
+            padding: 0px 12px 0px 5px;
+        }
+
+        &.disable {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    // btn main icon
+    &-main-l {
+        @include btn;
+
+        background-color: $purple-default;
+        max-width: 100%;
+        padding: 6px 8px;
+        color: $white;
+        display: inline-flex;
+
+        > button {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background: $transparent;
+            border: none;
+            color: $white;
+            outline: none;
+
+            &:nth-child(2) {
+                padding-left: 5px;
+            }
+        }
+
+        &:hover {
+            background-color: $purple-hover;
+            color: $white !important;
+        }
+    }
+
+    // btn main only icon
+    &-main-i {
+        @include btn;
+
+        background-color: $purple-default;
+        max-width: 100%;
+        max-height: 100%;
+        color: $white;
+        display: inline-flex;
+        padding: 8px 9px;
+
+        > button {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background: $transparent;
+            border: none;
+            color: $white;
+            outline: none;
+
+            &:nth-child(2) {
+                padding-left: 5px;
+            }
+        }
+
+        &:hover {
+            background-color: $purple-hover;
+            color: $white !important;
+        }
+    }
+
+    &.active-main {
+        background-color: $purple-active;
+        color: $white !important;
+
+        button {
+            max-width: 100%;
+            max-height: 100%;
+            font-family: Inter;
+            font-size: 14px;
+            color: $white;
+        }
+    }
+
+    &.disable-main {
+        background-color: $purple-light;
+
+        button {
+            max-width: 100%;
+            max-height: 100%;
+            font-family: Inter;
+            font-size: 14px;
+            color: $white !important;
+        }
+    }
+
+    // btn main sub
+    &-danger {
+        @include btn;
+
+        max-width: 100%;
+        max-height: 100%;
+        color: $red-default;
+        display: inline-flex;
+        padding: 6px 14px;
+
+        > button {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background: $transparent;
+            border: none;
+            outline: none;
+            color: $red-default !important;
+
+            &:nth-child(2) {
+                padding-left: 5px;
+            }
+        }
+
+        &:hover {
+            background-color: $red-extralight;
+            color: $red-default !important;
+        }
+    }
+
+    // btn main icon
+    &-danger-l {
+        @include btn;
+
+        max-width: 100%;
+        padding: 6px 8px;
+        color: $red-default;
+        display: inline-flex;
+
+        > button {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background: $transparent;
+            border: none;
+            outline: none;
+            color: $red-default !important;
+
+            &:nth-child(2) {
+                padding-left: 5px;
+            }
+
+            > button {
+                max-width: 100%;
+                max-height: 100%;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                background: $transparent;
+                border: none;
+                color: $white;
+                outline: none;
+
+                &:nth-child(2) {
+                    padding-left: 5px;
+                }
+            }
+
+            &:hover {
+                background-color: $red-extralight;
+                color: $red-default !important;
+            }
+        }
+
+        &.active-danger {
+            background-color: $red-light;
+            color: $red-default !important;
+
+            button {
+                max-width: 100%;
+                max-height: 100%;
+                font-family: Inter;
+                font-size: 14px;
+                color: $red-default;
+            }
+        }
+
+        &.disable-danger {
+            background-color: $transparent;
+
+            button {
+                max-width: 100%;
+                max-height: 100%;
+                font-family: Inter;
+                font-size: 14px;
+                color: $red-default !important;
+            }
+        }
+
+        &-jobstt {
+            height: 24px;
+            padding: 0px 6px;
+            display: inline-flex;
+            align-items: center;
+            color: $white;
+            border-radius: 9px;
+            white-space: nowrap;
+
+            &.pending {
+                background-color: $orchid;
+            }
+            &.sent {
+                background-color: $background-title;
+            }
+            &.completed {
+                background-color: $background-grey;
+                color: $black-2;
+            }
+            &.canceled {
+                background-color: $red-default;
+            }
+        }
+
+        &:hover {
+            background-color: $red-extralight;
+            color: $red-default !important;
+        }
+    }
+
+    // btn main only icon
+    &-danger-i {
+        @include btn;
+
+        max-width: 100%;
+        max-height: 100%;
+        color: $red-default;
+        padding: 8px 9px;
+        display: inline-flex;
+
+        > button {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background: $transparent;
+            border: none;
+            color: $white;
+            outline: none;
+
+            &:nth-child(2) {
+                padding-left: 5px;
+            }
+        }
+
+        &:hover {
+            background-color: $red-extralight;
+            color: $red-default !important;
+        }
+    }
+
+    &.active-danger {
+        background-color: $red-light;
+        color: $red-default !important;
+
+        button {
+            max-width: 100%;
+            max-height: 100%;
+            font-family: Inter;
+            font-size: 14px;
+            color: $red-default;
+        }
+    }
+
+    &.disable-danger {
+        background-color: $transparent;
+
+        button {
+            max-width: 100%;
+            max-height: 100%;
+            font-family: Inter;
+            font-size: 14px;
+            color: $red-default !important;
+        }
+    }
+
+    &-jobstt {
+        height: 24px;
+        padding: 0px 6px;
+        display: inline-flex;
+        align-items: center;
+        color: $white;
+        border-radius: 9px;
+        white-space: nowrap;
+
+        &.pending {
+            background-color: $orchid;
+        }
+        &.sent {
+            background-color: $background-title;
+        }
+        &.paid {
+            background-color: $white;
+            color: $green-default;
+        }
+    }
+}
+
+.btn-default {
+    border: 1px solid $border-color-grey;
+    border-radius: 3px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $black-3;
+    height: 32px;
+    text-align: center;
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: auto;
+
+    &:hover:not(.btn-default--noborder) {
+        border: 1px solid $btn-hover-gray !important;
+    }
+
+    &.has-icon {
+        padding: 4px 8px 4px 4px;
+
+        svg {
+            margin-right: 4px;
+        }
+    }
+
+    &.right {
+        padding: 4px 4px 4px 8px;
+
+        svg {
+            margin-right: 0;
+            margin-left: 4px;
+        }
+    }
+
+    &.selection {
+        padding: 0px 10px;
+
+        svg:not(.svg-selectbox svg) {
+            margin-right: 4px;
+        }
+        .svg-selectbox {
+            margin-left: 5px;
+        }
+    }
+
+    &.just-icon {
+        @include size(32px);
+        padding: 0px;
+    }
+
+    &--noborder {
+        border: none;
+    }
+}
+
+// Invoice status
+.btn-status {
+    @include centeritem;
+    display: inline-flex;
+    height: 24px;
+    border-radius: 4px;
+    padding: 0px 6px;
+    color: $white;
+    font-size: 14px;
+
+    &.lozenge {
+        height: 16px;
+        line-height: 16px;
+        font-size: 11px;
+    }
+    &.draft {
+        background: $grey-dark;
+    }
+    &.sent {
+        background: $btn-hover-black;
+    }
+    &.void {
+        background: $red-default;
+    }
+    &.write-off {
+        background: $blue-default;
+    }
+    &.partial {
+        background: $yellow-selective;
+    }
+    &.partial-paid {
+        background: $yellow-dark;
+    }
+    &.paid {
+        background: $green-forest;
+    }
+    &.failed {
+        background: $orange-royal;
+    }
+}

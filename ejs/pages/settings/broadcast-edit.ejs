@@ -1,0 +1,247 @@
+
+<%- include('../../partials/_head', {
+    title: 'Settings Broadcast Edit',
+    slug: 'setting-broadcast-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {broadcastTemplate: 'broadcastTemplate'}) %>
+    
+    <div class="contents-pages container-setting-user d-flex system-email-template-v2">
+        <div class="container-content-email-sms">
+            <div class="header-title">
+                <h2> Broadcast </h2>
+                <div class="w-button">
+                    <div class="cancel"> Cancel </div>
+                    <div class="btn btn-main">
+                        <span>Save</span>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex container-setting-email-sms scrolls scrolls-x">
+                <div class="container-setting-left">
+                    <div class="content-header has-input">
+                        <div class="col">
+                            <span class="txt">Template Name</span>
+                            <input class="field-input" type="text" name="" placeholder="Ant Service Reminder">
+                        </div>
+                        <p> This is the reminder email your customers receive to verify their bank account by entering two micro-deposits. The return address on your emails is <span class="email"> chris.moreschi@gmail.com. </span> </p>
+                    </div>
+                    <div class="container-switch-reminder">
+                        <div class="wrap-switch-reminder">
+                            <div class="line"></div>
+                            <br/>
+                            <div class="switch-reminder-header">
+                                <div class="title svg-email-blue">
+                                    <%- include ("../../svg/states-mail-default.svg") %>  Email
+                                </div>
+                                <div class="switch large">
+                                    <input id="toggle-email" class="toggle toggle-round" type="checkbox" checked onclick="checkboxMessage('reminder-email-body');">
+                                    <label for="toggle-email">
+                                        <span class="onoff enable-disable"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="switch-reminder-content reminder-email-body">
+                                <p class="title-message"> Subject Line </p>
+                                <div class="container-message-builder small">
+                                   <div class="message-builder-left scrolls">
+                                       <p>Hi 
+                                            <span class="btn btn-tag-message">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name 
+                                                <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span>
+                                            .
+                                        </p>
+                                        <p>
+                                            I have attached your most recent invoice 
+                                            <span class="btn btn-tag-message">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> as a PDF. Please let me know if you have any questions. 
+                                            <span class="btn btn-tag-message">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> Pay online using our secure checkout.
+                                            Thanks for the business!
+                                        </p>
+                                   </div>
+                                   <div class="message-builder-right">
+                                       <div class="btn-plus-message">
+                                           <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                       </div>
+                                       <div class="btn-reload-message">
+                                        <%- include ("../../svg/outline/outline-repeat.svg") %>
+                                       </div>
+                                   </div>
+                               </div>
+                                <p class="title-message"> Email Body </p>
+                                <div class="container-message-builder">
+                                   <div class="message-builder-left scrolls">
+                                       <p>Hi 
+                                            <span class="btn btn-tag-message">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span>
+                                            .
+                                        </p>
+                                        <p>
+                                            I have attached your most recent invoice 
+                                            <span class="btn btn-tag-message">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> as a PDF. Please let me know if you have any questions. 
+                                            <span class="btn btn-tag-message">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> Pay online using our secure checkout.
+                                            Thanks for the business!
+                                        </p>
+                                        <p>
+                                            I have attached your most recent invoice 
+                                            <span class="btn btn-tag-message">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> as a PDF. Please let me know if you have any questions. 
+                                            <span class="btn btn-tag-message">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> Pay online using our secure checkout.
+                                            Thanks for the business!
+                                        </p>
+                                        <p>
+                                            I have attached your most recent invoice 
+                                            <span class="btn btn-tag-message">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> as a PDF. Please let me know if you have any questions. 
+                                            <span class="btn btn-tag-message">
+                                                <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                            </span> Pay online using our secure checkout.
+                                            Thanks for the business!
+                                        </p>
+                                   </div>
+                                   <div class="message-builder-right">
+                                       <div class="btn-plus-message">
+                                           <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                       </div>
+                                       <div class="btn-reload-message">
+                                           <%- include ("../../svg/outline/outline-repeat.svg") %>
+                                       </div>
+                                   </div>
+                               </div>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+
+                        <div class="wrap-switch-reminder">
+                            <div class="switch-reminder-header">
+                                <div class="title svg-sms-yellow">
+                                    <%- include ("../../svg/states-sms.svg") %>  SMS
+                                </div>
+                                <div class="switch large">
+                                    <input id="toggle-sms" class="toggle toggle-round" type="checkbox" checked onclick="checkboxMessage('reminder-sms');">
+                                    <label for="toggle-sms">
+                                        <span class="onoff enable-disable"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="switch-reminder-content reminder-sms">
+                                <div class="container-message-builder medium">
+                                    <div class="message-builder-left scrolls">
+                                        <p>Hi 
+                                             <span class="btn btn-tag-message">
+                                                 <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                             </span>
+                                             .
+                                         </p>
+                                         <p>
+                                             I have attached your most recent invoice 
+                                             <span class="btn btn-tag-message">
+                                                 <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                             </span> as a PDF. Please let me know if you have any questions. 
+                                             <span class="btn btn-tag-message">
+                                                 <span class="svg-drag-blue"><%- include ("../../svg/outline/outline-drag.svg") %></span> Company Name <span class="svg-remove-blue"><%- include ("../../svg/outline/outline-remove.svg") %></span>
+                                             </span> Pay online using our secure checkout.
+                                             Thanks for the business!
+                                         </p>
+                                    </div>
+                                    <div class="message-builder-right">
+                                        <div class="btn-plus-message">
+                                            <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                        </div>
+                                        <div class="btn-reload-message">
+                                            <%- include ("../../svg/outline/outline-repeat.svg") %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      
+                        </div>
+                    </div>
+
+                </div>   
+                <div class="container-setting-right">
+                    <div class="container-content-email">
+                        <div class="title">
+                            <h3>Agmenty Invoice #5167</h3>
+                        </div>
+                        <div class="wrap-content-email">
+                            <div class="logo">
+                                <img src="/images/logo_company.png" alt="">
+                            </div>
+                            <div class="txt-welcome">
+                                <p> Hi Client_First_Name, </p> <br/>
+                                <p> I have attached your most recent invoice #5167 as a PDF. Please let me know if you have any questions. </p> <br/>
+                                <p> Pay online using our secure checkout. </p>
+                                <div class="btn btn-main btn-pay-online">
+                                    <span>Pay Online</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="txt-thanks-you">
+                                <h5> Thanks for the business! </h5>
+                               <p> Chris Moreschi </p> 
+                               <p> TruGanix </p> 
+                               <p> 855-536-7470 </p> 
+                               <p>  chris.moreschi@gmail.com </p> <br/>
+                               <p class="cursor-pointer manage-link">
+                                    Manage Your Account &gt;&gt;
+                                </p>
+                            </div>
+                            <div class="line"></div>
+                            <div class="txt-feedback">
+                                <h5> Tell us what you think </h5>
+                                <p> Thanks for your business! How would you rate your experience? </p> 
+                                <ul class="rate">
+                                    <li>
+                                        <%- include ("../../svg/outline-star.svg") %>
+                                        <p> Terrible </p> 
+                                    </li>
+                                    <li>
+                                        <%- include ("../../svg/outline-star.svg") %>
+                                       <p> Poor </p> 
+                                    </li>
+                                    <li>
+                                        <%- include ("../../svg/outline-star.svg") %>
+                                       <p> Average </p> 
+                                    </li>
+                                    <li>
+                                        <%- include ("../../svg/outline-star.svg") %>
+                                        <p> Good </p> 
+                                    </li>
+                                    <li>
+                                        <%- include ("../../svg/outline-star.svg") %>
+                                       <p> Great! </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>      
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'setting-broadcast-v2',
+    root: ''
+}) %>

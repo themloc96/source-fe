@@ -1,0 +1,256 @@
+<div class="sidebar-pages scrolls">
+	<ul>
+		<li class="sub-title">
+			Your Account
+		</li>
+		<li>
+			<%
+				if(typeof stAccount != 'undefined') {
+			%>
+				<a href="/pages/settings/account.html" class="items svg-account svg-noeffect active">
+			<% } else { %>
+				<a href="/pages/settings/account.html" class="items svg-account svg-noeffect">
+			<% } %>
+				<%- include ("../../svg/states-account.svg") %>
+				Account
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof stPlan != 'undefined') {
+			%>
+				<a href="/pages/settings/plan.html" class="items svg-plans svg-noeffect active">
+			<% } else { %>
+				<a href="/pages/settings/plan.html" class="items svg-plans svg-noeffect">
+			<% } %>
+				<%- include ("../../svg/states-plans.svg") %>
+				Plans
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof planInvoices != 'undefined') {
+			%>
+				<a href="/pages/settings/plan-invoices.html" class="items active">
+			<% } else { %>
+				<a href="/pages/settings/plan-invoices.html" class="items">
+			<% } %>
+				<%- include ("../../svg/states-invoice-default.svg") %>
+				Invoices
+			</a>
+		</li>
+		<li class="sub-title pt-4">
+			Administration
+		</li>
+		<li>
+			<%
+				if(typeof profile != 'undefined') {
+			%>
+				<a href="/pages/settings/company-profile.html" class="items active">
+			<% } else { %>
+				<a href="/pages/settings/company-profile.html" class="items">
+			<% } %>
+				<%- include ("../../svg/states-service-address-default.svg") %>
+				Company
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof users != 'undefined') {
+			%>
+				<a href="/pages/settings/users.html" class="items active">
+			<% } else { %>
+				<a href="/pages/settings/users.html" class="items">
+			<% } %>
+				<%- include ("../../svg/states-customer-default.svg") %>
+				Users
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof schedules != 'undefined') {
+			%>
+				<a href="/pages/settings/schedules.html" class="items svg-schedule active">
+			<% } else { %>
+				<a href="/pages/settings/schedules.html" class="items svg-schedule">
+			<% } %>
+				<%- include ("../../svg/states-calendar-default.svg") %>
+				Schedules
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof stTaxes != 'undefined') {
+			%>
+				<a href="/pages/settings/taxes.html" class="items active">
+			<% } else { %>
+				<a href="/pages/settings/taxes.html" class="items">
+			<% } %>
+				<%- include ("../../svg/states-tax.svg") %>
+				Taxes
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof stItems != 'undefined') {
+			%>
+				<a href="/pages/settings/items.html" class="items svg-lines svg-noeffect active">
+			<% } else { %>
+				<a href="/pages/settings/items.html" class="items svg-lines svg-noeffect">
+			<% } %>
+				<%- include ("../../svg/states-lineitem.svg") %>
+				Line Items
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof paymentMethods != 'undefined') {
+			%>
+				<a href="/pages/settings/payment-methods.html" class="items svg-credit svg-noeffect active">
+			<% } else { %>
+				<a href="/pages/settings/payment-methods.html" class="items svg-credit svg-noeffect">
+			<% } %>	
+				<%- include ("../../svg/states-credit-default.svg") %>
+				Payment Methods
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof serviceTemplates != 'undefined') {
+			%>
+				<a href="/pages/settings/service-templates.html" class="items svg-service svg-noeffect active">
+			<% } else { %>
+				<a href="/pages/settings/service-templates.html" class="items svg-service svg-noeffect">
+			<% } %>
+				<%- include ("../../svg/states-servicetemplate.svg") %>
+				Service Templates
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof stSources != 'undefined') {
+			%>
+				<a href="/pages/settings/sources.html" class="items active">
+			<% } else { %>
+				<a href="/pages/settings/sources.html" class="items">
+			<% } %>
+				<%- include ("../../svg/states-sources-default.svg") %>
+				Sources
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof stTags != 'undefined') {
+			%>
+				<a href="/pages/settings/tags.html" class="items active">
+			<% } else { %>
+				<a href="/pages/settings/tags.html" class="items">
+			<% } %>
+				<%- include ("../../svg/states-tags-default.svg") %>
+				Tags
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof title != 'undefined') {
+			%>
+				<a href="/pages/settings/title.html" class="items svg-tiles svg-noeffect active">
+			<% } else { %>
+				<a href="/pages/settings/title.html" class="items svg-tiles svg-noeffect">
+			<% } %>
+				<%- include ("../../svg/states-tiles.svg") %>
+				Tiles
+			</a>
+		</li>
+		<li class="sub-title pt-4">
+			Documents templates
+		</li>
+		<li>
+			<%
+				if(typeof invoice != 'undefined') {
+			%>
+				<a href="/pages/settings/invoice.html" class="items active">
+			<% } else { %>
+				<a href="/pages/settings/invoice.html" class="items">
+			<% } %>
+				<%- include ("../../svg/states-document-default.svg") %>
+				Invoice
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof estimate != 'undefined') {
+			%>
+				<a href="/pages/settings/estimate.html" class="items active">
+			<% } else { %>
+				<a href="/pages/settings/estimate.html" class="items">
+			<% } %>
+				<%- include ("../../svg/states-estimate-default.svg") %>
+				Estimate
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof workorder != 'undefined') {
+			%>
+				<a href="/pages/settings/work-order.html" class="items active">
+			<% } else { %>
+				<a href="/pages/settings/work-order.html" class="items">
+			<% } %>
+				<%- include ("../../svg/states-note-default.svg") %>
+				Work Order
+			</a>
+		</li>		
+		<li class="sub-title pt-4">
+			SMS & Email Templates
+		</li>
+		<li>
+			<%
+				if(typeof stSystem != 'undefined') {
+			%>
+				<a href="/pages/settings/system.html" class="items active">
+			<% } else { %>
+				<a href="/pages/settings/system.html" class="items">
+			<% } %>
+				<%- include ("../../svg/states-notification.svg") %>
+				System
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof stCustom != 'undefined') {
+			%>
+				<a href="/pages/settings/custom.html" class="items svg-tempt svg-noeffect active">
+			<% } else { %>
+				<a href="/pages/settings/custom.html" class="items svg-tempt svg-noeffect">
+			<% } %>
+				<%- include ("../../svg/states-tempt.svg") %>
+				Custom
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof broadcastTemplate != 'undefined') {
+			%>
+				<a href="/pages/settings/broadcast.html" class="items svg-broad svg-noeffect active">
+			<% } else { %>
+				<a href="/pages/settings/broadcast.html" class="items svg-broad svg-noeffect">
+			<% } %>
+				<%- include ("../../svg/states-broad.svg") %>
+				Broadcast
+			</a>
+		</li>
+		<li>
+			<%
+				if(typeof stEmailInbox != 'undefined') {
+			%>
+				<a href="/pages/settings/email-inbox.html" class="items svg-inbox active">
+			<% } else { %>
+				<a href="/pages/settings/email-inbox.html" class="items svg-inbox">
+			<% } %>				
+				<%- include ("../../svg/states-inbox.svg") %>
+				Email Inbox
+			</a>
+		</li>
+	</ul>
+</div>

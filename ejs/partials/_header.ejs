@@ -1,0 +1,1749 @@
+<div class="header-v2" id="header_v2">
+	<div class="container d-flex">
+		<div class="header-v2-left d-flex align-center">
+			<div class="collapse-sidebar">
+				<div class="btn-sidebar items-collapse">
+					<div class="default"><%- include ("../svg/outline-burger-menu.svg") %></div>
+					<div class="active"><%- include ("../svg/outline-close-menu.svg") %></div>
+				</div>
+			</div>
+			<a href="../../index.html" class="logo px-4">
+				<img src="../../images/icon-logo.png" width="32px" height="32px">
+			</a>
+
+			<div class="nav-menu dropdown">
+				<%
+					if(typeof report != 'undefined') {
+				%>
+				<span class="dropbtn nav">
+					<%- include ("../svg/menu-reports-active.svg") %>
+					Reports
+					<span class="svg-dropup"><%- include ("../svg/outline/dropdown-up.svg") %></span>
+				</span>
+
+				<% } else if (typeof reviews != 'undefined') { %>
+				<span class="dropbtn nav">
+					<%- include ("../svg/menu-reviews-active.svg") %>
+					Reviews
+					<span class="svg-dropup"><%- include ("../svg/outline/dropdown-up.svg") %></span>
+				</span>
+
+				<% } else if (typeof settings != 'undefined') { %>
+				<span class="dropbtn nav">
+					<%- include ("../svg/menu-settings-active.svg") %>
+					Settings
+					<span class="svg-dropup"><%- include ("../svg/outline/dropdown-up.svg") %></span>
+				</span>
+
+				<% } else if (typeof customers != 'undefined') { %>
+				<span class="dropbtn nav">
+					<%- include ("../svg/menu-customers-active.svg") %>
+					Customers
+					<span class="svg-dropup"><%- include ("../svg/outline/dropdown-up.svg") %></span>
+				</span>
+				<!-- For drip -->
+				<% } else if (typeof drip != 'undefined') { %>
+				<span class="dropbtn nav">
+					<%- include ("../svg/menu-calendar-active.svg") %>
+					Drip
+					<span class="svg-dropup"><%- include ("../svg/outline/dropdown-up.svg") %></span>
+				</span>
+
+				<% } else { %>
+				<span class="dropbtn nav">
+					<%- include ("../svg/menu-calendar-active.svg") %>
+					Calendar
+					<span class="svg-dropup"><%- include ("../svg/outline/dropdown-up.svg") %></span>
+				</span>
+				<% } %>
+
+				<div class="dropdown-menu">
+					<div class="d-flex">
+						<div class="active-tool py-4 pl-6">
+							<div class="scrolls">
+								<div class="title-plan">
+									<%- include ("../svg/outline/outline-powerups.svg") %>
+									<span>Basic Plan</span>
+									<span class="upgrade-plan">
+										<%- include ("../svg/outline/outline-powerup-none.svg") %>
+										Upgrade to Pro
+									</span>
+								</div>
+								<ul class="nav nav-list mt-4 pl-1 pr-6">
+									<li>
+										<a href="javascript:void(0)" class="nav-items active">
+											<%- include ("../svg/menu-calendar-active.svg") %>
+											Calendar
+										</a>
+									</li>
+									<li>
+										<a href="/pages/customers/customers-list.html" class="nav-items">
+											<%- include ("../svg/menu-customers.svg") %>
+											Customers
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" class="nav-items">
+											<%- include ("../svg/menu-inbox.svg") %>
+											Inbox
+											<div class="upgrade-plan">PRO</div>
+										</a>
+									</li>
+									<li>
+										<a href="/pages/report/forecast.html" class="nav-items">
+											<%- include ("../svg/menu-reports.svg") %>
+											Reports
+										</a>
+									</li>
+									<div class="line"></div>
+									<li>
+										<a href="javascript:void(0)" class="nav-items">
+											<%- include ("../svg/menu-addons.svg") %>
+											Addons
+										</a>
+									</li>
+									<li>
+										<a href="/pages/settings/company-profile.html" class="nav-items">
+											<%- include ("../svg/menu-settings.svg") %>
+											Settings
+										</a>
+									</li>
+									<li>
+										<a href="/pages/drip/campaigns.html" class="nav-items">
+											<%- include ("../svg/menu-calendar.svg") %>
+											Drip Campaigns
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="features py-2 px-1">
+							<div class="scrolls py-2 px-1">
+								<div class="action-addon active">
+									<span class="dot"></span>
+									Active Addons
+									<span class="budget">12</span>
+								</div>
+								<ul class="nav-list mt-3">
+									<li class="">
+										<div class="nav-items">
+											<%- include ("../svg/addons-square.svg") %>
+											Square
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items">
+											<%- include ("../svg/addons-stripe.svg") %>
+											Stripe
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items">
+											<%- include ("../svg/addons-customer-portal.svg") %>
+											Customer Portal
+											<div class="upgrade-plan">PRO</div>
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items">
+											<%- include ("../svg/menu-inbox.svg") %>
+											Inbox
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items">
+											<%- include ("../svg/addons-documents.svg") %>
+											Documents
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+								</ul>
+								<div class="action-addon inactive mt-4">
+									<span class="dot"></span>
+									InActive Addons
+									<span class="budget bg-green-default">6</span>
+								</div>
+								<ul class="nav-list inactive mt-2">
+									<li class="">
+										<div class="nav-items nohover">
+											<%- include ("../svg/addons-material-usage.svg") %>
+											Material Usage
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items nohover">
+											<%- include ("../svg/addons-online-booking.svg") %>
+											Online Booking
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items nohover">
+											<%- include ("../svg/addons-tags.svg") %>
+											Tags
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items nohover">
+											<%- include ("../svg/addons-device-tracking.svg") %>
+											Device Tracking
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items nohover">
+											<%- include ("../svg/addons-gps-tracking.svg") %>
+											GPS Tracking
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items nohover">
+											<%- include ("../svg/addons-quick-book.svg") %>
+											QuickBooks Sync
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items nohover">
+											<%- include ("../svg/addons-routing-optimization.svg") %>
+											Route Optimizer
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items nohover">
+											<%- include ("../svg/addons-sms-text-messaging.svg") %>
+											SMS Text Messaging
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items nohover">
+											<%- include ("../svg/addons-trigers.svg") %>
+											Triggers
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+									<li class="">
+										<div class="nav-items nohover">
+											<%- include ("../svg/addons-zappier.svg") %>
+											Zapier
+											<span class="svg-chevron arrow-left">
+												<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+											</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="bg-feauture">
+							<div class="relative p-4">
+								<div class="fw-600 black-2 fs-26">
+									More amenities with <span class="orange-default">PRO</span> features
+								</div>
+								<p class="mt-2 grey-dark">
+									Unlock the potential of your business by upgrading to Pro.
+								</p>
+								<button type="button" class="btn btn-plan bg-orange-default white fw-500">
+									<%- include ("../svg/outline/outline-powerup-white.svg") %>
+									Expand Your Plan
+								</button>
+								<button class="close-tab" onclick="hideExpandPlan()">
+									<%- include ("../svg/outline/outline-close.svg") %>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="questlog-menu dropdown ml-3">
+				<span class="dropbtn questlog-btn btn-open">
+					<%- include ("../svg/outline/outline-rocket.svg") %>
+				</span>
+				<div class="dropdown-menu py-2">
+					<div class="scrolls">
+						<div class="title py-2 ml-2 mr-3">
+							<div class="fs-15 green-default fw-600 mb-3 px-1">60% Efficiency</div>
+							<span class="dp-block orange-default fw-600 mb-2 px-1">Allerts</span>
+							<div class="rows orange-default">
+								<span class="txt">12 Incomplete Jobs in the Past</span>
+								<%- include ("../svg/outline/outline-academy.svg") %>
+							</div>
+							<div class="rows orange-default disable">
+								<span class="txt">0 Invoices Pending on Completed Jobs</span>
+								<%- include ("../svg/outline/outline-academy.svg") %>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="accordion active">
+							<div class="accordion-item">
+								<div class="justify-space-between">
+									<span class="fw-600">Level 1</span>
+									<div class="green-default fw-500">
+										8%
+										<span class="svg-chevron arrow-left">
+											<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+										</span>
+									</div>
+								</div>
+								<div class="progress-bar --green per-8">
+									<span></span>
+								</div>
+							</div>
+							<div class="accordion-panel" style="display:block;">
+								<div class="rows">
+									<span class="txt">[0/1] Customer Import</span>
+									<%- include ("../svg/outline/outline-academy.svg") %>
+								</div>
+								<div class="rows disable">
+									<div class="check-items">
+										<input type="checkbox" id="check-box-1" checked>
+										<div class="item-checkbox">
+											<label for="check-box-1"></label>
+										</div>
+									</div>
+									<span class="txt">Logo</span>
+									<%- include ("../svg/outline/outline-academy.svg") %>
+								</div>
+								<% for (i = 0; i < 3; i++){ %>
+								<div class="rows">
+									<span class="txt">[8/10] New Customer</span>
+									<%- include ("../svg/outline/outline-academy.svg") %>
+								</div>
+								<% } %>
+							</div>
+						</div>
+
+						<div class="line"></div>
+						<div class="accordion">
+							<div class="accordion-item">
+								<div class="justify-space-between">
+									<span class="fw-600">Level 2</span>
+									<div class="green-default fw-500">
+										42%
+										<span class="svg-chevron arrow-left">
+											<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+										</span>
+									</div>
+								</div>
+								<div class="progress-bar --green per-42">
+									<span></span>
+								</div>
+							</div>
+							<div class="accordion-panel">
+								<% for (i = 0; i < 2; i++){ %>
+								<div class="rows">
+									<span class="txt">[8/10] New Customer</span>
+									<%- include ("../svg/outline/outline-academy.svg") %>
+								</div>
+								<% } %>
+							</div>
+						</div>
+
+						<div class="line"></div>
+						<div class="accordion">
+							<div class="accordion-item">
+								<div class="justify-space-between">
+									<span class="fw-600">
+										Level 3
+										<button type="button" class="btn btn-pro white fs-13 fw-500 svg-star-white">
+											<%- include ("../svg/outline/outline-star.svg") %>
+											Pro
+										</button>
+									</span>
+									<div class="green-default fw-500">
+										0%
+										<span class="svg-chevron arrow-left">
+											<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+										</span>
+									</div>
+								</div>
+								<div class="progress-bar --green per-0">
+									<span></span>
+								</div>
+							</div>
+							<div class="accordion-panel">
+								<% for (i = 0; i < 2; i++){ %>
+								<div class="rows">
+									<span class="txt">[0/10] Documents Sent</span>
+									<%- include ("../svg/outline/outline-academy.svg") %>
+								</div>
+								<% } %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-v2-right justify-end pr-2">
+			<div class="search-form relative">
+				<span class="svg-search-absolute">
+					<%- include ("../svg/outline/outline-search.svg") %>
+				</span>
+				<input id="search-ip" type="text" name="" placeholder="Search Customers">
+				<span class="key absolute">ALT+S</span>
+				<span class="closetxt absolute svg-remove white">
+					<%- include ("../svg/outline/outline-remove.svg") %>
+				</span>
+
+				<div class="search-dropdown">
+					<div class="scrolls">
+						<% for (let i = 0; i < 10;  i++ ) { %>
+
+						<div class="items border-bottom-grey-light d-flex justify-space-between align-center">
+							<div class="i-left">
+								<div class="avatar fs-13 d-flex justify-center align-center">RP</div>
+								<div class="content">
+									<h3 class="name fs-14 fw-500">Regina Pollastro</h3>
+									<p class="fs-11"> 910 Edinburgh Ln, Charlotte, NC 28209 </p>
+								</div>
+							</div>
+							<div class="i-right">
+								<span class="icon-job-list d-flex justify-center align-center svg-folder-yellow">
+									<div class="title fs-11">Job List</div>
+									<%- include ("../svg/outline/outline-folder.svg") %>
+								</span>
+							</div>
+						</div>
+
+						<% } %>
+					</div>
+				</div>
+			</div>
+
+			<div class="add-menu dropdown dropdown-w200 mx-5">
+				<span class="dropbtn add-btn svg-plus white">
+					<%- include ("../svg/outline/outline-plus-black.svg") %>
+				</span>
+
+				<div class="dropdown-menu">
+					<ul class="relative">
+						<div class="arrow">
+							<i class="up"></i>
+						</div>
+						<li>
+							<div class="items hover-yellow">
+								<%- include ("../svg/outline/outline-user.svg") %>
+								New Customer
+							</div>
+						</li>
+						<li>
+							<div class="items hover-yellow">
+								<%- include ("../svg/outline/outline-document.svg") %>
+								New Document
+							</div>
+						</li>
+						<li>
+							<div class="items hover-yellow">
+								<%- include ("../svg/outline/outline-invoice.svg") %>
+								New Invoice
+							</div>
+						</li>
+						<li>
+							<div class="items hover-yellow">
+								<%- include ("../svg/outline/outline-estimate.svg") %>
+								New Estimate
+							</div>
+						</li>
+						<li>
+							<div class="items hover-yellow">
+								<%- include ("../svg/outline/outline-payment-card.svg") %>
+								New Payment
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="boxs-notification notifi nav-sms">
+				<div class="dropbtn btn-noti-sms notify-btn hover-yellow has-notify">
+					<%- include ("../svg/states-sms.svg") %>
+					<span class="budget">6</span>
+				</div>
+				<!-- Step 1 -->
+				<div class="dropdown notification-dropdown notification-sms sms-message step-1 accessible-tabs-container">
+					<div class="sms-messagebox-content">
+						<div class="header-noti">
+							<div class="wrap-title">
+								<div class="title-search">
+									<h3 class="title fs-18 fw-600"> SMS </h3>
+									<div class="search-form relative">
+										<span class="svg-search-absolute">
+											<%- include ("../svg/outline/outline-search.svg") %>
+										</span>
+										<input type="text" name="" placeholder="Search">
+									</div>
+								</div>
+								<div class="wrap-btn">
+									<span class="btn-plus"> <%- include ("../svg/outline/outline-plus-circle.svg") %> </span>
+									<span class="btn-screen"> <%- include ("../svg/outline/outline-open.svg") %> </span>
+									<div class="close-noti close-sms-step-1 cursor-pointer"> <%- include ("../svg/outline/outline-close.svg") %> </div>
+								</div>
+							</div>
+							<div class="wrap-tab tab-messagesms">
+								<div class="tabs">
+									<div role="tablist" aria-lable="Tabs Example" class="tab-selectors btn-item">
+										<button class="tab-items active-tab-selector no-effect relative" type="button">
+											Unread <span class="number">12</span>
+										</button>
+										<button class="tab-items no-effect" type="button">
+											Read
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-contents tab-sms scrolls">
+							<div id="smsUnread" class="tab-conts tab-content-active w-100">
+								<!-- Start -->
+								<div class="content">
+									<% for (let i = 0; i < 8;  i++ ) { %>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<div class="avt">RP</div>
+											</div>
+											<div class="wrap-items">
+												<div class="description">
+													<div class="cont-description">
+														Laborum maiores officia occaecati sint molestias
+														voluptate repudiandae.
+														Optio aut et. Autem voluptatum aliquid consectetur
+														dignissimos est ipsam.
+													</div>
+
+													<div class="check-items">
+														<input id="check-items<%=i%>" type="checkbox">
+														<div class="item-checkbox">
+															<label for="check-items-<%=i%>"></label>
+														</div>
+													</div>
+												</div>
+												<div class="details">
+													<div class="info">
+														<span class="name">Olivia Eklund,</span>
+														<span class="phone">Home, (844)-345-3045</span>
+													</div>
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<% } %>
+								</div>
+								<!-- End -->
+							</div>
+
+							<div id="smsRead" class="tab-conts">
+								<div class="content">
+									<% for (let i = 0; i < 3;  i++ ) { %>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<div class="avt">RP</div>
+											</div>
+											<div class="wrap-items">
+												<div class="description">
+													<div class="cont-description">
+														Laborum maiores officia occaecati sint molestias
+														voluptate repudiandae.
+														Optio aut et. Autem voluptatum aliquid consectetur
+														dignissimos est ipsam.
+													</div>
+
+													<div class="check-items">
+														<input id="check-items<%=i%>" checked type="checkbox"
+															value="">
+														<div class="item-checkbox">
+															<label for="check-items-<%=i%>"></label>
+														</div>
+													</div>
+												</div>
+												<div class="details">
+													<div class="info">
+														<span class="name">Olivia Eklund,</span>
+														<span class="phone">Home, (844)-345-3045</span>
+													</div>
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<% } %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End - Step 1 -->
+
+				<!-- Step 2 -->
+				<div class="notification-dropdown notification-sms conversation-sms step-2">
+					<div class="conversation-details">
+						<div class="header-noti">
+							<div class="header-title">
+								<div class="back">
+									<%- include ("../svg/outline/outline-arrow-left.svg") %>
+								</div>
+
+								<div class="info">
+									<div class="wrap-title">
+										<div class="title-search">
+											<div class="avt">AB</div>
+											<span class="name cursor-pointer"> Emelda Scandroot </span>
+										</div>
+										<div class="wrap-btn">
+											<span class="btn-plus"> <%- include ("../svg/outline/outline-customer-circle.svg") %>
+											</span>
+											<span class="btn-screen"> <%- include ("../svg/outline/outline-collapse-2.svg") %> </span>
+											<div class="close-noti close-sms-step-2"> <%- include ("../svg/outline/outline-close.svg") %>
+											</div>
+										</div>
+									</div>
+									<div class="wrap-toggle-phone scrolls">
+										<ul>
+											<li class="active">
+												<div class="user-info">
+													<span class="name"> Emelda </span>
+													<span class="phone"> 8443-345-304 </span>
+												</div>
+												<div class="switch">
+													<input id="toggle-phone-1" class="toggle toggle-round"
+														type="checkbox" checked>
+													<label for="toggle-phone-1"></label>
+												</div>
+											</li>
+											<li>
+												<div class="user-info">
+													<span class="name"> Erika Erika </span>
+													<span class="phone"> 3440-090-309 </span>
+												</div>
+												<div class="switch">
+													<input id="toggle-phone-2" class="toggle toggle-round"
+														type="checkbox">
+													<label for="toggle-phone-2"></label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="wrap-action">
+								<ul class="d-flex">
+									<li class="item-user">
+										<div class="avt-img">
+											<img src="../../images/avatar.png" alt="" width="24px" height="24px">
+										</div>
+										Yvonne
+									</li>
+									<li class="item-user">
+										<div class="avt-img">
+											<img src="../../images/avatar.png" alt="" width="24px" height="24px">
+										</div>
+										Sophia
+									</li>
+									<% for (let i = 0; i < 5;  i++ ) { %>
+									<li class="item-user">
+										<div class="avt-img">
+											<img src="../../images/avatar.png" alt="" width="24px" height="24px">
+										</div>
+										Jel
+									</li>
+									<% } %>
+									<li class="avt-img addmore">+8</li>
+								</ul>
+
+								<div class="activities-all">
+									<div class="activities-btn btn-list-friends">
+										<%- include ("../svg/outline/dropdown-down.svg") %>
+									</div>
+									<div class="activities-dropdown dropdown-list-friends">
+										<div class="wrap-title-list">
+											<span>Select All</span>
+											<div class="btn btn-main">
+												<span>Apply</span>
+											</div>
+										</div>
+										<ul class="list-user scrolls">
+											<li class="active">
+												<div class="check-items">
+													<input id="check-person-<%=i%>" checked type="checkbox" value="">
+													<div class="item-checkbox">
+														<label for="check-person-<%=i%>"></label>
+													</div>
+												</div>
+												<div class="images">
+													<div class="avt-img">
+														<img src="../../images/avatar.png" alt="" width="32px" height="32px">
+													</div>
+												</div>
+												<span class="name">Heather</span>
+											</li>
+											<% for (let i = 0; i < 5;  i++ ) { %>
+											<li>
+												<div class="check-items">
+													<input id="check-person-<%=i%>" type="checkbox" value="">
+													<div class="item-checkbox">
+														<label for="check-person-<%=i%>"></label>
+													</div>
+												</div>
+												<div class="images">
+													<div class="img-avatar relative">
+														<img src="../../images/avatar.png" alt="" width="32px" height="32px">
+													</div>
+												</div>
+												<span class="name"> Ariana </span>
+											</li>
+											<% } %>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<%- include('./_conversation-sms') %>
+
+						<!-- Box add message -->
+						<div class="box-message-chat">
+							<div class="content-message">
+								<div class="title-message-chat">
+									<div class="wrap-action">
+										<div class="message-name">
+											Message
+											<span class="name"> Olivia </span>
+											<span class="phone">8443-345-304</span>
+										</div>
+										<div class="activities-all dropdown-viewuser dropdown">
+											<div class="activities-btn btn-phone-message btn-viewuser">
+												<span class="svg-dropup"><%- include ("../svg/outline/dropdown-down.svg") %></span>
+											</div>
+											<div class="activities-dropdown dropdown-menu">
+												<ul>
+													<% for (let i = 0; i < 2;  i++ ) { %>
+													<li>
+														<div class="name">
+															<span> Erika </span> 3440-090-309
+														</div>
+													</li>
+													<% } %>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wrap-show-message-chat">
+									<div class="file-attachment scrolls-x">
+										<div class="file-attachment-conts">
+											<div class="attachment">
+												<div class="file file-img"></div>
+												<span class="close-file svg-remove white">
+													<%- include ("../svg/outline/outline-remove.svg") %>
+												</span>
+											</div>
+											<div class="attachment">
+												<div class="file file-other file-pdf">
+													<div class="content-file"></div>
+													<div class="name">a.pdf</div>
+												</div>
+												<span class="close-file svg-remove white">
+													<%- include ("../svg/outline/outline-remove.svg") %>
+												</span>
+											</div>
+											<% for (i = 0; i < 8; i++){ %>
+											<div class="attachment">
+												<div class="file file-img"></div>
+												<span class="close-file svg-remove white">
+													<%- include ("../svg/outline/outline-remove.svg") %>
+												</span>
+											</div>
+											<% } %>
+										</div>
+									</div>
+									<div class="text-message">
+										<textarea class="box-message scrolls"
+											placeholder="Text Messages ..."></textarea>
+									</div>
+									<div class="tag-label">
+										<div class="tag-its">
+											<span class="svg-drag-blue"><%- include ("../svg/outline/outline-drag.svg") %></span>
+											Tag Label
+											<span class="close-tag svg-remove-blue">
+												<%- include ("../svg/outline/outline-remove.svg") %>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Active bottom -->
+							<div class="footer-action">
+								<input type="text" class="input-ft" placeholder="Message Emelda…">
+								<div class="btn-action">
+									<div class="dropup dropdown-taglabel">
+										<div class="dropbtn btn-taglabel">
+											<%- include ("../svg/outline/outline-variable.svg") %>
+										</div>
+										<div class="dropdown-menu">
+											<div class="search-input">
+												<span class="svg-search-absolute"><%- include ("../svg/outline/outline-search.svg") %></span>
+												<input type="text" name="" placeholder="Search Item" class="no-effect">
+											</div>
+											<ul class="scrolls">
+												<div class="info">Info</div>
+												<li>
+													<div class="items hover-yellow">Client First Name</div>
+												</li>
+												<li>
+													<div class="items hover-yellow">Client Last Name</div>
+												</li>
+												<li>
+													<div class="items hover-yellow">Company Email</div>
+												</li>
+												<li>
+													<div class="items hover-yellow">Company Phone</div>
+												</li>
+												<li>
+													<div class="items hover-yellow">Company Address</div>
+												</li>
+												<li>
+													<div class="items hover-yellow">Client First Name</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="dropdown">
+										<div class="dropbtn">
+											<%- include ("../svg/outline/outline-emoji.svg") %>
+										</div>
+									</div>
+									<div class="dropdown add-attachment">
+										<div class="dropbtn btn-attachment">
+											<%- include ("../svg/outline/outline-attach.svg") %>
+										</div>
+									</div>
+									<div class="btn-send">
+										<div class="btn btn-main">Send</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End - Step 2 -->
+
+				<!-- Step 3 -->
+				<div class="notification-dropdown notification-sms new-conversation sms-message step-3">
+					<div class="sms-messagebox-content">
+						<div class="header-noti">
+							<div class="wrap-title">
+								<div class="title-search">
+									<div class="back">
+										<%- include ("../svg/outline/outline-arrow-left.svg") %>
+									</div>
+									<div class="title"> New SMS Chat </div>
+								</div>
+								<div class="wrap-btn">
+									<div class="close-noti close-sms-step-3 cursor-pointer">
+										<%- include ("../svg/outline/outline-close.svg") %>
+									</div>
+								</div>
+							</div>
+							<div class="search-form relative">
+								<span class="svg-search-absolute">
+									<%- include ("../svg/outline/outline-search.svg") %>
+								</span>
+								<input id="search-sms" type="text" name="" placeholder="Search">
+								<span class="closetxt absolute svg-remove white">
+									<%- include ("../svg/outline/outline-remove.svg") %>
+								</span>
+							</div>
+						</div>
+
+						<div class="tab-sms content scrolls">
+							<div class="items-noti-news list-phone">
+								<% for (let i = 0; i < 8;  i++ ) { %>
+								<div class="noti-items">
+									<div class="wrap-items">
+										<div class="images">
+											<div class="avt">RP</div>
+										</div>
+										<div class="name-content">
+											<div class="name">
+												<span> Tallah Cotton </span>
+												<p> Account #5580 </p>
+											</div>
+										</div>
+									</div>
+									<div class="description">
+										<ul>
+											<li>
+												<div class="wrap-mes-num d-flex">
+													<div class="message"> <span class="svg-message purple"> <%- include ("../svg/outline/outline-message.svg") %> </span> </div>
+													<div class="number"> <span> 1-161-028-5579 </span> </div>
+												</div>
+												<div class="primary d-flex svg-star-yellow">
+													Primary Phone
+													<%- include ("../svg/outline/outline-star.svg") %>
+												</div>
+											</li>
+											<li>
+												<div class="wrap-mes-num d-flex">
+													<div class="message"> <span class="svg-message purple"> <%- include ("../svg/outline/outline-message.svg") %> </span> </div>
+													<div class="number"> <span> 1-161-028-5579 </span> </div>
+												</div>
+											</li>
+											<li>
+												<div class="wrap-mes-num d-flex">
+													<div class="message"> <span class="svg-message purple"> <%- include ("../svg/outline/outline-message.svg") %> </span> </div>
+													<div class="number"> <span> 1-161-028-5579 </span> </div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<% } %>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End - Step 3 -->
+			</div>
+
+			<div class="boxs-notification notifi nav-inbox">
+				<div class="dropbtn hover-yellow btn-inbox notify-btn">
+					<%- include ("../svg/states-inbox.svg") %>
+					<span class="budget">22</span>
+				</div>
+			</div>
+
+			<!-- Notification -->
+			<div class="boxs-notification notifi nav-notification tabs-notify">
+				<div class="dropbtn btn-notification notify-btn hover-yellow has-notify">
+					<%- include ("../svg/states-notification.svg") %>
+					<span class="budget">11</span>
+				</div>
+
+				<div class="dropdown notification-dropdown notification-news accessible-tabs-container">
+					<div class="sms-messagebox-content">
+						<div class="header-noti header-noti-modify">
+							<div class="wrap-title d-flex align-center">
+								<h3 class="title fs-18 fw-600"> Notification </h3>
+								<div class="close-noti d-flex">
+									<div class="activities-all">
+										<div class="setting-noti btn-filter-noti d-flex align-center cursor-pointer">
+											<%- include ("../svg/outline/outline-gear.svg") %>
+										</div>
+										<div class="activities-dropdown filter-dropdown">
+											<span class="notifi-text">Notify Me For</span>
+											<ul>
+												<li
+													class="check-items switch-item sticket d-flex justify-space-between hover-yellow">
+													<div class="label-text">
+														<%- include ("../svg/states-payment-default.svg") %>
+														Online Payments
+													</div>
+													<div class="switch large">
+														<input id="toggle-enable-disable-1" class="toggle toggle-round"
+															type="checkbox">
+														<label for="toggle-enable-disable-1">
+															<span class="onoff enable-disable dp-hide"></span>
+														</label>
+													</div>
+												</li>
+												<li
+													class="check-items switch-item sticket d-flex justify-space-between hover-yellow">
+													<div class="label-text">
+														<%- include ("../svg/states-check.svg") %>
+														Job Confirmations
+													</div>
+													<div class="switch large">
+														<input id="toggle-enable-disable-2" class="toggle toggle-round"
+															type="checkbox">
+														<label for="toggle-enable-disable-2">
+															<span class="onoff enable-disable dp-hide"></span>
+														</label>
+													</div>
+												</li>
+												<li
+													class="check-items switch-item sticket d-flex justify-space-between hover-yellow">
+													<div class="label-text">
+														<%- include ("../svg/states-calendar.svg") %>
+														Job Reschedules
+													</div>
+													<div class="switch large">
+														<input id="toggle-enable-disable-3" class="toggle toggle-round"
+															type="checkbox">
+														<label for="toggle-enable-disable-3">
+															<span class="onoff enable-disable dp-hide"></span>
+														</label>
+													</div>
+												</li>
+												<li
+													class="check-items switch-item sticket d-flex justify-space-between hover-yellow">
+													<div class="label-text">
+														<%- include ("../svg/states-document-signature.svg") %>
+														E-signed Doucments
+													</div>
+													<div class="switch large">
+														<input id="toggle-enable-disable-4" class="toggle toggle-round"
+															type="checkbox">
+														<label for="toggle-enable-disable-4">
+															<span class="onoff enable-disable dp-hide"></span>
+														</label>
+													</div>
+												</li>
+												<li
+													class="check-items switch-item sticket d-flex justify-space-between hover-yellow">
+													<div class="label-text">
+														<%- include ("../svg/states-estimate-signature.svg") %>
+														E-signed Estimates
+													</div>
+													<div class="switch large">
+														<input id="toggle-enable-disable-5" class="toggle toggle-round"
+															type="checkbox">
+														<label for="toggle-enable-disable-5">
+															<span class="onoff enable-disable dp-hide"></span>
+														</label>
+													</div>
+												</li>
+												<li
+													class="check-items switch-item sticket d-flex justify-space-between hover-yellow">
+													<div class="label-text">
+														<%- include ("../svg/states-online-booking2.svg") %>
+														E-signed Invoices
+													</div>
+													<div class="switch large">
+														<input id="toggle-enable-disable-6" class="toggle toggle-round"
+															type="checkbox">
+														<label for="toggle-enable-disable-6">
+															<span class="onoff enable-disable dp-hide"></span>
+														</label>
+													</div>
+												</li>
+												<li
+													class="check-items switch-item sticket d-flex justify-space-between hover-yellow">
+													<div class="label-text">
+														<%- include ("../svg/states-first-name-default.svg") %>
+														Inbound Leads
+													</div>
+													<div class="switch large">
+														<input id="toggle-enable-disable-7" class="toggle toggle-round"
+															type="checkbox">
+														<label for="toggle-enable-disable-7">
+															<span class="onoff enable-disable dp-hide"></span>
+														</label>
+													</div>
+												</li>
+												<li
+													class="check-items switch-item sticket d-flex justify-space-between hover-yellow">
+													<div class="label-text">
+														<%- include ("../svg/states-calendar-default.svg") %>
+														Subscriptions
+													</div>
+													<div class="switch large">
+														<input id="toggle-enable-disable-8" class="toggle toggle-round"
+															type="checkbox">
+														<label for="toggle-enable-disable-8">
+															<span class="onoff enable-disable dp-hide"></span>
+														</label>
+													</div>
+												</li>
+												<li
+													class="check-items switch-item sticket d-flex justify-space-between hover-yellow">
+													<div class="label-text">
+														<%- include ("../svg/states-plans.svg") %>
+														Reviews Notification
+													</div>
+													<div class="switch large">
+														<input id="toggle-enable-disable-9" class="toggle toggle-round"
+															type="checkbox">
+														<label for="toggle-enable-disable-9">
+															<span class="onoff enable-disable dp-hide"></span>
+														</label>
+													</div>
+												</li>
+												<li
+													class="check-items switch-item sticket d-flex justify-space-between hover-yellow">
+													<div class="label-text">
+														<%- include ("../svg/states-online-booking.svg") %>
+														Online Booking
+													</div>
+													<div class="switch large">
+														<input id="toggle-enable-disable-10" class="toggle toggle-round"
+															type="checkbox">
+														<label for="toggle-enable-disable-10">
+															<span class="onoff enable-disable dp-hide"></span>
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="close-news d-flex align-center cursor-pointer">
+										<%- include ("../svg/outline/outline-close.svg") %>
+									</div>
+								</div>
+							</div>
+							<div class="wrap-tab tab-messagesms">
+								<div class="tabs">
+									<div role="tablist" aria-lable="Tabs Example" class="tab-selectors btn-item">
+										<button class="tab-items active-tab-selector no-effect relative" type="button">
+											Unread <span class="number">12</span>
+										</button>
+										<button class="tab-items no-effect" type="button">
+											Read
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-contents tabs tab-sms notifi-content scrolls">
+							<div id="notifiUnread" class="tab-conts tab-content-active w-100">
+								<!-- Start -->
+								<div class="content">
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-payment-default.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New Payment
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Zeng Wen</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														You payment for invoice #3783691 has failed. You were unable
+														to compleate the additional customer authentication
+														required. Plasw re-run the card again.
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-1" type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-1"></label>
+														</div>
+													</div>
+												</div>
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-payment-default.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New E-Signature Document
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Ingo Schimpff</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Customer signed an estimate #3366950
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-21" type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-21"></label>
+														</div>
+													</div>
+												</div>
+												
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-plans.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New Review
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Diego Morata</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Diego Morata
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-3" type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-3"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-document-signature.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New E-Signature Document
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Ingo Schimpff</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Customer signed an estimate #3366950
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-4" type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-4"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-plans.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New Review
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Diego Morata</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Diego Morata
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-5" type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-5"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-document-signature.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New E-Signature Document
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Ingo Schimpff</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Customer signed an estimate #3366950
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-6" type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-6"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-plans.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New Review
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Diego Morata</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Diego Morata
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-7" type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-7"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-document-signature.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New E-Signature Document
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Ingo Schimpff</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Customer signed an estimate #3366950
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-8" type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-8"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- End -->
+							</div>
+
+							<div id="notifiRead" class="tab-conts">
+								<div class="content">
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-payment-default.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New Payment
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Zeng Wen</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														You payment for invoice #3783691 has failed. You were unable
+														to compleate the additional customer authentication
+														required. Plasw re-run the card again.
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-12" checked type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-12"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-document-default.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New E-Signature Document
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Ingo Schimpff</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Customer signed an estimate #3366950
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-2" checked type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-2"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-plans.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New Review
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Diego Morata</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Diego Morata
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-3" checked type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-3"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-document-signature.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New E-Signature Document
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Ingo Schimpff</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Customer signed an estimate #3366950
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-4" checked type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-4"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="items-noti-news">
+										<div class="noti-items">
+											<div class="images">
+												<%- include ("../svg/states-plans.svg") %>
+											</div>
+											<div class="wrap-items">
+												<div class="breadcrumb">
+													<span class="breadcrumb-link">
+														New Review
+														<span class="svg-chevron arrow-left purple">
+															<%- include ("../svg/outline/outline-chevron-down-small.svg") %>
+														</span>
+													</span>
+													<span class="title">Diego Morata</span>
+												</div>
+												<div class="description">
+													<div class="cont-desc">
+														Diego Morata
+													</div>
+
+													<div class="check-items">
+														<input id="check-items-5" checked type="checkbox" value="">
+														<div class="item-checkbox">
+															<label for="check-items-5"></label>
+														</div>
+													</div>
+												</div>
+											
+												<div class="details">
+													<div class="datetime">
+														<span class="date">September 16, 2020</span>
+														<span class="time">10:13am</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End - Notification -->
+
+			<div class="dropdown dropdown-w200 nav-help ml-6">
+				<span class="dropbtn help-btn">
+					<%- include ("../svg/outline/outline-help.svg") %>
+					Help
+				</span>
+				<div class="dropdown-menu">
+					<ul class="relative">
+						<li>
+							<div class="items">
+								<%- include ("../svg/outline/outline-academy.svg") %>
+								Academy
+							</div>
+						</li>
+						<li>
+							<div class="items">
+								<%- include ("../svg/outline/outline-rocket.svg") %>
+								Getting Started
+							</div>
+						</li>
+						<li>
+							<div class="items">
+								<%- include ("../svg/outline/outline-training.svg") %>
+								Traning
+							</div>
+						</li>
+						<li>
+							<div class="items">
+								<%- include ("../svg/outline/outline-book.svg") %>
+								Knowledge Base
+							</div>
+						</li>
+						<li class="line"></li>
+						<li>
+							<div class="items">
+								<%- include ("../svg/outline/outline-youtube.svg") %>
+								YouTube
+							</div>
+						</li>
+						<li>
+							<div class="items">
+								<%- include ("../svg/outline/outline-facebook.svg") %>
+								Facebook
+							</div>
+						</li>
+						<li class="line"></li>
+						<li>
+							<div class="items">
+								<%- include ("../svg/outline/outline-message.svg") %>
+								Chat With Support
+							</div>
+						</li> 
+						<li>
+							<div class="items">
+								<%- include ("../svg/outline/outline-phone.svg") %>
+								Book a Sales Call
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="user-menu-v2 dropdown ml-4">
+				<div class="dropbtn user-wrap relative">
+					<div class="avatar relative">
+						<img src="../../images/avatar.png" alt="" width="32px" height="32px">
+						<span class="marker absolute"></span>
+					</div>
+					<span class="name fw-500"> Wendell </span>
+					<span class="svg-dropup"><%- include ("../svg/outline/dropdown-up.svg") %></span>
+				</div>
+				<div class="user-content dropdown-menu absolute">
+					<ul>
+						<li class="items">
+							<%- include ("../svg/outline/outline-user.svg") %>
+							My Account
+						</li>
+						<li class="items">
+							<%- include ("../svg/outline/outline-powerups.svg") %>
+							Upgrade Plan
+						</li>
+						<li class="line"></li>
+						<li class="items">
+							<%- include ("../svg/outline/outline-features.svg") %>
+							Request a Feature
+						</li>
+						<li class="items">
+							<%- include ("../svg/outline/outline-google-calendar.svg") %>
+							Sync with Google
+						</li>
+						<li class="line"></li>
+						<li class="items">
+							<%- include ("../svg/outline/outline-shop.svg") %>
+							Shop
+						</li>
+						<li class="items">
+							<%- include ("../svg/outline/outline-log-out.svg") %>
+							Log out
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,179 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'drip-campaigns',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {drip: 'drip'}) %>
+<%- include('../../partials/_sidebar', {drip: 'drip'}) %>
+
+<div class="drip container-wrap">
+    <div class="drip__header heading-page">
+        <h4 class="heading-page__label">
+            <a href="#" class="d-flex align-center">
+                <%- include ("../../svg/outline/outline-arrow-left.svg") %>
+                <span class="ml-3">Drip Campaigns</span>
+            </a>
+        </h4>
+    </div>
+	<div class="drip__container">
+        <%- include('_sidebar', {dripUnsubscribed: 'dripUnsubscribed'}) %>
+
+        <div class="wrapper flex-column">
+            <div class="wrapper__title heading-page heading-page--normal flex-column__head">
+                <h5 class="heading-page__label">
+                    <a href="#" class="d-flex align-center">
+                        <%- include ("../../svg/outline/outline-arrow-left.svg") %>
+                        <span class="ml-3">Unsubscribed</span>
+                    </a>
+                </h5> 
+                <div class="search-input">
+                    <span class="svg-search-absolute"><%- include ("../../svg/outline/outline-search.svg") %></span>
+                    <input type="text" placeholder="Search Customers">
+                </div>
+            </div>
+            <div class="wrapper__list l-table flex-column__content scrolls-x">
+                <div class="l-table__title">
+                    <div class="rows rows--listitems">
+                        <div class="col col--name col--select">
+                            Name
+                            <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                        </div>
+                        <div class="col col--status">Status</div>
+                        <div class="col col--email">Email</div>
+                        <div class="col col--zip">Zip</div>
+                        <div class="col col--jobs">Active Jobs</div>
+                        <div class="col col--company">Company</div>
+                        <div class="col col--source">Source</div>
+                        <div class="col col--discount">Discount</div>
+                        <div class="col col--service">Active Services</div>
+                        <div class="col col--more">More option</div>
+                        <div class="col col--menu"></div>
+                    </div>
+                </div>
+                <div class="l-table__content l-table__content--listint scrolls">
+                    <% for (let i = 0; i < 3; i++ ) { %>
+                    <div class="rows rows--listitems">
+                        <div class="col col--name">
+                            <a href="#">Pauline Welch</a>
+                        </div>
+                        <div class="col col--status">
+                            <span class="btn-status btn-status--green">Active</span>
+                        </div>
+                        <div class="col col--email">
+                            <span class="email">n.gregory@msn.com</span>
+                        </div>
+                        <div class="col col--zip">33101</div>
+                        <div class="col col--jobs">1</div>
+                        <div class="col col--company col--empty"></div>
+                        <div class="col col--source">Facebook</div>
+                        <div class="col col--discount col--empty"></div>
+                        <div class="col col--service">
+                            <span class="btn-status btn-status--grey">Regular Montly Service</span>
+                        </div>
+                        <div class="col col--more">
+                            <span class="btn-status btn-status--grey">Cleaning</span>
+                        </div>
+                        
+                        <div class="col col--menu">
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default btn-default--noborder just-icon">
+                                    <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu--right">
+                                    <ul>
+                                        <li class="items">Option1</li>
+                                        <li class="items">Option1</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                    <div class="rows rows--listitems">
+                        <div class="col col--name">
+                            <a href="#">Pauline Welch</a>
+                        </div>
+                        <div class="col col--status">
+                            <span class="btn-status btn-status--blue">Lead</span>
+                        </div>
+                        <div class="col col--email">
+                            <span class="email">k.green@yahoo.com</span>
+                            <span class="email">byron.schroeder@live.com</span>
+                        </div>
+                        <div class="col col--zip">33101</div>
+                        <div class="col col--jobs">5</div>
+                        <div class="col col--company col--empty"></div>
+                        <div class="col col--source">Google</div>
+                        <div class="col col--discount col--empty"></div>
+                        <div class="col col--service">
+                            <span class="btn-status btn-status--grey">Regular Montly Service</span>
+                        </div>
+                        <div class="col col--more">
+                            <span class="btn-status btn-status--grey">Cleaning</span>
+                        </div>
+                        
+                        <div class="col col--menu">
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default btn-default--noborder just-icon">
+                                    <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu--right">
+                                    <ul>
+                                        <li class="items">Option1</li>
+                                        <li class="items">Option1</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rows rows--listitems">
+                        <div class="col col--name">
+                            <a href="#">Pauline Welch</a>
+                        </div>
+                        <div class="col col--status">
+                            <span class="btn-status btn-status--grey">Inactive</span>
+                        </div>
+                        <div class="col col--email">
+                            <span class="email">marvin.simmons@verizon.net</span>
+                            <span class="email">elmer.hart@hotmail.com</span>
+                            <span class="email">byron.schroeder@live.com</span>
+                        </div>
+                        <div class="col col--zip">33101</div>
+                        <div class="col col--jobs disable">0</div>
+                        <div class="col col--company">Google</div>
+                        <div class="col col--source">Facebook</div>
+                        <div class="col col--discount col--empty"></div>
+                        <div class="col col--service">
+                            <span class="btn-status btn-status--grey">Regular Montly Service</span>
+                            <span class="btn-status btn-status--grey">Cleaning</span>
+                            <span class="btn-status btn-status--grey">Mosquitoes</span>
+                        </div>
+                        <div class="col col--more">
+                            <span class="btn-status btn-status--grey">Cleaning</span>
+                        </div>
+                        
+                        <div class="col col--menu">
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default btn-default--noborder just-icon">
+                                    <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu--right">
+                                    <ul>
+                                        <li class="items">Option1</li>
+                                        <li class="items">Option1</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>			
+
+<%- include('../../partials/_footer', {
+    slug: 'drip-campaigns',
+    root: ''
+}) %>

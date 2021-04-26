@@ -1,0 +1,182 @@
+<%- include('../../partials/_head', {
+  title: 'Reviews',
+  slug: 'review-v2',
+  root: ''
+}) %>
+
+<%- include('../../partials/_header', {reviews: 'reviews'}) %>
+<%- include('../../partials/_sidebar', {reviews: 'reviews'}) %>
+
+<div class="review container-wrap relative accessible-tabs-container container-column">
+    <div class="header header-review">
+        <div class="mb-3">
+            <h6 class="fs-18 fw-600 black-2 mb-0">Rating Report</h6>
+            <div class="tabs">
+                <div role="tablist" aria-lable="Tabs Example" class="tab-selectors btn-item">
+                    <button class="tab-items active-tab-selector" type="button">
+                        Service Ratings
+                    </button>
+                    <button class="tab-items" type="button">
+                        Likely Ratings
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="group-select">
+            <div class="d-flex align-center">
+                <div class="dropdown dropdown-box calendar">
+                    <div class="dropbtn">
+                        <span class="svg-calendar"><%- include ("../../svg/outline/outline-calendar.svg") %></span>
+                        <span>03/06/2020 <span class="fs-13 date-to">to</span> 03/07/2020</span>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                        <span class="txt-ellipsis">Teammate</span>
+                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li class="items">
+                                <span class="txt-ellipsis">Teammate</span>
+                            </li>
+                            <li class="items">
+                                <span class="txt-ellipsis">Teammate</span>
+                            </li>
+                      </ul>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                        <span class="txt-ellipsis">All Ratings</span>
+                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li class="items">
+                                <span class="txt-ellipsis">All Ratings</span>
+                            </li>
+                            <li class="items">
+                                <span class="txt-ellipsis">All Ratings</span>
+                            </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                    Export
+                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                </div>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li class="items">
+                            PDF
+                        </li>
+                        <li class="items">
+                            PSD
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tables box-auto has-footer">
+        <div class="tabs content-table tab-contents">
+            <div id="serviceRatings" class="tab-conts tab-content-active">
+                <div class="t-title">
+                    <div class="rows">
+                        <div class="col-customer">Customer</div>
+                        <div class="col-date pl-1">Date</div>
+                        <div class="col-temmate pl-1">Temmate</div>
+                        <div class="col-rating pl-1">Rating</div>
+                        <div class="col-feedback pl-1">Feedback</div>
+                    </div>
+                </div>
+                <div class="t-content scrolls">
+                    <% for (i = 0; i < 15; i++){ %>
+                    <div class="rows">
+                        <div class="d-flex">
+                            <div class="col-customer member">
+                                <span class="avt fs-11">AB</span>
+                                <div class="name cursor-pointer">Alice Krejčová</div>
+                            </div>
+                            <div class="col-date pl-1">
+                                Jul 17, 2020
+                            </div>
+                            <div class="col-temmate pl-1 member">
+                                <span class="avt-img fs-11">
+                                    <img src="https://unsplash.it/32/32" alt="">
+                                </span>
+                                <div class="name">Alma Malmberg</div>
+                            </div>
+                            <div class="col-rating pl-1">
+                                <div class="svg-star-yellow">
+                                    <span class="orange-default">4.0</span>
+                                    <%- include ("../../svg/outline/outline-star-none.svg") %>
+                                    <%- include ("../../svg/outline/outline-star-none.svg") %>
+                                    <%- include ("../../svg/outline/outline-star-none.svg") %>
+                                    <%- include ("../../svg/outline/outline-star-none.svg") %>
+                                    <%- include ("../../svg/outline/outline-star-none.svg") %>
+                                </div>
+                            </div>
+                            <div class="col-feedback pl-1">
+                                Qui est dolorum ullam similique quis eligendi voluptatibus itaque cupiditate.
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+
+            <div id="likelyRatings" class="tab-conts">
+                <div class="t-title">
+                    <div class="rows">
+                        <div class="col-customer">Customer</div>
+                        <div class="col-date pl-1">Date</div>
+                        <div class="col-rating pl-1">Rating</div>
+                        <div class="col-feedback pl-1">Feedback</div>
+                    </div>
+                </div>
+                <div class="t-content scrolls">
+                    <% for (i = 0; i < 10; i++){ %>
+                    <div class="rows">
+                        <div class="d-flex">
+                            <div class="col-customer member">
+                                <span class="avt fs-11">AB</span>
+                                <div class="name cursor-pointer">Alice Krejčová</div>
+                            </div>
+                            <div class="col-date pl-1">
+                                Jul 17, 2020
+                            </div>
+                            <div class="col-rating pl-1">
+                                <div class="svg-star-yellow">
+                                    <span class="orange-default">4.0</span>
+                                    <%- include ("../../svg/outline/outline-star-none.svg") %>
+                                    <%- include ("../../svg/outline/outline-star-none.svg") %>
+                                    <%- include ("../../svg/outline/outline-star-none.svg") %>
+                                    <%- include ("../../svg/outline/outline-star-none.svg") %>
+                                    <%- include ("../../svg/outline/outline-star-none.svg") %>
+                                </div>
+                            </div>
+                            <div class="col-feedback pl-1">
+                                Illo aut accusamus qui. Eligendi et amet. Ut nemo illo quam qui. Quae et qui numquam commodi sed suscipit dolorem voluptas. Nisi atque nulla necessitatibus. Aut eos saepe non id.
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../../partials/_pagination') %>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'review-v2',
+    root: ''
+}) %>

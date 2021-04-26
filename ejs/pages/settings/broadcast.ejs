@@ -1,0 +1,100 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Broadcast',
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {broadcastTemplate: 'broadcastTemplate'}) %>
+
+    <div class="contents-pages container-setting-user maintables-page d-flex modal-container setting-items setting-custom">
+        <div class="relative w-100 container-column">
+            <%- include('_tips') %>
+            <div class="header-title flex-auto">
+                <h2>Broadcast Templates</h2>
+
+                <div class="btn btn-main has-plus btn-add-method svg-plus white">
+                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                    Add Template
+                </div>
+            </div>
+            <div class="from-addr flex-auto">
+                <span>"From" Address</span>
+                <span class="company">Dev Team LLC</span>
+                <div class="email">
+                    agmenty@info.com
+                    <div class="tooltip">
+                        <%- include ("../../svg/outline/outline-question.svg") %>
+                        <span class="tooltiptext top">Tooltip</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="select-items flex-auto">
+                <div class="list-items nonselect">
+                    <div class="check-items">
+                        <input id="check-broadcast" type="checkbox" value="">
+                        <div class="item-checkbox">
+                            <label for="check-broadcast"> 
+                                <span class="txt-ellipsis ml-2">0 items:</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn-input ml-15">
+                        <div class="svg-delete-grey mr-1">
+                            <%- include ("../../svg/outline/outline-delete.svg") %>
+                        </div>
+                        Delete
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-table table-custom table-email box-auto">
+                <div class="table-title">
+                    <div class="rows">
+                        <div class="col-checkbox"></div>
+                        <div class="col-name">Template</div>
+                    </div>
+                </div>
+                <div class="table-list scrolls">                	
+                    <div class="rows">
+                        <div class="col-checkbox">
+                        	<div class="check-items">
+				              	<input id="checkbroadcast-1" type="checkbox" value="">
+				              	<div class="item-checkbox">
+                                    <label for="checkbroadcast-1"></label>
+                                </div>
+				            </div>
+                        </div>
+                        <div class="col-name">
+                            <a href="/pages/settings/broadcast-edit.html" class="txt-ellipsis">Cash</a>
+                        </div>
+                    </div>
+
+                    <div class="rows">
+                        <div class="col-checkbox">
+                            <div class="check-items">
+                                <input id="checkbroadcast-2" type="checkbox" value="">
+                                <div class="item-checkbox">
+                                    <label for="checkbroadcast-2"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-name">
+                            <a href="/pages/settings/broadcast-edit.html" class="txt-ellipsis">Ant Service Follow Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>

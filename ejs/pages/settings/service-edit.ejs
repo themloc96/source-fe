@@ -1,0 +1,276 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Service Edit',
+    slug: 'service-edit-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {serviceTemplates: 'serviceTemplates'}) %>
+
+    <div class="contents-pages container-setting-user service-edit-v2">
+        <div class="w-100 wrap-content-service container-column">
+            <div class="header-title flex-auto">
+                <h2>Edit service </h2>
+                <div class="w-button">
+                    <div class="cancel"> Cancel </div>
+                    <div class="btn btn-main">
+                        <span>Save</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-services d-flex box-auto">
+                <div class="container-setting-left">
+                    <div class="wrap-title">
+                        <ul>
+                            <li>
+                                <a href="/pages/settings/service-edit.html" class="item svg-service svg-noeffect active">
+                                    <%- include ("../../svg/states-servicetemplate.svg") %>
+                                    Service 
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" href="/pages/settings/service-estimate.html" class="item"> 
+                                    <%- include ("../../svg/states-estimate-default.svg") %>
+                                    Estimate 
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" href="/pages/settings/service-invoice.html" class="item"> 
+                                    <%- include ("../../svg/states-document-default.svg") %>
+                                    Invoice 
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" href="/pages/settings/service-materials.html" class="item"> 
+                                    <%- include ("../../svg/states-materials-default.svg") %>
+                                    Materials 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wrap-title wrap-list-add">
+                        <ul>
+                            <li> 
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Estimate
+                                </div>
+                            </li>
+                            <li> 
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Invoice
+                                </div>
+                            </li>
+                            <li> 
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Documents
+                                </div>
+                            </li>
+                            <li> 
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Materials
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>   
+                <div class="container-setting-right">                    
+                    <div class="container-setting-center relative">
+                        <div class="wrap-content">
+                            <h3 class="title">Service</h3>
+                            <div class="box-items">
+                                <div class="items d-flex">
+                                    <div class="name">
+                                        <%- include ("../../svg/states-label-default.svg") %>
+                                        Service Name
+                                    </div>
+                                    <div class="item-right">
+                                        <div class="input-color">
+                                            <input class="field-input" type="text" name="" placeholder="Service name">
+                                            <div class="choose-color">
+                                                <span></span>
+                                                #8B044D
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-items">
+                                <div class="items d-flex">
+                                    <div class="name">
+                                        <%- include ("../../svg/states-clock-default.svg") %>
+                                        Length
+                                    </div>
+                                    <div class="item-right">
+                                        <div class="field-input wrapper-choosetime">
+                                            <div class="from-time">
+                                                <div class="dropdown">
+                                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                                        <span>01</span>
+                                                        <span class="time-text">h</span>
+                                                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                    </div>
+                                                    <div class="dropdown-menu">
+                                                        <div class="scrolls">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="items">01</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">02</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">03</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">04</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">05</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">06</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">07</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">08</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">09</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">10</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">11</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">12</div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="from-time">
+                                                <div class="dropdown">
+                                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                                        <span>01</span>
+                                                        <span class="time-text">m</span>
+                                                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                    </div>
+                                                    <div class="dropdown-menu">
+                                                        <div class="scrolls">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="items">01</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">02</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">03</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">04</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">05</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">06</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">07</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">08</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">09</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">10</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">11</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">12</div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-items">
+                                <div class="items has-border d-flex">
+                                    <div class="name">
+                                        <%- include ("../../svg/states-check.svg") %>
+                                        Set to Confirmed
+                                    </div>
+                                    <div class="item-right">
+                                        <div class="wrap-confirmed">
+                                            <div class="switch large">
+                                                <input id="toggle-user-custom-1" class="toggle toggle-round" type="checkbox">
+                                                <label for="toggle-user-custom-1"></label>
+                                            </div>
+                                            Each Recurring job will have its status set to confirmed
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-items">
+                                <div class="items d-flex">
+                                    <div class="name">
+                                        <%- include ("../../svg/states-repeat.svg") %>
+                                        Repeat
+                                    </div>
+                                    <div class="item-right tabs">
+                                        <div class="tabs-daily">
+                                            <div class="btn-item m-0">
+                                                <button class="tab-items active-tab-selector item-off" type="button">
+                                                    Off
+                                                </button>
+                                                <button class="tab-items" type="button">
+                                                    Daily
+                                                </button>
+                                                <button class="tab-items" type="button">
+                                                    Weekly
+                                                </button>
+                                                <button class="tab-items" type="button">
+                                                    Monthly
+                                                </button>
+                                                <button class="tab-items" type="button">
+                                                    Yearly
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>      
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'service-edit-v2',
+    root: ''
+}) %>

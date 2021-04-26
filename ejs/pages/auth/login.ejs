@@ -1,0 +1,78 @@
+<%- include('../../partials/_head', {
+  title: 'Login',
+  slug: 'login-v2',
+  root: ''
+}) %>
+<div class="auth-v2">
+  <h1 class="logo-text-gorilla-v2">
+    <img src="/images/logo_text_gorilla.png">
+  </h1>
+
+  <div class="main-login">
+    <div id="gd-login-v2" class="gd-form-v2">
+      <h2 class="fs-27">
+        Log In
+      </h2>
+      <div class="gd-login-btn">
+        <div class="flex">
+          <div class="gd-login-col2 mb-2">
+            <div class="gd-login-v2-btn-left">
+                <div class="btn-fb btn-fb-blue">
+                  <div class="btn-fb-content-wp">
+                    <div class="btn-fb-icon">
+                      <%- include ("../../svg/facebook-icon.svg") %>
+                    </div>
+                    <span class="btn-fb-text">Log in with Facebook</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="gd-login-col2">
+            <div class="gd-login-v2-btn-right">
+                <div class="btn-gg btn-gg-blue">
+                  <div class="btn-gg-content-wp">
+                    <div class="btn-gg-icon">
+                      <%- include ("../../svg/google-icon.svg") %>
+                    </div>
+                    <span class="btn-gg-text">Sign in with Google</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gd-line">
+        <div class="gd-login-line"> <span> Or </span></div>
+      </div>
+      <form action="#">
+        <section class="gd-login-btn-group">
+          <div class="user-box">
+            <label for="" class="fs-15">Username or Email</label>
+            <input type="text" class="field-input">
+          </div>
+          <div class="pwd-box">
+            <label for="" class="fs-15">Password</label>
+            <input type="password" class="field-input">
+          </div>
+          <a href="/pages/auth/forgot.html">
+            <div class="gd-nottext">
+              Forgot your password?
+            </div>
+          </a>
+          <div class="gd-getstarted btn btn-main gd-btn-getstarted fs-15 fw-500">
+            <button type="submit"> Log In </button>
+          </div>
+          <div class="gd-login-confirm border-none">
+            Don't have an account? <a href="/pages/auth/registration.html" title="Sign up">Sign up</a>
+          </div>
+        </section>
+      </form>
+    </div>
+    <p class="mascot"><img src="/images/logo_gorilla.png"></p>
+  </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'login-v2',
+    root: ''
+}) %>

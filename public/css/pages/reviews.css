@@ -1,0 +1,157 @@
+.review.container-wrap {
+  overflow: hidden;
+}
+.review .header-review {
+  flex: 0 0 auto;
+  padding: 20px 25px;
+  border-bottom: solid 1px #e3e8ee;
+}
+.review .header-review > div:first-child {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.review .group-select {
+  display: flex;
+  justify-content: space-between;
+}
+.review .group-select .dropdown .dropbtn {
+  min-width: 95px;
+}
+.review .group-select .dropdown + .dropdown {
+  margin-left: 8px;
+}
+.review .group-select .calendar .dropbtn {
+  color: #676f7d;
+  padding: 0px 10px 0px 5px;
+}
+.review .group-select .calendar .dropbtn .date-to {
+  color: #a0adbe;
+  padding: 0px 3px;
+}
+.review .group-select .calendar .dropbtn .outline-calendar {
+  margin-right: 2px;
+}
+.review .tables .content-table {
+  font-size: 13px;
+  height: 100%;
+}
+.review .tables .content-table .tab-conts {
+  width: 100%;
+  height: 100%;
+}
+.review .tables .content-table .t-title .rows {
+  height: 40px;
+}
+.review .tables .content-table .t-title .rows > div {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.54;
+}
+.review .tables .content-table .t-content {
+  color: #202633;
+  height: calc(100% - 42px);
+}
+.review .tables .content-table .t-content .rows {
+  min-height: 64px;
+}
+.review .tables .content-table .t-content .rows:last-child {
+  border-bottom: 0;
+}
+.review .tables .content-table .t-content .rows > div {
+  align-items: flex-start;
+  width: 100%;
+}
+.review .tables .content-table .t-content .col-date,
+.review .tables .content-table .t-content .col-feedback {
+  margin-top: 4px;
+}
+.review .tables .content-table .rows {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: solid 1px #e3e8ee;
+  padding: 20px 10px 20px 25px;
+}
+.review .tables .content-table .member {
+  justify-content: space-between;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.review .tables .content-table .member .avt {
+  display: inline-block;
+  border-radius: 9px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+.review .tables .content-table .member .avt.avt-img {
+  background-color: #f2f5f7;
+}
+.review .tables .content-table .member .name {
+  width: calc(100% - 30px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.review .tables .content-table .col-customer {
+  width: 13%;
+}
+.review .tables .content-table .col-customer .avt {
+  background-color: #3075ea;
+  color: #ffffff;
+}
+.review .tables .content-table .col-customer .name {
+  color: #8d3eff;
+}
+.review .tables .content-table .col-date {
+  width: 13%;
+}
+.review .tables .content-table .col-temmate {
+  width: 13%;
+}
+.review .tables .content-table .col-temmate .avt img {
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+}
+.review .tables .content-table .col-rating {
+  width: 20%;
+}
+.review .tables .content-table .col-rating > div:first-child {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.review .tables .content-table .col-rating > div:first-child > span:first-child {
+  margin-right: 5px;
+  margin-top: -3px;
+}
+.review .tables .content-table .col-rating svg {
+  cursor: pointer;
+}
+.review .tables .content-table .col-feedback {
+  width: calc(41% - 25px);
+}
+.review .tables .content-table #likelyRatings .col-customer,
+.review .tables .content-table #likelyRatings .col-temmate {
+  width: 20%;
+}
+.review .tables .content-table #likelyRatings .col-date {
+  width: 16%;
+}
+.review .tables .content-table #likelyRatings .col-feedback {
+  width: calc(44% - 25px);
+}
+.review .footer-pages {
+  flex: 0 0 auto;
+}

@@ -1,0 +1,425 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+	<%- include('_sidebar') %>
+
+	<div class="contents-pages accessible-tabs-container container-column modal-container customer-list">
+		<div class="title-header">
+    		<div class="search-input">
+				<span class="svg-search-absolute">
+					<%- include ("../../svg/outline/outline-search.svg") %>
+				</span>
+    			<input type="text" name="" placeholder="Placeholder">
+    		</div>
+    		<div class="right-conts">
+    			<div href="#importCustomer" class="btn-modal btn-default has-icon">
+                    <%- include ("../../svg/outline/outline-upload.svg") %>
+                    Import
+                </div>
+
+                <div class="">
+	    			<div href="#addCustomer" class="btn-modal btn-main has-icon svg-plus white">
+	    				<%- include ("../../svg/outline/outline-plus-black.svg") %>
+				        Add Customer
+				    </div>
+			    </div>
+    		</div>
+		</div>
+ 
+		<div class="title-action tabs">
+			<div class="action">
+				<div class="dropdown">
+					<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+						<div class="d-flex align-center">
+							<%- include ("../../svg/outline/outline-device-status.svg") %>
+							Import
+						</div>
+						<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+					</div>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="items">
+								<div class="txt-ellipsis">Import</div>
+							</li>
+							<li class="items">
+								<div class="txt-ellipsis">Import</div>
+							</li>
+					  </ul>
+					</div>
+			  	</div>
+				<div class="dropdown">
+					<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+						<div class="d-flex align-center">
+							<%- include ("../../svg/outline/outline-check-circle.svg") %>
+							Status
+						</div>
+						<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+					</div>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="items">
+								<div class="txt-ellipsis">Status</div>
+							</li>
+							<li class="items">
+								<div class="txt-ellipsis">Status</div>
+							</li>
+					  </ul>
+					</div>
+			  	</div>
+				<div class="dropdown">
+					<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+						<div class="d-flex align-center">
+							<%- include ("../../svg/outline/outline-check-circle.svg") %>
+							Tags
+						</div>
+						<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+					</div>
+					<div class="dropdown-menu">
+						<ul>
+							<li class="items">
+								<div class="txt-ellipsis">Tags</div>
+							</li>
+							<li class="items">
+								<div class="txt-ellipsis">Tags</div>
+							</li>
+					  </ul>
+					</div>
+			  	</div>
+
+				<div class="dropdown dropdown-nobox">
+					<div  onclick="dropdownFunc(this)" class="dropbtn btn-default nonborder">
+	                    <span class="sort">Sort By:</span>
+	                    <span class="text">First Name</span>
+	                    <span class="svg-dropup"><%- include ("../../svg/outline/dropdown-up.svg") %></span>
+	                </div>
+					<div class="dropdown-menu">
+						<div class="scrolls">
+							<ul>
+								<li class="items">
+									<span class="txt-ellipsis">First Name 1</span>
+								</li>
+								<li class="items">
+									<span class="txt-ellipsis">First Name 2</span>
+								</li>
+							  </ul>
+					  	</div>
+					</div>
+				</div>
+
+				<div class="dropdown dropdown-nobox ml-0">
+					<div onclick="dropdownFunc(this)" class="dropbtn btn-default nonborder">
+						<span>A-Z</span>
+						<span class="svg-dropup"><%- include ("../../svg/outline/dropdown-up.svg") %></span>
+					</div>
+					<div class="dropdown-menu">
+						<div class="scrolls">
+							<ul>
+								<li class="items">
+									<span class="txt-ellipsis">A - B</span>
+								</li>
+								<li class="items">
+									<span class="txt-ellipsis">F - J</span>
+								</li>
+							  </ul>
+					  	</div>
+					</div>
+				</div>
+			</div>
+			<div role="tablist" aria-lable="Tabs Example" class="tab-selectors">
+				<div class="btn-default btn-icon btn-hasaction btn-viewmap tab-items svg-noeffect">
+					<%- include ("../../svg/outline/outline-map-pin.svg") %>
+				</div>
+				<div class="btn-default btn-icon btn-hasaction tab-items active-tab-selector btn-list-row-task svg-noeffect">
+					<%- include ("../../svg/outline/outline-list-row.svg") %>
+				</div>
+			</div>
+		</div>
+		<div class="title-action action-export">
+			<div>
+				<div class="action">
+					<div class="check-items">
+		              	<input id="check-0" type="checkbox" value="">
+		              	<div class="item-checkbox">
+							<label for="check-0"></label>
+						</div>
+		            </div>
+		            <div class="action-items disable">
+			            <span class="fs-13">0 items:</span>
+
+						<div class="dropdown mr-2">
+							<div class="dropbtn btn-default selection">
+								Mark as
+								<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+			                </div>
+						</div>
+						<div href="#mergeAccount" class="btn-modal btn-default has-icon">
+		                    <%- include ("../../svg/outline/outline-merge.svg") %>
+		                    Merge Accounts
+		                </div>
+		                <div class="btn-default has-icon">
+		                    <%- include ("../../svg/outline/outline-repeat.svg") %>
+		                    Sync To QB
+		                </div>
+		                <div href="#confirmDelete" class="btn-default has-icon btn-modal">
+		                    <div class="svg-delete-grey">
+								<%- include ("../../svg/outline/outline-delete.svg") %>
+							</div>
+		                    Delete 
+		                </div>
+	                </div>
+				</div>
+
+				<div class="export">
+					<span>Export 864 customers:</span>
+					<span class="export-file cursor-pointer">CSV</span>
+					<span class="export-file cursor-pointer">Excel</span>
+				</div>
+			</div>	
+		</div>
+
+		<div class="tab-contents box-auto has-map">
+			<div class="calendar map tab-conts">
+				<div id="displayView" class="calendar-container">
+					<div class="view-calendar">
+						<div id="mapCustomerList" class="container-map">
+							<%- include('../calendar/_control-mapbox') %>
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="tables has-footer tab-conts tab-content-active">
+				<div class="t-title">
+					<div class="rows">
+						<div class="col-checkbox"></div>
+							<div class="col-customer">
+								Customer
+							</div>
+							<div class="col-email pl-2">
+								Emails
+							</div>
+							<div class="col-phone pl-2">
+								Phones
+							</div>
+							<div class="col-location pl-2">
+								Service Locations
+							</div>
+							<div class="col-balance pl-2">
+								Balance
+							</div>
+					</div>
+				</div>
+				<div class="t-content has-avt scrolls scrolls-x">
+					<% for (i = 0; i < 10; i++){ %>
+					<div class="rows">
+						<div class="d-flex w-100 align-top">
+							<div class="col-checkbox">
+								<div class="check-items">
+									<input id="check-1" type="checkbox" value="">
+									<div class="item-checkbox">
+										<label for="check-1"></label>
+									</div>
+								</div>
+							</div>
+							<div class="col-customer">
+								<span class="avt fs-11">AB</span>
+								<a href="/pages/customers/customer-timelines.html" class="name">Alice Krejčová</a>
+							</div>
+							<div class="col-email pl-2">
+								<span class="txt-ellipsis">Haylee_Rosenbaum61@gmail.com</span>
+							</div>
+							<div class="col-phone pl-2">
+								<div class="txt-ellipsis">
+									<span>568-431-1854</span>
+									<span class="type">Mobile</span>
+								</div>
+								<div class="txt-ellipsis">
+									<span>568-431-1854</span>
+									<span class="type">Mobile</span>
+								</div>
+							</div>
+							<div class="col-location pl-2">
+								<div class="txt-ellipsis">Home, 405 Anchor St, Las Vegas, NV 89110</div>
+								<div class="txt-ellipsis">Office, 842 County Road 519, Milford, NJ 08848</div>
+								<div class="txt-ellipsis">Parents, 1028 Garfield Ave, Jersey City, NJ 07304</div>
+							</div>
+							<div class="col-balance pl-2">
+								<span class="txt-ellipsis">$100.00</span>
+							</div>
+						</div>
+					</div>
+					<% } %>
+				</div>
+				<%- include('../../partials/_pagination') %>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal merge account -->
+	<div id="mergeAccount"  class="modal container-modal">
+		<div class="modal__overlay bg-fixed"></div>
+		<div class="modal__container modal-mergeacount">	
+			<div class="header-modal">
+				<span>Merge Account</span>
+				<div class="btn btn-main">Merge</div>
+			</div>
+
+			<div class="body-modal">
+				<div class="description">
+					Select the primary account. Other accounts will become location under this primary account.
+				</div>
+				<div class="has-form">
+					<div class="rows">
+						<span class="txt">
+							Primary Account
+						</span>
+						<div class="dropdown">
+							<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+								Jeremías del Pozo
+								<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+							</div>
+							<div class="dropdown-menu scrolls">
+								<ul>
+									<li class="items">
+										Jeremías del Pozo
+									</li>
+									<li class="items">
+										Jeremías del Pozo 2
+									</li>
+							  </ul>
+							</div>
+					  	</div>
+					</div>
+				</div>
+
+				<div class="map-merge main-timeline">
+					<span class="txt">Merge Map</span>
+					
+					<div class="detail-map">
+						<div class="timeline-details primary-user">
+							<div class="line"></div>
+							<div class="circle">
+								JO
+								<span class="svg-user-primary">
+									<%- include ("../../svg/outline/outline-primary-user.svg") %>
+								</span>
+							</div>
+							<div class="detail">
+								Jurrien Oldhof
+								<div class="primary">Primary Account</div>
+							</div>
+						</div>
+
+						<div class="timeline-details timeline-conts">
+							<div class="line"></div>
+							<div class="detail">
+								<div class="line"></div>
+								<div class="circle bg-green-light">ND</div>
+								Afonso Pinto
+							</div>
+						</div>
+
+						<div class="timeline-details timeline-conts">
+							<div class="line"></div>
+							<div class="detail">
+								<div class="line"></div>
+								<div class="circle bg-orange-plan">PR</div>
+								Patrícia Ribeiro
+							</div>
+						</div>
+
+						<div class="timeline-details timeline-conts">
+							<div class="line"></div>
+							<div class="detail">
+								<div class="line"></div>
+								<div class="circle bg-pink-active">CP</div>
+								Cecilia Pozo
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-modal btn-close">
+				<span>Cancel</span>
+			</div>
+		</div>
+	</div>
+	<!-- Modal Import Customer -->
+	<div id="importCustomer"  class="modal container-modal">
+		<div class="modal__overlay bg-fixed"></div>
+		<div class="modal__container modal-import-customer">	
+			<div class="body-modal">
+				<div class="col-import-left">
+					<div class="title">
+						<span>Import customers from a CSV file:</span>
+					</div>
+					<div class="step-import-customer">
+						<div class="step-number">1</div>
+						<div class="step-details">
+							<div class="step-title">Step</div>
+							<div class="step-description">Upload your CSV file</div>
+						</div>
+					</div>
+					<div class="description">
+						To import your clients into your GorillaDesk account, you must first export a GorillaDesk compatible CSV file. Then select your exportable file with the button below, and click "Upload".
+					</div>
+					<div>
+						<span class="svg-download purple cursor-pointer">
+							<%- include ("../../svg/outline/outline-download.svg") %>
+							<span class="text-purple">
+								Download a sample
+							</span>
+						</span>
+						of how to format your file for import.
+					</div>
+					<div class="upload">
+						<div class="choose-file">
+							<%- include ("../../svg/outline/outline-document.svg") %>
+							<span>Choose a File</span>
+						</div>
+						<div class="notify uploaded">
+							<span class="no-file-selected">No file selected</span>
+							<span class="filename">file-name.csv</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-import-right"> 
+					<div class="content-right">
+						<div class="question">
+							Need help importing your customers?
+						</div>
+						<div class="contact">
+							Please contact
+						</div>				
+
+						<div class="support svg-message purple">
+                            <%- include ("../../svg/outline/outline-message.svg") %>
+							<span class="text-purple">Customer Support</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-modal btn-close">
+				<span>Cancel</span>
+				<a href="/pages/customers/customers-review-column.html" class="btn-main">
+					Upload
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%- include('../calendar/_modal') %>
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

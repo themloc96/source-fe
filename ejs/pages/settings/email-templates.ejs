@@ -1,0 +1,143 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Templates Inbox',
+    slug: 'system-custom-edit-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {stEmailInbox: 'stEmailInbox'}) %>
+
+    <div class="contents-pages container-setting-user d-flex system-email-template-v2">
+        <div class="container-content-email-sms content-emailinbox">
+            <div class="header-title">
+                <h2>Email Inbox</h2>
+                <div class="w-button">
+                    <div class="cancel"> Cancel </div>
+                    <div class="btn btn-main">
+                        <span>Save</span>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex container-setting-email-sms scrolls scrolls-x">
+                <div class="container-setting-left">
+                    <div class="content-header has-input form-newnote">
+                        <div class="col">
+                            <span class="txt">Template Name</span>
+                            <input class="field-input" type="text" name="" placeholder="Ant Service Reminder">
+                        </div>
+
+                        <div class="col-full mt-4">
+                            <span class="txt">Subject Line</span>
+                            <input class="field-input" type="text" name="" placeholder="Repellat odit ratione unde cum libero.">
+                        </div>
+                        <div class="col-full mt-4">
+                            <span class="txt">Email</span>
+                            <div class="description-box container-column">
+                                <textarea class="field-input no-effect box-auto scrolls" name="" rows="4" cols="50" placeholder="Placeholder"></textarea>
+                                
+                                <div class="toolbar flex-auto">
+                                    <div class="tool-link">
+                                        <%- include ("../../svg/outline/outline-emoji.svg") %>
+                                    </div>
+                                    <div class="tool-link">
+                                        <%- include ("../../svg/outline/outline-attach.svg") %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <div class="attachment-file">
+                        <div class="btn-default has-icon">
+                            <%- include ("../../svg/outline/outline-attach.svg") %>
+                            Attach File
+                        </div>
+                        <div class="file">
+                            <div>
+                                <span class="mr-1"><%- include ("../../svg/outline/outline-document.svg") %></span>
+                                File name.pdf
+                            </div>
+                            <span class="svg-outline-delete"><%- include ("../../svg/outline/outline-delete.svg") %></span>
+                        </div>
+                        <div class="file">
+                            <div>
+                                <span class="mr-1"><%- include ("../../svg/outline/outline-document.svg") %></span>
+                                File name.pdf
+                            </div>
+                            <span class="svg-outline-delete"><%- include ("../../svg/outline/outline-delete.svg") %></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-setting-right">
+                    <div class="container-content-email">
+                        <div class="title">
+                            <h3>Agmenty Invoice #5167</h3>
+                        </div>
+                        <div class="wrap-content-email pb-8">
+                            <div class="logo">
+                                <img src="/images/logo_company.png" alt="">
+                            </div>
+                            <div class="txt-welcome">
+                                <p> Hi Client_First_Name, </p> <br/>
+                                <p> I have attached your most recent invoice #5167 as a PDF. Please let me know if you have any questions. </p> <br/>
+                                <p> Pay online using our secure checkout. </p>
+                                <div class="btn btn-main btn-pay-online">
+                                    <span>Pay Online</span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="txt-thanks-you">
+                                <h5> Thanks for the business! </h5>
+                               <p> Chris Moreschi </p> 
+                               <p> TruGanix </p> 
+                               <p> 855-536-7470 </p> 
+                               <p>  chris.moreschi@gmail.com </p> <br/>
+                               <p class="cursor-pointer manage-link">
+                                    Manage Your Account &gt;&gt;
+                                </p>
+                            </div>
+                            <div class="line"></div>
+                            <div class="txt-feedback">
+                                <h5> Tell us what you think </h5>
+                                <p> Thanks for your business! How would you rate your experience? </p> 
+                                <ul class="rate">
+                                    <li>
+                                        <%- include ("../../svg/outline-star.svg") %>
+                                        <p> Terrible </p> 
+                                    </li>
+                                    <li>
+                                        <%- include ("../../svg/outline-star.svg") %>
+                                       <p> Poor </p> 
+                                    </li>
+                                    <li>
+                                        <%- include ("../../svg/outline-star.svg") %>
+                                       <p> Average </p> 
+                                    </li>
+                                    <li>
+                                        <%- include ("../../svg/outline-star.svg") %>
+                                        <p> Good </p> 
+                                    </li>
+                                    <li>
+                                        <%- include ("../../svg/outline-star.svg") %>
+                                       <p> Great! </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>      
+        </div>
+    </div>
+
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'settings-v2',
+    root: ''
+}) %>

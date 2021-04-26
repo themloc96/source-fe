@@ -1,0 +1,121 @@
+<%- include('../../partials/_head', { title: 'Customer' , slug: 'customers-v2' , root: '' }) %>
+
+<%- include('../../partials/_header', {customers: 'customers' }) %>
+<%- include('../../partials/_sidebar', {customers: 'customers' }) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+    <%- include('_sidebar-details', {paymentCustomer: 'paymentCustomer' }) %>
+
+    <div class="contents-pages modal-container invoice-page payment-page">
+        <div class="title-header border-none">
+            <span class="fs-18">Payments</span>
+            <div class="">
+                <div class="btn-main has-icon svg-plus white">
+                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                    Payment
+                </div>
+            </div>
+        </div>
+        <div class="title-action border-none">
+            <div class="action">
+                <div class="check-items">
+                    <input id="check-0" type="checkbox" value="">
+                    <div class="item-checkbox">
+                        <label for="check-0"></label>
+                    </div>
+                </div>
+                <div class="action-items disable">
+                    <span class="fs-13">0 items:</span>
+                    <div class="btn-default has-icon">
+                        <div class="svg-delete-grey">
+                            <%- include ("../../svg/outline/outline-delete.svg") %>
+                        </div>
+                        Delete
+                    </div>
+                    <div class="btn-default has-icon">
+                        <%- include ("../../svg/outline/outline-repeat.svg") %>
+                        Sync to QB
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="invoice-list tabs payment-list">
+            <div class="tab-content">
+                <div class="tables table-invoice table-payment">
+                    <div class="t-title">
+                        <div class="rows">
+                            <div class="col-checkbox"></div>
+                            <div class="col-payment">
+                                Payment for
+                            </div>
+                            <div class="col-method">
+                                Method
+                            </div>
+                            <div class="col-memo pl-2">
+                                Memo
+                            </div>
+                            <div class="col-date pl-2">
+                                Date
+                            </div>
+                            <div class="col-amount">
+                                Amount
+                            </div>
+                            <div class="col-stt">
+                                Status
+                            </div>
+                            <div class="col-qb pr-1">
+                                QB Sync
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-content scrolls scrolls-x">
+                        <% for (i=0; i < 12; i++){ %>
+                        <div class="rows">
+                            <div class="d-flex w-100 align-top">
+                                <div class="col-checkbox">
+                                    <div class="check-items">
+                                        <input id="check-1" type="checkbox" value="">
+                                        <div class="item-checkbox">
+                                            <label for="check-1"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-payment">
+                                    <div class="name">
+                                        <span>Invoice</span>
+                                        <div class="violet-name pl-1 txt-ellipsis">1002668951</div>
+                                    </div>
+                                </div>
+                                <div class="col-method">
+                                    <span class="name">Check</span>
+                                </div>
+                                <div class="col-memo pl-2">
+                                    <div class="txt-ellipsis">Quos harum vel.</div>
+                                </div>
+                                <div class="col-date pl-2">
+                                    <span class="black-5 txt-ellipsis">Jul 17, 2020</span>
+                                </div>
+                                <div class="col-amount">
+                                    <span class="txt-ellipsis">$100.00</span>
+                                </div>
+                                <div class="col-stt">
+                                    <span class="btn-jobstt paid">Paid</span>
+                                </div>
+                                <div class="col-qb">
+                                    <div class="btn-default just-icon">
+                                        <%- include ("../../svg/outline/outline-repeat.svg") %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <%- include('../../partials/_pagination2') %>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', { slug: 'customers-v2' , root: '' }) %>

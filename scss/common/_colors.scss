@@ -1,0 +1,9 @@
+// Text color 
+@each $color, $value in $colors {
+  .#{$color} { color: $value!important; }
+}
+
+// Background color 
+@each $color, $value in $colors {
+  .bg-#{$color}{ background-color: $value!important; }
+}

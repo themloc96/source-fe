@@ -1,0 +1,75 @@
+<%- include('../../partials/_head', {
+    title: 'Message Templates',
+    slug: 'drip-campaigns',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {drip: 'drip'}) %>
+<%- include('../../partials/_sidebar', {drip: 'drip'}) %>
+
+<div class="drip container-wrap">
+    <div class="drip__header heading-page">
+        <h4 class="heading-page__label">
+            <a href="#" class="d-flex align-center">
+                <%- include ("../../svg/outline/outline-arrow-left.svg") %>
+                <span class="ml-3">Drip Campaigns</span>
+            </a>
+        </h4>
+    </div>
+	<div class="drip__container">
+        <%- include('_sidebar', {dripTemplates: 'dripTemplates'}) %>
+        <div class="wrapper container-column">
+            <div class="wrapper__title heading-page flex-column__head">
+                <h4 class="heading-page__label"> Templates </h4>
+                <a href="/pages/drip/new-template.html" class="btn-main has-icon svg-plus white">
+                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                    New Template
+                </a>
+            </div>
+            <div class="wrapper__list l-table flex-column__content">
+                <div class="l-table__title">
+                    <div class="rows rows--template">
+                        <div class="col col--name col--select">
+                            Name
+                            <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                        </div>
+                        <div class="col col--subject">
+                            Subject
+                        </div>
+                        <div class="col col--menu"></div>
+                    </div>
+                </div>
+                <div class="l-table__content scrolls">
+                    <% for (let i = 0; i < 5; i++ ) { %>
+                    <div class="rows rows--template">
+                        <div class="col col--name">
+                            <a href="/pages/drip/new-template.html">Template Names</a>
+                        </div>
+                        <div class="col col--subject">
+                            Just a bit of fun with a sidebar exploration for our UI8's Author Dash
+                        </div>
+                        <div class="col col--menu">
+                            <div class="dropdown">
+                                <div onclick="dropdownFunc(this)" class="dropbtn btn-default btn-default--noborder just-icon">
+                                    <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu--right">
+                                    <ul>
+                                        <li class="items">Option1</li>
+                                        <li class="items">Option1</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>			
+
+<%- include('../../partials/_footer', {
+    slug: 'drip-campaigns',
+    root: ''
+}) %>

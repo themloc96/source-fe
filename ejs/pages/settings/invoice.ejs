@@ -1,0 +1,203 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Invoice',
+    slug: 'invoice-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {invoice: 'invoice'}) %>
+
+    <div class="contents-pages container-setting-user invoice-v2 d-flex">
+
+        <div class="set-user-right w-100 container-column">
+            <div class="header-title flex-auto">
+                <h2>Invoice Template </h2>
+                <div class="w-button">
+                    <div class="cancel"> Cancel </div>
+                    <div class="btn btn-main">
+                        <span>Save</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scrolls box-auto">
+                <div class="set-user-wrap relative">
+                    <div class="w-user-infomations">
+                        <div class="header d-flex">
+                            <div class="header-l">
+                                <div class="title-choose relative"> Choose Your Template  
+                                    <div class="w-tooltip absolute">
+                                        <div class="tooltip">
+                                            <%- include ("../../svg/outline/outline-question.svg") %>
+                                            <span class="tooltiptext top"> Tooltip </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p> TruGanix </p>
+                                <p> 777 Glades Rd </p>
+                                <p> Boca Raton, FL 33431</p>
+                                <a class="btn-default btn-edit" href="javascript:void(0);"> Edit </a>
+                            </div>
+                            <div class="header-r">
+                                <div class="btn-default has-icon">
+                                    <%- include ("../../svg/outline/outline-show.svg") %>
+                                    Preview
+                                </div> 
+                            </div>
+                            
+                      
+                        </div>
+                        <div class="content">
+                            <div class="w-input w-100">
+                                <span class="txt">Choose Your Template</span>
+                                <div class="dropdown">
+                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                        Placeholder
+                                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <ul>
+                                            <li class="items">
+                                                Placeholder
+                                            </li>
+                                            <li class="items">
+                                                Placeholder
+                                            </li>
+                                      </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-input w-100">
+                                <span class="txt">Invoice Title</span>
+                                <input  class="field-input" type="text" name="" id="" placeholder="INVOICE">
+                                <p class="txt-down">Changes the title of all your new and existing invoices.</p>
+                            </div>
+                            <div class="w-input w-100">
+                                <span class="txt">Text Below Your Logo</span>
+                                <input class="field-input" type="text" name="" id="" placeholder="Sed totam non quia rerum eligendi repellat occaecati laborum.">
+                                <p class="txt-down">Adds text to all your new and existing documents.</p>
+                            </div>
+                        </div>
+                        <div class="content w-option-selected">
+                            <div class="items">
+                                <div class="name"> Check in/out 
+                                    <div class="w-tooltip absolute">
+                                        <div class="tooltip">
+                                            <%- include ("../../svg/outline/outline-question.svg") %>
+                                            <span class="tooltiptext top"> Tooltip </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="switch large">
+                                    <input id="toggle-in-out" class="toggle toggle-round" type="checkbox">
+                                    <label for="toggle-in-out">
+                                        <span class="onoff hideshow"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="name"> Weather
+                                    <div class="w-tooltip absolute">
+                                        <div class="tooltip">
+                                            <%- include ("../../svg/outline/outline-question.svg") %>
+                                            <span class="tooltiptext top"> Tooltip </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="switch large">
+                                    <input id="toggle-weather" class="toggle toggle-round" type="checkbox" checked>
+                                    <label for="toggle-weather">
+                                        <span class="onoff hideshow"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="name"> Payment Method
+                                    <div class="w-tooltip absolute">
+                                        <div class="tooltip">
+                                            <%- include ("../../svg/outline/outline-question.svg") %>
+                                            <span class="tooltiptext top"> Tooltip </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="switch large">
+                                    <input id="toggle-payment-method" class="toggle toggle-round" type="checkbox" checked>
+                                    <label for="toggle-payment-method">
+                                        <span class="onoff hideshow"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="name"> Payment Stub
+                                    <div class="w-tooltip absolute">
+                                        <div class="tooltip">
+                                            <%- include ("../../svg/outline/outline-question.svg") %>
+                                            <span class="tooltiptext top"> Tooltip </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="switch large">
+                                    <input id="toggle-payment-stub" class="toggle toggle-round" type="checkbox" checked>
+                                    <label for="toggle-payment-stub">
+                                        <span class="onoff hideshow"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="name"> Service Address
+                                    <div class="w-tooltip absolute">
+                                        <div class="tooltip">
+                                            <%- include ("../../svg/outline/outline-question.svg") %>
+                                            <span class="tooltiptext top"> Tooltip </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropup">
+                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection border-dark">
+                                        <span class="txt-ellipsis">Hide only when printing</span>
+                                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <ul>
+                                            <li class="items">
+                                                <span class="txt-ellipsis">Hide only when printing 1</span>
+                                            </li>
+                                            <li class="items">
+                                                <span class="txt-ellipsis">Hide only when printing 2</span>
+                                            </li>
+                                      </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="name"> Location Address Name
+                                    <div class="w-tooltip absolute">
+                                        <div class="tooltip">
+                                            <%- include ("../../svg/outline/outline-question.svg") %>
+                                            <span class="tooltiptext top"> Tooltip </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="switch large">
+                                    <input id="toggle-location-address-name" class="toggle toggle-round" type="checkbox" checked>
+                                    <label for="toggle-location-address-name">
+                                        <span class="onoff hideshow"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'invoice-v2',
+    root: ''
+}) %>

@@ -1,0 +1,218 @@
+<div class="container-control">
+    <div class="map-header">
+        <div class="search-input">
+            <div class="search relative">
+                <span class="svg-search-absolute"><%- include ("../../svg/outline/outline-search.svg") %></span>
+                <input class="field-search no-effect" type="text" name="" placeholder="Search">            
+                <span class="close-btn svg-remove white">
+                    <%- include ("../../svg/outline/outline-remove.svg") %>
+                </span>
+            </div>
+        </div>
+
+        <div id="viewmap" class="btn-default just-icon view-routing">
+            <%- include ("../../svg/outline/outline-rout.svg") %>
+        </div>
+
+        <div class="dropdown dropdown-items dropdown-statusjobs">
+            <div class="dropbtn btn-default selection btn-statusjobs">
+                <%- include ("../../svg/outline/outline-job.svg") %>
+                <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+            </div>
+            <div class="dropdown-menu scrolls">
+                <ul>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>All</span>
+                        </div>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Recurrence</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Unconfirmed</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Pending</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Confirmed</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action active">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Reschedule</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Complete</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Canceled</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>        
+
+        <div class="dropdown dropdown-items dropdown-chooseday">
+            <div class="dropbtn btn-default selection btn-chooseday">
+                <%- include ("../../svg/outline/outline-calendar.svg") %>
+                <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+            </div>
+            
+            <div class="dropdown-menu scrolls">
+                <ul>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>All</span>
+                        </div>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Sunday</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Monday</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Tuesday</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action active">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Wednesday</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Thursday</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Friday</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="items item-action">
+                            <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                            <span>Saturday</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="mode-viewmap">
+            <div class="btn-default just-icon mode-horizontal">
+                <%- include ("../../svg/outline/outline-bottom-map.svg") %>
+            </div>
+            <div class="btn-default just-icon mode-vertical">
+                <%- include ("../../svg/outline/outline-map-left.svg") %>
+            </div>
+        </div>
+    </div>
+
+    <!-- Style Navigation Control -->
+    <div class="vector-control">
+        <div class="action-vector btn-vector btn-location">
+            <%- include ("../../svg/outline/outline-my-location.svg") %>
+        </div>
+
+        <div class="action-vector action-zoom">
+            <div class="btn-vector btn-zoomin">
+                <%- include ("../../svg/outline/outline-plus-black.svg") %>
+            </div>
+            <div class="btn-vector btn-zoomout">
+                <%- include ("../../svg/outline/outline-minus.svg") %>
+            </div>
+        </div>
+    </div>
+
+    <!-- Style map -->
+    <div class="change-stylemap">
+        <div class="style-map btn-vector active">
+            <img src="https://unsplash.it/50/50" alt="">
+        </div>
+        <div class="style-map btn-vector">
+            <img src="https://unsplash.it/60/60" alt="">
+        </div>
+        <div class="style-map btn-vector">
+            <img src="https://unsplash.it/80/80" alt="">
+        </div>
+        <div class="style-map btn-vector">
+            <img src="https://unsplash.it/90/90" alt="">
+        </div>
+    </div>
+
+    <!-- Style marker -->
+    <div class="display-marker">
+        <div class="style-marker">
+            <div class="marker-icon">
+                <%- include ("../../svg/mappin-blue.svg") %>
+                <span class="number">3</span>
+            </div>
+
+            <div class="marker-content">
+                <div class="recurrence">
+                    <%- include ("../../svg/outline/outline-repeat-3.svg") %>
+                    Recurrence
+                </div>
+                <div class="description">
+                    <div class="avt">AB</div>
+                    <div class="marker-info">
+                        <div class="name">Marco Alves</div>
+                        <div class="address">
+                            2091 Mission St <br>
+                            San Francisco, CA 94110
+                        </div>
+                    </div>
+                </div>
+                <div class="description user">
+                    <div class="avt-img">
+                        <img src="https://unsplash.it/24/24" alt="">
+                    </div>
+                    <div class="marker-info">
+                        <div class="name">Chinelo Chyke</div>
+                        <div class="address">
+                            2091 Mission St <br>
+                            San Francisco, CA 94110
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

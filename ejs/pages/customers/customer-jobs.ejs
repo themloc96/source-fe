@@ -1,0 +1,263 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+	<%- include('_sidebar-details', {jobsCustomer: 'jobsCustomer'}) %>
+
+	<div class="contents-pages modal-container jobs-page">
+		<div class="title-header">
+            <span class="fs-18">Job</span>
+            
+            <div class="btn-main has-icon svg-plus white">
+                <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                Job
+            </div>
+        </div>
+		
+		<div class="title-action">
+            <div class="action">
+                <div class="check-items">
+                    <input id="check-0" type="checkbox" value="">
+                    <div class="item-checkbox">
+                        <label for="check-0"></label>
+                    </div>
+                </div>
+                <div class="action-items disable">
+                    <span class="fs-13">0 items:</span>
+                    <div class="btn-default has-icon">
+                        <div class="svg-delete-grey">
+                            <%- include ("../../svg/outline/outline-delete.svg") %>
+                        </div>
+                        Delete
+                    </div>
+                </div>
+			</div>	
+		</div>
+
+        <div class="tabs">
+            <div class="table-jobs scrolls scrolls-x">
+                <!-- Table Active jobs -->
+                <div class="tables active-jobs">
+                    <div class="t-title">
+                        <div class="rows">
+                            <div class="col-checkbox"></div>
+                            <div class="col-jobtitle">
+                                Active Jobs
+                            </div>
+                            <div class="col-frequence pl-2">
+                                Job Frequency
+                            </div>
+                            <div class="col-invfrequence pl-2">
+                                Invoice Frequency
+                            </div>
+                            <div class="col-service pl-2">
+                                Next Service
+                            </div>
+                            <div class="col-user pl-2">
+                                Assigned To
+                            </div>
+                            <div class="col-total">
+                                Total
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-content">
+                        <% for (i = 0; i < 2; i++){ %>
+                        <div class="rows">
+                            <div class="col-checkbox">
+                                <div class="check-items">
+                                    <input id="check-1" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-jobtitle">
+                                <div class="name violet-name txt-ellipsis cursor-pointer">Ant Monthly Service</div>
+                                <div class="txt-ellipsis">83 Barbara St, Newark, NJ 07105</div>
+                            </div>
+                            <div class="col-frequence pl-2">
+                                <div class="txt-ellipsis">Monthly</div>
+                                <div class="txt-ellipsis">Monthly on the 4th Monday</div>
+                            </div>
+                            <div class="col-invfrequence pl-2">
+                                <span class="txt-ellipsis">Monthly with each job</span>
+                            </div>
+                            <div class="col-service pl-2">
+                                <div class="txt-ellipsis">Jul 17, 2020</div>
+                                <div class="txt-ellipsis">9:00am - 9:30am</div>
+                            </div>
+                            <div class="col-user pl-2">
+                                <div class="avt-img">
+                                    <img src="https://unsplash.it/24/24" alt="">
+                                </div>
+                                <span class="name txt-ellipsis">Loni Bowcher</span>
+                            </div>
+                            <div class="col-total">
+                                <span class="txt-ellipsis">$100.00</span>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="space"></div>
+
+                <!-- Table Completed jobs -->
+                <div class="tables complete-jobs table-aligncenter">
+                    <div class="t-title">
+                        <div class="rows">
+                            <div class="col-checkbox"></div>
+                            <div class="col-title">
+                                Completed Jobs
+                            </div>
+                            <div class="col-service pl-2">
+                                Service Location
+                            </div>
+                            <div class="col-date pl-2">
+                                Date
+                            </div>
+                            <div class="col-user pl-2">
+                                Assign To
+                            </div>
+                            <div class="col-inv pl-2">
+                                Invoice #
+                            </div>
+                            <div class="col-total">
+                                Total
+                            </div>
+                            <div class="col-status">
+                                Status
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-content">
+                        <% for (i = 0; i < 2; i++){ %>
+                        <div class="rows">
+                            <div class="row-conts">
+                                <div class="col-checkbox">
+                                    <div class="check-items">
+                                        <input class="check-all purple" id="check-2" type="checkbox" value="">
+                                        <div class="item-checkbox">
+                                            <label for="check-2"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-title">
+                                    <div class="name violet-name txt-ellipsis cursor-pointer">Ant Monthly Service</div>
+                                </div>
+                                <div class="col-service pl-2">
+                                    <div class="txt-ellipsis">3701 Prairie Ave, Miami Beach, FL 33140</div>
+                                </div>
+                                <div class="col-date pl-2">
+                                    <span class="txt-ellipsis">Jul 17, 2020</span>
+                                </div>
+                                <div class="col-user pl-2">
+                                    <div class="avt-img">
+                                        <img src="https://unsplash.it/24/24" alt="">
+                                    </div>
+                                    <span class="name txt-ellipsis">Loni Bowcher</span>
+                                </div>
+                                <div class="col-inv pl-2">
+                                    <span class="txt-ellipsis">#115582000</span>
+                                </div>
+                                <div class="col-total">
+                                    <span class="txt-ellipsis">$100.00</span>
+                                </div>
+                                <div class="col-status">
+                                    <span class="btn-jobstt completed">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="space"></div>
+
+                <!-- Table Canceled jobs -->
+                <div class="tables complete-jobs table-aligncenter">
+                    <div class="t-title">
+                        <div class="rows">
+                            <div class="col-checkbox"></div>
+                            <div class="col-title">
+                                Canceled Jobs
+                            </div>
+                            <div class="col-service pl-2">
+                                Service Location
+                            </div>
+                            <div class="col-date pl-2">
+                                Date
+                            </div>
+                            <div class="col-user pl-2">
+                                Assign To
+                            </div>
+                            <div class="col-inv pl-2">
+                                Invoice #
+                            </div>
+                            <div class="col-total">
+                                Total
+                            </div>
+                            <div class="col-status">
+                                Status
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-content">
+                        <% for (i = 0; i < 2; i++){ %>
+                        <div class="rows">
+                            <div class="row-conts">
+                                <div class="col-checkbox">
+                                    <div class="check-items">
+                                        <input id="check-3" type="checkbox" value="">
+                                        <div class="item-checkbox">
+                                            <label for="check-3"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-title">
+                                    <div class="name violet-name txt-ellipsis cursor-pointer">Ant Monthly Service</div>
+                                </div>
+                                <div class="col-service pl-2">
+                                    <div class="txt-ellipsis">3701 Prairie Ave, Miami Beach, FL 33140</div>
+                                </div>
+                                <div class="col-date pl-2">
+                                    <span class="txt-ellipsis">Jul 17, 2020</span>
+                                </div>
+                                <div class="col-user pl-2">
+                                    <div class="avt-img">
+                                        <img src="https://unsplash.it/24/24" alt="">
+                                    </div>
+                                    <span class="name txt-ellipsis">Loni Bowcher</span>
+                                </div>
+                                <div class="col-inv pl-2">
+                                    <span class="txt-ellipsis">#115582000</span>
+                                </div>
+                                <div class="col-total">
+                                    <span class="txt-ellipsis">$100.00</span>
+                                </div>
+                                <div class="col-status">
+                                    <span class="btn-jobstt canceled">Canceled</span>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <!-- End table -->
+            </div>
+        </div>
+
+        <%- include('../../partials/_pagination2') %>
+	</div>
+</div>			
+
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

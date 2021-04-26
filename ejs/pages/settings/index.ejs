@@ -1,0 +1,20 @@
+<%- include('../../partials/_head', {
+    title: 'Settings',
+    slug: 'settings-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar') %>
+    
+    <div class="contents-pages"></div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'settings-v2',
+    root: ''
+}) %>

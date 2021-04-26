@@ -1,0 +1,205 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+	<%- include('_sidebar-details', {contactCustomer: 'contactCustomer'}) %>
+
+	<div class="contents-pages modal-container contact-page">
+		<div class="title-header">
+    		<span class="fs-18">Contacts</span>
+    		<div class="">
+    			<div href="#addContact" class="btn-modal btn-main has-icon svg-plus white">
+					<%- include ("../../svg/outline/outline-plus-black.svg") %>
+					Contacts
+				</div>
+				<div id="addContact" class="modal container-modal">
+					<div class="modal__overlay bg-fixed"></div>
+					<div class="modal__container show-contact">	
+						<div class="header-modal">
+							<span>Add Contact</span>
+							<div class="btn-main">Add</div>
+						</div>
+
+						<div hred class="body-modal">
+							<div class="has-form">
+								<div class="rows">
+									<div class="txt relative">
+										<span class="dot"></span>
+										First Name
+									</div>
+									<input class="field-input" type="text" name="" placeholder="Placeholder">
+								</div>
+								<div class="rows">
+									<div class="txt">
+										Email
+									</div>
+									<input class="field-input" type="text" name="" placeholder="Placeholder">
+								</div>
+
+								<div class="rows d-flex align-end">
+									<div class="col col-3 first-field">
+										<div class="txt">
+											Phone
+										</div>
+										<input class="field-input" type="text" name="" placeholder="" value="1-925-297-8295">
+									</div>
+									<div class="col col-1 second-field">
+										<div class="txt"></div>
+										<div class="dropdown">
+											<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+												Primary
+												<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+											</div>
+											<div class="dropdown-menu">
+												<ul>
+												  <li>
+													  <div class="items">Primary</div>
+												  </li>
+												  <li>
+													  <div class="items">Primary</div>
+												  </li>
+											  </ul>
+											</div>
+									  </div>
+									</div>
+								</div>
+								<div class="rows mt-2">
+									<div class="btn-default has-icon">
+										<%- include ("../../svg/outline/outline-plus-black.svg") %>
+										Add New
+									</div>
+								</div>
+
+								<div class="rows row-assign d-flex">
+									<div class="col w-100">
+										<div class="txt relative">
+											<span class="dot"></span>
+											Assign To Address
+										</div>
+										<div class="d-flex w-100 first-field">
+											<div class="dropdown">
+												<div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+													<span class="txt-ellipsis">178 Nguyen Van Thuong</span>
+													<span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+												</div>
+												<div class="dropdown-menu">
+													<ul>
+														<li class="items">
+															Assign To
+														</li>
+														<li class="items">
+															Assign To
+														</li>
+												  </ul>
+												</div> 
+										  	</div>
+											<div class="col-add btn-default has-icon svg-plus">
+												<%- include ("../../svg/outline/outline-plus-black.svg") %>
+												Add New
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="footer-modal btn-close">
+							<span>Cancel</span>
+						</div>
+					</div>
+				</div>
+    		</div>
+        </div>
+		
+		<div class="title-action">
+			<div>
+				<div class="action">
+					<div class="check-items">
+		              	<input id="checkbox-contact" type="checkbox" value="">
+		              	<div class="item-checkbox">
+							<label for="checkbox-contact"></label>
+						</div>
+		            </div>
+		            <div class="action-items disable">
+			            <span class="fs-13">0 items:</span>
+		                <div class="btn-default has-icon">
+							<div class="svg-delete-grey">
+								<%- include ("../../svg/outline/outline-delete.svg") %>
+							</div>
+		                    Delete
+		                </div>
+	                </div>
+				</div>
+			</div>	
+		</div>
+
+		<div class="tables table-contact">
+            <div class="t-title">
+                <div class="rows">
+                    <div class="col-checkbox"></div>
+					<div class="col-customer">
+						Customer
+					</div>
+					<div class="col-email pl-2">
+						Emails
+					</div>
+					<div class="col-phone pl-2">
+						Phones
+					</div>
+					<div class="col-location pl-2">
+						Service Locations
+					</div>
+                </div>
+            </div>
+            <div class="t-content scrolls scrolls-x">
+            	<% for (i = 0; i < 15; i++){ %>
+                <div class="rows">
+                    <div class="d-flex w-100 align-top">
+                    	<div class="col-checkbox">
+                    		<div class="check-items">
+				              	<input id="check-1" type="checkbox" value="">
+				              	<div class="item-checkbox">
+									<label for="check-1"></label>
+								</div>
+				            </div>
+                    	</div>
+                        <div class="col-customer">
+                        	<span class="name">Abagail28@gmail.com</span>
+                        </div>
+                        <div class="col-email pl-2">
+                            <span class="txt-ellipsis">Haylee_Rosenbaum61@gmail.com</span>
+                        </div>
+                        <div class="col-phone pl-2">
+                            <div class="txt-ellipsis">
+                            	<span>568-431-1854</span>
+                            	<span class="type">Mobile</span>
+                            </div>
+                            <div class="txt-ellipsis">
+                            	<span>568-431-1854</span>
+                            	<span class="type">Mobile</span>
+                            </div>
+                        </div>
+                        <div class="col-location pl-2">
+                            <div class="txt-ellipsis">Home, 405 Anchor St, Las Vegas, NV 89110</div>
+                            <div class="txt-ellipsis">Office, 842 County Road 519, Milford, NJ 08848</div>
+                            <div class="txt-ellipsis">Parents, 1028 Garfield Ave, Jersey City, NJ 07304</div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+	    </div>
+	</div>
+</div>			
+
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

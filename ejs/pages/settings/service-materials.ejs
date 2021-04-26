@@ -1,0 +1,158 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Service Materials',
+    slug: 'service-materials-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+    
+    <%- include('_sidebar', {serviceTemplates: 'serviceTemplates'}) %>
+
+    <div class="contents-pages container-setting-user service-edit-v2">
+        <div class="w-100 wrap-content-service container-column">
+            <div class="header-title flex-auto">
+                <h2>Edit service </h2>
+                <div class="w-button">
+                    <div class="cancel"> Cancel </div>
+                    <div class="btn btn-main">
+                        <span>Save</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-services d-flex box-auto">
+                <div class="container-setting-left">
+                    <div class="wrap-title">
+                        <ul>
+                            <li>
+                                <a href="/pages/settings/service-edit.html" class="item svg-service svg-noeffect">
+                                    <%- include ("../../svg/states-servicetemplate.svg") %>
+                                    Service 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/pages/settings/service-estimate.html" class="item"> 
+                                    <%- include ("../../svg/states-estimate-default.svg") %>
+                                    Estimate 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/pages/settings/service-invoice.html" class="item"> 
+                                    <%- include ("../../svg/states-document-default.svg") %>
+                                    Invoice 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/pages/settings/service-materials.html" class="item active"> 
+                                    <%- include ("../../svg/states-materials-default.svg") %>
+                                    Materials 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wrap-title wrap-list-add">
+                        <ul>
+                            <li> 
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Estimate
+                                </div>
+                            </li>
+                            <li> 
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Invoice
+                                </div>
+                            </li>
+                            <li> 
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Documents
+                                </div>
+                            </li>
+                            <li> 
+                                <div class="item svg-noeffect">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    Add Materials
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>   
+                <div class="container-setting-right"> 
+                    <div class="container-setting-center relative service-materials-v2">
+                        <div class="wrap-content custom-height">
+                            <h3 class="title">Materials</h3>
+                            <div class="wrap-button">
+                                <div class="btn btn-main has-plus svg-plus white">
+                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                    <span> Add Material </span>
+                                </div>
+                                <div class="btn-default">
+                                    Update Materials for All Active Jobs
+                                </div>
+                            </div>
+                            <div class="container-material-items scrolls">                                
+                                <% for (i = 0; i < 10; i++){ %>
+                                <div class="material-items">
+                                    <div class="box-title">
+                                        <div class="wrap-name">
+                                            <%- include ("../../svg/outline/outline-drag.svg") %>
+                                            
+                                            <span class="states-materials">
+                                                <%- include ("../../svg/states-materials-default.svg") %>
+                                            </span>
+                                            <div class="name"> Material Name </div>
+                                        </div>
+                                        <div class="total"> 2.00 Cans 1.5 Broadcast</div>
+                                        <div class="d-flex align-center">
+                                            <div class="square">
+                                                1.6 Square ft
+                                            </div>
+                                            <div class="dropdown option-material ml-2">
+                                                <div onclick="dropdownFunc(this)" class="dropbtn ">
+                                                    <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                                </div>
+                                                <div class="dropdown-menu">
+                                                    <ul>
+                                                        <li class="items">
+                                                            <div class="txt-ellipsis">Option 1</div>
+                                                        </li>
+                                                        <li class="items">
+                                                            <div class="txt-ellipsis">Option 1</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>                                       
+                                    </div>
+
+                                    <div class="box-list-button">
+                                        <ul>
+                                            <li><a href="javascript:void(0)"> Bedroom </a></li>
+                                            <li><a href="javascript:void(0)"> Kitchen </a></li>
+                                            <li><a href="javascript:void(0)"> Basement </a></li>
+                                            <li><a href="javascript:void(0)"> Attic </a></li>
+                                            <li><a href="javascript:void(0)"> Beetles </a></li>
+                                            <li><a href="javascript:void(0)"> Insect </a></li>
+                                            <li><a href="javascript:void(0)"> Locust </a></li>
+                                            <li><a href="javascript:void(0)"> Ant </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>  
+            </div>      
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'service-materials-v2',
+    root: ''
+}) %>

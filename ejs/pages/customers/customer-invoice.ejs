@@ -1,0 +1,172 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+	<%- include('_sidebar-details', {invoiceCustomer: 'invoiceCustomer'}) %>
+
+	<div class="contents-pages modal-container invoice-page">
+		<div class="title-header">
+    		<span class="fs-18">Invoices</span>
+    		<div class="">
+    			<div class="btn-main has-icon svg-plus white">
+					<%- include ("../../svg/outline/outline-plus-black.svg") %>
+					Invoices
+                </div>
+    		</div>
+        </div>
+        <div class="invoice-list tabs scrolls scrolls-x">
+            <div class="tab-content">
+                <!-- Table Recurring invoice -->
+                <div class="tables table-recurring">
+                    <div class="t-title">
+                        <div class="rows">
+                            <div class="col-recurring">
+                                Recurring Invoices
+                            </div>
+                            <div class="col-job pl-2">
+                                Job
+                            </div>
+                            <div class="col-frequence pl-2">
+                                Frequency
+                            </div>
+                            <div class="col-date pl-2">
+                                Created
+                            </div>
+                            <div class="col-upcoming pl-2">
+                                Upcoming Invoice
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-content">
+                        <div class="rows">
+                            <div class="d-flex w-100 align-top">
+                                <div class="col-recurring">
+                                    <div class="name cursor-pointer">1120663</div>
+                                </div>
+                                <div class="col-job pl-2">
+                                    <div class="txt-ellipsis">Ant Monthly Service</div>
+                                    <div class="txt-ellipsis">64 E Julian St, San Jose, CA 95112</div>
+                                </div>
+                                <div class="col-frequence pl-2">
+                                    <div class="txt-ellipsis">Monthly</div>
+                                    <div class="txt-ellipsis">Monthly on the 4th Tuesday</div>
+                                </div>
+                                <div class="col-date pl-2">
+                                    <span class="txt-ellipsis">Jul 17, 2020</span>
+                                </div>
+                                <div class="col-upcoming pl-2">
+                                    <span class="txt-ellipsis">$4.50 on Jul 17, 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Table Recurring invoice -->
+
+                <div class="title-action">
+                    <div class="action">
+                        <div class="check-items">
+                            <input class="check-all purple" id="check-0" type="checkbox" value="">
+                            <div class="item-checkbox">
+                                <label for="check-10"></label>
+                            </div>
+                        </div>
+                        <div class="action-items disable">
+                            <span class="fs-13">0 items:</span>
+                            <div class="btn-default has-icon">
+                                <div class="svg-delete-grey">
+                                    <%- include ("../../svg/outline/outline-delete.svg") %>
+                                </div>
+                                Delete
+                            </div>
+                            <div class="btn-default has-icon">
+                                <%- include ("../../svg/outline/outline-clock.svg") %>
+                                Archive
+                            </div>
+                            <div class="btn-default has-icon">
+                                <%- include ("../../svg/outline/outline-repeat.svg") %>
+                                Sync to QB
+                            </div>
+                        </div>
+                    </div>	
+                </div>
+                
+                <div class="tables table-invoice">
+                    <div class="t-title">
+                        <div class="rows">
+                            <div class="col-checkbox"></div>
+                            <div class="col-customer">
+                                Invoice
+                            </div>
+                            <div class="col-job pl-2">
+                                Job
+                            </div>
+                            <div class="col-date pl-2">
+                                Date
+                            </div>
+                            <div class="col-total pl-2">
+                                Total
+                            </div>
+                            <div class="col-status">
+                                Status
+                            </div>
+                            <div class="col-qb">
+                                QB Sync
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-content">
+                        <% for (i = 0; i < 10; i++){ %>
+                        <div class="rows">
+                            <div class="d-flex w-100 align-top">
+                                <div class="col-checkbox">
+                                    <div class="check-items">
+                                        <input class="check-all purple" id="check-1" type="checkbox" value="">
+                                        <div class="item-checkbox">
+                                            <label for="check-1"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-customer">
+                                    <div class="name cursor-pointer">1120663</div>
+                                </div>
+                                <div class="col-job pl-2">
+                                    <div class="txt-ellipsis">Ant Monthly Service</div>
+                                    <div class="txt-ellipsis">237 W 2nd Ave, Columbus, OH 43201</div>
+                                </div>
+                                <div class="col-date pl-2">
+                                    <span class="txt-ellipsis">Jul 17, 2020</span>
+                                </div>
+                                <div class="col-total pl-2">
+                                    <span class="txt-ellipsis">$100.00</span>
+                                </div>
+                                <div class="col-status">
+                                    <span class="btn-jobstt sent">Sent</span>
+                                </div>
+                                <div class="col-qb">
+                                    <div class="btn-default just-icon">
+                                        <%- include ("../../svg/outline/outline-repeat.svg") %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <%- include('../../partials/_pagination2') %>
+        </div>
+	</div>
+</div>			
+
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

@@ -1,0 +1,115 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+	<%- include('_sidebar-details', {estimateCustomer: 'estimateCustomer'}) %>
+
+	<div class="contents-pages modal-container estimate-page">
+		<div class="title-header">
+    		<span class="fs-18">Estimate</span>
+    		<div class="">
+    			<div class="btn-main has-icon svg-plus white">
+					<%- include ("../../svg/outline/outline-plus-black.svg") %>
+					Estimate
+				</div>
+    		</div>
+        </div>
+		
+		<div class="title-action">
+			<div>
+				<div class="action">
+					<div class="check-items">
+		              	<input id="check-0" type="checkbox" value="">
+		              	<div class="item-checkbox">
+                            <label for="check-0"></label>
+                        </div>
+		            </div>
+		            <div class="action-items disable">
+			            <span class="fs-13">0 items:</span>
+		                <div class="btn-default has-icon">
+		                    <div class="svg-delete-grey">
+                                <%- include ("../../svg/outline/outline-delete.svg") %>
+                            </div>
+		                    Delete
+                        </div>
+                        <div class="btn-default has-icon">
+		                    <%- include ("../../svg/outline/outline-clock.svg") %>
+		                    Archive
+		                </div>
+	                </div>
+				</div>
+			</div>	
+		</div>
+
+        <div class="tabs">
+            <div class="tables">
+                <div class="t-title">
+                    <div class="rows">
+                        <div class="col-checkbox"></div>
+                        <div class="col-customer">
+                            Estimates
+                        </div>
+                        <div class="col-job pl-2">
+                            Job
+                        </div>
+                        <div class="col-date pl-2">
+                            Date
+                        </div>
+                        <div class="col-total pl-2">
+                            Total
+                        </div>
+                        <div class="col-status">
+                            Status
+                        </div>
+                    </div>
+                </div>
+                <div class="t-content scrolls scrolls-x">
+                    <% for (i = 0; i < 10; i++){ %>
+                    <div class="rows">
+                        <div class="d-flex w-100 align-top">
+                            <div class="col-checkbox">
+                                <div class="check-items">
+                                    <input id="check-1" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-customer">
+                                <div class="name cursor-pointer">1120663</div>
+                            </div>
+                            <div class="col-job pl-2">
+                                <div class="txt-ellipsis">Ant Monthly Service</div>
+                                <div class="txt-ellipsis">237 W 2nd Ave, Columbus, OH 43201</div>
+                            </div>
+                            <div class="col-date pl-2">
+                                <span class="txt-ellipsis">Jul 17, 2020</span>
+                            </div>
+                            <div class="col-total pl-2">
+                                <span class="txt-ellipsis">$100.00</span>
+                            </div>
+                            <div class="col-status">
+                                <span class="btn-jobstt sent">Sent</span>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+
+        <%- include('../../partials/_pagination2') %>
+	</div>
+</div>			
+
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

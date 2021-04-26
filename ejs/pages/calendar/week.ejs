@@ -1,0 +1,51 @@
+<%- include('../../partials/_head', {
+    title: 'GorillaDesk',
+    slug: 'calendar',
+    root: ''
+}) %>
+
+<%- include('../../partials/_trial_bar') %>
+<%- include('../../partials/_header') %>
+<%- include('../../partials/_sidebar') %>
+
+<div class="container-wrap calendar has-jobtabs">
+    <%- include('_job-header') %>
+    <div class="container">
+        <div id="displayView" class="calendar-container calendar-mode-vertical">
+            <%- include('_header') %>            
+            
+            <div class="view-calendar">
+                <!-- show map -->
+                <div id="map" class="container-map">
+                    <%- include('_control-mapbox') %>
+                </div>
+                <!-- custom resizable -->
+                <div class="resizable">
+                    <div class="resizable-handle"></div>
+                </div>
+                
+                <!-- show calendar -->
+                <div class="full-calendar calendar-team">
+                    <!-- Calendar horizontal -->
+                    <div id="calendar_horizontal" class="calendar-row"></div>
+            
+                    <!-- Calendar vertical -->
+                    <div id="calendar_week" class="calendar-task"></div>
+
+                    <!-- Job event -->
+                    <%- include('_job-event') %>
+                </div>
+
+                <%- include('_taskpopup') %>
+            </div>
+        </div>
+
+        <%- include('_sidebar') %>
+    </div>
+</div>
+<%- include('_modal') %>
+
+<%- include('../../partials/_footer', {
+    slug: 'calendar',
+    root: ''
+}) %>

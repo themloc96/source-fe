@@ -1,0 +1,196 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+	<%- include('_sidebar-details', {documentCustomer: 'documentCustomer'}) %>
+
+	<div class="contents-pages content-documents modal-container estimate-page">
+		<div class="title-header">
+            <span class="fs-18">Document</span>
+            
+    		<div class="">
+    			<div href="#addDocument" class="btn-modal btn-main has-icon svg-plus white">
+					<%- include ("../../svg/outline/outline-plus-black.svg") %>
+					Document
+                </div>
+                <div id="addDocument"  class="modal container-modal">
+                    <div class="modal__overlay bg-fixed"></div>
+                    <div class="modal__container modal-document">	
+                        <div class="header-modal">
+                            <span>New Document</span>
+
+                            <div class="btn-main">Add</div>
+                        </div>
+
+                        <div class="body-modal">
+                            <div class="has-form">
+                                <div class="rows fs-13">
+                                    <span class="txt">
+                                        Location
+                                    </span>
+                                    <div class="dropdown">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection justify-start">
+                                            Customer Location
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                              <li>
+                                                  <div class="items">Customer Location 1</div>
+                                              </li>
+                                              <li>
+                                                <div class="items">Customer Location 2</div>
+                                            </li>
+                                            <li>
+                                                <div class="items">Customer Location 3</div>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-form">
+                                <div class="search-input w-100">
+                                    <span class="svg-search-absolute"><%- include ("../../svg/outline/outline-search.svg") %></span>
+                                    <input type="text" name="" placeholder="Search">
+                                </div>
+                            </div>
+
+                            <!-- List document -->
+                            <div class="document-list">
+                                <div class="scrolls">
+                                    <% for (i = 0; i < 18; i++){ %>
+                                    <div class="document-rows">
+                                        <div class="action-document">
+                                            <div class="add-docs">
+                                                <div class="btn-default has-icon">
+                                                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                                    Add
+                                                </div>
+                                            </div>
+                                            <div class="remove-docs">
+                                                <div class="btn-default has-icon">
+                                                    <%- include ("../../svg/outline/outline-close.svg") %>
+                                                    Remove
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="docs-name">
+                                            <span>Document Name</span>
+                                        </div>
+                                    </div>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-modal btn-close">
+                            <span>Cancel</span>
+                        </div>
+                    </div>
+                </div>
+    		</div>
+        </div>
+		
+		<div class="title-action">
+            <div class="action">
+                <div class="check-items">
+                    <input id="check-0" type="checkbox" value="">
+                    <div class="item-checkbox">
+                        <label for="check-0"></label>
+                    </div>
+                </div>
+                <div class="action-items disable">
+                    <span class="fs-13">0 items:</span>
+                    <div class="btn-default has-icon">
+                        <div class="svg-delete-grey">
+                            <%- include ("../../svg/outline/outline-delete.svg") %>
+                        </div>
+                        Delete
+                    </div>
+                </div>
+			</div>	
+		</div>
+
+        <div class="tabs">
+            <div class="tables table-aligncenter scrolls-x">
+                <div class="t-title">
+                    <div class="rows">
+                        <div class="col-checkbox"></div>
+                        <div class="col-document">
+                            Document
+                        </div>
+                        <div class="col-type pl-2">
+                            Type
+                        </div>
+                        <div class="col-docsjob pl-2">
+                            Job
+                        </div>
+                        <div class="col-creatby pl-2">
+                            Created By
+                        </div>
+                        <div class="col-date pl-2">
+                            Date Created
+                        </div>
+                        <div class="col-docstatus">
+                            Status
+                        </div>
+                    </div>
+                </div>
+                <div class="t-content scrolls">
+                    <% for (i = 0; i < 8; i++){ %>
+                    <div class="rows">
+                        <div class="row-conts">
+                            <div class="col-checkbox">
+                                <div class="check-items">
+                                    <input id="check-1" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-1"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-document">
+                                <div class="attachment"><img src="https://unsplash.it/49/49" alt=""></div>
+                                <div class="name violet-name txt-ellipsis cursor-pointer">1120663</div>
+                            </div>
+                            <div class="col-type pl-2">
+                                <div class="violet-name txt-ellipsis cursor-pointer">NJ Consumer Info Notice</div>
+                            </div>
+                            <div class="col-docsjob pl-2">
+                                <span class="txt-ellipsis">Service Name</span>
+                            </div>
+                            <div class="col-creatby col-user pl-2">
+                                <div class="avt-img">
+                                    <img src="https://unsplash.it/24/24" alt="">
+                                </div>
+                                <span class="name txt-ellipsis">Loni Bowcher</span>
+                            </div>
+                            <div class="col-date pl-2">
+                                <span class="txt-ellipsis">Jul 17, 2020</span>
+                            </div>
+                            <div class="col-docstatus">
+                                <span class="btn-jobstt sent">Sent</span>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        
+        <%- include('../../partials/_pagination2') %>
+	</div>
+</div>			
+
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

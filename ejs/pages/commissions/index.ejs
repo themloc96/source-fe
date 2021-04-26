@@ -1,0 +1,359 @@
+<%- include('../../partials/_head', {
+  title: 'Commision',
+  slug: 'commision-v2',
+  root: ''
+}) %>
+
+<%- include('../../partials/_header', {commision: 'commision'}) %>
+<%- include('../../partials/_sidebar', {commision: 'commision'}) %>
+
+<!-- content -->
+<div id="commision_wrap" class="commision-v2 container-wrap commision-container">
+    <div class="container accessible-tabs-container">
+        <div class="main border-bottom-border-color-grey">
+            <div class="header">
+                <div class="header-main header-commission">
+                    <div class="wrap-header-title d-flex">
+                        <h2 class="header-title fs-18 d-flex align-center"> Commission Tracking
+                            <div class="tooltip w-question ml-1">
+                                <%- include ("../../svg/outline/outline-question.svg") %>
+                                <span class="tooltiptext top"> Tooltip </span>
+                            </div>
+                        </h2>
+                        <div class="tabs">
+                            <div role="tablist" aria-lable="Tabs Example" class="tab-selectors btn-item">
+                                <button class="tab-items active-tab-selector" type="button">
+                                    Data
+                                </button>
+                                <button class="tab-items" type="button">
+                                    Setup
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="content-commistion-tab">
+            <div class="tabs tab-contents h-100">
+                <div id="tabsActive" class="tab-conts tab-content-active w-100">
+                    <div class="commision-tracking container-column"> 
+                        <!--Start-->
+                        <div class="header header-tabs-active">
+                            <div class="header-main border-bottom-border-color-grey">
+                                <div class="main">
+                                    <div class="header-content">
+                                        <div class="header-content-left dropdown">
+                                            <div class="item-report datetime">
+                                                <%- include ("../../svg/outline/outline-calendar.svg") %>
+                                                <span class="calendar-label">03/06/2020 <span class="fs-13 date-to">to</span> 03/07/2020</span>
+                                            </div>
+                                            <div class="dropdown dropdown-items item-report print-text list-commission dropdown-report">
+                                                <div class="dropbtn btn-default selection btn-commission" onclick="dropdownFunc(this)">
+                                                    Commission 
+                                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                </div>
+                                                <div class="dropdown-menu">
+                                                    <div class="scrolls">
+                                                        <ul>
+                                                            <% for (let h = 1; h < 20;  h++ ) { %>
+                                                            <li>
+                                                                <div class="items">
+                                                                    Commission
+                                                                </div>
+                                                            </li>
+                                                            <% } %>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown dropdown-items item-report print-text list-staff dropdown-report">
+                                                <div class="dropbtn btn-default selection btn-staff" onclick="dropdownFunc(this)">
+                                                    Staff 
+                                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                </div>
+                                                <div class="dropdown-menu">
+                                                    <div class="scrolls">
+                                                        <ul>
+                                                            <% for (let h = 1; h < 10;  h++ ) { %>
+                                                            <li>
+                                                                <div class="items">
+                                                                    Staff
+                                                                </div>
+                                                            </li>
+                                                            <% } %>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown dropdown-items item-report print-text list-invoice-status dropdown-report">
+                                                <div class="dropbtn btn-default selection btn-invoice-status" onclick="dropdownFunc(this)">
+                                                    Invoice status 
+                                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                </div>
+                                                <div class="dropdown-menu">
+                                                    <div class="scrolls">
+                                                        <ul>
+                                                            <% for (let h = 1; h < 10;  h++ ) { %>
+                                                            <li>
+                                                                <div class="items">
+                                                                    Invoice status
+                                                                </div>
+                                                            </li>
+                                                            <% } %>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown dropdown-items item-report print-text list-methods dropdown-report">
+                                                <div class="dropbtn btn-default selection btn-methods" onclick="dropdownFunc(this)">
+                                                    Methods
+                                                    <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                </div>
+                                                <div class="dropdown-menu">
+                                                    <div class="scrolls">
+                                                        <ul>
+                                                            <% for (let h = 1; h < 10;  h++ ) { %>
+                                                            <li>
+                                                                <div class="items">
+                                                                    Methods
+                                                                </div>
+                                                            </li>
+                                                            <% } %>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header-content-right">
+                                            <div class="item-report border-none">
+                                                <span class="date-to fs-13">Export 864 customers:</span>
+                                                <span class="csv pl-1 fs-13">CSV</span>
+                                                <span class="excel pl-1 fs-13">Excel</span>
+                                            </div>
+                                            <div class="item-report mr-0 border-custom">
+                                                <%- include ("../../svg/outline/outline-print.svg") %>
+                                                <span class="print-text ml-1">Print</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-scroll scrolls scrolls-x has-footer-larger">
+                            <table>
+                                <tr class="border-bottom-border-color-grey parent-sticky-top text-left">
+                                    <th>
+                                        Staff
+                                    </th>
+                                    <th>
+                                        Line Item
+                                    </th>
+                                    <th>
+                                        Item Value
+                                    </th>
+                                    <th>
+                                        Customer
+                                    </th>
+                                    <th>
+                                        Service
+                                    </th>
+                                    <th>
+                                        Invoice
+                                    </th>
+                                    <th>
+                                        Invoice Date
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th>
+                                        Method
+                                    </th>
+                                    <th>
+                                        Type
+                                    </th>
+                                    <th>
+                                        Com Value
+                                    </th>
+                                    <th>
+                                        Excluding Tax
+                                    </th>
+                                </tr>
+                                <% for (let j = 10; j < 30;  j++ ) { %>
+                                <tr class="border-bottom-border-color-grey">
+                                    <td class="d-inlineflex align-center">
+                                        <div class="avt-img">
+                                            <img src="https://unsplash.it/24/24" alt="">
+                                        </div>
+                                        Gabriel Pires
+                                    </td>
+                                    <td>
+                                        <span class="name pl-0">Invoice Line Item</span>
+                                    </td>
+                                    <td>
+                                        $100.00
+                                    </td>
+                                    <td class="fs-13 d-inlineflex align-center">
+                                        <div class="avt mr-1 fs-11">
+                                            AB
+                                        </div>
+                                        Aaron Almaraz
+                                    </td>
+                                    <td>
+                                        <span class="name pl-0"> Ant Monthly Service </span>
+                                    </td>
+                                    <td>
+                                        <span class="name pl-0"> Ant Monthly Service </span>
+                                    </td>
+                                    <td>
+                                        Jul 17, 2020
+                                    </td>
+                                    <td>
+                                        <span class="btn-draft">Draft</span>
+                                    </td>
+                                    <td>
+                                        Cash
+                                    </td>
+                                    <td>
+                                        $
+                                    </td>
+                                    <td>
+                                        $5.00
+                                    </td>
+                                    <td>
+                                        $3.25
+                                    </td>
+                                </tr>
+
+                                <% } %>
+                            </table>
+                        </div>
+                        <div class="total-report">
+                            <div class="total-text">Total Commissions</div>
+                            <div class="total-amount">$106,036.00</div>
+                            <div class="total-tax">$106,036.00</div>
+                        </div>
+                        <%- include('../../partials/_pagination') %>
+                        <!--End-->
+                    </div>
+                </div>
+
+                <div id="tabsDeleted" class="tab-conts w-100 h-100">
+                    <!--Start-->
+                    <div class="setup-tracking d-flex h-100">
+                        <div class="wrap-sidebar-select-user">
+                            <div class="scrolls">
+                                <ul class="users-list">
+                                    <li class="item-user selected">
+                                        <div class="switch">
+                                            <input id="toggle-user-0" class="toggle toggle-round" type="checkbox">
+                                            <label for="toggle-user-0"></label>
+                                        </div>
+                                        <div class="avatar">
+                                            <img src="https://unsplash.it/32/32" alt="">
+                                        </div>
+                                        <span> Alicia Stanger </span>
+                                    </li>
+                                    <% for (let g = 1; g < 15;  g++ ) { %>
+                                    <li class="item-user">
+                                        <div class="switch">
+                                            <input id="toggle-user-<%=g%>" class="toggle toggle-round" type="checkbox">
+                                            <label for="toggle-user-<%=g%>"></label>
+                                        </div>
+                                        <div class="avatar">
+                                            <img src="https://unsplash.it/32/32" alt="">
+                                        </div>
+                                        <span> Alicia Stanger </span>
+                                    </li>
+                                    <% } %>
+                                </ul>
+                            </div>
+
+                            <div class="sidebar-select-user-bottom">
+                                <p> Apply settings from another user: </p>
+                                <div class="wrap-bottom">
+                                    <div class="dropdown dropdown-items item-report list-select-user dropdown-report">
+                                        <div class="dropbtn btn-default selection btn-select-user" onclick="dropdownFunc(this)">
+                                            Select User
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                        <div class="dropdown-menu scrolls">
+                                            <div>
+                                                <ul>
+                                                    <% for (let h = 1; h < 10;  h++ ) { %>
+                                                    <li>
+                                                        <div class="items">
+                                                            User name
+                                                        </div>
+                                                    </li>
+                                                    <% } %>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn btn-main">
+                                        <span>Save</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-scroll scrolls scrolls-x">
+                            <table class="table-setup">
+                                <tr class="border-bottom-border-color-grey parent-sticky-top text-left">
+                                    <th class="col-line-item">
+                                        Line Items
+                                    </th>
+                                    <th class="col-rate">
+                                        Rate
+                                    </th>
+                                    <th class="col-type">
+                                        Commission Type
+                                    </th>
+                                    <th class="col-value">
+                                        Commissions Value
+                                    </th>
+                                </tr>
+                                <% for (let j = 10; j < 30;  j++ ) { %>
+                                <tr class="border-bottom-border-color-grey">
+                                    <td class="text-left">
+                                        <span class="fs-13">Item</span>
+                                    </td>
+                                    <td class="fs-13 text-left">
+                                        $100.00
+                                    </td>
+                                    <td>
+                                        <div class="wrap-type-commission">
+                                            <div class="btn-item">
+                                                <div class="items active">%</div>
+                                                <div class="items">$</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="col-5">
+                                        <div class="value-commissions">
+                                            <input type="text" name="value-commissions" id="" value="0">
+                                            <span> % </span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <% } %>
+
+                            </table>
+                        </div>
+                    </div>
+                    <!--End-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'commision-v2',
+    root: ''
+}) %>

@@ -1,0 +1,117 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Service Templates a',
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {serviceTemplates: 'serviceTemplates'}) %>
+    
+    <div class="contents-pages container-setting-user maintables-page d-flex payment-methods-v2 modal-container setting-items">
+        <div class="relative w-100 accessible-tabs-container container-column">
+            <%- include('_tips') %>
+            <div class="header-title flex-auto">
+                <h2>Services</h2>
+                <div class="tabs">
+                    <div  role="tablist" aria-lable="Tabs Example" class="tab-selectors btn-item">
+                        <button class="tab-items active-tab-selector" type="button">
+                            Active
+                        </button>
+                        <button class="tab-items" type="button">
+                            Archived
+                        </button>
+                        <button class="tab-items" type="button">
+                            Deleted
+                        </button>
+                    </div>
+                </div>
+                <a href="/pages/settings/service-edit.html" class="btn btn-main has-plus btn-add-method svg-plus white">
+                    <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                    Add Service
+                </a>
+            </div>
+
+            <div class="container-delete-all flex-auto">
+                <div class="w-delete-all d-flex align-center">
+                    <div class="check-items">
+                        <input id="check-user-all" type="checkbox" value="">
+                        <div class="item-checkbox">
+							<label for="check-user-all"> 
+								<span class="txt-ellipsis">0 items: </span>
+							</label>
+						</div>
+                    </div>
+                    <div class="w-item item-delete border-custom ml-2">
+                        <div class="svg-delete-grey">
+                            <%- include ("../../svg/outline/outline-delete.svg") %>
+                        </div>
+                        <span>Delete</span>
+                    </div>
+                    <div class="w-item item-archive border-custom">
+                        <%- include ("../../svg/outline/outline-clock.svg") %>
+                        <span>Archive</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-contents tabs content-table table-service box-auto">
+                <div id="ActiveMethod" class="tab-conts w-100 tab-content-active">
+                    <div class="table-title">
+                        <div class="rows">
+                            <div class="col-checkbox"></div>
+                            <div class="col-name">Service Name</div>
+                            <div class="col-joblegth pl-2">Default Job Length</div>
+                            <div class="col-colorcode pl-2">Color code</div>
+                            <div class="col-frequence pl-2">Frequency</div>
+                        </div>
+                    </div>
+                    <div class="table-list scrolls">
+                    	<% for (i = 0; i < 10; i++){ %>
+                        <div class="rows">
+                            <div class="col-checkbox">
+                            	<div class="check-items">
+					              	<input id="check-1" type="checkbox" value="">
+					              	<div class="item-checkbox">
+                                        <label for="check-1"></label>
+                                    </div>
+					            </div>
+                            </div>
+                            <div class="col-name">
+                            	<div class="txt-ellipsis">Bi Monthly Kerry</div>
+                            </div>
+                            <div class="col-joblegth pl-2">
+                            	<span class="txt-ellipsis">30 minutes</span>
+                            </div>
+                            <div class="col-colorcode pl-2">
+                            	<div class="color"></div>
+                            	<span class="code">#FFFFFF</span>
+                            </div>
+                            <div class="col-frequence pl-2 txt-ellipsis">
+                            	<span>Monthly</span>
+                            	<span class="detail">Weekly on Monday, Saturday</span>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div id="ArchivedMethod" class="tab-conts w-100">
+                    <div class="p-5">ArchivedMethod</div>
+                </div>
+                <div id="DeletedMethod" class="tab-conts w-100">
+                    <div class="p-5">DeletedMethod</div>
+                </div>                
+            </div>
+
+            <%- include('../../partials/_pagination') %>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>

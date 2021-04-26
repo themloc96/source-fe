@@ -1,0 +1,154 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Plan Account',
+    slug: 'settings-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {stPlan: 'stPlan'}) %>
+
+    <div class="contents-pages scrolls setting-plans">
+    	<div class="page-plans container-column">
+            <div class="tabs-plan accessible-tabs-container">
+                <div class="title-header">
+                    <span class="fs-18">Your Plan</span>
+                    <div class="tabs">
+                        <div role="tablist" aria-lable="Tabs Example" class="tab-selectors btn-item">
+                            <button class="tab-items" type="button">
+                                Monthly
+                            </button>
+                            <button class="tab-items active-tab-selector" type="button">
+                                Yearly
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-contents tabs">
+                    <div id="planMonthly" class="tab-conts w-100 inactive">
+                        <div class="p-5">Plan Monthly</div>
+                    </div>
+                    <div id="planYearly" class="tab-conts tab-content-active w-100">
+                        <div class="plan-price">
+                            <div class="btn-plan">
+                                <span class="fw-600">PRO</span>
+                                8 Users
+                            </div>
+                            <span>$2739</span>
+                            <span>/year</span>
+                        </div>
+
+                        <div class="slider mt-6">
+                            <div class="wrap-slider">
+                              <input type="range" class="range" min="0" max="100" step="0.1" value="0">
+                              <div class="track">
+                                <div class="track-inner"></div>
+                              </div>
+                              <div class="thumb"></div>
+                            </div>
+                        </div>
+                        <div class="content-slider mt-12">
+                            <span class="range-number">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span class="active">8</span>
+                            <span>9</span>
+                            <span class="range-number">10</span>
+                            <span>11</span>
+                            <span>12</span>
+                            <span>13</span>
+                            <span>14</span>
+                            <span>15</span>
+                            <span>16</span>
+                            <span>17</span>
+                            <span>18</span>
+                            <span>19</span>
+                            <span class="range-number">20</span>
+                            <span>21</span>
+                            <span>22</span>
+                            <span>23</span>
+                            <span>24</span>
+                            <span>25</span>
+                            <span>26</span>
+                            <span>27</span>
+                            <span>28</span>
+                            <span>29</span>
+                            <span class="range-number">30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plans-accout">
+                <div class="box-plans">
+                    <div class="header-box">
+                        <div class="check-items">
+                            <input class="checkbox-plan" id="check-basic" type="checkbox">
+                            <div class="item-checkbox">
+                                <label for="check-basic"></label>
+                            </div>
+                        </div>
+                        <span class="basic">Basic</span>
+                    </div>
+                    <div class="conts-box">
+                        <ul>
+                            <li>Unlimited Admin Users</li>
+                            <li>Unlimited Mobile Devices</li>
+                            <li>Job Mapping</li>
+                            <li>Routing (limited to 24 stops)</li>
+                            <li>Square & Stripe Integration</li>
+                            <li>Automated Emails & SMS</li>
+                            <li>Material Tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-plans active">
+                    <div class="header-box">
+                        <div class="check-items">
+                            <input id="check-pro" type="checkbox">
+                            <div class="item-checkbox">
+                                <label for="check-pro"></label>
+                            </div>
+                        </div>
+                        <span class="pro">PRO</span>
+                    </div>
+                    <div class="conts-box">
+                        <ul>
+                            <li>Basic Features +</li>
+                            <li>Customer Online Portal</li>
+                            <li>Ratings & Review Generation</li>
+                            <li>Documents & e-Signatures</li>
+                            <li>GPS Device Tracking</li>
+                            <li>Stripe Subscriptions</li>
+                            <li>QuickBooks Sync</li>
+                            <li>Device Tracking</li>
+                            <li>Routing (over 24 stops)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upgrade-plans">
+                <div class="plan-price">
+                    <span>$2739</span>
+                    <span>/year</span>
+                </div>
+                <a href="" class="btn btn-main">
+                    Upgrade
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'settings-v2',
+    root: ''
+}) %>

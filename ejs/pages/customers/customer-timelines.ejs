@@ -1,0 +1,924 @@
+<%- include('../../partials/_head', {
+    title: 'Customer',
+    slug: 'customers-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {customers: 'customers'}) %>
+<%- include('../../partials/_sidebar', {customers: 'customers'}) %>
+
+<div class="customers-v2 container-wrap container-customer">
+
+    <%- include('_sidebar-details', {timelinesCustomer: 'timelinesCustomer'}) %>
+
+    <div class="contents-pages modal-container dashboard-page">
+        <div class="title-header relative">
+            <span class="fs-18">Timeline</span>
+
+            <div class="action">
+                <div class="left d-flex">
+                    <div class="addnew-note btn-default has-icon">
+                        <%- include ("../../svg/outline/outline-note.svg") %>
+                        Note
+                    </div>
+                    <div class="addnew-task btn-default has-icon">
+                        <%- include ("../../svg/outline/outline-task.svg") %>
+                        Task
+                    </div>
+                    <div class="addnew-email btn-default has-icon">
+                        <%- include ("../../svg/outline/outline-mail.svg") %>
+                        Email
+                    </div>
+                    <div class="btn-default has-icon">
+                        <%- include ("../../svg/outline/outline-message.svg") %>
+                        SMS
+                    </div>
+                </div>
+
+                <div class="dropdown dropdown-filter filter-activities">
+                    <div onclick="dropdownFunc(this)" class="btn-filter dropbtn btn-default selection">
+                        <div class="d-flex align-center">
+                            <%- include ("../../svg/outline/outline-filter.svg") %>
+                            All Activities
+                        </div>
+                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <ul class="filter-all">
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-1" type="checkbox" value="">
+                                        <div class="item-checkbox">
+                                            <label for="check-1">
+                                                <div class="txt-ellipsis">All</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-2" type="checkbox" checked>
+                                        <div class="item-checkbox">
+                                            <label for="check-2">
+                                                <div class="txt-ellipsis">Notes</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-3" type="checkbox" value="">
+                                        <div class="item-checkbox">
+                                            <label for="check-3">
+                                                <div class="txt-ellipsis">Emails</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-4" type="checkbox" value="">
+                                        <div class="item-checkbox">
+                                            <label for="check-4">
+                                                <div class="txt-ellipsis">All Open Tasks</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-5" type="checkbox" checked>
+                                        <div class="item-checkbox">
+                                            <label for="check-5">
+                                                <div class="txt-ellipsis"> My Open Tasks</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-6" type="checkbox" checked>
+                                        <div class="item-checkbox">
+                                            <label for="check-6">
+                                                <div class="txt-ellipsis">All Completed Tasks</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="items">
+                                    <div class="check-items">
+                                        <input id="check-7" type="checkbox" checked>
+                                        <div class="item-checkbox">
+                                            <label for="check-7">
+                                                <div class="txt-ellipsis">Activities</div>
+                                            </label>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scrolls ">
+            <div class="dashboard-wrapper">
+                <div class="boxs box-topnote">
+                    <div class="left-icons">
+                        <%- include ("../../svg/states-top-note-default.svg") %>
+                    </div>
+
+                    <div class="content">
+                        <div class="header-box">
+                            <div class="name">
+                                Top Note
+                            </div>
+                            <div class="dropdown">
+                                <div class="dropbtn">
+                                    <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conts-box">
+                            <div class="description">
+                                Architecto itaque magnam perferendis sunt amet temporibus sed et.
+                                Autem expedita dignissimos eum veniam aut aut rerum error.
+                                Quaerat iste eos quisquam ipsum est dolores.
+                                Sit provident cumque molestiae quia minima aut velit. Repellendus et et.
+                                Illum rerum nulla voluptatem nam iure odit maiores earum saepe.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lines"></div>
+
+                <!-- Add Note -->
+                <div class="boxs form-main form-newnote">
+                    <div class="left-icons">
+                        <%- include ("../../svg/states-top-note-default.svg") %>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="header">
+                            <span>Add Note</span>
+                            <div class="btn btn-main">
+                                Add
+                            </div>
+                        </div>
+
+                        <div class="content pt-0">
+                            <div class="description-box container-column">
+                                <textarea class="field-input no-effect box-auto scrolls" name="" rows="4" cols="50" placeholder="Placeholder">Esse enim non pariatur dolore vero consequatur temporibus impedit nisi. Dolores aut reiciendis sunt minima quia et id qui. Maiores et pariatur ut sunt architecto. Odio nemo laudantium neque laborum magni voluptatem fugiat sunt. Consequuntur quis quisquam. Quo iusto soluta. Et illo maiores et quae laudantium illo officia.
+                                </textarea>
+
+                                <div class="attachment-image scrolls-x flex-auto">
+                                    <div class="attachment">
+                                        <img src="https://unsplash.it/110/75" alt="">
+                                        <span class="ic-close svg-remove white">
+                                            <%- include ("../../svg/outline/outline-remove.svg") %>
+                                        </span>
+                                    </div>
+                                    <div class="attachment">
+                                        <img src="https://unsplash.it/110/75" alt="">
+                                        <span class="ic-close svg-remove white">
+                                            <%- include ("../../svg/outline/outline-remove.svg") %>
+                                        </span>
+                                    </div>
+                                    <div class="attachment">
+                                        <img src="https://unsplash.it/110/75" alt="">
+                                        <span class="ic-close svg-remove white">
+                                            <%- include ("../../svg/outline/outline-remove.svg") %>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="toolbar flex-auto">
+                                    <div class="tool-link">
+                                        <%- include ("../../svg/outline/outline-emoji.svg") %>
+                                    </div>
+                                    <div class="tool-link">
+                                        <%- include ("../../svg/outline/outline-attach.svg") %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer">
+                            <span class="close-box close-note">Cancel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End Add Task -->
+                <div class="boxs form-main form-newtask">
+                    <div class="left-icons">
+                        <%- include ("../../svg/states-check.svg") %>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="header">
+                            <span>Add Task</span>
+                            <div class="btn btn-main">
+                                Add
+                            </div>
+                        </div>
+
+                        <div class="content pt-0">
+                            <div class="box-addinfo content-addtask">
+                                <div class="rows">
+                                    <div class="left-txt">
+                                        <%- include ("../../svg/states-calendar.svg") %>
+                                        Date & Time
+                                    </div>
+                                    <div class="right-conts justify-space-between">
+                                        <div class="field-date">
+                                            <input class="field-input" type="text" name="" value="06/06/2020"
+                                                placeholder="">
+                                            <span class="svg-calendar-absolute"><%- include ("../../svg/outline/outline-calendar.svg") %></span>
+                                        </div>
+
+                                        <div class="field-input wrapper-choosetime">
+                                            <div class="from-time">
+                                                <div class="dropdown">
+                                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                                        <span>01</span>
+                                                        <span class="time-text">h</span>
+                                                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                    </div>
+                                                    <div class="dropdown-menu">
+                                                        <div class="scrolls">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="items">01</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">02</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">03</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">04</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">05</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">06</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">07</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">08</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">09</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">10</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">11</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">12</div>
+                                                                </li>
+                                                          </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="from-time">
+                                                <div class="dropdown">
+                                                    <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                                        <span>01</span>
+                                                        <span class="time-text">m</span>
+                                                        <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                                    </div>
+                                                    <div class="dropdown-menu">
+                                                        <div class="scrolls">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="items">01</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">02</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">03</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">04</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">05</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">06</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">07</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">08</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">09</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">10</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">11</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="items">12</div>
+                                                                </li>
+                                                          </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tabs">
+                                                <div class="btn-item m-0">
+                                                    <button class="tab-items" type="button">
+                                                        AM
+                                                    </button>
+                                                    <button class="tab-items active-tab-selector" type="button">
+                                                        PM
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rows">
+                                    <div class="left-txt">
+                                        <%- include ("../../svg/states-assign-to.svg") %>
+                                        Assign To
+                                    </div>
+                                    <div class="right-conts user-asign ">
+                                        <div class="user">
+                                            <span class="avt-img">
+                                                <img src="https://unsplash.it/24/24" alt="">
+                                            </span>
+                                            <span class="name txt-ellipsis">
+                                                Darren Adams
+                                            </span>
+                                            <div class="close svg-remove white">
+                                                <%- include ("../../svg/outline/outline-remove.svg") %>
+                                            </div>
+                                        </div>
+
+                                        <div class="add-user">
+                                            <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rows">
+                                    <div class="left-txt">
+                                        <%- include ("../../svg/states-check.svg") %>
+                                        Task
+                                    </div>
+                                    <div class="right-conts">
+                                        <input class="field-input" type="text" name=""
+                                            value="Sed doloremque nesciunt quisquam doloribus autem." placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer">
+                            <span class="close-box close-task">Cancel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add new email -->
+                <div class="boxs form-main form-newemail form-newtask form-newnote">
+                    <div class="left-icons svg-email-blue">
+                        <%- include ("../../svg/states-mail-default.svg") %>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="header">
+                            <span>New Email</span>
+                            <div class="btn btn-main">
+                                Send
+                            </div>
+                        </div>
+
+                        <div class="content pt-0">
+                            <div class="box-addinfo content-addtask info-addemail">
+                                <div class="rows">
+                                    <div class="left-txt">
+                                        <%- include ("../../svg/states-customer-default.svg") %>
+                                        To
+                                    </div>
+                                    <div class="right-conts user-asign user-to">
+                                        <div class="user">
+                                            <span class="name txt-ellipsis">
+                                                Gilberto_Hamill46@hotmail.com
+                                            </span>
+                                            <div class="close svg-remove white">
+                                                <%- include ("../../svg/outline/outline-remove.svg") %>
+                                            </div>
+                                        </div>
+
+                                        <div id="btnEmail" class="add-user btn-default">
+                                            <%- include ("../../svg/outline/outline-plus-black.svg") %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="addMoreEmail" class="add-more">
+                                    <div class="rows">
+                                        <div class="left-txt"></div>
+                                        <div class="right-conts">
+                                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+
+                                            <div class="field-action ml-1">
+                                                <div class="btn-default just-icon">
+                                                    <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                                                </div>
+
+                                                <div id="removeEmail" class="btn-default just-icon remove-user">
+                                                    <%- include ("../../svg/outline/outline-delete.svg") %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="formCCEmail" class="formCCemail my-3">
+                                    <div class="rows">
+                                        <div class="left-txt svg-conversation">
+                                            <%- include ("../../svg/states-sms.svg") %>
+                                            Billing CC
+                                        </div>
+                                        <div class="right-conts user-asign user-to">
+                                            <div class="user">
+                                                <span class="name txt-ellipsis">
+                                                    Hilbert.Jacobson@gmail.com
+                                                </span>
+                                                <div id="close_formCCEmail" class="close svg-remove white">
+                                                    <%- include ("../../svg/outline/outline-remove.svg") %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="addCCEmail" class="add-more">
+                                    <div class="rows">
+                                        <div class="left-txt svg-conversation">
+                                            <%- include ("../../svg/states-sms.svg") %>
+                                            Billing CC
+                                        </div>
+                                        <div class="right-conts">
+                                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+
+                                            <div class="field-action ml-1">
+                                                <div id="doneCCEmail" class="btn-default just-icon">
+                                                    <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                                                </div>
+
+                                                <div id="removeCCEmail" class="btn-default just-icon remove-user">
+                                                    <%- include ("../../svg/outline/outline-delete.svg") %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="addBCCEmail" class="add-more">
+                                    <div class="rows">
+                                        <div class="left-txt svg-conversation">
+                                            <%- include ("../../svg/states-sms.svg") %>
+                                            Billing BCC
+                                        </div>
+                                        <div class="right-conts">
+                                            <input class="field-input" type="text" name="" placeholder="Placeholder">
+
+                                            <div class="field-action ml-1">
+                                                <div class="btn-default just-icon">
+                                                    <%- include ("../../svg/outline/outline-arrow-check.svg") %>
+                                                </div>
+
+                                                <div id="removeBCCEmail" class="btn-default just-icon remove-user">
+                                                    <%- include ("../../svg/outline/outline-delete.svg") %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rows mt-2">
+                                    <div class="left-txt"></div>
+                                    <div class="right-conts">
+                                        <div id="btnCcBilling" class="billing-email mr-2">
+                                            <div class="btn-default has-icon">
+                                                <%- include ("../../svg/outline/outline-mail.svg") %>
+                                                Billing CC
+                                            </div>
+                                        </div>
+                                        <div id="btnBccBilling" class="billing-email">
+                                            <div class="btn-default has-icon">
+                                                <%- include ("../../svg/outline/outline-mail.svg") %>
+                                                Billing BCC
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rows">
+                                    <div class="left-txt">
+                                        <%- include ("../../svg/states-label-default.svg") %>
+                                        Subject
+                                    </div>
+                                    <div class="right-conts">
+                                        <input class="field-input" type="text" name="" placeholder="Placeholder">
+                                    </div>
+                                </div>
+                                <div class="rows">
+                                    <div class="left-txt">
+                                        <%- include ("../../svg/states-check.svg") %>
+                                        Template
+                                    </div>
+                                    <div class="right-conts">
+                                        <div class="dropdown">
+                                            <div onclick="dropdownFunc(this)"
+                                                class="dropbtn btn-default selection">
+                                                Template
+                                                <span
+                                                    class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                            </div>
+                                            <div class="dropdown-menu">
+                                                <ul>
+                                                    <li class="items">
+                                                        Select Template 1
+                                                    </li>
+                                                    <li class="items">
+                                                        Select Template 2
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="description-box description-box-email mt-3 container-column">
+                                <textarea class="field-input no-effect box-auto scrolls" name="" rows="4" cols="50" placeholder="Placeholder">Esse enim non pariatur dolore vero consequatur temporibus impedit nisi. Dolores aut reiciendis sunt minima quia et id qui. Maiores et pariatur ut sunt architecto. Odio nemo laudantium neque laborum magni voluptatem fugiat sunt. Consequuntur quis quisquam.
+                                </textarea>
+                                <div class="attachment-file flex-auto">
+                                    <div class="file">
+                                        <div>
+                                            <span class="mr-1"><%- include ("../../svg/outline/outline-document.svg") %></span>
+                                            File name.pdf
+                                        </div>
+                                        <span class="svg-outline-delete"><%- include ("../../svg/outline/outline-delete.svg") %></span>
+                                    </div>
+                                    <div class="file">
+                                        <div>
+                                            <span class="mr-1"><%- include ("../../svg/outline/outline-document.svg") %></span>
+                                            File name.pdf
+                                        </div>
+                                        <span class="svg-outline-delete"><%- include ("../../svg/outline/outline-delete.svg") %></span>
+                                    </div>
+                                </div>
+
+                                <div class="toolbar flex-auto">
+                                    <div class="tool-link">
+                                        <%- include ("../../svg/outline/outline-emoji.svg") %>
+                                    </div>
+                                    <div class="tool-link">
+                                        <%- include ("../../svg/outline/outline-attach.svg") %>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rows-checked mt-3">
+                                <div class="check-items mr-1">
+                                    <input id="check-reply" type="checkbox" value="">
+                                    <div class="item-checkbox">
+                                        <label for="check-reply">
+                                            <span>If no reply</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="choosen d-flex align-center">
+                                    <div class="dropdown choose-day">
+                                        <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                            in 1 day
+                                            <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                        </div>
+                                    </div>
+                                    <span class="mx-2">then</span>
+                                    <div class="follow-up">
+                                        <div class="dropdown">
+                                            <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
+                                                <span class="txt-ellipsis">remind me to follow up</span>
+                                                <span class="svg-selectbox"><%- include ("../../svg/outline/icon-selectbox.svg") %></span>
+                                            </div>
+                                            <div class="dropdown-menu">
+                                                <ul>
+                                                    <li class="items">
+                                                        <span class="txt-ellipsis">remind me to follow up 1</span>
+                                                    </li>
+                                                    <li class="items">
+                                                        <span class="txt-ellipsis">remind me to follow up 2</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer">
+                            <span class="close-box close-email">Cancel</span>
+
+                            <div class="action">
+                                <div class="btn-default has-icon disable">
+                                    <%- include ("../../svg/outline/outline-clock.svg") %>
+                                    Send Later
+                                </div>
+                                <div class="btn-default ml-2">
+                                    Save Draft
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End add new -->
+
+                <div class="boxs">
+                    <div class="left-icons">
+                        <%- include ("../../svg/states-note-default.svg") %>
+                    </div>
+
+                    <div class="content">
+                        <div class="header-box">
+                            <div class="name">
+                                <span class="avt-img">
+                                    <img src="https://unsplash.it/32/32" alt="">
+                                </span>
+                                <div class="txt-ellipsis cursor-pointer">Abbie Wilson</div>
+                            </div>
+                            <div class="right-more">
+                                <div class="info-time">
+                                    <span class="date">02/06/2020</span>
+                                    <span class="time">08:47PM</span>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="dropbtn">
+                                        <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="conts-box">
+                            <div class="description">
+                                Hic cupiditate similique nihil suscipit eum voluptatem sint aut aperiam.
+                                Voluptatem voluptate qui incidunt non laboriosam sapiente provident.
+                                Sit eum est ut praesentium perspiciatis.
+                                Architecto ipsum voluptas commodi sed et tempore voluptatem aliquid nihil.
+                                Sit eum est ut praesentium perspiciatis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boxs">
+                    <div class="left-icons">
+                        <%- include ("../../svg/states-note-default.svg") %>
+                    </div>
+
+                    <div class="content">
+                        <div class="header-box">
+                            <div class="name">
+                                <span class="avt-img">
+                                    <img src="https://unsplash.it/32/32" alt="">
+                                </span>
+                                <div class="txt-ellipsis cursor-pointer">Abbie Wilson</div>
+                            </div>
+                            <div class="right-more">
+                                <div class="info-time">
+                                    <span class="date">02/06/2020</span>
+                                    <span class="time">08:47PM</span>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="dropbtn">
+                                        <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="conts-box">
+                            <div class="description">
+                                Hic cupiditate similique nihil suscipit eum voluptatem sint aut aperiam.
+                                Voluptatem voluptate qui incidunt non laboriosam sapiente provident.
+                                Sit eum est ut praesentium perspiciatis.
+                                Architecto ipsum voluptas commodi sed et tempore voluptatem aliquid nihil.
+                                Sit eum est ut praesentium perspiciatis.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content form-comment">
+                        <div class="icon-reply">
+                            <%- include ("../../svg/outline/outline-subnote.svg") %>
+                        </div>
+
+                        <div class="header-box">
+                            <div class="name">
+                                <span class="avt-img">
+                                    <img src="https://unsplash.it/32/32" alt="">
+                                </span>
+                                <div class="txt-ellipsis">Oscar de la Cavallería</div>
+                            </div>
+                            <div class="right-more">
+                                <div class="info-time">
+                                    <span class="date">02/06/2020</span>
+                                    <span class="time">08:47PM</span>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="dropbtn">
+                                        <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conts-box">
+                            <div class="description">
+                                Suscipit sint eius ea et. Est dolor provident eaque voluptatibus aut sunt quod.
+                                Aliquid ducimus perspiciatis veniam totam enim. Nostrum nostrum culpa omnis adipisci.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boxs form-complete">
+                    <div class="left-icons">
+                        <%- include ("../../svg/states-check.svg") %>
+                    </div>
+
+                    <div class="content">
+                        <div class="header-box">
+                            <div class="left-header">
+                                <div class="btn-complete btn-default has-icon">
+                                    <%- include ("../../svg/outline/outline-check-circle.svg") %>
+                                    Complete
+                                </div>
+
+                                <div class="name">
+                                    <span class="avt-img">
+                                        <img src="https://unsplash.it/32/32" alt="">
+                                    </span>
+                                    <div class="txt-ellipsis cursor-pointer">Abbie Wilson</div>
+                                </div>
+                            </div>
+                            <div class="right-more">
+                                <div class="info-time">
+                                    <span class="date">02/06/2020</span>
+                                    <span class="time">08:47PM</span>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="dropbtn">
+                                        <%- include ("../../svg/outline/outline-more-verticale.svg") %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="conts-box">
+                            <div class="description">
+                                Architecto itaque magnam perferendis sunt amet temporibus sed et.
+                                Autem expedita dignissimos eum veniam aut aut rerum error. Quaerat iste eosr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boxs">
+                    <div class="left-icons">
+                        <%- include ("../../svg/states-length.svg") %>
+                    </div>
+
+                    <div class="content">
+                        <div class="header-box">
+                            <div class="name">
+                                <span class="avt-img">
+                                    <img src="https://unsplash.it/32/32" alt="">
+                                </span>
+                                <div class="txt-ellipsis cursor-pointer">Abbie Wilson</div>
+                            </div>
+                            <div class="right-more">
+                                <div class="info-time">
+                                    <span class="date">02/06/2020</span>
+                                    <span class="time">08:47PM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="conts-box">
+                            <div class="description">
+                                Voluptas doloremque soluta cupiditate vero in et perferendis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boxs box-template">
+                    <div class="left-icons svg-email-blue">
+                        <%- include ("../../svg/states-mail-default.svg") %>
+                    </div>
+
+                    <div class="content">
+                        <div class="container-content-email">
+                            <div class="title">
+                                <h3>Agmenty Invoice #5167</h3>
+                            </div>
+                            <div class="wrap-content-email pb-8">
+                                <div class="logo">
+                                    <img src="/images/logo_company.png" alt="">
+                                </div>
+                                <div class="txt-welcome">
+                                    <p> Hi Client_First_Name, </p> <br>
+                                    <p> I have attached your most recent invoice #5167 as a PDF. Please let me know if
+                                        you have any questions. </p> <br>
+                                    <p> Pay online using our secure checkout. </p>
+                                    <div class="btn btn-main btn-pay-online">
+                                        <span>Pay Online</span>
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="txt-thanks-you">
+                                    <h5> Thanks for the business! </h5>
+                                   <p> Chris Moreschi </p> 
+                                   <p> TruGanix </p> 
+                                   <p> 855-536-7470 </p> 
+                                   <p>  chris.moreschi@gmail.com </p> <br>
+                                   <p><span class="manage-link cursor-pointer purple-default"> Manage Your Account &gt;&gt;  </span></p>
+                                </div>
+                                <div class="line"></div>
+                                <div class="txt-feedback">
+                                    <h5> Tell us what you think </h5>
+                                    <p> Thanks for your business! How would you rate your experience? </p>
+                                    <ul class="rate">
+                                        <li>
+                                            <%- include ("../../svg/outline-star.svg") %>
+                                            <p> Terrible </p>
+                                        </li>
+                                        <li>
+                                            <%- include ("../../svg/outline-star.svg") %>
+                                            <p> Poor </p>
+                                        </li>
+                                        <li>
+                                            <%- include ("../../svg/outline-star.svg") %>
+                                            <p> Average </p>
+                                        </li>
+                                        <li>
+                                            <%- include ("../../svg/outline-star.svg") %>
+                                            <p> Good </p>
+                                        </li>
+                                        <li>
+                                            <%- include ("../../svg/outline-star.svg") %>
+                                            <p> Great! </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'customers-v2',
+    root: ''
+}) %>

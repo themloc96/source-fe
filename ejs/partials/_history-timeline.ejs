@@ -1,0 +1,182 @@
+<div class="content-history">
+    <div class="dropdown-history">
+        <div onclick="dropdownFunc(this)" class="btn-history">
+            History
+            <span class="toggle-icon">
+                <%- include ("../svg/outline/dropdown-down.svg") %>
+            </span>
+        </div>
+        <div class="history-content">
+            <% for (i = 0; i < 2; i++){ %>
+            <div class="title-font15 timeline-title">
+                12 March, Thu 2020
+            </div>
+            <!-- Timeline history -->
+            <div class="timeline-history main-timeline">
+
+                <div class="timeline">
+                    <div class="avatar">
+                        <div class="avt-img">
+                            <img src="https://unsplash.it/24/24" alt="">
+                        </div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="line"></div>
+                        <div class="circle">
+                            <%- include ("../svg/outline/outline-invoice.svg") %>
+                        </div>
+                        <div class="detail">
+                            <div class="info">
+                                <span class="name">Adaora Azubuike</span>
+                                <span class="datetime">02:34PM 16/03/20250</span>
+                            </div>
+                            <div class="conts">
+                                Create an estimate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="avatar">
+                        <div class="avt-img">
+                            <img src="https://unsplash.it/24/24" alt="">
+                        </div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="line"></div>
+                        <div class="circle">
+                            <%- include ("../svg/outline/outline-estimate.svg") %>
+                        </div>
+                        <div class="detail">
+                            <div class="info">
+                                <span class="name">Adaora Azubuike</span>
+                                <span class="datetime">02:34PM 16/03/20250</span>
+                            </div>
+                            <div class="conts">
+                                Estimat changed status from
+                                <span class="stt sent">Sent</span>
+                                to
+                                <span class="stt won">Won</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline">
+                    <div class="avatar">
+                        <div class="avt-img">
+                            <img src="https://unsplash.it/24/24" alt="">
+                        </div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="line"></div>
+                        <div class="circle">
+                            <%- include ("../svg/outline/outline-mail.svg") %>
+                        </div>
+                        <div class="detail">
+                            <div class="info">
+                                <span class="name">Adaora Azubuike</span>
+                                <span class="datetime">02:34PM 16/03/20250</span>
+                            </div>
+                            <div class="conts">
+                                Sent
+                                <span class="stt sent">Estimate #33569</span>
+                                by email to
+                                <div class="user">
+                                    <span class="avt">DS</span>
+                                    <span class="name">Dusana Semenov</span>
+                                </div>
+                            </div>
+                            <div class="mt-1">
+                                <span class="stt sent">Laurianne.McKenzie71@yahoo.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="avatar">
+                        <div class="avt-img">
+                            <img src="https://unsplash.it/24/24" alt="">
+                        </div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="line"></div>
+                        <div class="circle">
+                            <%- include ("../svg/outline/outline-customer-circle.svg") %>
+                        </div>
+                        <div class="detail">
+                            <div class="info">
+                                <span class="name">Adaora Azubuike</span>
+                                <span class="datetime">02:34PM 16/03/20250</span>
+                            </div>
+                            <div class="conts conts-assign">
+                                Assign to
+                                <div class="user ml-1">
+                                    <span class="avt-img">
+                                        <img src="https://unsplash.it/20/20" alt="">
+                                    </span>
+                                    <span class="name">Dusana Semenov</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="avatar">
+                        <div class="avt-img">
+                            <img src="https://unsplash.it/24/24" alt="">
+                        </div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="line"></div>
+                        <div class="circle">
+                            <%- include ("../svg/outline/outline-pen.svg") %>
+                        </div>
+                        <div class="detail">
+                            <div class="info">
+                                <span class="name">Adaora Azubuike</span>
+                                <span class="datetime">02:34PM 16/03/20250</span>
+                            </div>
+                            <div class="conts">
+                                Add note
+                            </div>
+                            <div class="conts conts-note">
+                                Ratione voluptatem qui. Quo qui voluptatibus aut sunt qui eligendi esse ut.
+                                Quia vero sunt delectus omnis quidem quia. Quidem aut ratione et commod
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="avatar">
+                        <div class="avt-img">
+                            <img src="https://unsplash.it/24/24" alt="">
+                        </div>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="line"></div>
+                        <div class="circle">
+                            <%- include ("../svg/outline/outline-calendar.svg") %>
+                        </div>
+                        <div class="detail">
+                            <div class="info">
+                                <span class="name">Adaora Azubuike</span>
+                                <span class="datetime">02:34PM 16/03/20250</span>
+                            </div>
+                            <div class="conts">
+                                Pick service date & time
+                                <span class="stt sent">16/03/2020  11:30AM - 12:30PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Timeline -->
+            <% } %>
+        </div>
+    </div>
+</div>

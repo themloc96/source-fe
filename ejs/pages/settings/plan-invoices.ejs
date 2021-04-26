@@ -1,0 +1,64 @@
+<%- include('../../partials/_head', {
+    title: 'Settings Invoices',
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>
+
+<%- include('../../partials/_header', {settings: 'settings'}) %>
+<%- include('../../partials/_sidebar', {settings: 'settings'}) %>
+
+<div class="settings-v2 container-wrap container-setting">
+
+    <%- include('_sidebar', {planInvoices: 'planInvoices'}) %>
+
+    <div class="contents-pages container-setting-user maintables-page d-flex payment-methods-v2">
+        <div class="set-user-right w-100 container-column">
+            <div class="title-header flex-auto">
+                <span class="fs-18">Invoices</span>
+            </div>
+            
+            <div class="table-invoices box-auto">
+                <div class="table-title">
+                    <div class="rows">
+                        <div class="col-idinvoice">
+                            <div class="filter">
+                                Invoice ID
+                                <%- include ("../../svg/outline/icon-selectbox.svg") %>
+                            </div>
+                        </div>
+                        <div class="col-idcustomer pl-2">Customer Id</div>
+                        <div class="col-date pl-2">Date</div>
+                        <div class="col-stt pl-2">Status</div>
+                        <div class="col-amount pl-2">Amount</div>
+                    </div>
+                </div>
+                <div class="table-list scrolls">
+                    <% for (i = 0; i < 20; i++){ %>
+                    <div class="rows">
+                        <div class="col-idinvoice">
+                            <div class="txt-ellipsis cursor-pointer">ch_Ew4BsebgcjnIn8</div>
+                        </div>
+                        <div class="col-idcustomer pl-2">
+                            <span class="txt-ellipsis">cus_3oDYzdMqcGt8Fj
+                        </div>
+                        <div class="col-date pl-2">
+                            <span class="txt-ellipsis">November 8, 2014</span>
+                        </div>
+                        <div class="col-stt pl-2">
+                            <span class="txt-ellipsis">Paid</span>
+                        </div>
+                        <div class="col-amount pl-2">
+                            <span class="txt-ellipsis">$250.00</span>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/_footer', {
+    slug: 'payment-methods-v2',
+    root: ''
+}) %>
